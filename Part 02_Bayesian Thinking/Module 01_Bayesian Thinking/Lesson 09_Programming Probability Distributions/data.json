@@ -1,0 +1,738 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349928,
+      "key": "31a8e9fd-58d6-4398-bc07-a3ba0dd9fe5f",
+      "title": "Programming Probability Distributions",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Apply what you've learned in this course by programming and visualizing probability distributions.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/31a8e9fd-58d6-4398-bc07-a3ba0dd9fe5f/349928/1544452784488/Programming+Probability+Distributions+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/31a8e9fd-58d6-4398-bc07-a3ba0dd9fe5f/349928/1544452782417/Programming+Probability+Distributions+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 458562,
+          "key": "4665e76f-705e-4a42-9c34-63ade709bcae",
+          "title": "Prepare for a Challenge",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4665e76f-705e-4a42-9c34-63ade709bcae",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458563,
+              "key": "2fa99897-a86e-4c51-8be2-ee958779b1ba",
+              "title": "Nd113 Bayesian L9 01 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Sebastian mentions Slack here, although you may be using Study Groups as your classroom support tool.",
+              "video": {
+                "youtube_id": "dWLZSQiN5vI",
+                "china_cdn_id": "dWLZSQiN5vI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 349930,
+          "key": "db5945f4-4385-4f57-b52d-c7c77030e9d3",
+          "title": "Programming Probability Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "db5945f4-4385-4f57-b52d-c7c77030e9d3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355515,
+              "key": "1f7116b1-d165-4aa7-873d-270c69ddee3d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Programming Probability Distributions\n\n### Introduction\n\nIt's time to get more experience programming in Python. Probability distributions involve algebraic functions and visualizing those functions.\n\nYou'll start out by making a few basic functions to calculate and visualize continuous uniform probability distributions. \n\nThen, you'll program a more complex distribution: a non-uniform discrete probability distribution.\n\nNext, you'll use those skills to explore how a self-driving car, or really any robot, might represent its location probabilities in a discrete, 1-D world. Then you'll expand into probabilities in a 2-D world. You're going to implement the 2-D world using something called a **class**, which is a sort of programming template. You'll learn more about classes in the exercises.\n\nFinally, you'll become familiar with a probability distribution that is especially important to self-driving cars: the normal distribution.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 355519,
+              "key": "c6e1918e-c76f-4cec-911f-78474ef7b69f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Skills\n\nHere is a summary of the skills you'll work on in these excercises:\n\n##### Python Skills\n* Writing a function in python\n* Initializing 1-Dimensional and 2-Dimensional arrays\n* Creating visualizations\n* Classes in Python\n\n##### Probability Skills\n* Calculating probabilities for a continuous uniform distribution\n* Calculating probabilities for a discrete non-uniform distribution\n* Location probabilities on a 1-D grid\n* Location probabilities on a 2-D grid",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 409581,
+          "key": "f10594a4-1c66-43ce-8a7b-3d20fa0cafa1",
+          "title": "Math in Python [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f10594a4-1c66-43ce-8a7b-3d20fa0cafa1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409582,
+              "key": "7135d4cc-a430-4ded-8614-30bd9f06acc8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "cd6933cd-4969-4b54-9c74-a6f252720cd8",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/1_math_in_python_demonstration.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409603,
+          "key": "82c79821-dced-4f29-9b33-f09798aadacc",
+          "title": "Uniform Distribution [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "82c79821-dced-4f29-9b33-f09798aadacc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409604,
+              "key": "0b1c5999-99d5-4372-acd7-2d42d1564f1e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "0f259032-afae-4779-aa43-9983a9f994e9",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2_uniform_distribution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409607,
+          "key": "9cc20603-f279-42f4-9a36-3e7f526fe5e2",
+          "title": "Uniform Distribution Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9cc20603-f279-42f4-9a36-3e7f526fe5e2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409609,
+              "key": "2cd43e41-50e9-4fc8-9062-7d26b90d8d4b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Solution to the Uniform Probability Distribution Exercise\n```python\ndef probability_uniform(low_range, high_range, minimum, maximum):\n    \n    ## Calculate the probability of an event occurring between \n    ##     low_range and high_range.\n    \n    probability = (high_range - low_range) / (maximum - minimum) \n    \n    return probability\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 409612,
+          "key": "7b623219-4072-400b-ac4d-d7e9ebc9f6e9",
+          "title": "Function Improvements [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7b623219-4072-400b-ac4d-d7e9ebc9f6e9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409613,
+              "key": "ff695226-3a61-4320-b93c-890197f5c86f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "5faa0961-a435-4394-a604-a83cebd5a81e",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/3_function_improvements.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409615,
+          "key": "d3caa942-344e-46ca-b15a-fff33fb29836",
+          "title": "Function Improvements Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d3caa942-344e-46ca-b15a-fff33fb29836",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409616,
+              "key": "70a1f0f1-40c1-4243-a119-e96ebf29571c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Function Improvements Solution\n\n```python\ndef probability_range_improved(low_range, high_range, minimum, maximum):\n\n    if (isinstance(low_range, str) or isinstance(high_range, str)):\n        # print a message to the user and return none\n        print('Inputs should be numbers not string')\n        return None\n    \n    if (low_range < minimum or low_range > maximum):\n        # print a message to the user and return none\n        print('Your low range value must be between minimum and maximum')\n        return None\n        \n    if (high_range < minimum or high_range > maximum):\n        # print a message to the user and return none\n        print('The high range value must be between minimum and maximum')\n        return None\n\n    probability = abs(high_range - low_range) / (maximum - minimum)\n    \n    return probability\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 478568,
+          "key": "709b20bc-e7fd-412a-b58a-7778a4dad5d1",
+          "title": "Plotting in Python [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "709b20bc-e7fd-412a-b58a-7778a4dad5d1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478600,
+              "key": "9444e410-b83b-4896-b0e6-31be568c886e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "c011fc41-df4f-4e83-ba9a-b030eac7e185",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/plotting_in_python.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409622,
+          "key": "ecbad4d9-80e9-4098-9fb4-a227e766f769",
+          "title": "Visualizing Uniform Distributions [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ecbad4d9-80e9-4098-9fb4-a227e766f769",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409624,
+              "key": "e2e9d512-d563-47d5-8611-9fd89e61567a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "33bd16aa-4b28-4edc-b0e6-b2f5d98fe4a4",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/4_visualize_uniform_distribution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409627,
+          "key": "d0f2c261-2a9a-4146-a15d-c0273c64c084",
+          "title": "Visualizing Uniform Distributions Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0f2c261-2a9a-4146-a15d-c0273c64c084",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409630,
+              "key": "ff3cfbf0-ff97-4049-8487-cabde752c8b9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Visualizing Uniform Distributions Solution\n\n```python \ndef uniform_distribution_height(x_minimum, x_maximum):\n        \n    height = 1/(x_maximum - x_minimum)\n    return height```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 409660,
+          "key": "1b981597-7319-4e0a-a248-ba329a8e6cb6",
+          "title": "Visualizing Piece-wise Uniform Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1b981597-7319-4e0a-a248-ba329a8e6cb6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409661,
+              "key": "13a59824-bf80-4ca4-9393-0a3bc50791b5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Visualizing a Piece-Wise Continuous Probability Distribution\n\nNow it's time for a challenge!\n\nAfter Sebastian introduced a uniform continuous probability distribution, he then showed you a piece-wise continuous function representing the probability of when someone was born. You are going to code a generic piece-wise continuous probability density function in Python.\n\nYour result is going to look something like this:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 409664,
+              "key": "319d2485-0319-4110-89b1-23dbf91f532e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/5984e59c_temp/temp.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/319d2485-0319-4110-89b1-23dbf91f532e",
+              "caption": "",
+              "alt": "",
+              "width": 432,
+              "height": 288,
+              "instructor_notes": null
+            },
+            {
+              "id": 409662,
+              "key": "83ca1e85-8602-4bca-949f-51c9c2d70149",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Instructions\n\nWrite a function that, given a list of x-axis intervals, relative probabilities and a total probability, calculates the height of each bar. Remember that the sum of the area for all bars should be the total probability.\n\nHere is an example input and output based on the above visualization:\n* a vehicle accident is 5 times more likely from 5am t\no 10am versus midnight to 5am. \n* a vehicle accident is 3 times more likely from 10am to 4pm versus midnight to 5am.\n* a vehicle accident is 6 times more likely from 4pm to 9pm versus midnight to 5am.\n* a vehicle accident is 1/2 as likely from 9pm to midnight versus midnight to 5am.\n* The probability of getting in an accident on any given day is .05\n\nThe inputs would look like this. \n\nFor the hours, you can use 24 hour time\nhour_intervals = [0, 5, 10, 16, 21, 24]\n\nrelative_probabilities = [1, 5, 3, 6, 0.5]\n\ntotal_probability = 0.05\n\nThe output would be the height of each bar:\n```\n[0.0006451612903225806,\n 0.0032258064516129032,\n 0.0016129032258064516,\n 0.003870967741935484,\n 0.0005376344086021505]\n```\n\n# Hints\n\n* Summing the area of all the bars equals the total probability, which in this case is 0.05.\n* The relative probabilities and total probability can be used to find the exact area of each bar. If the area of the first bar is A, then the area of the second bar is 5A, the third bar is 3A, etc.\n* Once you know the area of each bar, you can divide each area by its width to calculate the bar height.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 409667,
+              "key": "aa413252-8c49-4cf5-bdb8-ded99836a3cf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "But the function should be generic. It should be able to receive an arbitrary list of numbers with the relative probabilities of each interval and any value for total probability. Before trying to write the program, it might be helpful to calculate the results you expect with a pen and paper. That will help you work through the logic of the programming.\n\nYou'll find the exercise in the next part of the lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 409655,
+          "key": "493d88e8-17b6-4e55-85fb-f1d723e733fe",
+          "title": "Visualizing Piece-Wise Distributions [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "493d88e8-17b6-4e55-85fb-f1d723e733fe",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409657,
+              "key": "ff76b8e9-0393-436b-bbc4-f0ff432b9528",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "d3db17d0-0fb9-4b46-9c0f-38bf943d6fe4",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/5_visualize_discrete_distribution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409670,
+          "key": "2b380187-4a5c-489b-84ee-9751f2e6d2df",
+          "title": "Visualizing Piece-Wise Distributions Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2b380187-4a5c-489b-84ee-9751f2e6d2df",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409671,
+              "key": "764ee42b-8b4b-4c88-9359-a65387f366b8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Solution\n\n```python\ndef bar_heights(intervals, probabilities, total_probability):\n\n    heights = []\n\n    total_relative_prob = sum(probabilities)\n    \n    for i in range(0, len(probabilities)):\n        bar_area = (probabilities[i] / total_relative_prob) * total_probability\n        heights.append(bar_area / (intervals[i + 1] - intervals[i]))\n        \n    return heights\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 409672,
+          "key": "176c889f-8cff-4911-9825-5ac9e587ba6a",
+          "title": "1-D Car World [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "176c889f-8cff-4911-9825-5ac9e587ba6a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409673,
+              "key": "d3848709-717e-4a81-8071-87174d28bffb",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "44f2d052-96f8-4751-90d9-196355dbc08b",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/6_1D_selfdrivingcar.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 409677,
+          "key": "a1bf0a84-d449-4a59-bccb-39550ea4a231",
+          "title": "1-D Car World Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a1bf0a84-d449-4a59-bccb-39550ea4a231",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485964,
+              "key": "015c92ca-6ec3-4aa2-b7eb-ab12c600915a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Solution Exercise 1\n\n```python\ndef initialize_robot(grid_size):\n    grid = [1/grid_size] * grid_size\n    return grid    \n```\n\nHere is an alternative solution.\n\n```python\ndef initialize_robot(grid_size):\n    \n    grid = []\n\n    for i in range(grid_size):\n        grid.append(1/grid_size)\n    \n    return grid\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485965,
+              "key": "d7bd3d06-20de-42ce-9882-6a46caa51b19",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Solution Exercise 2\n\n```python\n\ndef grid_probability(grid, position):\n    \n    if position < len(grid):\n        return grid[position]\n    \n    return None\n```\n\nYou could also check to make sure that the position variable is non-negative. But in Python, negative list indices are actually legitimate. `grid[-1]` gives you access to the last element in the list. `grid[-2]` gives you access to the second to last element, etc.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485967,
+              "key": "fda739c2-5f5b-40dd-bc9e-936d4c758123",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Solution Exercise 3\n\n```python\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\ndef output_map(grid):\n        \n    x_labels = range(len(grid))\n        \n    plt.bar(x_labels, grid)\n    plt.xlabel('Grid Space')\n    plt.ylabel('Probability')\n    plt.title('Probability of the Robot Being at Each Space on the Grid')\n    plt.show()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 409678,
+              "key": "50e2a3b0-03d5-4236-9602-219dfefb3131",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Solution Exercise 4\n\n```python\ndef update_probabilities(grid, updates):  \n    \n    for i in range(len(updates)):\n        grid[updates[i][0]] = updates[i][1]\n    \n    return grid\n```\n\nHere is an alternative solution.\n\n```python\ndef update_probabilities(grid, updates):\n    for update in updates:\n        grid[update[0]] = update[1] \n    return grid\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 485975,
+          "key": "2e63309f-e9aa-485c-a87e-e6fc6121f483",
+          "title": "2-D Car World [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2e63309f-e9aa-485c-a87e-e6fc6121f483",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 494884,
+              "key": "ba846f0e-c2ca-4fb2-b730-602ad02669f7",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "78236e9f-982a-47a3-a037-a633355ff3ef",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/7_2D_self-drivingcar_demo.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 486022,
+          "key": "a8663e1c-08ee-4d4e-87bc-a7c09582e0a4",
+          "title": "2-D Car World [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a8663e1c-08ee-4d4e-87bc-a7c09582e0a4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 494885,
+              "key": "7dcc5b03-0e57-4a75-9bb8-95a11c7d9927",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewc88236eb",
+              "pool_id": "jupyter",
+              "view_id": "334cd49b-6e3b-47fb-a65e-e73e4300ddbe",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/7_2D_self-drivingcar_exercises.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 489043,
+          "key": "c50129d9-8903-40e1-8457-fbf90a71da4b",
+          "title": "2-D Car World Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c50129d9-8903-40e1-8457-fbf90a71da4b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 489048,
+              "key": "3830b732-d461-404d-913f-924f7fa998a2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Exercise 1\n\n```python\n\ndef initial_grid(rows, columns):\n\n    grid = []\n    row = []\n    probability = 1 / (rows * columns)\n        \n    for i in range(rows):\n        for j in range(columns):\n            row.append(probability)\n        grid.append(row)\n        row = []\n    \n    return grid\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 489049,
+              "key": "47ada632-cf5d-42e1-a643-7969c6f8cc42",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Exercise 2\n\n```python\n\ndef probability(grid, row, column):\n        \n    return grid[row][column]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 489051,
+              "key": "6aea6db7-d9f7-4032-a26b-e10ae07b0d49",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Exercise 3\n\ndef update_probability(grid, update_list):\n\n    for element in update_list:\n        x, y = element[0]\n        grid[x][y] = element[1]\n    \n    return grid",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 498859,
+          "key": "c02b7ee1-306b-4857-bbf9-a433b8d1d056",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c02b7ee1-306b-4857-bbf9-a433b8d1d056",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 498860,
+              "key": "0b440fda-c418-42c4-a0ff-70cd0260ba4c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Conclusion\n\nIn this lesson you've programmed a few discrete probability distribution including a continuous uniform distribution, a piece-wise uniform distribution, and a discrete distribution representing a mapped grid.\n\nIn the next section, you'll gain experience working with a very important continuous distribution called the **Gaussian distribution**. A Gaussian distribution is oftentimes used to represent uncertainty in sensor measurements or locations. Continue on to the next lesson to learn more.",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "data": {
+    "lesson": {
+      "id": 385740,
+      "key": "dc370470-1e65-4cad-8c28-0af415ebb69a",
+      "title": "Introduction",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Welcome to the Intro to Self-Driving Cars Nanodegree program! We are excited to have you and hope you are looking forward to learning about this game-changing field!",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/dc370470-1e65-4cad-8c28-0af415ebb69a/385740/1516935813374/Introduction%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/dc370470-1e65-4cad-8c28-0af415ebb69a/385740/1516935803637/Introduction%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 556324,
+          "key": "9ff83729-b5da-42bf-9e57-d707bff6a648",
+          "title": "The Magic of Self-Driving Cars",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9ff83729-b5da-42bf-9e57-d707bff6a648",
+            "completed_at": "2020-04-19T12:26:05.329Z",
+            "last_viewed_at": "2020-04-22T03:06:26.479Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 556325,
+              "key": "8f14ac16-3142-4a94-9983-e8715cb7373d",
+              "title": "Final Teaser ISDC",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "j7iB0p4dOj4",
+                "china_cdn_id": "j7iB0p4dOj4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 385744,
+          "key": "56cd9740-bf87-41a3-aa81-35138238acac",
+          "title": "Welcome from Sebastian",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "56cd9740-bf87-41a3-aa81-35138238acac",
+            "completed_at": "2020-04-19T12:27:59.942Z",
+            "last_viewed_at": "2020-04-19T12:28:01.938Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402099,
+              "key": "87e49d88-0889-4324-8bd3-a91e71080cab",
+              "title": "Intro to Self-Driving Cars: Welcome From Sebastian",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qZt87xwkHro",
+                "china_cdn_id": "qZt87xwkHro.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 385745,
+          "key": "f8f46093-bec2-45b2-a314-f493b05ce8e1",
+          "title": "Meet the Team",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f8f46093-bec2-45b2-a314-f493b05ce8e1",
+            "completed_at": "2020-04-19T12:28:56.880Z",
+            "last_viewed_at": "2020-04-19T12:28:58.875Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 430312,
+              "key": "ea51b071-1210-4b4a-9fb6-4a9cb85e77fa",
+              "title": "Meet The Team",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "U7OiT5kWlnQ",
+                "china_cdn_id": "U7OiT5kWlnQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 560270,
+          "key": "2c93cda7-d92b-4b81-851f-d314beb7c921",
+          "title": "Community Code of Conduct",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2c93cda7-d92b-4b81-851f-d314beb7c921",
+            "completed_at": "2020-04-19T12:30:19.605Z",
+            "last_viewed_at": "2020-04-19T12:30:21.637Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 560271,
+              "key": "1ae628ae-1233-45a7-a3dc-ab912d5017af",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Community Code of Conduct\n\nYour experience in the Nanodegree program and community should be an engaging, fulfilling, and positive one. As such, we have outlined the following system for reporting behavior that does not live up to Udacity’s standards, so it can quickly be addressed by our staff. \n\nAll reports of suspected violations to the [TOU](https://www.udacity.com/legal/terms-of-service), [Community Code of Conduct](https://www.udacity.com/legal/community-guidelines) or [Honor Code](https://www.udacity.com/legal/community-guidelines) should be submitted to [report@udacity.com](mailto:report@udacity.com) and will be reviewed. If you witness or are experiencing any violations of our policies please get in touch with us. Below prohibited actions as set forth on our [Community Code of Conduct](https://www.udacity.com/legal/community-guidelines):\n\n- **Harassment:** Inappropriate, harassing, abusive, discriminatory, derogatory or violent comments or conduct. \n- **Discrimination:** Offensive comments related to gender or gender identity, sexual orientation, race, ethnicity, religion, national origin, disability or disease\n- **Distributing inappropriate content:** Use of sexual, violent, graphic, or derogatory images\n- **Bullying:** Deliberate intimidation, threats of violence or violent language directed against another person\n- **Sexual harassment:** Unwelcome sexual attention \n- **Defamation:** Obscene, fraudulent, indecent, or libelous acts that defame, abuse, harass, discriminate against or threaten others\n- **Plagiarism:** will not cheat on any homework assignment, projects or exams for the Online Courses and, specifically, will not plagiarize materials created by others\n- **Self-injury or Suicide:** We do not encourage community postings in Student Hub or Knowledge related to self-injury or suicide. If you or someone you know is exhibiting signs of self-injury or suicide, find help at the [Suicide Prevention Lifeline](https://suicidepreventionlifeline.org/) in the U.S. and [Befrienders.org](https://www.befrienders.org/) globally. \n\nWhen a potential violation is brought to our attention, we will make every effort to investigate the case thoroughly and make a decision that is fair to all parties.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 385815,
+          "key": "e039e3b2-fb80-4ad0-8b3a-c08b890b8de9",
+          "title": "Expectations for this Nanodegree",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e039e3b2-fb80-4ad0-8b3a-c08b890b8de9",
+            "completed_at": "2020-04-19T12:30:45.905Z",
+            "last_viewed_at": "2020-04-19T12:30:47.841Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402101,
+              "key": "7aaf8e0a-dcdd-46f2-a522-58b04b148d54",
+              "title": "Intro to Self-Driving Cars: Expectations for this Nanodegree",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TTOhBB7QaUg",
+                "china_cdn_id": "TTOhBB7QaUg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 392056,
+          "key": "d298be47-4293-43df-8421-19a8da5c3cca",
+          "title": "Readiness Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d298be47-4293-43df-8421-19a8da5c3cca",
+            "completed_at": "2020-04-19T12:31:53.051Z",
+            "last_viewed_at": "2020-04-22T03:06:54.609Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402102,
+              "key": "5ccb6c0b-634e-45e3-b5b7-6187bbd6f022",
+              "title": "Intro to Self-Driving Cars: Readiness Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "sWKwL3NBa_E",
+                "china_cdn_id": "sWKwL3NBa_E.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

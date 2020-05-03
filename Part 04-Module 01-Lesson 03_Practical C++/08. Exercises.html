@@ -1,0 +1,243 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercises</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practical C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Compilation.html">01. Introduction to Compilation</a>
+    </li>
+    <li class="">
+      <a href="02. Running Code Locally.html">02. Running Code Locally</a>
+    </li>
+    <li class="">
+      <a href="03. C++ Versions.html">03. C++ Versions</a>
+    </li>
+    <li class="">
+      <a href="04. Structuring Functions and File Organization.html">04. Structuring Functions and File Organization</a>
+    </li>
+    <li class="">
+      <a href="05. Input and Output.html">05. Input and Output</a>
+    </li>
+    <li class="">
+      <a href="06. Reading in Text Files.html">06. Reading in Text Files</a>
+    </li>
+    <li class="">
+      <a href="07. Outputting to Text Files.html">07. Outputting to Text Files</a>
+    </li>
+    <li class="">
+      <a href="08. Exercises.html">08. Exercises</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Exercises</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="exercises">Exercises</h1>
+<p>Now it's your turn to write C++ programs.</p>
+<p>Practicing is the best way to improve your C++ skills. Here you will find a few ideas to get you started. We have not provided a code playground this time, so you will need to compile and execute programs locally on your computer. </p>
+<p>These are non-graded, so it's up to you how many you want to complete. At the end of the C++ Basics Module, there will be a more comprehensive project asking you to translate Python code to C++.</p>
+<p>If you get stuck because you are not sure how to code something or how to decipher an error, use a search engine like Google or Bing. You can copy and paste an error message directly and oftentimes, somebody has already written a clear explanation of what the error means and how to get rid of it.  </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="exercise-1">Exercise 1</h3>
+<p>In the robot localization lectures, Sebastian Thrun led you through Python code for one-dimensional robot sensing and robot movement. You ended up with a sense() function for updating probabilities based on a sensor measurement. You also had a move() function that updated probabilities based on robot movement across a grid.</p>
+<p>Translate the following code from Python into C++:</p>
+<pre><code class="python language-python">p = [0.2, 0.2, 0.2, 0.2, 0.2]
+world = ['green', 'red', 'red', 'green', 'green']
+measurements = ['red', 'green']
+motions = [1,1]
+pHit = 0.6
+pMiss = 0.2
+pExact = 0.8
+pOvershoot = 0.1
+pUndershoot = 0.1
+
+def sense(p, Z):
+    q=[]
+    for i in range(len(p)):
+        hit = (Z == world[i])
+        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))
+    s = sum(q)
+    for i in range(len(q)):
+        q[i] = q[i] / s
+    return q
+
+def move(p, U):
+    q = []
+    for i in range(len(p)):
+        s = pExact * p[(i-U) % len(p)]
+        s = s + pOvershoot * p[(i-U-1) % len(p)]
+        s = s + pUndershoot * p[(i-U+1) % len(p)]
+        q.append(s)
+    return q
+
+for k in range(len(measurements)):
+    p = sense(p, measurements[k])
+    p = move(p, motions[k])
+
+print p         </code></pre>
+<p>You can find one potential solution to the above translation <a href="https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/iSDC/CPP_basics_EX1_solution.cpp" rel="noopener noreferrer" target="_blank">here</a>. </p>
+<p>The expected output is:</p>
+<pre><code class="python language-python">0.211579 0.151579 0.0810526 0.168421 0.387368</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="exercise-2">Exercise 2</h3>
+<p>Write a C++ function that takes in two matrices and outputs their product. Your function should first check that the two matrices can actually be multiplied together; if matrix one is m by n and matrix two is w by z, then n must equal w. And the resulting matrix will be m by z.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Exercises')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2D Vectors</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Vectors</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. C++ Vectors.html">01. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="02. Namespaces.html">02. Namespaces</a>
+    </li>
+    <li class="">
+      <a href="03. Python Lists vs. C++ Vectors.html">03. Python Lists vs. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="04. Initializing Vector Values.html">04. Initializing Vector Values</a>
+    </li>
+    <li class="">
+      <a href="05. Vector Methods.html">05. Vector Methods</a>
+    </li>
+    <li class="">
+      <a href="06. Vectors and For Loops.html">06. Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="07. Math and Vectors.html">07. Math and Vectors</a>
+    </li>
+    <li class="">
+      <a href="08. 1D Vector Playground.html">08. 1D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="09. 2D Vectors.html">09. 2D Vectors</a>
+    </li>
+    <li class="">
+      <a href="10. 2D Vectors and For Loops.html">10. 2D Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="11. 2D Vector Playground.html">11. 2D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="12. Next Lesson.html">12. Next Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. 2D Vectors</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="two-dimensional-vectors">Two Dimensional Vectors</h1>
+<p>Next, you are going to use vectors to store matrices. Much like how Python uses a list of lists to store matrices, for the C++ lessons you will use a vector of vectors. The syntax for declaring two-dimensional vectors is a bit tricky.</p>
+<p>Say you're using Python and want to store a 3 by 5 matrix. You could do something like this:</p>
+<pre><code>matrixexample = [[2, 1, 5], [7, 9, 2], [16, 5, 9], [5, 2, 1], [1, 2, 4]]</code></pre>
+<p>In C++, you are going to create a similar structure by appending vectors to vectors. Here is a comparison of Python and C++ code to see what this looks like:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/copy-of-template.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="explanation-of-the-code">Explanation of the Code</h2>
+<p>First, the line</p>
+<pre><code class="c++ language-c++">vector &lt; vector &lt;int&gt; &gt; twodvector;</code></pre>
+<p>declares an empty two dimensional vector named twodvector. A couple of things to notice:</p>
+<ul>
+<li>like with all variables in C++, you have to declare what type of values will go into the vector. In this case, integers will go into the twodvector variable.</li>
+<li>Notice the spaces between brackets <code>&lt; vector &lt;int&gt; &gt;</code>. Your program probably won't run if the spacing is not done correctly.</li>
+</ul>
+<p>Then a one dimensional vector called singlerow is declared. The singlerow vector has the form [2, 2, 2].</p>
+<pre><code class="c++ language-c++">vector&lt;int&gt; singlerow (3,2);</code></pre>
+<p>Then the singlerow vector is appended to the twodvector five times:</p>
+<pre><code class="c++ language-c++">    for (int i = 0; i &lt; 5; i++) {
+        twodvector.push_back(singlerow);
+    }</code></pre>
+<p>You end up with the same two-dimensional structure just like in the Python code. If you were to run this C++ code, the terminal would print out:</p>
+<pre><code>2 2 2 
+2 2 2 
+2 2 2 
+2 2 2 
+2 2 2 </code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="alternative-initialization">Alternative Initialization</h2>
+<p>Here is another way you could have set up the vector from the previous example:</p>
+<pre><code class="c++ language-c++">vector &lt; vector &lt;int&gt; &gt; twodvector (5, vector &lt;int&gt; (3, 2));</code></pre>
+<p>The syntax is a little bit more complicated. But if you start from the inside of the parenthesis and work your way out, you see that you have already seen all of the functionality.</p>
+<p>The line:</p>
+<pre><code class="c++ language-c++">vector &lt;int&gt; (3, 2) </code></pre>
+<p>would set up an integer vector like {2, 2, 2}. So even though you don't see the inner vector, the code is essentially doing something like this:</p>
+<pre><code class="c++ language-c++">vector &lt; vector &lt;int&gt; &gt; twodvector (5, {2, 2, 2});</code></pre>
+<p>So then the code copies {2, 2, 2} five times into the twodvector variable: </p>
+<pre><code>{{2, 2, 2},
+{2, 2, 2},
+{2, 2, 2},
+{2, 2, 2},
+{2, 2, 2}}</code></pre>
+<p>Just keep in mind that only Python represents vectors or matrices with square brackets []. Newer versions of C++ can use squiggly brackets to represent vectors {}, but older implementations of C++ do not have an equivalent representation.</p>
+<p>A line of code like the following would not run in C++:</p>
+<pre><code class="c++ language-c++">vector &lt; vector &lt;int&gt; &gt; twodvector (5, [2, 2, 2]);</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. 2D Vectors and For Loops.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. 2D Vectors')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

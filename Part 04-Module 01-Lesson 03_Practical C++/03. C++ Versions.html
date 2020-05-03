@@ -1,0 +1,308 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C++ Versions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practical C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Compilation.html">01. Introduction to Compilation</a>
+    </li>
+    <li class="">
+      <a href="02. Running Code Locally.html">02. Running Code Locally</a>
+    </li>
+    <li class="">
+      <a href="03. C++ Versions.html">03. C++ Versions</a>
+    </li>
+    <li class="">
+      <a href="04. Structuring Functions and File Organization.html">04. Structuring Functions and File Organization</a>
+    </li>
+    <li class="">
+      <a href="05. Input and Output.html">05. Input and Output</a>
+    </li>
+    <li class="">
+      <a href="06. Reading in Text Files.html">06. Reading in Text Files</a>
+    </li>
+    <li class="">
+      <a href="07. Outputting to Text Files.html">07. Outputting to Text Files</a>
+    </li>
+    <li class="">
+      <a href="08. Exercises.html">08. Exercises</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. C++ Versions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="versions-of-c">Versions of C++</h1>
+<p>The <a href="https://www.iso.org/home.html" rel="noopener noreferrer" target="_blank">International Organization for Standardization</a> publishes standards for the C++ language. Every few years the standard is updated with new features and syntax. The C++ standards are  written documents providing guidelines for what the C++ language should be able to do and what the language looks like.</p>
+<p>The responsibility for implementing a standard is left to the company, person or team that designs a compiler; hence, not all compilers implement all features. And some compilers might implement a feature differently.</p>
+<p>There are currently five published C++ standards with the earliest standard called <strong>C++98</strong> and the most recent standard <strong>C++17</strong>. The number designates the year in which the standard was published such as 1998 and 2017.</p>
+<p>Thus far, the classroom has been compiling your code with the oldest standard: <strong>C++98</strong>. We have used C++98 so that you could get the basics of C++ down without worrying about advanced features.</p>
+<p>As an example of a more advanced features, <strong>C++11</strong>, allows you to initialize a vector with the following syntax:</p>
+<pre><code>vector&lt;int&gt; myvector = {5, 4, 9, 1, 10}</code></pre>
+<p>There is generally a lag of a few years between publication of a standard and industry adoption. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="gcc-compiler">GCC Compiler</h1>
+<p>The classroom uses a compiler called gcc. Thus far, we have been compiling your code for you when you hit the "Test Run" button. In the "Performance Programming C++" module, you will use a different interface for writing, compiling and running your code. This interface also uses the gcc compiler.</p>
+<p>In the classroom, gcc compiles with C++98 by default. As you will see, you can use the command line to tell gcc what version of C++ to use:</p>
+<pre><code>g++ -std=c++11 main.cpp</code></pre>
+<p>You might find different behavior on your system because of the compiler you are using or because of your compiler options.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C++ Versions</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Rank the C++ standards from oldest to newest</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>C++03</p></button>
+  <button class="btn btn-primary"><p>C++11</p></button>
+  <button class="btn btn-primary"><p>C++17</p></button>
+  <button class="btn btn-primary"><p>C++14</p></button>
+  <button class="btn btn-primary"><p>C++98</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Order</p>
+      </th>
+      <th>
+        <p>C++ Version</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>1</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>2</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>3</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>4</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>5</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Order</p>
+        </th>
+        <th>
+          <p>C++ Version</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>C++03</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>3</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>C++11</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>5</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>C++17</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>4</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>C++14</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>1</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>C++98</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Structuring Functions and File Organization.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. C++ Versions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

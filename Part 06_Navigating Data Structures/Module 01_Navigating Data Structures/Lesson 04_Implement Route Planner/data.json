@@ -1,0 +1,238 @@
+{
+  "data": {
+    "lesson": {
+      "id": 395971,
+      "key": "b1e11f40-418c-4292-af6f-56ac2603e868",
+      "title": "Implement Route Planner",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson you will actually implement a Google-maps style routing algorithm using A star search. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/b1e11f40-418c-4292-af6f-56ac2603e868/395971/1544452789688/Implement+Route+Planner+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/b1e11f40-418c-4292-af6f-56ac2603e868/395971/1544452787555/Implement+Route+Planner+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "09fc85f6-764f-4f82-a29a-a78b9f94a39e",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 40320,
+        "semantic_type": "Project",
+        "title": "Implement Route Planner",
+        "description": "To submit please return to the [Jupyter notebook on the previous page](https://classroom.udacity.com/nanodegrees/nd113/parts/ede2eb64-de89-4e84-a99d-0a838a67be6d/modules/5c470211-7565-4454-bb3f-17b04bd41044/lessons/b1e11f40-418c-4292-af6f-56ac2603e868/concepts/f85bd002-3f9f-4c2b-961e-7ef2d8ab700c) and press the submit button in the lower right corner.\n\nPlease **do not submit your project from this page** (apologies for the UI confusion).",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1210",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 436527,
+          "key": "2d7c94f4-86a6-4a52-a4bc-e4cc590bc32c",
+          "title": "About this Project",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2d7c94f4-86a6-4a52-a4bc-e4cc590bc32c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458572,
+              "key": "c7443e16-711d-4386-9409-a28043694d05",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# About this Project\nIn this project, you will **build** a route-planning algorithm like the one used in Google Maps to calculate the shortest path between two points on a map.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 458569,
+              "key": "8e5d60da-1905-4dce-b274-3872793889df",
+              "title": "Nd113 Navigating L3 01 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NGSaeofqZPc",
+                "china_cdn_id": "NGSaeofqZPc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 436266,
+          "key": "39de5601-ae58-44e7-853d-b155538b6022",
+          "title": "What to do",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "39de5601-ae58-44e7-853d-b155538b6022",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461437,
+              "key": "000e008e-9ec5-4dd7-9b02-a4f7df30b187",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Instructions\n\nThe next section is a Jupyter Notebook which contains all the instructions for the project. We recommend that you have two files open in separate tabs while working on this project: `project_notebook.ipynb`.  Further instructions and tips for the functions to implement can be found in the notebook!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461436,
+              "key": "3f2f559a-1735-4437-96d6-d62d70f14ad4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a0a0907_screen-shot-2017-11-13-at-1.04.07-pm/screen-shot-2017-11-13-at-1.04.07-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3f2f559a-1735-4437-96d6-d62d70f14ad4",
+              "caption": "",
+              "alt": "",
+              "width": 581,
+              "height": 80,
+              "instructor_notes": null
+            },
+            {
+              "id": 783907,
+              "key": "3574631d-128f-44b4-a2af-40a43503810f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Further instructions and tips for the functions to implement can be found in the notebook!",
+              "instructor_notes": null
+            },
+            {
+              "id": 543464,
+              "key": "24366b0d-94df-4658-bb91-23843622fdbd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Evaluation\nOnce you have completed your project, use the [Project Rubric](https://review.udacity.com/#!/rubrics/1210/view) to review the project. If you have covered all of the points in the rubric, then you are ready to submit! If you see room for improvement in any category in which you do not meet specifications, keep working!\n\nYour project will be evaluated by a Udacity reviewer according to the same Project Rubric. Your project must \"meet specifications\" in each category in order for your submission to pass.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461441,
+              "key": "b7216a6d-53ba-4491-b9e3-91128e7723a1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "When you're done with the project please double check any **outside sources have been correctly cited** before submitting. You should submit **from the Jupyter notebook** by clicking the big Submit button in the bottom right. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 543027,
+          "key": "498d1011-019d-4768-bd46-f476b68c2c4b",
+          "title": "Notebook - Implement Route Planner",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "498d1011-019d-4768-bd46-f476b68c2c4b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543029,
+              "key": "32a856f7-4d6d-475b-88bc-4993149b1684",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view680ce097",
+              "pool_id": "jupyter",
+              "view_id": "680ce097-3c99-448b-811a-0d534a6f2e83",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": true,
+                    "defaultPath": "/notebooks/project_notebook.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 458566,
+          "key": "84aa8262-0933-49ff-b15d-17ce5dc06765",
+          "title": "Congratulations!",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "84aa8262-0933-49ff-b15d-17ce5dc06765",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458568,
+              "key": "d8066c14-5d98-4e96-8865-859f24d81777",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Congratulations!\n\nOnce you've submitted and passed this project: congratulations! You've solved a **really** hard problem!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 458567,
+              "key": "44089732-7286-419e-92e8-3bfef9065133",
+              "title": "Nd113 Navigating Last Video V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yJfKK3Mg-BE",
+                "china_cdn_id": "yJfKK3Mg-BE.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

@@ -1,0 +1,2107 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349902,
+      "key": "49990947-c955-4c4f-bb08-73088c46d8bc",
+      "title": "Conditional Probability",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In order to infer meaning from noisy sensor measurements, a self driving car needs to use the math of Conditional Probability. Learn this math from Sebastian (and then apply it in the next lesson).",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/49990947-c955-4c4f-bb08-73088c46d8bc/349902/1544452598988/Conditional+Probability+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/49990947-c955-4c4f-bb08-73088c46d8bc/349902/1544452590477/Conditional+Probability+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 410352,
+          "key": "b344bfdd-c313-46dd-8c6d-ee1eb588c381",
+          "title": "Conditional Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b344bfdd-c313-46dd-8c6d-ee1eb588c381",
+            "completed_at": "2020-04-19T15:17:39.643Z",
+            "last_viewed_at": "2020-04-22T02:33:04.368Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410353,
+              "key": "f54bdd22-52bf-481e-89eb-dad14263f864",
+              "title": "Conditional Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Fda3U2HGNVM",
+                "china_cdn_id": "Fda3U2HGNVM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 349916,
+          "key": "447d848b-7df8-461c-9433-f05583041487",
+          "title": "Intro to Conditional Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "447d848b-7df8-461c-9433-f05583041487",
+            "completed_at": "2020-04-19T15:18:17.388Z",
+            "last_viewed_at": "2020-04-22T02:34:09.466Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 412915,
+              "key": "a3c897fc-accd-4de9-a580-8e3afba5a975",
+              "title": "Introduction To Conditional Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "-_j5NZN2Tfs",
+                "china_cdn_id": "-_j5NZN2Tfs.mp4"
+              }
+            },
+            {
+              "id": 412920,
+              "key": "4c43438d-aa89-489b-9f54-235380f78c3c",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4c43438d-aa89-489b-9f54-235380f78c3c",
+                "completed_at": "2020-04-19T15:19:57.793Z",
+                "last_viewed_at": "2020-04-19T15:19:57.793Z",
+                "unstructured": "{\"selected_id\":\"a1506703426969\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "What do you estimate is the probability `P(cloudy)` that one year from now it will be **cloudy** where you are now? ( `P(cloudy) = 0.0` means \"it definitely **will not** be cloudy\" and `P(cloudy) = 1.0` means it definitely **will** be cloudy).",
+                "answers": [
+                  {
+                    "id": "a1506703426969",
+                    "text": "P(cloudy) < 0.05",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1506703480391",
+                    "text": "0.05 < P(cloudy) < 0.20",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506703494432",
+                    "text": "0.20 < P(cloudy) < 0.40",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506703524424",
+                    "text": "0.40 < P(cloudy) < 0.60",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506703530745",
+                    "text": "0.60 <P(cloudy) < 0.80",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506703537377",
+                    "text": "0.80 < P(cloudy) < 0.95",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506703545809",
+                    "text": "P(cloudy) > 0.95",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 355675,
+          "key": "31b76004-fe5a-4c69-bb61-5cc1ae1cd6aa",
+          "title": "Estimating Based on Conditions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "31b76004-fe5a-4c69-bb61-5cc1ae1cd6aa",
+            "completed_at": "2020-04-19T15:20:04.747Z",
+            "last_viewed_at": "2020-04-22T02:34:55.172Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 412916,
+              "key": "43b1ac6c-2048-454f-a835-1f6543a5c688",
+              "title": "Estimating Based on Conditions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "RAIkZUZ2BeY",
+                "china_cdn_id": "RAIkZUZ2BeY.mp4"
+              }
+            },
+            {
+              "id": 412929,
+              "key": "9848e229-5f3e-46e8-b372-1ed6323606f2",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9848e229-5f3e-46e8-b372-1ed6323606f2",
+                "completed_at": "2020-04-19T15:20:49.631Z",
+                "last_viewed_at": "2020-04-19T15:23:00.464Z",
+                "unstructured": "{\"selected_id\":\"a1506703904768\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "What is your best estimate for the probability that it is cloudy one minute from now *given* your measurement of the current weather? ",
+                "answers": [
+                  {
+                    "id": "a1506703904768",
+                    "text": "P(cloudy | measurement) < 0.05",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1506704136740",
+                    "text": "0.05 < P(cloudy | measurement) < 0.20",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506704155125",
+                    "text": "0.20 < P(cloudy | measurement) < 0.40",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506704161205",
+                    "text": "0.40 < P(cloudy | measurement) < 0.60",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506704172645",
+                    "text": "0.60 < P(cloudy | measurement) < 0.80",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506704178102",
+                    "text": "0.80 < P(cloudy | measurement) < 0.95",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506704188790",
+                    "text": "P(cloudy | measurement) > 0.95",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 355682,
+          "key": "48606170-310c-471f-bb67-77b47f30027a",
+          "title": "Dependent Events and Conditional Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "48606170-310c-471f-bb67-77b47f30027a",
+            "completed_at": "2020-04-19T15:22:13.874Z",
+            "last_viewed_at": "2020-04-22T02:36:09.526Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 412917,
+              "key": "29ecc7e9-3eb4-41d5-8390-5f9139822239",
+              "title": "Dependent Events and Conditional Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GDWdCH4ilDI",
+                "china_cdn_id": "GDWdCH4ilDI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 357982,
+          "key": "2ec3fbcb-37c2-4ae1-a456-89606481a213",
+          "title": "Learning Objective Recap Explained",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2ec3fbcb-37c2-4ae1-a456-89606481a213",
+            "completed_at": "2020-04-19T15:23:09.957Z",
+            "last_viewed_at": "2020-04-22T03:06:04.602Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 357984,
+              "key": "cb8cb2a2-e786-4aa9-854d-e2f2c5a17c44",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning Objective Recap\n**In the previous lesson**, you began with the **learning objectives** for that lesson. These were a set of questions that demonstrated what you'd learn.\n\n**Next** you'll see those same questions. These are included here for two reasons:\n\n1. as a check to make sure you've learned what you were supposed to learn and\n2. as a reminder of where you left off (in case it's been a while since you finished the last lesson).\n\n**After** reviewing the *previous* lesson's learning objectives, you'll preview *this* lesson's learning objectives. Remember: you aren't expected to know the answers to these yet.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 349900,
+          "key": "f601ddf5-eadc-46ac-ac9d-7557b1855968",
+          "title": "Learning Objectives - Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f601ddf5-eadc-46ac-ac9d-7557b1855968",
+            "completed_at": "2020-04-19T15:02:58.995Z",
+            "last_viewed_at": "2020-04-22T03:06:02.671Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 357985,
+              "key": "020217f4-f6fd-4152-a336-950ad7f02ded",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning Objectives - Probability",
+              "instructor_notes": ""
+            },
+            {
+              "id": 349941,
+              "key": "bedd203b-6ce1-40b2-8a93-9a85491e73f6",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bedd203b-6ce1-40b2-8a93-9a85491e73f6",
+                "completed_at": "2020-04-19T15:03:22.460Z",
+                "last_viewed_at": "2020-04-19T15:03:25.094Z",
+                "unstructured": "{\"selected_ids\":[\"a1500921001559\",\"a1500921036907\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Which of the following are **true** statements about a fair coin?",
+                "answers": [
+                  {
+                    "id": "a1500921001559",
+                    "text": "The probability of heads is the same as the probability of tails.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921036907",
+                    "text": "When flipping a coin multiple times, each flip is an **independent event**.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921073649",
+                    "text": "When a flip comes up *heads*, it becomes more likely that the NEXT flip will come up *tails*.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921125821",
+                    "text": "When a flip comes up *heads*, it becomes more likely that the NEXT flip will come up *heads*.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349940,
+              "key": "3a2539d7-71f1-4fdf-ab07-62b23e0e14c0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/July/59763b9c_untitled-presentation-4/untitled-presentation-4.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3a2539d7-71f1-4fdf-ab07-62b23e0e14c0",
+              "caption": "",
+              "alt": null,
+              "width": 364,
+              "height": 370,
+              "instructor_notes": null
+            },
+            {
+              "id": 349939,
+              "key": "5f28669c-f8d8-4976-a2c8-a67e1d8b1c4d",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5f28669c-f8d8-4976-a2c8-a67e1d8b1c4d",
+                "completed_at": "2020-04-19T15:04:18.417Z",
+                "last_viewed_at": "2020-04-19T15:04:18.417Z",
+                "unstructured": "{\"answer\":\"0.35\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "At a particular intersection, cars can either:\n\n1. Turn left\n\n2. Go straight\n\n3. Turn right\n\nCars tend to turn left with a probability of 0.4 and go straight with a probability of 0.25.  What is the probability that a car turns right?",
+                "matchers": [
+                  {
+                    "expression": "^\\s*0?\\.350*\\s*"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349943,
+              "key": "47774f6e-7fd5-4afb-bb0d-3a692756f11d",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "47774f6e-7fd5-4afb-bb0d-3a692756f11d",
+                "completed_at": "2020-04-19T15:04:32.614Z",
+                "last_viewed_at": "2020-04-19T15:04:32.614Z",
+                "unstructured": "{\"selected_id\":\"a1500921341270\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You flip a fair coin 3 times. What's the probability that all three flips are heads?",
+                "answers": [
+                  {
+                    "id": "a1500921313772",
+                    "text": "1.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921325862",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921329048",
+                    "text": "0.333",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921334276",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921341270",
+                    "text": "0.125",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921346158",
+                    "text": "0.0625",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349945,
+              "key": "70db40b0-8a95-4245-9f6d-2819210446f5",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "70db40b0-8a95-4245-9f6d-2819210446f5",
+                "completed_at": "2020-04-19T15:04:57.623Z",
+                "last_viewed_at": "2020-04-19T15:05:04.300Z",
+                "unstructured": "{\"selected_id\":\"a1500921604656\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You flip a fair coin two times. What's the probability that **at least one flip** is heads?",
+                "answers": [
+                  {
+                    "id": "a1500921490116",
+                    "text": "0.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921589127",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921591658",
+                    "text": "0.333",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921594302",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921604656",
+                    "text": "0.75",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921609935",
+                    "text": "1.0",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349947,
+              "key": "437ce92e-cf23-4bc4-bb5d-a9f1cc31e4bb",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "437ce92e-cf23-4bc4-bb5d-a9f1cc31e4bb",
+                "completed_at": "2020-04-19T15:06:23.909Z",
+                "last_viewed_at": "2020-04-19T15:06:39.493Z",
+                "unstructured": "{\"selected_id\":\"a1500921909656\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You roll two six sided dice and then add the numbers together. What's the probability that the sum is equal to 7?",
+                "answers": [
+                  {
+                    "id": "a1500921816620",
+                    "text": "1/2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921900219",
+                    "text": "1/3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921903304",
+                    "text": "1/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921905705",
+                    "text": "1/5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921909656",
+                    "text": "1/6",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921913663",
+                    "text": "1/7",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921916537",
+                    "text": "1/12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921931751",
+                    "text": "1/36",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921943700",
+                    "text": "7/36",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 349905,
+          "key": "38b9ce6c-2be9-4834-a5ec-63af1bfab08a",
+          "title": "Learning Objectives - Conditional Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "38b9ce6c-2be9-4834-a5ec-63af1bfab08a",
+            "completed_at": "2020-04-19T15:23:49.520Z",
+            "last_viewed_at": "2020-04-22T02:39:03.870Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 350122,
+              "key": "d43356b1-5894-4764-b4f6-ca7216923dba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning Objectives - Conditional Probability\n\nWe use the notation where\n* <span class=\"mathquill\">P(A)</span> means \"the probability of A\"\n* <span class=\"mathquill\">P(\\neg A)</span> means \"the probability of NOT A\"\n*  <span class=\"mathquill\">P(A,B)</span> means \"the probability of A **and** B\"  \n* <span class=\"mathquill\">P(A|B)</span> means \"the probability of A **given** B.\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 350083,
+              "key": "bbd4b92c-9192-4886-aee8-da3272df6196",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bbd4b92c-9192-4886-aee8-da3272df6196",
+                "completed_at": "2020-04-19T15:24:07.442Z",
+                "last_viewed_at": "2020-04-19T15:24:07.442Z",
+                "unstructured": "{\"selected_id\":\"a1500933873835\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "If A and B are **independent** events and P(A) = 0.2 and P(B) = 0.1, what is P(A,B)?",
+                "answers": [
+                  {
+                    "id": "a1500933809643",
+                    "text": "0.3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500933853061",
+                    "text": "0.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500933864301",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500933873835",
+                    "text": "0.02",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500934245043",
+                    "text": "Not enough information to answer",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934252103",
+                    "text": "I don't know",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 350106,
+              "key": "bf2510ed-d972-4bc7-8c57-0eebcac68a20",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bf2510ed-d972-4bc7-8c57-0eebcac68a20",
+                "completed_at": "2020-04-19T15:24:16.860Z",
+                "last_viewed_at": "2020-04-19T15:24:44.362Z",
+                "unstructured": "{\"selected_id\":\"a1500934373758\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "If A and B are **NOT independent** events, and P(A) = 0.2 and P(B) = 0.1, what is P(A, B)?",
+                "answers": [
+                  {
+                    "id": "a1500934320168",
+                    "text": "0.3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934362471",
+                    "text": "0.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934365406",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934367815",
+                    "text": "0.02",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934373758",
+                    "text": "Not enough information to answer",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500934382848",
+                    "text": "I don't know",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 355707,
+              "key": "6ebe4de5-9d32-4366-ae96-8e4f91c10e3a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6ebe4de5-9d32-4366-ae96-8e4f91c10e3a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "If A and B are NOT independent events, and P(A) = 0.2, P(B) = 0.1, and P(B|A) = 0.3 what is P(A|B)?",
+                "answers": [
+                  {
+                    "id": "a1501874471170",
+                    "text": "0.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874502444",
+                    "text": "0.01",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874506318",
+                    "text": "0.02",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874509252",
+                    "text": "0.03",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874512125",
+                    "text": "0.04",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874514979",
+                    "text": "0.06",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874518093",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874521685",
+                    "text": "0.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874524401",
+                    "text": "0.3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874527603",
+                    "text": "0.4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874531914",
+                    "text": "0.6",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501874537090",
+                    "text": "1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875737595",
+                    "text": "I don't know",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 355710,
+              "key": "b051b23d-6011-4e11-a4ec-635053e9c157",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Note:\nThe remaining questions deal with two coins. \n\n**Coin 1** is fair. When flipped it has a **probability of 0.5 for heads and 0.5 for tails.**\n\n**Coin 2** is biased. When flipped it has a **probability of 0.9 for heads and 0.1 for tails.**",
+              "instructor_notes": ""
+            },
+            {
+              "id": 355720,
+              "key": "631f7d39-394a-4fa6-8318-cb34eea679ca",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "631f7d39-394a-4fa6-8318-cb34eea679ca",
+                "completed_at": "2020-04-19T15:26:27.763Z",
+                "last_viewed_at": "2020-04-19T15:26:31.265Z",
+                "unstructured": "{\"selected_id\":\"a1501874923317\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You grab one of these two coins *at random* (equally likely that you grabbed coin 1 or 2) and you flip it. What's the probability it comes up heads?",
+                "answers": [
+                  {
+                    "id": "a1501874811948",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874904998",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874907722",
+                    "text": "0.45",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874911216",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874913735",
+                    "text": "0.6",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874923317",
+                    "text": "0.7",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501874925688",
+                    "text": "0.8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874932492",
+                    "text": "0.9",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874936267",
+                    "text": "1.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874945392",
+                    "text": "1.4",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 355727,
+              "key": "5ce8fe81-0b55-40d5-be90-cdf3016c9a6e",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5ce8fe81-0b55-40d5-be90-cdf3016c9a6e",
+                "completed_at": "2020-04-19T15:27:24.988Z",
+                "last_viewed_at": "2020-04-19T15:27:24.988Z",
+                "unstructured": "{\"selected_id\":\"a1501875225805\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You grab a coin at random and flip it twice. \n\nWhat's the probability that it comes up tails both times?",
+                "answers": [
+                  {
+                    "id": "a1501874970316",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875184479",
+                    "text": "0.09",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875225805",
+                    "text": "0.13",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501875228988",
+                    "text": "0.21",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875234698",
+                    "text": "0.35",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875240651",
+                    "text": "0.44",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875254040",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875762758",
+                    "text": "I don't know",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 88809,
+          "key": "487450700923",
+          "title": "Dependent Things",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487450700923",
+            "completed_at": "2020-04-19T15:27:28.879Z",
+            "last_viewed_at": "2020-04-19T15:27:31.917Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 20207,
+              "key": "48745070",
+              "title": "Dependent Things",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "NDL-rxSYJWo",
+                "china_cdn_id": "NDL-rxSYJWo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 436597,
+          "key": "b948823d-93f2-4114-a4c4-eaa278f6359b",
+          "title": "Notation Note",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b948823d-93f2-4114-a4c4-eaa278f6359b",
+            "completed_at": "2020-04-19T15:29:17.640Z",
+            "last_viewed_at": "2020-04-22T02:32:37.507Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 436599,
+              "key": "78ec5673-e3f6-4f0a-b404-6cbbf9680e52",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Notation Note\nThis lesson will use some notation that you may not be familiar with. The table below explains some of that notation.\n\n|**Symbol**        | **Usage**    |  **Interpretation**\n| :-------------: |:-------------:|:-------|\n| <span class=\"mathquill\">P</span>| <span class=\"mathquill\">P(A)</span>      | \"The **probability** of event <span class=\"mathquill\">A</span> occurring\" | \n| <span class=\"mathquill\">\\lnot</span>     | <span class=\"mathquill\">P(\\lnot A)</span> | \"The probability of event <span class=\"mathquill\">A</span> **not** occurring\" |\n| <span class=\"mathquill\">\\mid</span> | <span class=\"mathquill\">P(A \\mid B)</span> | \"The probability of event <span class=\"mathquill\">A</span> occurring **given that** event <span class=\"mathquill\">B</span> occurs\"\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 89099,
+          "key": "487293710923",
+          "title": "Medical Example 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487293710923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 82355,
+              "key": "48729371",
+              "title": "Medical Example 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48729371",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "mFfbts1lAEo",
+                  "china_cdn_id": "mFfbts1lAEo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 1",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/M_5WqNtVlQEZ5MMTjpQzvcJLUyJw31C0x7nLx8JOTQR62wH3Y8kvQxho7hB9STitqL2QFkTzeYMgZPhe7jE=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48729371",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48716288",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183301414",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.08728179551122195,
+                      "x": 0.78125,
+                      "y": 0.25
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "E1ph6NP3_v4",
+                  "china_cdn_id": "E1ph6NP3_v4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 124510,
+          "key": "487236390923",
+          "title": "Medical Example 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236390923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 83663,
+              "key": "48723639",
+              "title": "Medical Example 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723639",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "FV_hc3MzS_8",
+                  "china_cdn_id": "FV_hc3MzS_8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 2",
+                "alt_text": "",
+                "background_image": "//lh5.ggpht.com/whIxkfDntcypE6B4lmSigDBEJbuf2hH-OFy522GFYcxRBhnIKdDAPiwxns70h8nO-KugHhD8xqlKRuBOyQ4=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723639",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48632848",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183339506",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.10972568578553615,
+                      "x": 0.798784289276808,
+                      "y": 0.7115091463414634
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "VLLG0rYC7To",
+                  "china_cdn_id": "VLLG0rYC7To.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87899,
+          "key": "486789140923",
+          "title": "Medical Example 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486789140923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 128758,
+              "key": "48678914",
+              "title": "Medical Example 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48678914",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Iz4ViIg9ZlQ",
+                  "china_cdn_id": "Iz4ViIg9ZlQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 3",
+                "alt_text": "",
+                "background_image": "//lh5.ggpht.com/IjJdXIUiN1C1lOgVOnI1O4w8kyjbvA5sKNpQeotjXENsaU4FgmE64w1WMIeqru5guYQXCfs3VwcOZEhdaA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48678914",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48641639",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183371951",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.09725685785536159,
+                      "x": 0.32291666666666674,
+                      "y": 0.28703703703703703
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Rf6WfB_1EJQ",
+                  "china_cdn_id": "Rf6WfB_1EJQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87519,
+          "key": "486977510923",
+          "title": "Medical Example 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486977510923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 89163,
+              "key": "48697751",
+              "title": "Medical Example 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48697751",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "pL8Bf6tck_A",
+                  "china_cdn_id": "pL8Bf6tck_A.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 4",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/HrbGQ5xB1huNYerWkXWNIpp64dyx7QTDYIRVpKfFuvBvpTKUlY9_KwneR9-70UmuHy8AOceFFj-8GCCe1w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48697751",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48739228",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183498088",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.09975062344139651,
+                      "x": 0.3206437032418953,
+                      "y": 0.3459672949002217
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "udduksMWMB4",
+                  "china_cdn_id": "udduksMWMB4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87641,
+          "key": "486928260923",
+          "title": "Medical Example 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486928260923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127156,
+              "key": "48692826",
+              "title": "Medical Example 5",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48692826",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "fqt7NIvMB0s",
+                  "china_cdn_id": "fqt7NIvMB0s.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 5",
+                "alt_text": "",
+                "background_image": "//lh5.ggpht.com/i49V-hp6_wwsg9NAIJdNKrp0MqZeobaoMuvRvZiTl1BJwyCYEIrfGop-C3Cq801BWz7FaT6CWnmxxWgh6CA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48692826",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48716290",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183525167",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.10224438902743142,
+                      "x": 0.3270924251870324,
+                      "y": 0.4156042128603104
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ys9w-NNKCcU",
+                  "china_cdn_id": "ys9w-NNKCcU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87441,
+          "key": "486987400923",
+          "title": "Medical Example 6",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486987400923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 90245,
+              "key": "48698740",
+              "title": "Medical Example 6",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48698740",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "iyE5h48qPFQ",
+                  "china_cdn_id": "iyE5h48qPFQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 6",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/RqmOxpR34PIQhLUgGnNq6KtGuKfrs_EOUfsKH88pfHwZXdzifrw5fVf8Akd3moYK77AocHV1YQFmuRrX-z0=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48698740",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48271966",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183572282",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.1130820399113082,
+                      "width": 0.10349127182044887,
+                      "x": 0.3206437032418953,
+                      "y": 0.5015590354767184
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-lC9xztr4zA",
+                  "china_cdn_id": "-lC9xztr4zA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87065,
+          "key": "487214940923",
+          "title": "Medical Example 7",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487214940923",
+            "completed_at": "2020-04-22T02:32:43.395Z",
+            "last_viewed_at": "2020-04-22T02:32:44.314Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 46775,
+              "key": "48721494",
+              "title": "Medical Example 7",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Please note that the four combined probabilities listed are 0.09, 0.01, 0.18, and 0.72.",
+              "user_state": {
+                "node_key": "48721494",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cw_zgQbAWNU",
+                  "china_cdn_id": "cw_zgQbAWNU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 7",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/mM53JGRMro8DfXsOEwbgNealEWwKRjsZD93EFKeX7nitr6yaylMfT3XGbfNM66tWrB_d17Y7wdFNC8-xbpw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48721494",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734324",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183605829",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.09850374064837905,
+                      "x": 0.34000935162094764,
+                      "y": 0.6700388026607539
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "jPspIs-fNxg",
+                  "china_cdn_id": "jPspIs-fNxg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87503,
+          "key": "486987410923",
+          "title": "Medical Example 8",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486987410923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 86550,
+              "key": "48698741",
+              "title": "Medical Example 8",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Please note that the four combined probabilities listed are 0.09, 0.01, 0.18, and 0.72.",
+              "user_state": {
+                "node_key": "48698741",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "7k5oAaZamCA",
+                  "china_cdn_id": "7k5oAaZamCA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 8",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/xoUtUbF5H7JVdSUx53ImAbjYGUou-kSk-1wGOvIPoB5eYZ-d2Q61PyvpU0wjQVeHDojLVgM8U5PHcUJb_w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48698741",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48271967",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183632830",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.15077605321507762,
+                      "width": 0.16209476309226933,
+                      "x": 0.6675498753117207,
+                      "y": 0.7611904101995566
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "btGdX0ZpkNU",
+                  "china_cdn_id": "btGdX0ZpkNU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87100,
+          "key": "487202500923",
+          "title": "Total Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487202500923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 51319,
+              "key": "48720250",
+              "title": "Total Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "YSYpzFR4k1I",
+                "china_cdn_id": "YSYpzFR4k1I.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 87009,
+          "key": "487236400923",
+          "title": "Two Coins 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236400923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 83656,
+              "key": "48723640",
+              "title": "Two Coins 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723640",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "QIQBb4nLsHc",
+                  "china_cdn_id": "QIQBb4nLsHc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Coins 1",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/eqqYv89IoXo3EB0nUFLZCPf3qs25GxUDjXQ0-8CN-JiBDsSBpYbGPYBGEVkCTl5qpF5t3eRTRow1vw49nvLi=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723640",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48632846",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183694153",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.12416851441241686,
+                      "width": 0.08728179551122195,
+                      "x": 0.33128117206982544,
+                      "y": 0.3044969512195122
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341183709206",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.12195121951219512,
+                      "width": 0.09226932668329177,
+                      "x": 0.16439370324189526,
+                      "y": 0.45523835920177386
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "SYnYIjLpbjE",
+                  "china_cdn_id": "SYnYIjLpbjE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87609,
+          "key": "486938400923",
+          "title": "Two Coins 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938400923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 91364,
+              "key": "48693840",
+              "title": "Two Coins 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Around 0:42, Sebastian means to say, \"0.5 times 0.9\", not \"0.5 times 0.95\".",
+              "user_state": {
+                "node_key": "48693840",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "tI0J14yQr1s",
+                  "china_cdn_id": "tI0J14yQr1s.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Coins 2",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/iseSFLoaHAs5m4wG4wiGCreh6cET5PCwKAfeTXrzBLUfBnfwUgm4sJgtUy8dcZHnDgTwB4puGY3kQrP8zwc=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48693840",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734186",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183755219",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09534368070953436,
+                      "width": 0.11596009975062344,
+                      "x": 0.8325280548628429,
+                      "y": 0.031146064301552107
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "hoVOT8qcQ7c",
+                  "china_cdn_id": "hoVOT8qcQ7c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87568,
+          "key": "486957990923",
+          "title": "Two Coins 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486957990923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 109980,
+              "key": "48695799",
+              "title": "Two Coins 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Clarification: You are picking only one coin from the bag, then flipping that one coin twice and observing heads then tails.\n\nText in red P<sub>1</sub>(T) = 0.1 should be P<sub>2</sub>(T) = 0.1",
+              "user_state": {
+                "node_key": "48695799",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GO6kbL3QRBE",
+                  "china_cdn_id": "GO6kbL3QRBE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Coins 3",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/2wgFBe5JZr5tXFgerAA_GvqudvfEJDxAfBlKRXL_h8KkNlB6zIy0fx1SJVEtgbTmeF1cgAXtvNGJlMtV5g=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48695799",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48652467",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183791354",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.13303769401330376,
+                      "width": 0.12344139650872818,
+                      "x": 0.840886066084788,
+                      "y": 0.21490437915742794
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "JIWv5fU3GLA",
+                  "china_cdn_id": "JIWv5fU3GLA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87366,
+          "key": "487015560923",
+          "title": "Two Coins 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487015560923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 75672,
+              "key": "48701556",
+              "title": "Two Coins 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "To clarify, the process happening here is as follows: You choose a coin and then flip it twice. The coin is not put back and chosen again in between flips.",
+              "user_state": {
+                "node_key": "48701556",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cDub-OOrIRE",
+                  "china_cdn_id": "cDub-OOrIRE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Coins 4",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/Q2JugAhAnqpu8ZhxMri1K8pe3Cm_3sgijVP7ZZed3Siw_jLSxjyuV8t9NT8SZFrThM3mTMU_aLzaFsQ2iQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48701556",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48720246",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341184050692",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.11751662971175167,
+                      "width": 0.13341645885286782,
+                      "x": 0.55794108478803,
+                      "y": 0.08488082039911309
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "9R44IyZ-aQI",
+                  "china_cdn_id": "9R44IyZ-aQI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88988,
+          "key": "487392360923",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487392360923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 60888,
+              "key": "48739236",
+              "title": "Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "yepMH9VswI8",
+                "china_cdn_id": "yepMH9VswI8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 785553,
+          "key": "74d821fe-5305-4cba-93bc-e598288b1b29",
+          "title": "[Optional] Cars and Conditional Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "74d821fe-5305-4cba-93bc-e598288b1b29",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 785554,
+              "key": "b67d027d-2563-4470-8132-76d3d9d4753a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Cars and Conditional Probability\n\nSo far you have gotten a glimpse of how probability is used in self-driving cars when events are independent from each other. However, in many cases, the previous event helps shape the probability of the current event. In this case, these events are said to be conditional, meaning they are affected by another (usually previous) event. This is a bit of a tricky nuance so let us spend some time trying to build some intuition.\n\n** *If you are already comfortable with conditional probability, please feel free to skip these exercises.* **\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785555,
+              "key": "5bc54c5a-c643-4dcf-a0ec-56fc9e471d38",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5bfc83c6_rightoway-2/rightoway-2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5bc54c5a-c643-4dcf-a0ec-56fc9e471d38",
+              "caption": "",
+              "alt": "",
+              "width": 300,
+              "height": 220,
+              "instructor_notes": null
+            },
+            {
+              "id": 785556,
+              "key": "cf98a92e-5522-4224-80a5-9e7fcc909099",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here is a real-problem that plagues many self-driving cars. Suppose your self-driving car and another car arrive at a four-way stop. The rules of the road state that the car that arrives at the stop sign first has the right of way to continue through the intersection before the other car. Unfortunately, sometimes this is hard to determine because two cars appear to get to the stop sign at the same time. Additionally, sometimes, the car that arrives second will actually go before the car that arrives first (thus breaking the law). ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785560,
+              "key": "80081a75-4873-46a4-a188-3fa73f8cd426",
+              "title": "Conditional Probability",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "80081a75-4873-46a4-a188-3fa73f8cd426",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Suppose your car and another car arrive at the intersection at roughly the same time. The probability you arrived first is 0.6. What is the probability that the other car arrived first?\n",
+                "matchers": [
+                  {
+                    "expression": "0.4"
+                  },
+                  {
+                    "expression": ".4"
+                  },
+                  {
+                    "expression": "4/10"
+                  },
+                  {
+                    "expression": "2/5"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785563,
+              "key": "fc37ab1d-9007-430e-8284-3578885eda07",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "At this point you know have several scenarios. You could arrive first, or you could arrive second. If you arrive first, you could go first or second, and similar for arriving second. However, the action of going is dependent on whether you arrived first or second.\n\nThis is called conditional probability, and can be denoted as <span class='mathquill'>P(X|Y)</span> (read as \"the probability of X given Y\"). ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785562,
+              "key": "d8b1b573-66a5-48c6-9fcf-b80a14e254d3",
+              "title": "Conditional Probability 2",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d8b1b573-66a5-48c6-9fcf-b80a14e254d3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Assume <span class='mathquill'>P(\\textrm{Go First} | \\textrm{Arrived First}) = 0.8</span>. What is the <span class='mathquill'>P(\\textrm{Go Second} | \\textrm{Arrived First})</span>?\n",
+                "matchers": [
+                  {
+                    "expression": "0.2"
+                  },
+                  {
+                    "expression": ".2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 787500,
+              "key": "0c3cae75-e8d5-49c3-8444-483153685f0d",
+              "title": "Conditional Probability 3",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0c3cae75-e8d5-49c3-8444-483153685f0d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Assume <span class='mathquill'>P(\\textrm{Go First} | \\textrm{Arrived Second}) = 0.9</span>. What is the <span class='mathquill'>P(\\textrm{Go Second} | \\textrm{Arrived Second})</span>?\n",
+                "matchers": [
+                  {
+                    "expression": "0.1"
+                  },
+                  {
+                    "expression": ".1"
+                  },
+                  {
+                    "expression": "1/10"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785598,
+              "key": "9c561899-6974-44cf-b7fc-d4323cce8c5b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Now, let’s calculate the conditional probability of some events. In order to do this we need the following formula:\n\n<span class='mathquill'>P(A|B) = P(A \\cap B) / P(B)</span>\n\nWhat this means in English is given an event B, find all the events shared with A, and divide by the probability of event B happening by itself. The <span class='mathquill'>\\cap</span> symbol for intersection represents these events shared between A & B.\n\nWhen dealing with these probabilities, the basic rules of algebra apply so we manipulate the equation by multiplying both sides by <span class='mathquill'>\\small P(B)</span> to also look like this:\n\n<span class='mathquill'>P(A \\cap B) = P(A|B) * P(B)</span>\n\nOther formulations are also valid provided you adhere to the algebraic rules, but these two equations should be sufficient for many of your needs. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785597,
+              "key": "7beab8a5-27b9-433a-b2e2-18e059222dbf",
+              "title": "Conditional Probability 3",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7beab8a5-27b9-433a-b2e2-18e059222dbf",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Assume:\n\nP(Arrive First) = 0.9\n\nP(Arrive Second) = 0.1\n\nP(Go First | Arrive Second) = 0.1\n\nP(Go Second | Arrive Second) = 0.9\n\nP(Go First | Arrive First) = 0.8\n\nP(Go Second | Arrive First) = 0.2\n\nUsing the formula <span class='mathquill'>P(A \\cap B) = P(A|B) * P(B)</span>\n\nWhat is <span class='mathquill'>P(\\textrm{You Go First} \\cap \\textrm{You Arrived First})</span>?",
+                "matchers": [
+                  {
+                    "expression": "0.72"
+                  },
+                  {
+                    "expression": ".72"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 787508,
+              "key": "ab38e410-bf48-4a72-9019-06953a52d412",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Law of Total Probability\n\nA useful law when dealing with conditional probability is the Law of Total Probability. \n\nIf <span class='mathquill'>B_1, B_2, B_3, ...</span> is a partition of a sample space <span class='mathquill'>S</span>, then for any event <span class='mathquill'>A</span>:\n\n<span class='mathquill'>P(A)=\\sum_i P(A \\cap B_i) = \\sum_i P(A | B_i) * P(B_i)</span>\n\nThe formal definition is a bit \"mathy\", but think of it as calculating the sum of all probabilities necessary to ensure all scenarios for specified event are included. This is actually quite similar to the equation from before, but now we calculate it for each <span class='mathquill'>i</span> of <span class='mathquill'>B</span>, and then sum all of these together.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 787510,
+              "key": "0a310e87-2253-4897-adfd-741fa19bb76b",
+              "title": "Total Probability",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0a310e87-2253-4897-adfd-741fa19bb76b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Recalling the previous values from above:\n\nP(Arrive First) = 0.6\n\nP(Arrive Second) = 0.4\n\nP(Go First | Arrive First) = 0.8\n\nP(Go Second | Arrive First) = 0.2\n\nP(Go First | Arrive Second) = 0.1\n\nP(Go Second | Arrive Second) = 0.9\n\nWhat is <span class='mathquill'>P(\\textrm{Go First})</span>? (Decimal only)",
+                "matchers": [
+                  {
+                    "expression": "0.52"
+                  },
+                  {
+                    "expression": ".52"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

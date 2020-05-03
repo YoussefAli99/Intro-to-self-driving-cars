@@ -1,0 +1,891 @@
+{
+  "data": {
+    "lesson": {
+      "id": 372422,
+      "key": "56980e75-08e4-4b3c-ba7f-58f10e963980",
+      "title": "The Carla Chronicles: Back on Track",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Work through the readiness assessment with Carla and her friends to make sure you are ready to begin your own personal adventure with self-driving cars!",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 385761,
+          "key": "3717bd8f-a1ae-40a2-b040-4c187ee2e312",
+          "title": "The Carla Chronicles: Back on Track",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3717bd8f-a1ae-40a2-b040-4c187ee2e312",
+            "completed_at": "2020-04-19T12:33:14.907Z",
+            "last_viewed_at": "2020-04-19T12:33:16.889Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 396502,
+              "key": "c3b8b3d6-6c99-4065-8788-4119c2e933e9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59bb5b04_udacity-cover-shades-2/udacity-cover-shades-2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c3b8b3d6-6c99-4065-8788-4119c2e933e9",
+              "caption": "Join Carla (the Udacity self-driving car) and her friends on a quick adventure to help you see where your programming and math are currently at.",
+              "alt": "",
+              "width": 2334,
+              "height": 2324,
+              "instructor_notes": null
+            },
+            {
+              "id": 402200,
+              "key": "512d6f5d-44e0-4e5b-907c-479ad3ee29c8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 385762,
+          "key": "f279be17-399f-4b6d-8cc1-14c2065a5601",
+          "title": "Meet the Crew",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f279be17-399f-4b6d-8cc1-14c2065a5601",
+            "completed_at": "2020-04-19T12:33:27.743Z",
+            "last_viewed_at": "2020-04-19T12:33:29.641Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 396507,
+              "key": "f64f1523-0c91-4f10-8b56-b2ebcbc8090b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59bb5db4_udacity-characters-bios-2/udacity-characters-bios-2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f64f1523-0c91-4f10-8b56-b2ebcbc8090b",
+              "caption": "",
+              "alt": "",
+              "width": 2414,
+              "height": 2904,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 372480,
+          "key": "34bdfd74-e224-41ed-b49f-fcb36981223d",
+          "title": "Wheel Size Matters",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "34bdfd74-e224-41ed-b49f-fcb36981223d",
+            "completed_at": "2020-04-19T12:33:45.617Z",
+            "last_viewed_at": "2020-04-19T12:33:47.664Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402924,
+              "key": "15553c6f-82f9-4f0f-b8e5-6aad2cd3dffa",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c091e8_udacity-page-1-shades/udacity-page-1-shades.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/15553c6f-82f9-4f0f-b8e5-6aad2cd3dffa",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385760,
+          "key": "f61de639-b7ac-45e0-88d7-d0658589fc05",
+          "title": "Challenge: Rotation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f61de639-b7ac-45e0-88d7-d0658589fc05",
+            "completed_at": "2020-04-19T12:35:12.665Z",
+            "last_viewed_at": "2020-04-19T12:35:14.599Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402373,
+              "key": "926dc4d6-3f86-4ab3-8615-33e04f4eae59",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59be15b0_udacity-challenge-shades-3/udacity-challenge-shades-3.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/926dc4d6-3f86-4ab3-8615-33e04f4eae59",
+              "caption": "",
+              "alt": "",
+              "width": 3828,
+              "height": 1485,
+              "instructor_notes": null
+            },
+            {
+              "id": 402768,
+              "key": "380d9a23-f934-4824-accf-6c1249ea5f2c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c00964_sdc-course-images-design-4/sdc-course-images-design-4.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/380d9a23-f934-4824-accf-6c1249ea5f2c",
+              "caption": "",
+              "alt": "",
+              "width": 488,
+              "height": 456,
+              "instructor_notes": null
+            },
+            {
+              "id": 393846,
+              "key": "9380ca1d-38ee-404d-b5f4-9721aaa1c218",
+              "title": "How far will she roll?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9380ca1d-38ee-404d-b5f4-9721aaa1c218",
+                "completed_at": "2020-04-19T12:35:44.695Z",
+                "last_viewed_at": "2020-04-19T12:35:44.695Z",
+                "unstructured": "{\"selected_id\":\"a1504888010626\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You brush the dust off of one of Carla's new tires. The rubber on the side is raised and says:\n\n```\nTire Diameter: 100 cm\n```\n\nAbout how far will Carla roll forward with **one full rotation** of her tires?",
+                "answers": [
+                  {
+                    "id": "a1504887853935",
+                    "text": "50 cm",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504888007624",
+                    "text": "100 cm",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504888010626",
+                    "text": "314 cm",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504888019394",
+                    "text": "500 cm",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 372423,
+          "key": "6183c4de-e0ce-41c8-975c-fedd2684e174",
+          "title": "Lost in Space",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6183c4de-e0ce-41c8-975c-fedd2684e174",
+            "completed_at": "2020-04-19T12:35:48.908Z",
+            "last_viewed_at": "2020-04-19T12:35:50.892Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402925,
+              "key": "39aa66bd-ad3f-414f-85d5-083d28a45806",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c09291_udacity-page-2-shades/udacity-page-2-shades.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/39aa66bd-ad3f-414f-85d5-083d28a45806",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385776,
+          "key": "bb9980de-1980-448c-b51e-5ce9fda63f42",
+          "title": "Challenge: Localization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bb9980de-1980-448c-b51e-5ce9fda63f42",
+            "completed_at": "2020-04-19T12:36:18.846Z",
+            "last_viewed_at": "2020-04-19T12:36:20.684Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402372,
+              "key": "61bce53e-ef2c-4b3b-8e75-076e767fac43",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59be1597_udacity-challenge-shades-3/udacity-challenge-shades-3.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/61bce53e-ef2c-4b3b-8e75-076e767fac43",
+              "caption": "",
+              "alt": "",
+              "width": 3828,
+              "height": 1485,
+              "instructor_notes": null
+            },
+            {
+              "id": 402172,
+              "key": "9d95d10b-c380-431d-8062-2457c4fc944e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59bc80c5_sdc-course-images-design-1/sdc-course-images-design-1.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9d95d10b-c380-431d-8062-2457c4fc944e",
+              "caption": "",
+              "alt": "",
+              "width": 1014,
+              "height": 950,
+              "instructor_notes": null
+            },
+            {
+              "id": 393849,
+              "key": "33c24cc5-7ddc-440a-8060-7b65566f8e27",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Help Carla Localize Herself\n\nCarla is lost in the junkyard. Lying around the junkyard are two old tires, a pile of bricks, and a green bucket. Luckily, we have a map of where these are and Carla's sensors are still working. \n\nWhen asked to describe what's around her, Carla replies:\n\n> \"*Location unknown.  I am located between a pile of bricks and a green bucket. Old tire **directly** to my left.*\"\n\nCan you help Carla use this information to narrow down where in the junkyard she is likely to be?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402171,
+              "key": "623def38-b9bd-45ae-baa3-1ac0a9228a65",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59bc7f90_sdc-course-images-design-2/sdc-course-images-design-2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/623def38-b9bd-45ae-baa3-1ac0a9228a65",
+              "caption": "",
+              "alt": "",
+              "width": 1014,
+              "height": 950,
+              "instructor_notes": null
+            },
+            {
+              "id": 393850,
+              "key": "3ccf1bba-5957-4b81-9822-679127584d4f",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3ccf1bba-5957-4b81-9822-679127584d4f",
+                "completed_at": "2020-04-19T12:37:34.493Z",
+                "last_viewed_at": "2020-04-19T12:37:59.666Z",
+                "unstructured": "{\"selected_ids\":[\"a1504889579903\",\"a1504889581703\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Based on what Carla sees, there are two locations in the junkyard where she might currently be located. Which **two** locations shown above (marked as **A**, **B**, **C**, and **D**) could be Carla's true location?",
+                "answers": [
+                  {
+                    "id": "a1504889472763",
+                    "text": "A",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504889577729",
+                    "text": "B",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504889579903",
+                    "text": "C",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504889581703",
+                    "text": "D",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 396557,
+              "key": "c84f59ac-ec5c-4087-8fb7-c61e7a25702e",
+              "title": "Clarifying Question",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c84f59ac-ec5c-4087-8fb7-c61e7a25702e",
+                "completed_at": "2020-04-19T12:39:43.045Z",
+                "last_viewed_at": "2020-04-19T12:39:43.045Z",
+                "unstructured": "{\"selected_ids\":[\"a1505497959095\",\"a1505497932270\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "The information Carla gave us was good, but it could have been better (but we can forgive her, after all she *did* just wake up).\n\nBased on what Carla's said so far you've localized her to **two** possible locations. Which of the following questions could you ask Carla to know **exactly** where she is? (there are 2 correct answers)",
+                "answers": [
+                  {
+                    "id": "a1505497701400",
+                    "text": "How far away are you from the tire?",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1505497932270",
+                    "text": "What's directly in front of you: the bricks or the bucket?",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505497959095",
+                    "text": "Are you closer to the bricks or the bucket?",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 372504,
+          "key": "d58196dc-dfcc-456a-aad5-8d9c41474120",
+          "title": "It's Getting Hot in Here",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d58196dc-dfcc-456a-aad5-8d9c41474120",
+            "completed_at": "2020-04-19T12:39:46.939Z",
+            "last_viewed_at": "2020-04-19T12:39:49.008Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 627641,
+              "key": "c17e1318-ca16-4e04-84e2-fe4b587518ed",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/May/5af9f4b1_udacity-page-3-shades-1/udacity-page-3-shades-1.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c17e1318-ca16-4e04-84e2-fe4b587518ed",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385777,
+          "key": "e8d35067-bf36-4bdf-ae40-b04ebd50858e",
+          "title": "Challenge: Changing Tire Size",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e8d35067-bf36-4bdf-ae40-b04ebd50858e",
+            "completed_at": "2020-04-19T12:40:27.164Z",
+            "last_viewed_at": "2020-04-19T12:40:29.123Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402371,
+              "key": "036324bf-74f0-4918-b564-d0eaf284e894",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59be1585_udacity-challenge-shades-3/udacity-challenge-shades-3.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/036324bf-74f0-4918-b564-d0eaf284e894",
+              "caption": "",
+              "alt": "",
+              "width": 3828,
+              "height": 1485,
+              "instructor_notes": null
+            },
+            {
+              "id": 394104,
+              "key": "489fed1e-c8db-473f-b9eb-6f2782ef8e77",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Unfortunately, Carla's tires (like any car's tires), don't always stay exactly the same size. When the outside temperature changes, the diameter of the tires will change too.  This **uncertainty** shows up everywhere in self driving cars. One way to deal with it is through exploration of your environment.\n\nFor Carla, that could mean doing the following every time she \"wakes up\":\n\n1. Measure the distance between herself and an object directly **behind** her.\n2. Turn her wheels exactly **one full rotation**.\n3. Make the same distance measurement again. \n4. Use the measurements from 1 and 3 to calculate the distance traveled. This is the current **circumference** of her tires.\n5. Perform the appropriate math to compute the *current* diameter of her tires.\n\nUnfortunately, Carla has a bug in the code that performs steps 4 and 5! Help Carla drive by finding and fixing the bug!\n\n**Note:** If you aren't ready to program in Python yet, that's okay! You can skip this quiz and the quiz in *Challenge: Shortest Path* for now; we'll provide you some resources to brush up on Python in the next lesson (as well as going through a lot of additional Python techniques throughout the Nanodegree program).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 394105,
+              "key": "8fa29b5b-5729-469b-acff-52f885faf6ae",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8fa29b5b-5729-469b-acff-52f885faf6ae",
+                "completed_at": "2020-04-19T12:42:59.180Z",
+                "last_viewed_at": "2020-04-19T12:43:05.703Z",
+                "unstructured": "{\"tire.py\":\"from math import pi\\n\\ndef get_tire_diameter(dist_before_turn, dist_after_turn):\\n    \\n    # TODO - there's a bug in this function! Find and fix it!\\n    \\n    circumference = dist_after_turn - dist_before_turn\\n    diameter = circumference / pi\\n    return diameter\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6231552102105088",
+                "initial_code_files": [
+                  {
+                    "text": "from math import pi\n\ndef get_tire_diameter(dist_before_turn, dist_after_turn):\n    \n    # TODO - there's a bug in this function! Find and fix it!\n    \n    circumference = dist_after_turn - dist_before_turn\n    diameter = circumference * pi\n    return diameter",
+                    "name": "tire.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 372512,
+          "key": "27d52a37-0aee-4bc3-959b-629ef90f05d0",
+          "title": "What's the Plan, Stan?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "27d52a37-0aee-4bc3-959b-629ef90f05d0",
+            "completed_at": "2020-04-19T12:43:12.388Z",
+            "last_viewed_at": "2020-04-19T12:43:14.456Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402927,
+              "key": "7654531a-a798-4915-a893-afb04d6744fb",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c093b1_udacity-page-4-shades-2/udacity-page-4-shades-2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7654531a-a798-4915-a893-afb04d6744fb",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385778,
+          "key": "81f5107e-bacb-4430-9f06-1bc179bbe82a",
+          "title": "Challenge: Planning",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81f5107e-bacb-4430-9f06-1bc179bbe82a",
+            "completed_at": "2020-04-19T12:45:17.690Z",
+            "last_viewed_at": "2020-04-19T12:45:19.724Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402370,
+              "key": "13cf2734-964c-430a-a125-2f3d2d60949e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59be155b_udacity-challenge-shades-3/udacity-challenge-shades-3.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/13cf2734-964c-430a-a125-2f3d2d60949e",
+              "caption": "",
+              "alt": "",
+              "width": 3828,
+              "height": 1485,
+              "instructor_notes": null
+            },
+            {
+              "id": 402173,
+              "key": "6adcc38d-d573-4084-b203-47b023597975",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In order to plan a successful path through the course, Carla will need to choose between many possible trajectories. If she chooses trajectories with too much lateral (sideways) acceleration, she may slide off the track. Help Carla find the best trajectory by eliminating turns that are too sharp for her speed!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402771,
+              "key": "a8bdbf4f-94b4-42b1-a033-5abbdd915e6d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c00988_sdc-course-images-design-6/sdc-course-images-design-6.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a8bdbf4f-94b4-42b1-a033-5abbdd915e6d",
+              "caption": "",
+              "alt": "",
+              "width": 486,
+              "height": 456,
+              "instructor_notes": null
+            },
+            {
+              "id": 403959,
+              "key": "dca860de-916f-47a2-91fc-2855571ea181",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\nThe equation for lateral acceleration (side to side acceleration) is given below.\n\n<span class=\"mathquill\">\na_{\\text{lat}} = \\frac{v^2}{R}\n</span>\n\nIn junkyard conditions, the **maximum** lateral acceleration that Carla's tires can support is <span class=\"mathquill\">12 m/s^2</span>. If she's traveling at a velocity of <span class=\"mathquill\">30 m/s</span>, what's the sharpest turn (**minimum** turning radius) she can make?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 396434,
+              "key": "78132748-4d45-4813-964e-c77951ba4b73",
+              "title": "What's the plan?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "78132748-4d45-4813-964e-c77951ba4b73",
+                "completed_at": "2020-04-19T12:46:56.613Z",
+                "last_viewed_at": "2020-04-19T12:46:56.613Z",
+                "unstructured": "{\"selected_id\":\"a1505420270093\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "What's the radius of the sharpest turn Carla can make?",
+                "answers": [
+                  {
+                    "id": "a1505420131567",
+                    "text": "50m",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1505420206990",
+                    "text": "31.4m",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1505420270093",
+                    "text": "75m",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505529491469",
+                    "text": "16m",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 385793,
+          "key": "e65f5d4e-aba7-4a87-9f35-50da474a2efa",
+          "title": "The Split Decision",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e65f5d4e-aba7-4a87-9f35-50da474a2efa",
+            "completed_at": "2020-04-19T12:47:24.223Z",
+            "last_viewed_at": "2020-04-19T12:47:26.303Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402930,
+              "key": "52c47781-e1de-4c06-b7ec-81a11f86401c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c09435_udacity-page-5-shades/udacity-page-5-shades.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/52c47781-e1de-4c06-b7ec-81a11f86401c",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385794,
+          "key": "6146c6bc-68c8-498b-b6bd-8c16bee2886b",
+          "title": "Challenge: Shortest Path",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6146c6bc-68c8-498b-b6bd-8c16bee2886b",
+            "completed_at": "2020-04-19T12:47:51.693Z",
+            "last_viewed_at": "2020-04-19T12:47:53.802Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402369,
+              "key": "398c27e0-f1e8-4630-8e69-e36e0d342477",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59be1548_udacity-challenge-shades-3/udacity-challenge-shades-3.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/398c27e0-f1e8-4630-8e69-e36e0d342477",
+              "caption": "",
+              "alt": "",
+              "width": 3828,
+              "height": 1485,
+              "instructor_notes": null
+            },
+            {
+              "id": 394958,
+              "key": "a8e9d2d0-7306-45f7-b111-c7fd65bdf4ea",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Carla's at a fork in the road and she insists on making the **optimal** choice for which way to go. This is a classic example of a **search** problem.  In this situation, the optimal path is the **shortest** path. \n\nCarla has two choices:\n\n1. Go Left - in which case she will travel a total distance of `L3 + L4`.\n\n2. Go Right - in which case she will travel a total distance of `L1 + L2`. \n\nComplete the function below so that it returns the string `L` when option 1 is a shorter distance and returns the string `R` when option 2 is shorter. If the two options are the same it can return either `L` or `R`. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402773,
+              "key": "1ccfc55e-1b40-4356-9eea-6f6132340782",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c009a4_sdc-course-images-design-5/sdc-course-images-design-5.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1ccfc55e-1b40-4356-9eea-6f6132340782",
+              "caption": "",
+              "alt": "",
+              "width": 486,
+              "height": 456,
+              "instructor_notes": null
+            },
+            {
+              "id": 394959,
+              "key": "3778216d-eb9a-44cb-a1a4-c20529c61473",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3778216d-eb9a-44cb-a1a4-c20529c61473",
+                "completed_at": "2020-04-19T12:49:45.863Z",
+                "last_viewed_at": "2020-04-19T12:49:45.863Z",
+                "unstructured": "{\"decision.py\":\"# Right now the make_decision function ALWAYS decides to go left.\\n# Modify this function so it behaves appropriately.\\n\\ndef make_decision(L1, L2, L3, L4):\\n    if L3+L4 < L1+L2:\\n        return \\\"L\\\"\\n    else:\\n        return \\\"R\\\"\\n\\n\\n##########################################################\\n# \\n# The code below is similar to the code that Udacity\\n# will use to test the correctness of your submission.\\n# You don't need to modify it but it may\\n# be helpful to look at for Python syntax help\\n# \\ndef test_make_decision():\\n    # start by initializing this to 0\\n    number_correct = 0\\n    \\n    # TEST 1, should return \\\"R\\\" since right path has \\n    # length 5 which is < left path with length 8\\n    length_1 = 2\\n    length_2 = 3\\n    length_3 = 4\\n    length_4 = 4\\n    \\n    decision = make_decision(length_1, length_2, length_3, length_4)\\n    \\n    if decision == \\\"R\\\":\\n        # Test 1 passes\\n        number_correct = number_correct + 1\\n        \\n    # TEST 2, should return \\\"L\\\" since right path still \\n    # has length 5 but left is only 3.\\n    length_3 = 1\\n    length_4 = 2\\n    \\n    decision = make_decision(length_1, length_2, length_3, length_4)\\n    if decision == \\\"L\\\":\\n        # Test 2 passes\\n        number_correct = number_correct + 1\\n    \\n    if number_correct == 2:\\n        all_correct = True\\n    else:\\n        all_correct = False\\n    \\n    return all_correct\\n    \\nif test_make_decision():\\n    print(\\\"Nice work! Your function passed both test cases.\\\")\\nelse:\\n    print(\\\"Not quite. Your function didn't pass both test cases.\\\")\\n    \"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5591576272306176",
+                "initial_code_files": [
+                  {
+                    "text": "# Right now the make_decision function ALWAYS decides to go left.\n# Modify this function so it behaves appropriately.\n\ndef make_decision(L1, L2, L3, L4):\n    return \"L\" \n\n\n##########################################################\n# \n# The code below is similar to the code that Udacity\n# will use to test the correctness of your submission.\n# You don't need to modify it but it may\n# be helpful to look at for Python syntax help\n# \ndef test_make_decision():\n    # start by initializing this to 0\n    number_correct = 0\n    \n    # TEST 1, should return \"R\" since right path has \n    # length 5 which is < left path with length 8\n    length_1 = 2\n    length_2 = 3\n    length_3 = 4\n    length_4 = 4\n    \n    decision = make_decision(length_1, length_2, length_3, length_4)\n    \n    if decision == \"R\":\n        # Test 1 passes\n        number_correct = number_correct + 1\n        \n    # TEST 2, should return \"L\" since right path still \n    # has length 5 but left is only 3.\n    length_3 = 1\n    length_4 = 2\n    \n    decision = make_decision(length_1, length_2, length_3, length_4)\n    if decision == \"L\":\n        # Test 2 passes\n        number_correct = number_correct + 1\n    \n    if number_correct == 2:\n        all_correct = True\n    else:\n        all_correct = False\n    \n    return all_correct\n    \nif test_make_decision():\n    print(\"Nice work! Your function passed both test cases.\")\nelse:\n    print(\"Not quite. Your function didn't pass both test cases.\")\n    ",
+                    "name": "decision.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 385795,
+          "key": "e31984f5-fe8a-4a72-b818-23256e328df6",
+          "title": "The End?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e31984f5-fe8a-4a72-b818-23256e328df6",
+            "completed_at": "2020-04-19T12:50:01.647Z",
+            "last_viewed_at": "2020-04-19T12:50:03.665Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402929,
+              "key": "2b27e3e8-7433-406f-a410-9407b503d11f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c09423_udacity-page-6-shades/udacity-page-6-shades.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2b27e3e8-7433-406f-a410-9407b503d11f",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385786,
+          "key": "e0fdf466-5629-4190-b960-f43b0c505256",
+          "title": "Thanks for Helping Carla!",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e0fdf466-5629-4190-b960-f43b0c505256",
+            "completed_at": "2020-04-19T12:50:48.539Z",
+            "last_viewed_at": "2020-04-19T12:50:50.650Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402934,
+              "key": "e921110c-5b0a-40a8-878c-1d212eec6720",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c09614_crew-faces-shades-3/crew-faces-shades-3.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e921110c-5b0a-40a8-878c-1d212eec6720",
+              "caption": "",
+              "alt": "",
+              "width": 1650,
+              "height": 2622,
+              "instructor_notes": null
+            },
+            {
+              "id": 385787,
+              "key": "07b091d8-d8d6-4f8a-bd4e-8b0612a164e2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Congrats on completing the Intro to Self-Driving Cars Readiness Assessment! We hope you enjoyed assisting Carla and the crew and are excited to hit the road learning about self-driving cars!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402292,
+              "key": "9ba95bb4-8b39-4450-adf0-bc447853a685",
+              "title": "Feedback",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9ba95bb4-8b39-4450-adf0-bc447853a685",
+                "completed_at": "2020-04-19T12:51:11.247Z",
+                "last_viewed_at": "2020-04-19T12:51:11.247Z",
+                "unstructured": "{\"selected_ids\":[\"a1505536483060\",\"a1505538605580\",\"a1505538606537\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "What did you think of The Carla Chronicles: Back on the Track?",
+                "answers": [
+                  {
+                    "id": "a1505536483060",
+                    "text": "Great Story!",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505538605580",
+                    "text": "Great Artwork!",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1505538606537",
+                    "text": "Great Questions!",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

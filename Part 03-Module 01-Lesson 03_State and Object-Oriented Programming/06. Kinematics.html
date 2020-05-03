@@ -1,0 +1,398 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kinematics</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State and Object-Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Localization Steps.html">01. Localization Steps</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to State.html">02. Intro to State</a>
+    </li>
+    <li class="">
+      <a href="03. Motion Models.html">03. Motion Models</a>
+    </li>
+    <li class="">
+      <a href="04. Quiz Predicting State.html">04. Quiz: Predicting State</a>
+    </li>
+    <li class="">
+      <a href="05. A Different Model.html">05. A Different Model</a>
+    </li>
+    <li class="">
+      <a href="06. Kinematics.html">06. Kinematics</a>
+    </li>
+    <li class="">
+      <a href="07. Quantifying State.html">07. Quantifying State</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Outline.html">08. Lesson Outline</a>
+    </li>
+    <li class="">
+      <a href="09. Always Moving.html">09. Always Moving</a>
+    </li>
+    <li class="">
+      <a href="10. Objects.html">10. Objects</a>
+    </li>
+    <li class="">
+      <a href="11. Car Object.html">11. Car Object</a>
+    </li>
+    <li class="">
+      <a href="12. Interacting with a Car Object.html">12. Interacting with a Car Object</a>
+    </li>
+    <li class="">
+      <a href="13. Car Class.html">13. Car Class</a>
+    </li>
+    <li class="">
+      <a href="14. Car Class File.html">14. Car Class File</a>
+    </li>
+    <li class="">
+      <a href="15. Look at the Class Code.html">15. Look at the Class Code</a>
+    </li>
+    <li class="">
+      <a href="16. Turn Right.html">16. Turn Right</a>
+    </li>
+    <li class="">
+      <a href="17. Adding Color.html">17. Adding Color</a>
+    </li>
+    <li class="">
+      <a href="18. Instantiate Multiple Cars.html">18. Instantiate Multiple Cars</a>
+    </li>
+    <li class="">
+      <a href="19. Color Class.html">19. Color Class</a>
+    </li>
+    <li class="">
+      <a href="20. Overloading Functions.html">20. Overloading Functions</a>
+    </li>
+    <li class="">
+      <a href="21. Overloading Color Addition.html">21. Overloading Color Addition</a>
+    </li>
+    <li class="">
+      <a href="22. State Vector.html">22. State Vector</a>
+    </li>
+    <li class="">
+      <a href="23. State Transformation Matrix.html">23. State Transformation Matrix</a>
+    </li>
+    <li class="">
+      <a href="24. Matrix Multiplication.html">24. Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="25. 1D State Vector and More Multiplication.html">25. 1D State Vector and More Multiplication</a>
+    </li>
+    <li class="">
+      <a href="26. Modify Predict State.html">26. Modify Predict State</a>
+    </li>
+    <li class="">
+      <a href="27. Working with Matrices.html">27. Working with Matrices</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Kinematics</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="kinematics">Kinematics</h3>
+<p>Kinematics is the study of the motion of objects. Motion models are also referred to as kinematic equations, and these equations give you all the information you need to be able to predict the motion of a car.</p>
+<p>Let's derive some of the most common motion models!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="constant-velocity">Constant Velocity</h3>
+<p>The constant velocity model assumes that a car moves at a constant speed. This is the simplest model for car movement.</p>
+<p><strong>Example</strong></p>
+<p>Say that our car is moving 100m/s, and we want to figure out how much it has moved from one point in time, t1, to another, t2. This is represented by the graph below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-03-at-11.03.31-am.png" alt="(Left) Graph of car velocity, (Right) a car going 100m/s on a road" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>(Left) Graph of car velocity, (Right) a car going 100m/s on a road</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="displacement">Displacement</h4>
+<p>How much the car has moved is called the <strong>displacement</strong> and we already know how to calculate this! </p>
+<p>We know, for example, that if the difference between t2 and t1 is one second, then we'll have moved <code>100m/sec*1sec = 100m</code>. If the difference between t2 and t1 is two seconds, then we'll have moved <code>100m/sec*2sec = 200m</code>. </p>
+<p>The displacement is  always = <code>100m/sec*(t2-t1)</code>.</p>
+<p><strong>Motion Model</strong></p>
+<p>Generally, for constant velocity, the motion model for displacement is:</p>
+<pre><code class="python language-python">displacement = velocity*dt</code></pre>
+<p>Where <code>dt</code> is calculus notation for <em>"difference in time."</em></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="area-under-the-line">Area Under the Line</h4>
+<p>Going back to our graph, displacement can also be thought of as the area under the line and within the given time interval.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-03-at-11.40.37-am.png" alt="The area under the line, A, is equal to the displacement!" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The area under the line, A, is equal to the displacement!</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>So, in addition to our motion model, we can also say that the displacement is equal to the area under the line!</p>
+<pre><code class="python language-python">displacement = A</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="constant-acceleration">Constant Acceleration</h3>
+<p>The constant acceleration model is a little different; it assumes that our car is constantly accelerating; its velocity is changing at a constant rate. </p>
+<p>Let's say our car has a velocity of 100m/s at time t1 and is accelerating at a rate of <span class="mathquill ud-math">10m/s^2</span>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-03-at-2.47.09-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="changing-velocity">Changing Velocity</h4>
+<p>For this motion model, we know that the velocity is constantly changing, and increasing +10m/s each second. This can be represented by this kinematic equation (where dv is the change in velocity):</p>
+<pre><code class="python language-python">dv = acceleration*dt</code></pre>
+<p>At any given time, this can also be written as the current velocity is the initial velocity + the change in velocity over some time (dv):</p>
+<pre><code class="python language-python">v = initial_velocity + acceleration*dt</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="displacement">Displacement</h4>
+<p>Displacement can be calculated by finding the area under the line in between t1 and t2, similar to our constant velocity equation but a slightly different shape.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-03-at-2.53.30-pm.png" alt="Area under the line, A1 and A2" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Area under the line, A1 and A2</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>This area can be calculated by breaking this area into two distinct shapes; a simple rectangle, A1, and a triangle, A2.</p>
+<p>A1 is the same area as in the constant velocity model.   </p>
+<pre><code class="python language-python">A1 = initial_velocity*dt</code></pre>
+<p>In other words, <code>A1 = 100m/s*(t2-t1)</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>A2 is a little trickier to calculate, but remember that the area of a triangle is <code>0.5*width*height</code>. </p>
+<p>The width, we know, is our change in time (t2-t1) or <code>dt</code>.</p>
+<p>And the height is the change in velocity over that time! From our earlier equation for velocity, we know that this value, dv, is equal to: <code>acceleration*(t2-t1)</code> or <code>acceleration*dt</code></p>
+<p>Now that we have the width and height of the triangle, we can calculate A2. Note that<code>**</code> is a Python operator for an exponent, so <code>**2</code> is equivalent to <code>^2</code> in mathematics or squaring a value.</p>
+<pre><code class="python language-python">A2 = 0.5*acceleration*dt**2</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="motion-model">Motion Model</h4>
+<p>This means that our total displacement, A1+A2 ,can be represented by the equation:</p>
+<pre><code class="python language-python">displacement = initial_velocity*dt + 0.5*acceleration*dt**2</code></pre>
+<p>We also know that our velocity over time changes according to the equation:</p>
+<pre><code class="python language-python">dv = acceleration*dt</code></pre>
+<p>And these two equations, together, make up our motion model for constant acceleration.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Quantifying State.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Kinematics')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

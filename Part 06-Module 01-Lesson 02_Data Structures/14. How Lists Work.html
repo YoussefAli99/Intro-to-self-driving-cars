@@ -1,0 +1,413 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>How Lists Work</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Data Structures</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Overview.html">01. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Tracking Tickets.html">02. Tracking Tickets</a>
+    </li>
+    <li class="">
+      <a href="03. Design Tradeoffs.html">03. Design Tradeoffs</a>
+    </li>
+    <li class="">
+      <a href="04. Three Approaches.html">04. Three Approaches</a>
+    </li>
+    <li class="">
+      <a href="05. Representing a Single Ticket.html">05. Representing a Single Ticket</a>
+    </li>
+    <li class="">
+      <a href="06. The problems with strings and lists.html">06. The problems with strings and lists</a>
+    </li>
+    <li class="">
+      <a href="07. Intro to Dictionaries.html">07. Intro to Dictionaries</a>
+    </li>
+    <li class="">
+      <a href="08. Intro to Dictionaries 2.html">08. Intro to Dictionaries 2</a>
+    </li>
+    <li class="">
+      <a href="09. Keys and Values.html">09. Keys and Values</a>
+    </li>
+    <li class="">
+      <a href="10. Adding Labels.html">10. Adding Labels</a>
+    </li>
+    <li class="">
+      <a href="11. Implementing Labels (and Introducing Sets).html">11. Implementing Labels (and Introducing Sets)</a>
+    </li>
+    <li class="">
+      <a href="12. Performance Considerations.html">12. Performance Considerations</a>
+    </li>
+    <li class="">
+      <a href="13. Lists, Timing, and Performance.html">13. Lists, Timing, and Performance</a>
+    </li>
+    <li class="">
+      <a href="14. How Lists Work.html">14. How Lists Work</a>
+    </li>
+    <li class="">
+      <a href="15. Performance of Sets and Dictionaries.html">15. Performance of Sets and Dictionaries</a>
+    </li>
+    <li class="">
+      <a href="16. How Sets and Dictionaries Work.html">16. How Sets and Dictionaries Work</a>
+    </li>
+    <li class="">
+      <a href="17. Other Data Structures [optional].html">17. Other Data Structures [optional]</a>
+    </li>
+    <li class="">
+      <a href="18. Choosing good data structures.html">18. Choosing good data structures</a>
+    </li>
+    <li class="">
+      <a href="19. Conclusion.html">19. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">14. How Lists Work</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="how-lists-work">How Lists Work</h1>
+<p>In the previous section you saw two graphs that looked something like these:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/pos-v-time.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/size-vs-time.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>In the second experiment, about how long did it take to perform a membership test for a list with 700,000 elements in it?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1508452745501" name="436643" id="a1508452745501">
+        <label for="a1508452745501"><p>0.1 milliseconds</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508452898207" name="436643" id="a1508452898207">
+        <label for="a1508452898207"><p>0.5 milliseconds</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508452931792" name="436643" id="a1508452931792">
+        <label for="a1508452931792"><p>1 millisecond</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508452947001" name="436643" id="a1508452947001">
+        <label for="a1508452947001"><p>5 milliseconds</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508452954505" name="436643" id="a1508452954505">
+        <label for="a1508452954505"><p>10 milliseconds</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    10 milliseconds
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We repeated the second experiment on 4 different computers, each of which had a different processor. The results of this experiment are shown below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/speed-test.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which CPU is the <strong>fastest</strong>?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1508453787079" name="436655" id="a1508453787079">
+        <label for="a1508453787079"><p>CPU 1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508453800893" name="436655" id="a1508453800893">
+        <label for="a1508453800893"><p>CPU 2</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508453804277" name="436655" id="a1508453804277">
+        <label for="a1508453804277"><p>CPU 3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508453807518" name="436655" id="a1508453807518">
+        <label for="a1508453807518"><p>CPU 4</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    CPU 4
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following statements are true <strong>for all CPUs</strong>? </p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1508454894766" name="436656" id="a1508454894766">
+        <label for="a1508454894766"><p>It takes about 10 milliseconds to perform a membership test on a list with 500,000 elements</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508454913962" name="436656" id="a1508454913962">
+        <label for="a1508454913962"><p>The time it takes to scan a list of 800,000 elements is about <strong>twice</strong> the amount of time it takes to scan a list with 400,000 elements.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508454926378" name="436656" id="a1508454926378">
+        <label for="a1508454926378"><p>The speed of a CPU does not affect how long it takes to perform a membership test on a list.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The time it takes to scan a list of 800,000 elements is about **twice** the amount of time it takes to scan a list with 400,000 elements.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>A new CPU is released. The side of the package brags</p>
+<blockquote>
+  <p>Performs membership tests on 100,000 element lists in 0.1 ms!</p>
+</blockquote>
+<p>Assuming this claim is true, how long would you expect this processor to take when testing for membership on a 1,000,000 element list?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1508455700532" name="436664" id="a1508455700532">
+        <label for="a1508455700532"><p>about 0.1 ms</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508455712792" name="436664" id="a1508455712792">
+        <label for="a1508455712792"><p>about 1 ms</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508455720528" name="436664" id="a1508455720528">
+        <label for="a1508455720528"><p>about 10 ms</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    about 1 ms
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-do-lists-work">How do lists work?</h2>
+<p>The time it takes to test for membership in a list "scales linearly" with the size of the list. That just means if you double the size of the list you double the amount of time it takes to test for membership of an element (on average).</p>
+<blockquote>
+  <p><strong>Note:</strong> As you learn more, you might see this algorithm described as "big O of N", or mathematically as <span class="mathquill ud-math">\mathcal{O}(n)</span>. We aren't going to get too deep into the topic at this time, but this notation is all about the <a href="https://en.wikipedia.org/wiki/Analysis_of_algorithms" rel="noopener noreferrer" target="_blank">analysis of algorithms</a> in relation to their efficiency.</p>
+</blockquote>
+<p>The reason it takes longer to membership test a big list has to do with what the computer is doing behind the scenes. When you write:</p>
+<pre><code class="python language-python">if -1 in my_list</code></pre>
+<p><br />
+The computer will go through every single element of <code>my_list</code> in order until it finds <code>-1</code>. If it makes it through the entire list without finding <code>-1</code> then the result of the membership test will be <code>False</code>. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="15. Performance of Sets and Dictionaries.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('14. How Lists Work')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,977 @@
+{
+  "data": {
+    "lesson": {
+      "id": 489053,
+      "key": "2d9b1c60-0dba-4898-9635-6d2fe6ee88d4",
+      "title": "Gaussian Distributions",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "You will work with a specific continuous probability distribution called the Gaussian distribution. A Gaussian distribution helps describe uncertainty in sensor measurements and a vehicle's location.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/2d9b1c60-0dba-4898-9635-6d2fe6ee88d4/489053/1544452734550/Gaussian+Distributions+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/2d9b1c60-0dba-4898-9635-6d2fe6ee88d4/489053/1544452732255/Gaussian+Distributions+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 489054,
+          "key": "44460d6f-d92a-4a70-b6cf-9d08035dfa56",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "44460d6f-d92a-4a70-b6cf-9d08035dfa56",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 489055,
+              "key": "e50d5ed7-ae25-4bdc-b4a5-7d476bff59b6",
+              "title": "Introduction to Gaussian distributions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VQetR_9lBZc",
+                "china_cdn_id": "VQetR_9lBZc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 489057,
+          "key": "d1c1c874-73f2-4b35-9216-2ff4bc478d50",
+          "title": "Continuous Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d1c1c874-73f2-4b35-9216-2ff4bc478d50",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 489061,
+              "key": "640f2e77-b59f-4ba5-b846-f10dbe499405",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Continuous vs Discrete\n\nGaussian distributions are a type of continuous probability distribution. So before getting into the details about Gaussian distributions, let's review the differences between a continuous and discrete distribution. \n\nAs a reminder, a continuous probability distribution is associated with a continuous variable like height, weight, distance, velocity, angle, etc.\n\nYou've been working with a uniform continuous probability distribution like the following example.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 489064,
+              "key": "c4f3e15b-d1ad-48a5-8d4b-9ff8332f8973",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a309695_uniform-continuous/uniform-continuous.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c4f3e15b-d1ad-48a5-8d4b-9ff8332f8973",
+              "caption": "",
+              "alt": "",
+              "width": 640,
+              "height": 480,
+              "instructor_notes": null
+            },
+            {
+              "id": 489063,
+              "key": "eed8d574-e17c-4a08-b1f6-376b1fd5cc15",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "On the other hand, a discrete distribution is associated with variables that can only take on certain values like coin flips, dice rolls or location on a grid. This is an example of a discrete distribution.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 489062,
+              "key": "54e2b633-cf89-4aa9-b734-a9bd31ff9936",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a304744_discrete-distribution/discrete-distribution.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/54e2b633-cf89-4aa9-b734-a9bd31ff9936",
+              "caption": "",
+              "alt": "",
+              "width": 640,
+              "height": 480,
+              "instructor_notes": null
+            },
+            {
+              "id": 489066,
+              "key": "4c2a600e-820e-4c37-9a16-e077786bb1b3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Continuous Distributions\n\nThe uniform continuous probability distribution is just one of many continuous probability distributions that exist. Take a look at this Wikipedia page, [List of Continuous Distributions](https://en.wikipedia.org/wiki/List_of_probability_distributions#Continuous_distributions), just to get a sense for how many there are.\n\nWhat do all of these distributions have in common? They represent the probability of events occurring for **continuous variables**. Different applications will use different distributions.\n\nFor example, when modeling probabilities of a spinning wheel, you used a uniform distribution. When modeling uncertainty in a sensor measurement, you'll use a Gaussian distribution.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 489677,
+              "key": "bc899e89-565c-4c03-aaf5-eca37fff8fa3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Gaussian Distribution\n\nIn order to understand uncertainty in self-driving cars, you should at least have a basic knowledge of the Gaussian distribution. The uncertainty in a sensor measurement or the location of a pedestrian, for example, is oftentimes modeled with a Gaussian distribution.\n\nThis next part of the lesson will give a broad overview of the Gaussian distribution and where the distribution comes from.\n\nHowever, this is not a complete statistics course. This will be a brief overview of this particular distribution and assumes you're familiar with terms like mean, standard deviation, population, and sample where:\n\n* **population** refers to the entire set of all data points. Like if you were measuring people's weights, then the population would be all people in the world.\n* **sample** refers to a part of the population. In the weights example, you might take a random sample of the population since it would be practically impossible to measure the weights of all humans.\n* **mean** is the average value, which in this case would be the average weight of all humans.\n* **standard deviation** measures the spread in the data. Does the data tend to hover around the mean, or is the data more spread out?\n\nIf you aren't familiar with these terms or need a refresher, here is a resource that you might find helpful: [sample vs population](http://stattrek.com/sampling/populations-and-samples.aspx).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 489678,
+          "key": "4a7144ff-2b24-4a61-a8bc-96f0a8e3e95d",
+          "title": "Gaussian Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4a7144ff-2b24-4a61-a8bc-96f0a8e3e95d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 490067,
+              "key": "9e0f5b2a-dd21-4012-a28c-ce5b30b38e47",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# The Gaussian Distribution\n\nSo let's go straight to looking at a Gaussian distribution, and then we'll talk about what it is and how it relates to self-driving cars.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 542813,
+              "key": "7cf90676-0542-4c00-852a-2d11fd462814",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a7cc50d_gaussian2/gaussian2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7cf90676-0542-4c00-852a-2d11fd462814",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490084,
+              "key": "515e43fa-8897-4ee4-94f9-3e21c3a74551",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You might recognize this shape; it's oftentimes called a bell-shaped curve. Notice that the y-axis says \"probability density function\" just like the uniform continuous distribution.\n\nThe x-axis currently says \"x-value\"; however, the x-axis could take on any continuous variable like temperature, height, or velocity.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 490085,
+              "key": "06bf89a1-60b7-4bf2-894f-22f7181ff2eb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Gaussian Equation\n\nWhile this graph might look difficult to draw, there is actually an equation that maps the x variable to the y variable. Here is the probability density function for the Gaussian distribution:\n\n<span class=\"mathquill\">\\LARGE f(x) = \\frac{1}{\\sqrt{2\\pi\\sigma{^2}}}e^{\\frac{-(x-\\mu)^2}{2\\sigma^2}}</span>\n\nThis equation might look a bit intimidating, so let's break it down in the next part of the lesson.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 542800,
+              "key": "dedf1f9e-30b4-40bf-88f4-6071d738c62b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a7cc260_gaussian/gaussian.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/dedf1f9e-30b4-40bf-88f4-6071d738c62b",
+              "caption": "",
+              "alt": "",
+              "width": 0,
+              "height": 0,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 490086,
+          "key": "2fa1bc7c-decc-45b6-92ed-a8c96c7ccf56",
+          "title": "Gaussian Equation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2fa1bc7c-decc-45b6-92ed-a8c96c7ccf56",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 490087,
+              "key": "ce6ee6d7-fa59-4a8d-9c0e-780fb69ccb30",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Gaussian Equation\n\nHere again is the Gaussian probability density function.\n\n<span class=\"mathquill\">\\LARGE f(x) = \\frac{1}{\\sqrt{2\\pi\\sigma{^2}}}e^{\\frac{-(x-\\mu)^2}{2\\sigma^2}}</span>\n\nDon't let this equation intimidate you! This equation only has three input variables:\n* <span class=\"mathquill\">\\large \\mu</span>\n* <span class=\"mathquill\">\\large \\sigma</span>\n* <span class=\"mathquill\">\\large x</span>\n\nThe symbol <span class=\"mathquill\">\\mu</span> represents a population mean. The symbol <span class=\"mathquill\">\\sigma</span> is the standard deviation of the distribution, which represents the spread. If you remember from statistics, the mean and standard deviation are constants when dealing with a population. So for a specific population, the only value that varies is x.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495723,
+              "key": "be14f3a3-ab4b-494b-8297-a6823f2b079d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Example\n\nLet's make this more concrete. Say you are looking at the probabilities associated with winter temperatures in San Francisco. Assume that the minimum daily temperature follows a Gaussian distribution. This might or might not actually be true if you were to measure winter temperatures experimentally, but for this example, assume that it is true.\n\nSay that on average, the minimum winter temperature in San Francisco is 50 degrees Fahrenheit. In other words, If you measured the minimum temperature every day of winter over all winters ever, the average value would be 50. Let's say the standard deviation is 10 degrees. \n\nNow, substituting the mean and standard deviation into the Gaussian equation gives:\n\n<span class=\"mathquill\">\\LARGE f(x) = \\frac{1}{\\sqrt{2\\pi10{^2}}}e^{\\frac{-(x-50)^2}{2\\times10^2}}</span>\n\nAfter substituting in the mean and standard deviation into the equation, the equation doesn't look so bad. You could take a range of x values, which in this case represents temperature, and then you could calculate y for each x value.\n\nSo, get out your calculator because it's time for a quiz.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 490090,
+              "key": "fe5d0d68-9466-45f6-b34b-43e538debc1c",
+              "title": "Gaussian Probability Density Function",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fe5d0d68-9466-45f6-b34b-43e538debc1c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Given that the mean is 50 and the standard deviation is 10, calculate the probability density function value  f(x) of the Gaussian distribution. Use the following temperature data: x = [29, 45, 48, 50, 62, 78]\n",
+                "answers": [
+                  {
+                    "id": "a1513752359502",
+                    "text": "0.362, 0.0452, 0.0407, 0.0399, 0.0820, 2.01",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513753136458",
+                    "text": "0.000175, 0.00140, 0.00156, 0.00159, 0.000774, .00003157",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513753137016",
+                    "text": "0.0044, 0.0352, 0.0391, 0.0399, 0.0194, 0.000792",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513753137850",
+                    "text": "0.014, 0.111, 0.124, 0.126, 0.0614, 0.0025",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513753139159",
+                    "text": "0.0078, 0.0624, 0.0693, 0.0707, 0.0344, 0.0014",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 490092,
+          "key": "c830c75c-e8f3-462b-a0fd-3283acdec918",
+          "title": "Mean",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c830c75c-e8f3-462b-a0fd-3283acdec918",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 490105,
+              "key": "d8434cba-e4db-4e93-a883-34f0b579c5c6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Mean\n\nWhat exactly does the mean value represent in a Gaussian distribution? The mean value is the center of the bell curve.\n\nTake a look at the visualization below. Staying with the San Francisco temperature example, it shows three distributions with three different means. Everything else stays the same including the standard deviation.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 490110,
+              "key": "68638ed2-9d55-416f-a00a-5e4f74506a7c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1a70_gaussian40/gaussian40.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/68638ed2-9d55-416f-a00a-5e4f74506a7c",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490111,
+              "key": "5727217f-71af-43fb-82dd-e2ba4c35034b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1a7b_gaussian50/gaussian50.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5727217f-71af-43fb-82dd-e2ba4c35034b",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490112,
+              "key": "ae10fee1-09ee-4651-a671-3e28e60dd8c4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1a85_gaussian60/gaussian60.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ae10fee1-09ee-4651-a671-3e28e60dd8c4",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490107,
+              "key": "cbb84045-4458-4a63-8e56-e89e2b69a384",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You can see that changing the mean, while keeping everything else constant, shifts the curve to the left or to the right.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 490108,
+              "key": "3df9b8e4-fba7-42e0-bec2-9fe01cb960d5",
+              "title": "Mean Increases",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3df9b8e4-fba7-42e0-bec2-9fe01cb960d5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "As the mean of the Gaussian distribution increases, what happens to the curve?",
+                "answers": [
+                  {
+                    "id": "a1513756261537",
+                    "text": "Nothing",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513756282227",
+                    "text": "The distribution shifts left (towards the negative side of the x axis).",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513756294261",
+                    "text": "The distribution shifts right (towards the positive side of the x axis).",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513756307226",
+                    "text": "The distribution gets taller.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513756312651",
+                    "text": "The distribution gets wider.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 490093,
+          "key": "8b15a22d-1718-4d75-a434-9a185168caf7",
+          "title": "Standard Deviation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8b15a22d-1718-4d75-a434-9a185168caf7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 490109,
+              "key": "c59a796b-dbb1-4f78-bfae-66341f5c2b58",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Standard Deviation\n\nWhat effect does the standard deviation have on the Gaussian distribution? Let's repeat the same experiment. Take a look at what happens as the standard deviation changes but everything else remains the same.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 490113,
+              "key": "d8a13749-4885-4bf9-8ed2-e3036707b368",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1bb2_gaussian5/gaussian5.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d8a13749-4885-4bf9-8ed2-e3036707b368",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490114,
+              "key": "8cc47b96-4b49-49e8-8aff-bf14df3613ea",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1bbe_gaussian10/gaussian10.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8cc47b96-4b49-49e8-8aff-bf14df3613ea",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490115,
+              "key": "a5750b7a-40c3-4452-9e12-e5a91c335ce7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1bc9_gaussian15/gaussian15.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a5750b7a-40c3-4452-9e12-e5a91c335ce7",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 490116,
+              "key": "3cb22da0-a6ef-4fa3-a086-1c3faae9131c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "What do you notice is happening as the standard deviation increases? Answer the quiz:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 490117,
+              "key": "15fd48db-44cc-4024-a699-7121bea26624",
+              "title": "Standard Deviation Changes",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "15fd48db-44cc-4024-a699-7121bea26624",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What happens as the standard deviation increases but everything else remains the same?",
+                "answers": [
+                  {
+                    "id": "a1513757880501",
+                    "text": "Nothing",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513757898369",
+                    "text": "The distribution shifts farther to the right.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513757899027",
+                    "text": "The distribution shifts farther to the left.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513757900338",
+                    "text": "The distribution gets wider and flatter.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513757905267",
+                    "text": "The distribution gets skinnier and taller.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 490118,
+              "key": "07eeabe3-3e74-45ae-8406-5e05b149d904",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "As the standard deviation increases, uncertainty increases as well. Compare the charts where standard deviation is 5 and standard deviation is 15. When the standard deviation is five, the distribution looks tall and skinny, which implies that the temperature is more likely to be near 50 degrees.\n\nWhen the standard deviation increases to 15, the distribution gets flat and wide; the probability that the temperature is near 50 goes down while the probability that the temperature is farther to the left or to the right on the x-axis is increasing.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 490095,
+          "key": "24b00716-fe13-4721-afb4-9bc5f73ed980",
+          "title": "Plotting Gaussians in Python [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "24b00716-fe13-4721-afb4-9bc5f73ed980",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 490119,
+              "key": "b5c4cbcb-c8d8-46b5-90db-2dfb2a7f183e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8d8143bc",
+              "pool_id": "jupyter",
+              "view_id": "8d8143bc-8272-4913-94f9-0cbb57582cb6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/plotting_gaussians.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 495222,
+          "key": "ea5cdaba-efd8-4a5a-b39d-7ae569536287",
+          "title": "Plotting Gaussians in Python [Solution]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ea5cdaba-efd8-4a5a-b39d-7ae569536287",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495223,
+              "key": "3bff06d7-ab84-476a-904e-17980f96a0cb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Exercise 1 - Calculate the Probability Density Function\n```\ndef gaussian_density(x, mu, sigma):\n    return (1/np.sqrt(2*np.pi*np.power(sigma, 2.))) * np.exp(-np.power(x - mu, 2.) / (2 * np.power(sigma, 2.)))\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495224,
+              "key": "5fdd8eaa-5bb1-45a1-91e5-bec6b009c8aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Exercise 2 - Plot the Probability Density Function\n```\nimport matplotlib.pyplot as plt\n\ndef plot_gaussian(x, mu, sigma):\n    \n    y = gaussian_density(x, mu, sigma)\n\n    plt.plot(x, y)\n    plt.title('Gaussian Probability Density Function')\n    plt.xlabel('x variable')\n    plt.ylabel('probability density function')\n    plt.show()\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 490094,
+          "key": "b4c2107f-9a7a-4ec9-b2ed-22aa0c711f7e",
+          "title": "Area Under the Curve",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b4c2107f-9a7a-4ec9-b2ed-22aa0c711f7e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495225,
+              "key": "e0ed5f6f-2b81-48af-8001-f21fb9920ff9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Area Under the Curve\n\nAs a reminder, the y-axis of a continuous probability distribution shows the probability density function. The x-axis represents a continuous variable like height, velocity,  etc. For reference, here is a Gaussian distribution that we were looking at earlier with mean = 50 and standard deviation = 10.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495226,
+              "key": "244420e3-62ea-4e54-ada1-e40ffdc266f2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3a1a7b_gaussian50/gaussian50.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/244420e3-62ea-4e54-ada1-e40ffdc266f2",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 495227,
+              "key": "ff808597-9edc-481f-bfab-70bea689cf46",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "But the probability density function on the y-axis is not a direct measurement of probability. The **area** under the probability density function is the probability.\n\nLike if you wanted to know the probability that the temperature was between 45 and 60 degrees Fahrenheit, you'd need to calculate the area under the curve from 45 to 60 degrees:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495229,
+              "key": "8b692eff-c61a-45b5-94f3-985862802946",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a42c193_gaussian-fill50/gaussian-fill50.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8b692eff-c61a-45b5-94f3-985862802946",
+              "caption": "Area Under the Curve from 45 to 60",
+              "alt": "Area Under the Curve 45 to 60",
+              "width": 600,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 495228,
+              "key": "d540a801-5969-4260-9f00-9648548dd6e5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Area Under the Gaussian Probability Density Function\n\nYet, how can you calculate the area under a curve like the Gaussian distribution? If you are familiar with calculus, the area under a curve is called an integral. However, taking the integral of the Gaussian probability density function is not an easy task!\n\nInstead, you could use something called the [standard normal table](https://en.wikipedia.org/wiki/Standard_normal_table). This table contains data for calculating the area underneath a Gaussian probability density function. How to use these tables goes beyond the scope of this course; it's generally taught in an introductory statistics course like [Udacity's Statistics 101](https://classroom.udacity.com/courses/st101).\n\nLucky for us, Python has a library that can calculate the area underneath the Gaussian probability density function. In the next section, you'll learn how to use this library.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495231,
+              "key": "2c130d9d-f00f-4ea3-b7ab-26b30ad4567a",
+              "title": "Area Under the Density Function",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2c130d9d-f00f-4ea3-b7ab-26b30ad4567a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the area under the Gaussian probability distribution function from x = -infinity to x = +infinity? (Hint: You do not need to calculate anything to figure out the answer)",
+                "answers": [
+                  {
+                    "id": "a1514324476406",
+                    "text": "It's not possible to determine the answer",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1514324541174",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1514324541771",
+                    "text": "1",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1514324542307",
+                    "text": "0.5",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 490096,
+          "key": "716e676f-c315-43dd-9796-ac61ee1c2f31",
+          "title": "Calculating Area Under the Curve in Python",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "716e676f-c315-43dd-9796-ac61ee1c2f31",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495232,
+              "key": "7182137b-958e-4dbf-aa56-65b65d9bd582",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8d8143bc",
+              "pool_id": "jupyter",
+              "view_id": "40c83eb9-d17a-4f06-bf85-a3e7aaf8f251",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/area_under_curve.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 495493,
+          "key": "37542470-d861-478e-8687-63038dcb70e1",
+          "title": "Calculating Area Under the Curve [Solution]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "37542470-d861-478e-8687-63038dcb70e1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495494,
+              "key": "47cfe01d-5f42-4b87-a7ca-2712b6a809b6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Calculating Area Under the Curve Solution\n\n```\nfrom scipy.stats import norm\n\ndef gaussian_probability(mean, stdev, x_low, x_high):\n    return norm(loc = mean, scale = stdev).cdf(x_high) - norm(loc = mean, scale = stdev).cdf(x_low)\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 490097,
+          "key": "4893eeae-20a9-4409-a391-b10ea8390bb6",
+          "title": "Central Limit Theorem [Optional]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4893eeae-20a9-4409-a391-b10ea8390bb6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495495,
+              "key": "8228947f-6231-455a-b7d4-d94f17cb1f00",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Central Limit Theorem\n\nThe information from here until the end of the Gaussian Distributions lesson is optional. \n\nThis part of the lesson gives insight into where the Gaussian distribution comes from. If you would like to learn about the theory behind Gaussian distributions, then read on! Otherwise, you can move on to the Robot Localization lesson.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495496,
+              "key": "98d104fb-da86-475a-8929-60b5770b8c9f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What is the Central Limit Theorem?\n\nThe central limit theorem is quite interesting. It says that if you take large enough samples from a population and then calculate the sample means, these means will be normally distributed. The theorem should hold as long as the sample size is large enough and the variable in question is [independent](http://stattrek.com/statistics/dictionary.aspx?definition=independent) and [random](http://stattrek.com/statistics/dictionary.aspx?definition=random_variable).\n\nThis might all sound theoretical at this point. So in the next part of the lesson, we'll use Python to show you how the theorem works.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495497,
+              "key": "c5f9d267-9463-4ae8-b1a9-1e5966360ea2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# A Population\n\nA population consists of all of the values of a data set. For this lesson, we're going to use a data that looks like this:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495498,
+              "key": "584cd4fe-135d-4109-ae2f-dbcf7b740204",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a46f6e3_strange-distribution/strange-distribution.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/584cd4fe-135d-4109-ae2f-dbcf7b740204",
+              "caption": "Population Distribution",
+              "alt": "Population Distribution",
+              "width": 392,
+              "height": 278,
+              "instructor_notes": null
+            },
+            {
+              "id": 495499,
+              "key": "4ca60401-0ad6-4f71-aea4-0638fff8676f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For example, the value 15 shows up in the population about 160 times. The value 50 shows up in the population about 70 times. In total, this population has 10,000 data points. \n\nConsider randomly grabbing 100 data points from this distribution. Call these 100 data points a sample. Then calculate the mean value of the sample. If you did this random sampling over and over again, the mean values would have a Gaussian distribution. \n\nIt's amazing that a population distribution that does not look Gaussian at all becomes Gaussian as you take the mean of many samples.\n\nIn the following part of the lesson, we'll show you how this works using Python code.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 490098,
+          "key": "375a70b0-fbe3-4d5a-9036-bcc6580e99c9",
+          "title": "Central Limit Theorem [Optional Demo]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "375a70b0-fbe3-4d5a-9036-bcc6580e99c9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495500,
+              "key": "ff17b5c5-cc74-4c96-a91b-30eb33bf4485",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8d8143bc",
+              "pool_id": "jupyter",
+              "view_id": "485a86aa-639f-4516-a791-4d7ff03e483b",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/central_limit_theorem.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 490104,
+          "key": "493e14f2-76e2-4abe-b9d8-1cd6a78672dd",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "493e14f2-76e2-4abe-b9d8-1cd6a78672dd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 495501,
+              "key": "0757c438-45b3-4267-9cb9-c2b7d49fe64f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Conclusion\n\nIn this lesson you've learned what the Gaussian distribution is and where the distribution comes from. As you progress in your studies, you'll notice that the Gaussian distribution appears in a few different contexts. \n\nUncertainty in sensor measurements like radar or lidar are often modeled with Gaussian distributions.  Gaussian distributions are also sometimes used to represent uncertainty in the location or velocity of objects surrounding an autonomous vehicle.\n\nIn the next lesson, you'll learn about how a robot figures out its location. The probability lessons and programming exercises provide a base for understanding the next part of the lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

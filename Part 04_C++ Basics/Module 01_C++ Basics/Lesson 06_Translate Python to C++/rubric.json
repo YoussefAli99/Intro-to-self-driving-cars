@@ -1,0 +1,144 @@
+{
+  "id": 1146,
+  "project_id": 335,
+  "upload_types": [
+    "zip"
+  ],
+  "file_filter_regex": "\\A(?!(((.*/)?(__MACOSX|\\.git|node_modules|bower_components|jspm_packages|\\.idea|build|.ipynb_checkpoints|\\.Trash-0|logs)(\\Z|/))))((.*\\.(cpp|css|docx|gradle|htm|html|ipynb|java|js|markdown|md|pdf|py|rmd|rst|sql|swift|txt|xml|yaml|yml)\\Z)|((.*/)?(README|Readme|readme|Makefile)\\Z))",
+  "nomination_eligible": false,
+  "stand_out": "",
+  "hide_criteria": false,
+  "created_at": "2017-08-22T00:06:19.071Z",
+  "updated_at": "2020-01-17T12:05:05.357Z",
+  "hashtag": "",
+  "max_upload_size_mb": 500,
+  "estimated_sla": null,
+  "project_assistant_enabled": false,
+  "checkmate_enabled": false,
+  "checkmate_metadata": null,
+  "available_for_cert_project": false,
+  "classroom_node_id": 377528,
+  "classroom_project_key": "faa76781-0fc5-499e-8673-caed673869c8",
+  "language": "en-us",
+  "ndkeys": [
+    "nd501-iniot",
+    "nd113",
+    "nd113-mena-connect",
+    "nd113-ent",
+    "nd113-cn-ent",
+    "nd113-cn",
+    "nd113-beta"
+  ],
+  "coursekeys": [],
+  "sections": [
+    {
+      "id": 2511,
+      "name": "Correctness",
+      "created_at": "2017-08-22T00:09:34.477Z",
+      "updated_at": "2017-08-24T18:49:38.994Z",
+      "deleted_at": null,
+      "position": 0,
+      "rubric_id": 1146,
+      "rubric_items": [
+        {
+          "id": 7341,
+          "section_id": 2511,
+          "passed_description": "Code passes the provided tests in tests.cpp",
+          "exceeded_description": "",
+          "created_at": "2017-08-22T00:09:46.615Z",
+          "updated_at": "2018-11-02T17:28:36.401Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Code works as expected.",
+          "exceedable": false
+        },
+        {
+          "id": 7491,
+          "section_id": 2511,
+          "passed_description": "'initialize_beliefs' is implemented the right way.",
+          "exceeded_description": "",
+          "created_at": "2017-09-07T00:39:47.178Z",
+          "updated_at": "2017-09-14T18:25:48.960Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "'initialize_beliefs' works correctly.",
+          "exceedable": false
+        },
+        {
+          "id": 7492,
+          "section_id": 2511,
+          "passed_description": "'sense' is implemented the right way.",
+          "exceeded_description": "",
+          "created_at": "2017-09-07T00:39:48.362Z",
+          "updated_at": "2018-10-25T22:23:03.367Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 2,
+          "criteria": "'sense' works correctly.",
+          "exceedable": false
+        },
+        {
+          "id": 7493,
+          "section_id": 2511,
+          "passed_description": "'move' is implemented the right way.",
+          "exceeded_description": "",
+          "created_at": "2017-09-07T00:39:49.090Z",
+          "updated_at": "2017-09-14T18:25:48.981Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 3,
+          "criteria": "'move' works correctly.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 2519,
+      "name": "Code Quality",
+      "created_at": "2017-08-24T18:51:45.649Z",
+      "updated_at": "2017-08-24T18:52:53.920Z",
+      "deleted_at": null,
+      "position": 1,
+      "rubric_id": 1146,
+      "rubric_items": [
+        {
+          "id": 7382,
+          "section_id": 2519,
+          "passed_description": "Code quality issues should not make a project non-passing unless they are problematic enough that it is not possible to understand the code at all with a reasonable amount of effort. \r\n\r\nReadability is important so try to go through your code before submitting to make sure that a reviewer will be able to provide the most helpful feedback for you.",
+          "exceeded_description": "",
+          "created_at": "2017-08-24T18:52:54.021Z",
+          "updated_at": "2017-09-14T18:25:48.992Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Readability\r\n",
+          "exceedable": false
+        }
+      ]
+    }
+  ],
+  "project": {
+    "id": 335,
+    "name": "Translate Python to C++",
+    "nanodegree_key": "nd113",
+    "is_cert_project": false,
+    "audit_project_id": null,
+    "hashtag": null,
+    "audit_rubric_id": 1144,
+    "entitlement_required": false,
+    "is_career": false,
+    "recruitment_family_id": 9,
+    "awaiting_review_count": 0,
+    "awaiting_review_count_by_language": {},
+    "awaiting_audit_count": 0,
+    "awaiting_quality_audit_count": 0,
+    "awaiting_training_audit_count": 0,
+    "created_at": "2017-08-24T19:33:46.310Z",
+    "updated_at": "2020-05-03T20:43:57.337Z",
+    "price": "5.5",
+    "ungradeable_price": "3.0",
+    "audit_price": "0.0"
+  }
+}

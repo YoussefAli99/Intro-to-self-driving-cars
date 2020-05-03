@@ -1,0 +1,298 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>If Statements</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Optimization Practice</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Software Development and Optimization.html">02. Software Development and Optimization</a>
+    </li>
+    <li class="">
+      <a href="03. Optimization Techniques.html">03. Optimization Techniques</a>
+    </li>
+    <li class="">
+      <a href="04. Dead Code.html">04. Dead Code</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Remove Dead Code.html">05. Exercise: Remove Dead Code</a>
+    </li>
+    <li class="">
+      <a href="06. If Statements.html">06. If Statements</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise If Statements.html">07. Exercise: If Statements</a>
+    </li>
+    <li class="">
+      <a href="08. For Loops.html">08. For Loops</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise For Loops.html">09. Exercise: For Loops</a>
+    </li>
+    <li class="">
+      <a href="10. Intermediate Variables.html">10. Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Intermediate Variables.html">11. Exercise: Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="12. Vector Storage.html">12. Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Vector Storage.html">13. Exercise: Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="14. References.html">14. References</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise References.html">15. Exercise: References</a>
+    </li>
+    <li class="">
+      <a href="16. Sebastian&#x27;s Synchronization Story.html">16. Sebastian&#x27;s Synchronization Story</a>
+    </li>
+    <li class="">
+      <a href="17. Static Keyword.html">17. Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="18. Exercise Static Keyword.html">18. Exercise: Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="19. Speed Challenge.html">19. Speed Challenge</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. If Statements</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="if-statements">If Statements</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Many compilers will try to optimize if statements for you. So writing something like this:</p>
+<pre><code>int x = 7;
+
+if (x &gt; 0) {
+  return y;
+if (x &lt;= 0) {
+   return z;
+}</code></pre>
+<p>might become</p>
+<pre><code class="c++ language-c++">int x = 7;
+if (x &gt; 0) {
+   return y;
+else {
+   return z;
+}</code></pre>
+<p>The compiler won't literally rewrite your C++ code into optimized C++ code; the compiler does the optimization when outputting assembly language or machine code. But in general, you'll want to avoid too many if branches because each branch's logical expression requires time on the CPU. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Thinking about how if statements are executed, it's also more efficient to put the most common cases on a higher branch.</p>
+<p>Here is a simple example:</p>
+<pre><code class="c++ language-c++">    for (int i = 0; i &lt; 1000; i++) {
+        if (i &gt; 0 &amp;&amp; i &lt; 5) {
+            cout &lt;&lt;  "low \n";
+        }
+        else if (i &gt;= 990) {
+            cout &lt;&lt; "high \n";
+        }
+        else {
+            cout &lt;&lt; "normal \n";
+        }
+    }</code></pre>
+<p>Most of the time, the above code will print out the word "normal". So the code needs to go through all of the if and else branches most of the time as the CPU compares <strong>i</strong> in each branch.</p>
+<p>It would be more efficient to put the "normal" case at the top of the branches instead of at the bottom:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code>for (int i = 0; i &lt; 1000; i++) {
+    if (i &gt;= 5 &amp;&amp; i &lt; 990) {
+        cout &lt;&lt;  "normal \n";
+    }
+    else if (i &gt;= 990) {
+        cout &lt;&lt; "high \n";
+    }
+    else {
+        cout &lt;&lt; "low \n";
+    }
+}</code></pre>
+<p>Now, most of the time, the CPU can skip the else if and else branches.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="if-statements-on-the-cpu">If Statements on the CPU</h1>
+<p>There's one other aspect of if statements that you don't have much control over when using a high level language like C++. The CPU also tries to optimize if statement calculations by running simultaneous calculations. </p>
+<p>When running a calculation, the CPU can look ahead and start working on another calculation in parallel. In terms of if statements, the CPU will try to predict which branch will be taken next and starts running the calculations inside the predicted branch. When it's time to evaluate the logical expression, the CPU might realize that it made a bad prediction. If the prediction is wrong, the predicted calculation stops and the CPU starts running the correct calculation.</p>
+<p>So be aware that you might not get too much of a time boost when rearranging  or eliminating if statements. Both the compiler and the CPU are already trying to optimize these operations for you.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="exercise">Exercise</h1>
+<p>Move on to the next section to try out an if statement optimization exercise.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Exercise If Statements.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. If Statements')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Binary</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Intro to Optimization</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Introduction.html">01. Course Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Empathize with the Computer.html">02. Empathize with the Computer</a>
+    </li>
+    <li class="">
+      <a href="03. Intro to Computer Hardware.html">03. Intro to Computer Hardware</a>
+    </li>
+    <li class="">
+      <a href="04. Embedded Terminal Explanation.html">04. Embedded Terminal Explanation</a>
+    </li>
+    <li class="">
+      <a href="05. Demo Machine Code.html">05. Demo: Machine Code</a>
+    </li>
+    <li class="">
+      <a href="06. Assembly Language.html">06. Assembly Language</a>
+    </li>
+    <li class="">
+      <a href="07. Binary.html">07. Binary</a>
+    </li>
+    <li class="">
+      <a href="08. Demo Binary.html">08. Demo: Binary</a>
+    </li>
+    <li class="">
+      <a href="09. Demo Binary Floats.html">09. Demo: Binary Floats</a>
+    </li>
+    <li class="">
+      <a href="10. Memory and the CPU.html">10. Memory and the CPU</a>
+    </li>
+    <li class="">
+      <a href="11. Demo Stack vs Heap.html">11. Demo: Stack vs Heap</a>
+    </li>
+    <li class="">
+      <a href="12. Outro.html">12. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Binary</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>03 L Binary V1 RENDER V1</p></h3>
+  
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-much-space-do-my-variables-use">How much space do my variables use?</h2>
+<p>The <a href="https://isocpp.org/std/the-standard" rel="noopener noreferrer" target="_blank">standard that defines C++</a> specifies the minimum number of bytes required for each variable type. For instance, an integer is guaranteed to have at least 2 bytes or 16 bits.</p>
+<p>That does not mean your computer will use 16 bit integers by default. The default number of bits will depend on how your computer system was designed. An int variable might be 16 bits on some systems but 32 bits on other systems. You can get more information at this <a href="http://en.cppreference.com/w/cpp/language/types" rel="noopener noreferrer" target="_blank">link</a>.</p>
+<p>Although the exercises later in this lesson will focus on increasing the speed of your code, you might find yourself at other times trying to optimize for memory use as well. The more comfortable you are with how your computer works, the more tools you will have for optimization. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="all-variables-are-binary">All Variables are Binary</h2>
+<p>C++ stores all variables in multiples of bytes:</p>
+<ul>
+<li>a char is 1 byte</li>
+<li>a 16-bit integer would be 2 bytes</li>
+<li>a 32-bit integer would be 4 bytes</li>
+<li>a 32-bit float would be 4 bytes</li>
+</ul>
+<p>Thus all variables are represented by binary number. A 32-bit integer and a 32-bit float number take up the same amount of space; they would both be represented by a series of thirty-two 0s and 1s. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-bytes-limit-value-ranges">How Bytes Limit Value Ranges</h2>
+<p>In C++, your variables will take up either 8, 16, 32, or 64 bits of memory, which are 1, 2, 4, and 8 bytes respectively. </p>
+<p>The number of bytes put a limit on the minimum and maximum values that your variables can hold. As mentioned in the video, a 32 bit integer can have a maximum value of 4,294,967,295; however, if a variable might take on either a positive or negative value, then you need to use one bit to represent the variable's sign. This leaves 31 bits to represent the integer giving a max value of  2,147,483,647.</p>
+<p>Likewise, 32-bit floats can only contain about seven decimal places whereas 64-bit doubles can have about 15. The explanation for how floats are stored is a bit complex; however, you can imagine that a fixed number of bits puts a limit on the amount of decimal places that can be kept. In fact, you'll see this in an upcoming demo.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="is-my-system-32-bit-or-64-bit">Is my system 32 bit or 64 bit?</h2>
+<p>Your CPU probably either has a 32-bit architecture or a 64-bit architecture. That means the CPU was designed to work well with storing and manipulating information in 32-bit chunks versus 64 bit chunks.</p>
+<p>If your CPU uses a 32-bit architecture, you can still create 64-bit variables in your programs as long as your compiler has this feature. But, the code will most likely run more slowly than using a 64-bit architecture with 64-bit variables. On a 32 bit system, the compiler has to create extra instructions to move and do math on 64-bit variables.</p>
+<p>If you'd like to see whether your computer has a 32-bit or 64-bit system, here are instructions for:</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64" rel="noopener noreferrer" target="_blank">windows</a></li>
+<li><a href="https://apple.stackexchange.com/questions/12666/how-to-check-whether-my-intel-based-mac-is-32-bit-or-64-bit" rel="noopener noreferrer" target="_blank">mac</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="quiz">Quiz</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Binary Calculations</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following is the 8-bit binary representation of the decimal number 63?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1508889469047" name="439862" id="a1508889469047">
+        <label for="a1508889469047"><p>00011111</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508889494676" name="439862" id="a1508889494676">
+        <label for="a1508889494676"><p>00111111</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508889495339" name="439862" id="a1508889495339">
+        <label for="a1508889495339"><p>111111</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508889496203" name="439862" id="a1508889496203">
+        <label for="a1508889496203"><p>11111100</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    00111111
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Binary to Integer</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What integer is represented by the 16-bit binary number:<br />
+00100100 10110110</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1508963640001" name="439946" id="a1508963640001">
+        <label for="a1508963640001"><p>11510</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508963737538" name="439946" id="a1508963737538">
+        <label for="a1508963737538"><p>37592</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508963738041" name="439946" id="a1508963738041">
+        <label for="a1508963738041"><p>25783</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1508963738539" name="439946" id="a1508963738539">
+        <label for="a1508963738539"><p>9398</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    9398
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Demo Binary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Binary')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

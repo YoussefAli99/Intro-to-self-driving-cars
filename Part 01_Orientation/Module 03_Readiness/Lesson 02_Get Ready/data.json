@@ -1,0 +1,232 @@
+{
+  "data": {
+    "lesson": {
+      "id": 385807,
+      "key": "7028fed1-9cc2-4ef9-b5cd-5533eeb1b895",
+      "title": "Get Ready",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "While you wait for your classroom to open, refresh your math and programming skills with these helpful resources.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/7028fed1-9cc2-4ef9-b5cd-5533eeb1b895/385807/1516935847023/Get%20Ready%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/7028fed1-9cc2-4ef9-b5cd-5533eeb1b895/385807/1516935822673/Get%20Ready%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 385808,
+          "key": "19fe498c-fd85-49f2-8f4f-0c5cb0edd821",
+          "title": "How Did You Do?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "19fe498c-fd85-49f2-8f4f-0c5cb0edd821",
+            "completed_at": "2020-04-19T12:51:16.976Z",
+            "last_viewed_at": "2020-04-19T12:51:19.115Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402103,
+              "key": "c357793a-33dc-44e7-b869-3f1a66f17930",
+              "title": "Intro to Self-Driving Cars: How Did You Do?",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LGZJrihKAg4",
+                "china_cdn_id": "LGZJrihKAg4.mp4"
+              }
+            },
+            {
+              "id": 385811,
+              "key": "990ea325-a6b7-474c-b368-b6121793547f",
+              "title": "How Did You Do?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "990ea325-a6b7-474c-b368-b6121793547f",
+                "completed_at": "2020-04-19T12:51:58.535Z",
+                "last_viewed_at": "2020-04-19T12:51:58.535Z",
+                "unstructured": "{\"selected_id\":\"a1504250381007\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Now that you have completed the readiness assessment, how do you feel you did?",
+                "answers": [
+                  {
+                    "id": "a1504250381007",
+                    "text": "I had no issues and am ready to start!",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504250463582",
+                    "text": "I had some trouble with the math.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504250475180",
+                    "text": "I had some trouble with the programming.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504250484873",
+                    "text": "I had trouble completing most of the challenges.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 385812,
+          "key": "ce31302c-a8b4-409b-b415-95f88d5987c2",
+          "title": "While You Wait - Learning Resources",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ce31302c-a8b4-409b-b415-95f88d5987c2",
+            "completed_at": "2020-04-19T12:52:07.262Z",
+            "last_viewed_at": "2020-04-19T12:52:09.400Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385813,
+              "key": "77f6406f-9dc2-46b2-8a48-dd003e9e485a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning Resources\nWhile you wait for the classroom to open up, take advantage of the extra time to brush up your programming and math skills. None of this material is required and some of it is linked outside of Udacity (which we don't control), but it is here to help you be successful from day one. \n\n## Programming\n- [Intro to Computer Science](https://www.udacity.com/course/intro-to-computer-science--cs101)\n- [Programming Foundations with Python](https://www.udacity.com/course/programming-foundations-with-python--ud036)\n- [Intro to Data Analysis](https://www.udacity.com/course/intro-to-data-analysis--ud170)\n- [C++ for Programmers](https://www.udacity.com/course/c-for-programmers--ud210)\n- [Intro to Programming Nanodegree Program](https://www.udacity.com/degrees/intro-to-programming-nanodegree--nd000)\n- [Data Analyst Nanodegree Program](https://www.udacity.com/course/data-analyst-nanodegree--nd002)\n\n## Math\n- [Algebra Review](https://www.udacity.com/course/intro-algebra-review--ma004) \n- [Algebra I](https://www.khanacademy.org/math/algebra)\n- [Algebra II](https://www.khanacademy.org/math/algebra2)\n- [Geometry](https://www.khanacademy.org/math/basic-geo)\n- [Trigonometry](https://www.khanacademy.org/math/trigonometry)\n<br><br>\n<br>\n\nUp next we will get into using Jupyter Notebooks, a common tool you will encounter in the classroom.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 402122,
+          "key": "fcdace3d-c586-486d-b9ea-c4e3df4b98f2",
+          "title": "Intro to Jupyter Notebooks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fcdace3d-c586-486d-b9ea-c4e3df4b98f2",
+            "completed_at": "2020-04-19T12:53:08.106Z",
+            "last_viewed_at": "2020-04-19T12:53:10.185Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402187,
+              "key": "96ea70a7-4aaf-4ac1-a159-57090394a37c",
+              "title": "Intro to Self-Driving Cars: Intro To Jupyter Notebooks",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0-5VG9FsdQ0",
+                "china_cdn_id": "0-5VG9FsdQ0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 396531,
+          "key": "a38b9eb8-1deb-474c-b0e2-f3df755adbcf",
+          "title": "While You Wait - Programming Playground",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a38b9eb8-1deb-474c-b0e2-f3df755adbcf",
+            "completed_at": "2020-04-19T12:53:33.854Z",
+            "last_viewed_at": "2020-04-19T12:53:35.972Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 396533,
+              "key": "3b3a4fab-d083-4e00-aeb5-e3a52bdfd5dc",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view9f7037de",
+              "pool_id": "jupyter",
+              "view_id": "9f7037de-e4fc-451c-94a4-b61293a75da0",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "defaultPath": "/notebooks/playground.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 396021,
+          "key": "0bbd3a30-550e-4404-a3a1-f1c9b34ca20d",
+          "title": "The Grand Challenge",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0bbd3a30-550e-4404-a3a1-f1c9b34ca20d",
+            "completed_at": "2020-04-19T12:56:31.409Z",
+            "last_viewed_at": "2020-04-19T12:56:33.586Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 396022,
+              "key": "0ee36d71-cb41-4f30-8cac-679d1b90467a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The DARPA Grand Challenge is the race the entire self-driving car scene! While you wait for the classroom to open up, we thought it would be exciting to see some of the history of self-driving cars! You may even see a familiar face...",
+              "instructor_notes": ""
+            },
+            {
+              "id": 396023,
+              "key": "4115239e-372e-42bb-b73d-3bb9b617bbc2",
+              "title": "The Great Robot Race",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UFGu15hCtKg",
+                "china_cdn_id": "UFGu15hCtKg.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

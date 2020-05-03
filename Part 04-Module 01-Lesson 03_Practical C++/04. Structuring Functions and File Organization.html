@@ -1,0 +1,445 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Structuring Functions and File Organization</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practical C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Compilation.html">01. Introduction to Compilation</a>
+    </li>
+    <li class="">
+      <a href="02. Running Code Locally.html">02. Running Code Locally</a>
+    </li>
+    <li class="">
+      <a href="03. C++ Versions.html">03. C++ Versions</a>
+    </li>
+    <li class="">
+      <a href="04. Structuring Functions and File Organization.html">04. Structuring Functions and File Organization</a>
+    </li>
+    <li class="">
+      <a href="05. Input and Output.html">05. Input and Output</a>
+    </li>
+    <li class="">
+      <a href="06. Reading in Text Files.html">06. Reading in Text Files</a>
+    </li>
+    <li class="">
+      <a href="07. Outputting to Text Files.html">07. Outputting to Text Files</a>
+    </li>
+    <li class="">
+      <a href="08. Exercises.html">08. Exercises</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Structuring Functions and File Organization</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="structuring-your-functions">Structuring your Functions</h1>
+<p>In the last lesson, you learned two different ways for declaring and defining functions: </p>
+<ul>
+<li>declaring functions above main() and defining functions below main</li>
+<li>declaring and defining functions simultaneously above main</li>
+</ul>
+<p>As your C++ programs get longer and more complex, you might want to separate your code into multiple files. Keeping function definitions and declarations separate will help you with splitting and organizing your code.</p>
+<p>For example, take a look at this code from the functions quiz in the previous lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="c++ language-c++">#include &lt;iostream&gt;
+
+float distance(float velocity, float acceleration, float time_elapsed);
+
+int main() {
+
+    std::cout &lt;&lt; distance(3, 4, 5) &lt;&lt; std::endl;  
+    std::cout &lt;&lt; distance(7.0, 2.1, 5.4) &lt;&lt; std::endl;
+
+    return 0;   
+}
+
+float distance(float velocity, float acceleration, float time_elapsed) {
+    return velocity*time_elapsed + 0.5*acceleration*time_elapsed*time_elapsed;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Instead of putting everything into a main.cpp like in the previous quiz, the code could be organized into two files. Check out the code below and hit the "Test Run" button.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#403081-main-cpp" class="nav-item nav-link  active show" id="tab-403081-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="403081-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#403081-distance-cpp" class="nav-item nav-link " id="tab-403081-distance-cpp" data-toggle="tab" role="tab"
+      aria-controls="403081-distance-cpp" aria-selected="false">distance.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="403081-main-cpp" aria-labelledby="tab-403081-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+
+float distance(float velocity, float acceleration, float time_elapsed);
+
+int main() {
+
+    std::cout &lt;&lt; distance(3, 4, 5) &lt;&lt; std::endl;  
+    std::cout &lt;&lt; distance(7.0, 2.1, 5.4) &lt;&lt; std::endl;
+    
+    return 0;   
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="403081-distance-cpp" aria-labelledby="tab-403081-distance-cpp" role="tabpanel">
+      <pre><code></code>float distance(float velocity, float acceleration, float time_elapsed) {
+    return velocity*time_elapsed + 0.5*acceleration*time_elapsed*time_elapsed;
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Behind the scenes, both main.cpp and distance.cpp are being compiled. This is happening on the backend of the classroom, so you are not seeing the compilation happen. </p>
+<p>But if you were to run this program locally, you could open a terminal and navigate to the folder containing both files. Typing something like</p>
+<pre><code>g++ main.cpp distance.cpp
+./a.out</code></pre>
+<p>would compile both files together and then execute the program.</p>
+<p>Because you have defined your function in a separate file outside of main.cpp, you can more easily re-use the function in other parts of your code.</p>
+<p>Notice that you still had to declare the distance function at the top of main.cpp to be able to use the function.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="header-files">Header Files</h3>
+<p>The function declaration </p>
+<pre><code class="c++ language-c++">float distance(float velocity, float acceleration, float time_elapsed);</code></pre>
+<p>is oftentimes put into its own file as well. The declaration is kept in what's called a <strong>header</strong> file because the header is the information above the main() function. Header files generally have either a .h or .hpp extension. Here is the same code above but with the function declaration in a header file. If you click the "Test Run" button, you'll see that this code works as well:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#403096-main-cpp" class="nav-item nav-link  active show" id="tab-403096-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="403096-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#403096-distance-cpp" class="nav-item nav-link " id="tab-403096-distance-cpp" data-toggle="tab" role="tab"
+      aria-controls="403096-distance-cpp" aria-selected="false">distance.cpp</a>
+    <a href="#403096-distance-h" class="nav-item nav-link " id="tab-403096-distance-h" data-toggle="tab" role="tab"
+      aria-controls="403096-distance-h" aria-selected="false">distance.h</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="403096-main-cpp" aria-labelledby="tab-403096-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &quot;distance.h&quot;
+
+int main() {
+
+    std::cout &lt;&lt; distance(3, 4, 5) &lt;&lt; std::endl;  
+    std::cout &lt;&lt; distance(7.0, 2.1, 5.4) &lt;&lt; std::endl;
+    
+    return 0;   
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="403096-distance-cpp" aria-labelledby="tab-403096-distance-cpp" role="tabpanel">
+      <pre><code></code>float distance(float velocity, float acceleration, float time_elapsed) {
+    return velocity*time_elapsed + 0.5*acceleration*time_elapsed*time_elapsed;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="403096-distance-h" aria-labelledby="tab-403096-distance-h" role="tabpanel">
+      <pre><code></code>float distance(float velocity, float acceleration, float time_elapsed);</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The code line </p>
+<pre><code class="c++ language-c++">#include "distance.h"</code></pre>
+<p>will paste the contents of distance.h into main.cpp.</p>
+<p>Now let's say you wanted to reuse your distance function in a different file. All you have to do is declare the function at the top of your new file with an include statement:</p>
+<pre><code class="c++ language-c++">#include "distance.h"</code></pre>
+<p>and you can use the function in another part of your program. </p>
+<p>Organizing your code into different .cpp files separates out the implementation from the declaration. Furthermore, using header files means that you do not have to remember what the function declaration looked like because you can include it with the simple syntax of </p>
+<pre><code>#include "distance.h"</code></pre>
+<p>To compile the code, you only need to compile the .cpp files but not the .h file:</p>
+<pre><code>g++ main.cpp distance.cpp</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="file-naming">File Naming</h3>
+<p>Naming conventions dictate that the header file and associated cpp file have the same name. Therefore it's clear that distance.h contains the header declarations for distance.cpp. You'll also notice that the function name itself was called distance(). So the function name, .cpp and .h files all match.</p>
+<p>These are naming conventions, so your C++ code will still compile if you do not follow these conventions; however, it's highly recommended to stick with these conventions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="include-syntax">Include syntax</h3>
+<p>You might be wondering why there are two different types of include statements:</p>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+#include "distance.h"</code></pre>
+<p>The include statement with quotes tells the program to look for the distance.h file in the current directory. </p>
+<p>The &lt;&gt; syntax will depend on your C++ environment. Generally, environments are set up to look for the file where the C++ libraries are stored like the Standard Library.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Files Type and Definition</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>What type of code goes into each file type?</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>main.cpp</p></button>
+  <button class="btn btn-primary"><p>function.h</p></button>
+  <button class="btn btn-primary"><p>function.cpp</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Code</p>
+      </th>
+      <th>
+        <p>File Type</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>This file could contain function declarations.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>This file contains the part of the program that would call functions and output results.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>This file could contain a function definition.</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Code</p>
+        </th>
+        <th>
+          <p>File Type</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>This file contains the part of the program that would call functions and output results.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>main.cpp</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>This file could contain function declarations.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>function.h</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>This file could contain a function definition.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>function.cpp</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Input and Output.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Structuring Functions and File Organization')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

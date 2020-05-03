@@ -1,0 +1,345 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Software Development and Optimization</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Optimization Practice</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Software Development and Optimization.html">02. Software Development and Optimization</a>
+    </li>
+    <li class="">
+      <a href="03. Optimization Techniques.html">03. Optimization Techniques</a>
+    </li>
+    <li class="">
+      <a href="04. Dead Code.html">04. Dead Code</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Remove Dead Code.html">05. Exercise: Remove Dead Code</a>
+    </li>
+    <li class="">
+      <a href="06. If Statements.html">06. If Statements</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise If Statements.html">07. Exercise: If Statements</a>
+    </li>
+    <li class="">
+      <a href="08. For Loops.html">08. For Loops</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise For Loops.html">09. Exercise: For Loops</a>
+    </li>
+    <li class="">
+      <a href="10. Intermediate Variables.html">10. Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Intermediate Variables.html">11. Exercise: Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="12. Vector Storage.html">12. Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Vector Storage.html">13. Exercise: Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="14. References.html">14. References</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise References.html">15. Exercise: References</a>
+    </li>
+    <li class="">
+      <a href="16. Sebastian&#x27;s Synchronization Story.html">16. Sebastian&#x27;s Synchronization Story</a>
+    </li>
+    <li class="">
+      <a href="17. Static Keyword.html">17. Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="18. Exercise Static Keyword.html">18. Exercise: Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="19. Speed Challenge.html">19. Speed Challenge</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Software Development and Optimization</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="software-development">Software Development</h2>
+<p>Writing functioning code is arguably your number one goal as a software developer. Depending on your application, code efficiency might be very important as well. </p>
+<p>You could break down the code development process into the following steps:</p>
+<ul>
+<li>code design</li>
+<li>implementing the design</li>
+<li>testing for bugs and fixing the bugs</li>
+<li>optimization</li>
+</ul>
+<p>For a more detailed explanation of each of these steps (design, implementation, testing), see this <a href="https://en.wikibooks.org/wiki/Optimizing_C%2B%2B/Optimization_life_cycle" rel="noopener noreferrer" target="_blank">link</a>.</p>
+<p>As mentioned previously, there are many facets to code optimization related to hardware, compilers, algorithms and the C++ language itself. In this lesson, you'll focus on the C++ language. What you've just learned about the CPU and RAM will provide the context for why your code is able to run faster.</p>
+<p>You will have the opportunity to learn and implement a few techniques that make C++ run even faster. Each exercise presents a "slow" version of the code and a technique for making the code faster. You will then implement the technique to see how much faster the code runs. While these techniques do not encompass all of the ways to optimize C++ code, you'll gain an understanding of how memory, the CPU and coding choices affect how fast your code runs.</p>
+<p>At the end of the lesson, you are going to receive a set of files for a functioning C++ histogram filter. Your job will be to make the histogram filter code run faster using the techniques you've learned in the lesson. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-to-optimize-testing-versus-instinct">How to Optimize: Testing versus Instinct</h2>
+<p>To optimize your code, rely on testing and verification rather than instinct! </p>
+<p>Test your code to find areas that are inefficient in terms of time, memory or power use. Then, verify that any changes you have made really do make the code more efficient. If you test first, you might even find that your code is already efficient enough for your particular application.</p>
+<p>If you were optimizing a large amount of code, you would want to use something called a profiler. A profiler is a piece of software that measures how long parts of your code are taking to execute or how many resources the code uses. The profiler helps you find congestion points so that you can optimize the least efficient parts of the code first. </p>
+<p>Both Visual Studio and Xcode come with profilers, which you can read about at these links:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/visualstudio/profiling/beginners-guide-to-performance-profiling" rel="noopener noreferrer" target="_blank">Profiling in Visual Studio</a></li>
+<li><a href="https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/index.html" rel="noopener noreferrer" target="_blank">Profiling in Xcode</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="testing-your-code-with-standard-clock">Testing your Code with Standard Clock</h3>
+<p>In the following exercises, we've set up some simple profiling code for you; you'll time how long it takes to run a function using the C++ standard clock. </p>
+<p>You will optimize by:</p>
+<ul>
+<li>seeing how long it takes to run a function</li>
+<li>change some aspect of the code</li>
+<li>run the code again to see if the code runs faster</li>
+</ul>
+<p>The profiling code has already been set up for you, and it looks like this:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="c++ language-c++">#include &lt;ctime&gt;
+
+std::clock_t start;
+double duration;
+
+start = std::clock();
+
+function_name(var1, var2);
+
+duration = ( std::clock() - start ) / (double) CLOCKS_PER_SEC;
+
+std::cout &lt;&lt; "duration milliseconds initialize beliefs " &lt;&lt; 1000 * duration &lt;&lt; '\n';</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The code stores the current standard clock time, then runs a function, and then calculates the elapsed time.</p>
+<p>The standard library clock measures time in terms of <strong>clock ticks</strong>. Clock ticks are like a counter variable that goes up at a constant rate of time. But the length of time varies from system to system; therefore, dividing by the constant CLOCKS_PER_SEC gives the results in terms of seconds. The CLOCKS_PER_SEC variable is defined in the ctime library.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Most important for coding</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is usually the most important part of coding a program?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1509648490462" name="442387" id="a1509648490462">
+        <label for="a1509648490462"><p>Profiling the code</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509648503498" name="442387" id="a1509648503498">
+        <label for="a1509648503498"><p>Optimizing the code</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509648504057" name="442387" id="a1509648504057">
+        <label for="a1509648504057"><p>Getting functioning code that works as expected</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509648504537" name="442387" id="a1509648504537">
+        <label for="a1509648504537"><p>Getting the code to use fewer resources</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Getting functioning code that works as expected
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Clock Ticks</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>True or False: the amount of time that passes between calls to std::clock() is equal to the amount of time that has passed in the world.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1509648553251" name="442388" id="a1509648553251">
+        <label for="a1509648553251"><p>True</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509648564215" name="442388" id="a1509648564215">
+        <label for="a1509648564215"><p>False</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    False
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Optimization Techniques.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Software Development and Optimization')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

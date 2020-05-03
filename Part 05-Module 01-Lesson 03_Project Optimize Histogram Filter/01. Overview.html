@@ -1,0 +1,244 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Overview</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Optimize Histogram Filter</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Overview.html">01. Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Project Walk Through.html">02. Project Walk Through</a>
+    </li>
+    <li class="">
+      <a href="03. Project Code.html">03. Project Code</a>
+    </li>
+    <li class="">
+      <a href="04. GCC Flags.html">04. GCC Flags</a>
+    </li>
+    <li class="">
+      <a href="05. Project Solution.html">05. Project Solution</a>
+    </li>
+    <li class="">
+      <a href="06. Solution Code.html">06. Solution Code</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Overview</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-overview">Project Overview</h1>
+<p>Now it's time to apply what you've learned to Andy's histogram filter. In his code, you will find eight C++ files. Six of these files contain histogram filter functions. The other two are a main.cpp file and a file containing a function for printing out a matrix.</p>
+<p>Your challenge is to read through his files, run the program, and then get his code to run faster.</p>
+<p><strong>This project is non-graded</strong>, so we are also providing a solution for you in the section labeled "Solution Code". There is not necessarily a wrong and right answer to this project; the goal is to get the code to run faster. The example solution shows a few possible ways to optimize. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-files">Project Files</h1>
+<p>In the next part of the lesson, you will find an embedded workspace that contains the following files and folders:</p>
+<ul>
+<li>andy_histogram_filter folder</li>
+<li>optimized code folder</li>
+<li>instructions.md file</li>
+</ul>
+<h5 id="andy_histogram_filter">andy_histogram_filter</h5>
+<p>The andy_histogram_filter folder contains Andy's histogram filter code. There is a main.cpp file that runs and times each function of the histogram filter. The time results are outputted to the terminal.</p>
+<p>The other .cpp files contain function definitions for the histogram filter. </p>
+<h5 id="optimized_code">optimized_code</h5>
+<p>The optimized_code folder contains a copy of Andy's histogram filter code as well. This is where you can tweak the code for optimization. These files have extra comments giving some ideas about what to optimize.</p>
+<h5 id="instructionsmd">instructions.md</h5>
+<p>This file contains further instructions about how to complete and run the project. </p>
+<h5 id="hintsmd">hints.md</h5>
+<p>The optimized_code files already have ideas about what to optimize. The hints file contains more explicit ideas but does not give the actual code. You are not required to read this file, and we encourage you to try optimizing the code first before reading the hints file.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="explanation-of-the-code">Explanation of the Code</h1>
+<p>Here is an explanation of how the histogram filter code works. </p>
+<p>In main.cpp, you'll find a vector called grid. Grid is a char vector holding the color values of a 2-dimensional square grid. </p>
+<p>The <strong>initialize_beliefs</strong> function takes in the char grid and outputs the initial probabilities for each square on the grid.</p>
+<p>Then the <strong>sense</strong> function takes a measurement of the current grid space's color. The measurement is used to update the probabilities of each space on the grid.</p>
+<p>Next, the <strong>blur</strong> function passes the grid through a smoothing  algorithm.</p>
+<p>Then the probabilities are normalized with the <strong>normalize</strong> function.</p>
+<p>Finally, the robot moves to a new space on the board, and the probabilities are updated appropriately.</p>
+<p>Each function is run ten-thousand times. You can adjust the number of times by changing the value in the iterations variable.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="order">Order</h1>
+<p>As a suggestion, do the project in the following order:</p>
+<ol>
+<li>Read through the instructions in instructions.md</li>
+<li>Run the code in the andy_histogram_filter folder (see instructions.md for how to run the code)</li>
+<li>Open main.cpp and look through the code. You do not need to change anything in this file. Note that each function is run the same number of times. And each function is wrapped with a clock. </li>
+<li>Read through each of the .cpp files to become familiar with the code.</li>
+<li>Optimize the code in the optimized_code folder. For each optimization, make sure to run the code to see if the results have in fact improved.</li>
+</ol>
+<p>Here is a suggested order for optimizing the files:</p>
+<ul>
+<li>zeros.cpp</li>
+<li>initialize_beliefs.cpp</li>
+<li>sense.cpp</li>
+<li>blur.cpp</li>
+<li>normalize.cpp</li>
+<li>move.cpp</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Project Walk Through.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Overview')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

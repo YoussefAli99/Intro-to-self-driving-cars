@@ -1,0 +1,467 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Moving in C++</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Python and C++ Speed</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Executing the Move Function.html">02. Executing the Move Function</a>
+    </li>
+    <li class="">
+      <a href="03. Moving in Python.html">03. Moving in Python</a>
+    </li>
+    <li class="">
+      <a href="04. Moving in C++.html">04. Moving in C++</a>
+    </li>
+    <li class="">
+      <a href="05. Comparing Speeds.html">05. Comparing Speeds</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Moving in C++</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="c-speed">C++ Speed</h1>
+<p>Press the <code>TEST RUN</code> button a few times and get a sense for how long it takes to run this code 1000 times.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#385911-main-cpp" class="nav-item nav-link  active show" id="tab-385911-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="385911-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#385911-robot_functions-cpp" class="nav-item nav-link " id="tab-385911-robot_functions-cpp" data-toggle="tab" role="tab"
+      aria-controls="385911-robot_functions-cpp" aria-selected="false">robot_functions.cpp</a>
+    <a href="#385911-robot_functions-h" class="nav-item nav-link " id="tab-385911-robot_functions-h" data-toggle="tab" role="tab"
+      aria-controls="385911-robot_functions-h" aria-selected="false">robot_functions.h</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="385911-main-cpp" aria-labelledby="tab-385911-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &quot;robot_functions.h&quot;  // including the header file
+
+using namespace std;
+using std::vector;
+
+// Main function
+int main() {
+    
+    /* Defining the initial beliefs grid:
+     [ [0.05f, 0.2f, 0.2f, 0.05f, 0.05f],
+       [0.05f, 0.1f, 0.2f, 0.05f, 0.05f] ]
+       */
+    vector&lt; vector&lt; float &gt; &gt; beliefs_grid; 
+    
+    // Constructing the row vectors (from arrays)
+    float a_row1[] &#x3D; {0.05f, 0.2f, 0.2f, 0.05f, 0.05f};
+    vector&lt;float&gt; vec_row1 (a_row1, a_row1 + sizeof(a_row1) / sizeof(a_row1[0]) );
+    float a_row2[] &#x3D; {0.05f, 0.1f, 0.2f, 0.05f, 0.05f};
+    vector&lt;float&gt; vec_row2 (a_row2, a_row2 + sizeof(a_row2) / sizeof(a_row2[0]) );
+    // Adding vectors to the beliefs grid
+    beliefs_grid.push_back(vec_row1);
+    beliefs_grid.push_back(vec_row2);
+    
+    /* Timing the move function!
+     Start the timer below:
+     */
+    int start_s&#x3D;clock();
+	// Run move 1000 times - move right by 2 each iteration
+	// TODO: Change the number of iterations and notice the change in time
+	int iterations &#x3D; 1000;
+	
+	for(int i &#x3D; 0; i &lt; iterations; i++){
+	    move(0, 2, beliefs_grid, 1.0f);
+	}
+	// Stop the timer and display the result!
+    int stop_s&#x3D;clock();
+    
+    cout &lt;&lt; &quot;Time to move &quot;&lt;&lt;iterations&lt;&lt;&quot; iterations in milliseconds: &quot; &lt;&lt; (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 &lt;&lt; endl;
+    
+    return 0;   
+}
+</code></pre>
+    </div>
+    <div class="tab-pane " id="385911-robot_functions-cpp" aria-labelledby="tab-385911-robot_functions-cpp" role="tabpanel">
+      <pre><code></code>// Contains all functions: move AND helper functions
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+using namespace std;
+using std::vector;
+
+// Normalize and blur helper functions
+vector&lt; vector&lt;float&gt; &gt; normalize(vector&lt; vector &lt;float&gt; &gt; grid) {
+	float total &#x3D; 0.0;
+	int i;
+	int j;
+	vector&lt;float&gt; row;
+	vector&lt;float&gt; newRow;
+	float oldProb;
+	for (i &#x3D; 0; i &lt; grid.size(); i++)
+	{
+		row &#x3D; grid[i];
+		// cout &lt;&lt; &quot;row size: &quot; &lt;&lt; row.size(); 
+		for (j&#x3D;0; j&lt; row.size(); j++)
+		{
+			oldProb &#x3D; row[j];
+			total +&#x3D; oldProb;
+		}
+	}
+
+	vector&lt; vector&lt;float&gt; &gt; newGrid;
+
+	for (i &#x3D; 0; i &lt; grid.size(); i++) {
+		vector&lt;float&gt; row &#x3D; grid[i];
+		newRow.clear();
+		for (j&#x3D;0; j&lt; row.size(); j++) {
+			float oldProb &#x3D; row[j];
+			float newProb &#x3D; oldProb / total;
+			newRow.push_back(newProb);
+		}
+		newGrid.push_back(newRow);
+	}
+
+	return newGrid;
+}
+
+vector &lt; vector &lt;float&gt; &gt; blur(vector &lt; vector &lt; float&gt; &gt; grid, float blurring) {
+
+	vector &lt; vector &lt;float&gt; &gt; window;
+	vector &lt; vector &lt;float&gt; &gt; newGrid;
+	// vector &lt; vector &lt;float&gt; &gt; newGrid &#x3D; vector(height, vector(width, 0.0) );
+	vector &lt;float&gt; row;
+	vector &lt;float&gt; newRow;
+
+	int height;
+	int width;
+	float center, corner, adjacent;
+
+	
+
+	height &#x3D; grid.size();
+	width &#x3D; grid[0].size();
+
+	center &#x3D; 1.0 - blurring;
+	corner &#x3D; blurring / 12.0;
+	adjacent &#x3D; blurring / 6.0;
+
+	int i, j;
+	float val;
+
+	for (i&#x3D;0; i&lt;3; i++) {
+		row.clear();
+		for (j&#x3D;0; j&lt;3; j++) {
+			switch (i) {
+				case 0: 
+				switch (j) {
+					case 0: 
+					val &#x3D; corner;
+					break;
+
+					case 1: 
+					val &#x3D; adjacent;
+					break;
+
+					case 2: 
+					val &#x3D; corner;
+					break;
+				}
+				break; 
+
+				case 1:
+				switch (j) {
+					case 0: 
+					val &#x3D; adjacent;
+					break;
+
+					case 1: 
+					val &#x3D; center;
+					break;
+					
+					case 2: 
+					val &#x3D; adjacent;
+					break;
+				}
+				break;
+
+				case 2:
+				switch(j) {
+					case 0: 
+					val &#x3D; corner;
+					break;
+
+					case 1: 
+					val &#x3D; adjacent;
+					break;
+					
+					case 2: 
+					val &#x3D; corner;
+					break;
+				}
+				break;
+			}
+			row.push_back(val);
+		}
+		window.push_back(row);
+	}
+
+
+	vector &lt;int&gt; DX;
+	vector &lt;int&gt; DY;
+
+	DX.push_back(-1); DX.push_back(0); DX.push_back(1);
+	DY.push_back(-1); DY.push_back(0); DY.push_back(1);
+
+	int dx;
+	int dy;
+	int ii;
+	int jj;
+	int new_i;
+	int new_j;
+	float multiplier;
+	float newVal;
+
+	// initialize new grid to zeros
+	for (i&#x3D;0; i&lt;height; i++) {
+		newRow.clear();
+		for (j&#x3D;0; j&lt;width; j++) {
+			newRow.push_back(0.0);
+		}
+		newGrid.push_back(newRow);
+	}
+
+
+	for (i&#x3D;0; i&lt; height; i++ ) {
+		for (j&#x3D;0; j&lt;width; j++ ) {
+			val &#x3D; grid[i][j];
+			newVal &#x3D; val;
+			for (ii&#x3D;0; ii&lt;3; ii++) {
+				dy &#x3D; DY[ii];
+				for (jj&#x3D;0; jj&lt;3; jj++) {
+					dx &#x3D; DX[jj];
+					new_i &#x3D; (i + dy + height) % height;
+					new_j &#x3D; (j + dx + width) % width;
+					multiplier &#x3D; window[ii][jj];
+					newGrid[new_i][new_j] +&#x3D; newVal * multiplier;
+				}
+			}
+		}
+	}
+
+	return normalize(newGrid);
+}
+
+// Move function defined below -- do not change
+vector&lt; vector &lt;float&gt; &gt; move(int dy, int dx, 
+	vector &lt; vector &lt;float&gt; &gt; beliefs,
+	float blurring) 
+{
+	int height, width;
+	height &#x3D; beliefs.size();
+	width &#x3D; beliefs[0].size();
+
+	float belief;
+	vector &lt; vector &lt;float&gt; &gt; newGrid;
+	
+	// initialize new grid to zeros
+	for (int i&#x3D;0; i&lt;height; i++) {
+	    vector &lt;float&gt; newRow;
+		newRow.clear();
+		for (int j&#x3D;0; j&lt;width; j++) {
+			newRow.push_back(0.0);
+		}
+		newGrid.push_back(newRow);
+	}
+
+	int new_i, new_j;
+	for (int i&#x3D;0; i&lt;height; i++) {
+		for (int j&#x3D;0; j&lt;width; j++) {
+			new_i &#x3D; (i + dy + height) % height;
+			new_j &#x3D; (j + dx + width)  % width;
+			belief &#x3D; beliefs[i][j];
+
+			newGrid[new_i][new_j] &#x3D; belief;
+		}
+	}
+	return blur(newGrid, blurring);
+}
+</code></pre>
+    </div>
+    <div class="tab-pane " id="385911-robot_functions-h" aria-labelledby="tab-385911-robot_functions-h" role="tabpanel">
+      <pre><code></code>// This is the header file, which includes function declarations
+#include &lt;vector&gt;
+
+// Declare the move function - its return type and parameters
+std::vector&lt; std::vector &lt;float&gt; &gt; move(int dy, int dx, 
+	std::vector &lt; std::vector &lt;float&gt; &gt; beliefs,
+	float blurring);
+
+// Declaring the blur function
+std::vector &lt; std::vector &lt;float&gt; &gt; blur(std::vector &lt; std::vector &lt; float&gt; &gt; grid, 
+    float blurring);</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Comparing Speeds.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Moving in C++')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

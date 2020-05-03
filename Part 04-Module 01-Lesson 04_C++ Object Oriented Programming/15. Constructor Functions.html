@@ -1,0 +1,506 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Constructor Functions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">15. Constructor Functions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="declaring-constructor-functions">Declaring Constructor Functions</h1>
+<p>Both Python and C++ have constructor functions. Constructor functions define what happens when you instantiate an object.</p>
+<h4 id="python-constructor">Python Constructor</h4>
+<p>These are the functions that define what happens when an object is instantiated. In Python, the syntax is:</p>
+<pre><code class="python language-python">def __init__(self, variable1, variable2, ..., variablen):
+    self.variable1 = variable1
+    self.variable2 = variable2
+    self.variablen = variablen</code></pre>
+<h4 id="c-constructor-declaration">C++ Constructor Declaration</h4>
+<p>In C++, you declare a constructor like this:</p>
+<pre><code class="c++ language-c++">Classname (datatype variable1, datatype variable2, …, datatype variablen);</code></pre>
+<p>You can also simultaneously declare a default constructor function, which implies the function has no inputs:</p>
+<pre><code class="c++ language-c++">Classname ();</code></pre>
+<p>This default constructor function is used when  you instantiate an object without providing values for the variables. To be more concrete, you will initialize a Matrix variable with a two-dimensional vector. If you do not provide a two-dimensional vector, you could initialize your Matrix variable with a default vector. This second case is what the empty constructor function is for. </p>
+<p>The Gaussian constructor declarations looked like this:</p>
+<pre><code class="c++ language-c++">class Gaussian
+{
+    private:
+        ...
+
+    public:
+        ...
+        Gaussian ();
+        Gaussian (float, float);
+
+   ....
+};</code></pre>
+<p>Whether or not you use a default constructor function will depend on your particular application and use-case. For example, if an object always has the same initial values, then it would make sense to have a default constructor function.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="defining-constructor-functions">Defining Constructor Functions</h1>
+<p>Once you've declared your constructor functions, you need to actually define them in a .cpp file. </p>
+<p>The constructor function definitions have the following syntax:</p>
+<pre><code class="c++ language-c++">// empty constructor function syntax
+Classname::ClassName() {
+
+    constructor function definition
+}
+
+// constructor function syntax
+Classname::ClassName(datatype variable1, datatype variable2, …, datatype variablen) {
+
+    constructor function definition
+
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You can see how this was done for the Gaussian class:</p>
+<pre><code class="c++ language-c++">Gaussian::Gaussian() {
+    mu = 0;
+    sigma2 = 1; 
+}
+
+Gaussian::Gaussian (float average, float sigma) {
+    mu = average;
+    sigma2 = sigma;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Note that constructor functions do not return anything. They merely initialize class variables. You might also be wondering how the function definitions can access mu and sigma2 if those were private variables. Remember that private variables can be accessed from within the class code itself but not from outside the class.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="initializing-with-default-values">Initializing with Default Values</h1>
+<p>In both Python and C++, you can use default values in your construction functions. In Python, the syntax is:</p>
+<pre><code class="python language-python">def __init__(self, variable1 = default1, variable2 = default2, ..., variablen = defaultn):
+    self.variable1 = variable1
+    self.variable2 = variable2
+    self.variablen = variablen</code></pre>
+<p>You can also get this functionality in C++ although the syntax might not be what you'd expect; you actually define default values in the .h file function definition. Here is a trivial example for an addition Class that holds two integers and outputs their sum.</p>
+<p>Here is the header file add.h:</p>
+<pre><code class="c++ language-c++">class Add
+{
+    public:
+        int a;
+        int b;
+
+        Add(int, int second = 17);
+
+        int addition();
+};</code></pre>
+<p>and then here are the definitions in add.cpp:</p>
+<pre><code class="c++ language-c++">#include  "add.h"
+
+Add::Add(int first, int second) {
+
+    a = first;
+    b = second;
+}
+
+int Add::addition() {
+    return a + b;
+}</code></pre>
+<p>Notice that the default value was declared in the header file. Now, if you only specify one value when instantiating an add object, variable b will have a default value of 17:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="c++ language-c++">#include &lt;iostream&gt;
+
+#include  "add.h"
+
+int main() {
+
+    Add adder(5);
+    std::cout &lt;&lt; adder.addition() &lt;&lt; std::endl;
+    return 0;
+
+}</code></pre>
+<p>The above code outputs 22.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="declare-and-define-matrix-class-constructors">Declare and Define Matrix Class Constructors</h1>
+<p>Now it's your turn. Fill out the TODO sections in the matrix.h and matrix.cpp files. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#411633-main-cpp" class="nav-item nav-link  active show" id="tab-411633-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="411633-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#411633-matrix-cpp" class="nav-item nav-link " id="tab-411633-matrix-cpp" data-toggle="tab" role="tab"
+      aria-controls="411633-matrix-cpp" aria-selected="false">matrix.cpp</a>
+    <a href="#411633-matrix-h" class="nav-item nav-link " id="tab-411633-matrix-h" data-toggle="tab" role="tab"
+      aria-controls="411633-matrix-h" aria-selected="false">matrix.h</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="411633-main-cpp" aria-labelledby="tab-411633-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &quot;matrix.h&quot;
+
+int main () {
+    
+    // TODO: Nothing to do here
+    
+    return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="411633-matrix-cpp" aria-labelledby="tab-411633-matrix-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;matrix.h&quot;
+
+/* TODO: Define the default constructor. Remember the syntax is
+**      Classname::ClassName() {
+**    
+**          initialize variables
+**    
+**       }
+**
+**
+**      You need to initialize the grid variable to a default value such as
+**      a 4x4 matrix with all zeros.
+**
+**      Then initialize the rows variable, and the cols variable using the
+**      vector size method. For example myvector.size() will give the size of
+**      a vector. For a 2-dimensional vector, myvector.size() would be the
+**      number of rows in a matrix.
+**
+*/
+
+/* TODO: Define a constructor that receives a 2-Dimensional vector
+**       and assigns the vector to the grid variable. 
+**       
+**      Remember the syntax is
+**      Classname::ClassName(datatype inputvariablename) {
+**    
+**          classvariable &#x3D; inputvariablename
+**    
+**       }
+**
+**      Then initialize the rows variable, and the cols variable exactly
+**      as you did for the default constructor.
+**
+*/
+</code></pre>
+    </div>
+    <div class="tab-pane " id="411633-matrix-h" aria-labelledby="tab-411633-matrix-h" role="tabpanel">
+      <pre><code></code>#include &lt;vector&gt;
+
+class Matrix 
+{
+
+        private:
+
+            std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+            std::vector&lt;float&gt;::size_type rows;
+            std::vector&lt;float&gt;::size_type cols;
+            
+        public:
+        
+        /* 
+        ** TODO: Declare  constructor functions
+        ** For the matrix class, you will need two constructor functions.
+        ** 1. An empty constructor function
+        ** 2. A constructor function that accepts a 2-dimensional vector
+        */
+        
+};
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-matrixh">Solution matrix.h</h1>
+<pre><code class="c++ language-c++">#include &lt;vector&gt;
+
+class Matrix 
+{
+
+        private:
+
+            std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+            std::vector&lt;float&gt;::size_type rows;
+            std::vector&lt;float&gt;::size_type cols;
+
+        public:
+
+            // constructor function declarations
+            Matrix ();
+            Matrix (std::vector&lt; std::vector&lt;float&gt; &gt;);
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-matrixcpp">Solution matrix.cpp</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="c++ language-c++">#include "matrix.h"
+
+Matrix::Matrix() {
+    std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid (10, std::vector &lt;float&gt;(5, 0.5));
+    grid = initial_grid;
+    rows = initial_grid.size();
+    cols = initial_grid[0].size();
+
+}
+
+Matrix::Matrix(std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid) {
+    grid = initial_grid;
+    rows = initial_grid.size();
+    cols = initial_grid[0].size();
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="16. Set and Get Functions.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('15. Constructor Functions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1132 @@
+{
+  "data": {
+    "lesson": {
+      "id": 466898,
+      "key": "e40f1b7d-dd4c-4889-8f70-d9aa5cb38fde",
+      "title": "Odometers, Speedometers and Derivatives",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Gain a conceptual understanding of the *derivative* and basic calculus by plotting points and finding slopes.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/e40f1b7d-dd4c-4889-8f70-d9aa5cb38fde/466898/1544452913060/Odometers%2C+Speedometers+and+Derivatives+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/e40f1b7d-dd4c-4889-8f70-d9aa5cb38fde/466898/1544452909504/Odometers%2C+Speedometers+and+Derivatives+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 556330,
+          "key": "4a8a9840-bb73-4cb6-9ae7-c32f2d15f4c3",
+          "title": "Teleoperation at Phantom Auto",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4a8a9840-bb73-4cb6-9ae7-c32f2d15f4c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 556331,
+              "key": "bf02581a-bf4f-4002-b880-785e82af6b11",
+              "title": "Meet Phantom Auto",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "D6-7L9nZMPY",
+                "china_cdn_id": "D6-7L9nZMPY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466902,
+          "key": "179c07dc-7d5d-44ac-a5f2-3518bff176a8",
+          "title": "Inertial Navigation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "179c07dc-7d5d-44ac-a5f2-3518bff176a8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 476183,
+              "key": "1512822d-8780-42e4-9754-075f5ed1458a",
+              "title": "Nd113 C6 L1 01 Inertial Navigation V1 (1)",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vWgG0d2HOVE",
+                "china_cdn_id": "vWgG0d2HOVE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466903,
+          "key": "2360eeed-071a-4a3f-a954-1c1021b27a73",
+          "title": "Course Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2360eeed-071a-4a3f-a954-1c1021b27a73",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485989,
+              "key": "81f8f8de-7645-49cd-ad4e-15ac2a7ff661",
+              "title": "L1 02 B V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AFuQ1i3eUN8",
+                "china_cdn_id": "AFuQ1i3eUN8.mp4"
+              }
+            },
+            {
+              "id": 466971,
+              "key": "bfec92b4-d0d2-4810-866d-3f90a7b2eb0a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Outline\n\n### 1. Odometers, Speedometers, and Derivatives\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 466972,
+              "key": "03aa654f-d774-44f5-9fed-9b196c1250aa",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a21a720_odometer2/odometer2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/03aa654f-d774-44f5-9fed-9b196c1250aa",
+              "caption": "",
+              "alt": "",
+              "width": 500,
+              "height": 363,
+              "instructor_notes": null
+            },
+            {
+              "id": 466976,
+              "key": "667b9f81-3d46-45e5-a5be-0ccbb707f8ca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Understanding motion means understanding quantities like position, velocity, and acceleration and how they relate to each other. And it turns out that calculus gives us two incredible tools for understanding these relationships: **derivatives** and **integrals**. \n\nIn this lesson you will learn about the **derivative** and what it can tell us about motion. By the end of this lesson you will be able to take a car's *odometery data* (distance traveled) and use it to infer new knowledge about velocity and acceleration.\n\n### 2. Accelerometers, Rate Gyros, and Integrals\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 466981,
+              "key": "25f937b8-2852-48fd-979a-2883dd8e2644",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a21a91f_imu/imu.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/25f937b8-2852-48fd-979a-2883dd8e2644",
+              "caption": "",
+              "alt": "",
+              "width": 500,
+              "height": 382,
+              "instructor_notes": null
+            },
+            {
+              "id": 466982,
+              "key": "a6c2ce2b-e152-45f1-974d-bebcd9a0830b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Every self driving car has at least one **inertial measurement unit** in it. These small sensors are able to measure acceleration in three directions as well as rotation rates around all three axes (pitch, roll, and yaw).\n\nBut what can we *do* with this data? In this lesson you'll learn how the **integral** can be used to accumulate changes in data (and motion).\n\n### 3. Two Dimensional Robot Motion and Trigonometry",
+              "instructor_notes": ""
+            },
+            {
+              "id": 466985,
+              "key": "1e6097ef-b4db-4dbc-a422-7b7190d97f89",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a21aafd_vector-components-with-unit-vectors.svg/vector-components-with-unit-vectors.svg.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1e6097ef-b4db-4dbc-a422-7b7190d97f89",
+              "caption": "",
+              "alt": "",
+              "width": 500,
+              "height": 371,
+              "instructor_notes": null
+            },
+            {
+              "id": 485895,
+              "key": "6ed5f9f1-0cb9-4433-9e27-ac0d1f87be79",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In this lesson you'll use knowledge about a vehicle's **heading** and **displacement** to calculate horizontal and vertical changes in its motion.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485894,
+              "key": "002ccc9c-1816-41c9-89e4-85432b9fb6b2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 4. LAB - Reconstructing Trajectories\n\nIn the (optional) final project for this course you will use data like this.\n\n| timestamp | displacement  | yaw_rate | acceleration |\n| :-------: | :----------: | :------: | :----------: |\n| 0.0 | 0 | 0.0 | 0.0 |\n| 0.25 | 0.0 | 0.0 | 19.6 |\n| 0.5 | 1.225 | 0.0 | 19.6 |\n| 0.75 | 3.675 | 0.0 | 19.6 |\n| 1.0 | 7.35 | 0.0 | 19.6 |\n| 1.25 | 12.25 | 0.0 | 0.0 |\n| 1.5 | 17.15 | -2.829| 0.0 |\n| 1.75 | 22.05 | -2.829| 0.0 |\n| 2.0 | 26.95 | -2.829| 0.0 |\n| 2.25 | 31.85 | -2.829| 0.0 |\n| 2.5 | 36.75 | -2.829 | 0.0 |\n\nto reconstruct plots of the vehicle's trajectory like this:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485896,
+              "key": "0f8a407a-172e-4d71-ba23-c8ab5910c180",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3421c7_example-trajectory/example-trajectory.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0f8a407a-172e-4d71-ba23-c8ab5910c180",
+              "caption": "",
+              "alt": "",
+              "width": 380,
+              "height": 252,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 466904,
+          "key": "1d765c65-5843-4114-a49c-5cf511fc2516",
+          "title": "Inertial Navigation Sensors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1d765c65-5843-4114-a49c-5cf511fc2516",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 475763,
+              "key": "ff3978a2-748d-4edc-ab9d-4ea185c21448",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Navigation Sensors\nWe will be discussing the following sensors in this course: \n\n* **Odometers** - An odometer measures how far a vehicle has traveled by counting wheel rotations. These are useful for measuring distance traveled (or *displacement*), but they are susceptible to **bias** (often caused by changing tire diameter). A \"trip odometer\" is an odometer that can be manually reset by a vehicle's operator. \n\n* **Inertial Measurement Unit** - An Inertial Measurement Unit (or **IMU**) is used to measure a vehicle's heading, rotation rate, and linear acceleration using magnetometers, rate gyros, and accelerometers. We will discuss these sensors more in the next lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466905,
+          "key": "b54717dc-bbfc-413e-998c-89ab62ee7bbb",
+          "title": "Afternoon Drive",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b54717dc-bbfc-413e-998c-89ab62ee7bbb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485990,
+              "key": "fc46cf7f-039b-4223-9616-e9040688ab27",
+              "title": "L1 04 B V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jR7_6Zqq228",
+                "china_cdn_id": "jR7_6Zqq228.mp4"
+              }
+            },
+            {
+              "id": 467292,
+              "key": "4ba523a7-d332-4867-96a7-e3421bcb3fc7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To calculate average speed ( <span class=\"mathquill\">v_{\\text{avg}}</span> ), you can use the following equation:\n\n<div class=\"mathquill\">v_{\\text{avg}} = \\frac{\\Delta x}{\\Delta t}</div>\n\nwhere <span class=\"mathquill\">\\Delta x</span> means \"change in position\" and <span class=\"mathquill\">\\Delta t</span> means \"change in time\".",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467285,
+              "key": "14e13524-d5ac-456d-9852-7d14ad20a4e5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Trip Data\n\n| Time  | Position<br>(in miles)|\n|:----:|:--------------------------------:|\n| 2:00 |             30             |\n| 3:00 |             80             |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467286,
+              "key": "11b0321a-2cdf-4594-8f2c-653c238c2f05",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "11b0321a-2cdf-4594-8f2c-653c238c2f05",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Based on the data shown above, what was the average speed between 2:00 and 3:00 (in miles per hour)?",
+                "answers": [
+                  {
+                    "id": "a1512165966207",
+                    "text": "110",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512166006628",
+                    "text": "80",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512166089983",
+                    "text": "50",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512166097256",
+                    "text": "26.7",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512166118272",
+                    "text": "Impossible to calculate from this information",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 466906,
+          "key": "145a1542-1bc1-41dd-be38-409b8432c61f",
+          "title": "Delta x over Delta t",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "145a1542-1bc1-41dd-be38-409b8432c61f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 486250,
+              "key": "98ab787d-5bb9-4d52-9968-ddbd5b6faafb",
+              "title": "Delta X Over Delta T",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AsBTLDf0vQs",
+                "china_cdn_id": "AsBTLDf0vQs.mp4"
+              }
+            },
+            {
+              "id": 475768,
+              "key": "48218a76-a6a8-430b-a5e3-ac44e5a31e06",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution steps\n<div class=\"mathquill\">\nv_{\\text{avg}} = \\frac{\\text{distance traveled}}{\\text{time elapsed}}\n</div>\n\n<div class=\"mathquill\">\nv_{\\text{avg}} = \\frac{\\Delta x}{\\Delta t}\n</div>\n\n<div class=\"mathquill\">\nv_{\\text{avg}} = \\frac{x_{\\text{final}} - x_{\\text{initial}}}{t_{\\text{final}} - t_{\\text{initial}}}\n</div>\n\n<div class=\"mathquill\">\nv_{\\text{avg}} = \\frac{80-30}{3-2}\n</div>\n\n<div class=\"mathquill\">\nv_{\\text{avg}} = 50 \\text{mph}\n</div>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466907,
+          "key": "4c46b6d8-c9e6-445d-b321-29e7afcb5524",
+          "title": "Reducing Delta t",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4c46b6d8-c9e6-445d-b321-29e7afcb5524",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485991,
+              "key": "348992a1-598c-4f23-9612-e067d3120ec5",
+              "title": "L1 06 B V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GRaIUM6s6B4",
+                "china_cdn_id": "GRaIUM6s6B4.mp4"
+              }
+            },
+            {
+              "id": 467359,
+              "key": "871d2b1d-460f-4e9e-b5a3-92b65c7a3316",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Trip Data \n\nThis data shows information for the same trip that we looked at before. But this time the distance was recorded every twenty minutes. \n\n| Time | Odometer <br>(miles) |\n|:----:|:--------------------------------:|\n| 2:00 |                30                |\n| 2:20 |                40                |\n| 2:40 |                68                |\n| 3:00 |                80                |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467360,
+              "key": "715e517b-ebff-46b7-a7ea-83d7111df7cb",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "715e517b-ebff-46b7-a7ea-83d7111df7cb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the average speed (in miles per hour) to the time interval."
+                },
+                "concepts_label": "Time Interval",
+                "answers_label": "Average Speed",
+                "concepts": [
+                  {
+                    "text": "2:00 - 2:20",
+                    "correct_answer": {
+                      "id": "a1512170446613",
+                      "text": "30 MPH"
+                    }
+                  },
+                  {
+                    "text": "2:20 - 2:40",
+                    "correct_answer": {
+                      "id": "a1512170577783",
+                      "text": "84 MPH"
+                    }
+                  },
+                  {
+                    "text": "2:40 - 3:00",
+                    "correct_answer": {
+                      "id": "a1512170592554",
+                      "text": "36 MPH"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1512170592554",
+                    "text": "36 MPH"
+                  },
+                  {
+                    "id": "a1513626214957",
+                    "text": "72 MPH"
+                  },
+                  {
+                    "id": "a1512170446613",
+                    "text": "30 MPH"
+                  },
+                  {
+                    "id": "a1512170577783",
+                    "text": "84 MPH"
+                  },
+                  {
+                    "id": "a1513626224781",
+                    "text": "48 MPH"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 466908,
+          "key": "83e6648f-a883-407b-ad1d-038dc86b038a",
+          "title": "Plotting Position vs. Time",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "83e6648f-a883-407b-ad1d-038dc86b038a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 467358,
+              "key": "adeae20a-ed36-4a20-b574-b64d9a84765f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view090d131d",
+              "pool_id": "jupyter",
+              "view_id": "090d131d-3aaa-4ca4-9b49-ea31e901bf15",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Plotting%20Position%20vs%20Time.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466910,
+          "key": "1fb77dc8-4c13-4e41-bd86-aaf46cf58bb4",
+          "title": "Interpreting Position vs. Time Graphs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1fb77dc8-4c13-4e41-bd86-aaf46cf58bb4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 486664,
+              "key": "01a6cd0e-9cac-4b70-a573-4b63349f0def",
+              "title": "Nd113 C6 L1 09 L Interpreting Position Vs Time Graphs V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NAEasXHN_PU",
+                "china_cdn_id": "NAEasXHN_PU.mp4"
+              }
+            },
+            {
+              "id": 486005,
+              "key": "d9228acd-469b-4d73-bdcd-62a51b964451",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The graph below shows position on the **vertical axis** (in meters) vs time on the **horizontal axis**\n (in seconds) for a car moving in one dimension in a parking lot. The next few questions refer to this graph.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486002,
+              "key": "91bed67d-9181-4cc4-8a5e-1805e7641404",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a344f73_screen-shot-2017-12-15-at-2.29.58-pm/screen-shot-2017-12-15-at-2.29.58-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/91bed67d-9181-4cc4-8a5e-1805e7641404",
+              "caption": "",
+              "alt": "",
+              "width": 344,
+              "height": 342,
+              "instructor_notes": null
+            },
+            {
+              "id": 486010,
+              "key": "f20986bb-8de2-4dcd-8d46-3f3915694ffb",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f20986bb-8de2-4dcd-8d46-3f3915694ffb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following is the best verbal description of the vehicle's motion?",
+                "answers": [
+                  {
+                    "id": "a1513377798900",
+                    "text": "The car drove up a hill which goes up, then flat, then down.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513377857755",
+                    "text": "The car drove up and to the right, then turned to the right, then drove down and to the right.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513377892674",
+                    "text": "The car drove forward, stopped, then backed up.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 486014,
+              "key": "4d1bce51-7d8c-4008-aa9a-ca0e6e95df36",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4d1bce51-7d8c-4008-aa9a-ca0e6e95df36",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What was the car's average speed from <span class=\"mathquill\">t=0</span> to <span class=\"mathquill\">t=2</span>?",
+                "answers": [
+                  {
+                    "id": "a1513378139201",
+                    "text": "0 m/s",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378162774",
+                    "text": "2 m/s",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378178689",
+                    "text": "2.5 m/s",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513378193407",
+                    "text": "5 m/s",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 486019,
+              "key": "e1968b1f-d6e9-4c41-a414-45ecaef4b9a0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e1968b1f-d6e9-4c41-a414-45ecaef4b9a0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What was the car's average speed from t=0 to t=5.5?",
+                "answers": [
+                  {
+                    "id": "a1513378256278",
+                    "text": "0 m/s",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513378279627",
+                    "text": "2 m/s",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378289899",
+                    "text": "2.5 m/s",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378293236",
+                    "text": "-2 m/s",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 466911,
+          "key": "ca1b04bd-3896-4f38-bd4c-bcf1e175fd83",
+          "title": "Average vs. Instantaneous Speed",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ca1b04bd-3896-4f38-bd4c-bcf1e175fd83",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485992,
+              "key": "04a62e11-83a5-4c50-9c9c-8c1bcd71ea2e",
+              "title": "L1 09 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "b-zB9Bs8zKQ",
+                "china_cdn_id": "b-zB9Bs8zKQ.mp4"
+              }
+            },
+            {
+              "id": 486381,
+              "key": "ec7c7761-0be5-41af-88d0-98f21981f6cb",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a381c3a_speedo/speedo.jpeg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ec7c7761-0be5-41af-88d0-98f21981f6cb",
+              "caption": "A speedometer measures \"instantaneous speed\".",
+              "alt": "speedometer showing 90 miles per hour",
+              "width": 500,
+              "height": 333,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 466914,
+          "key": "aca4996b-a899-4601-9060-c52b513ac1db",
+          "title": "Defining the Derivative",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aca4996b-a899-4601-9060-c52b513ac1db",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 486255,
+              "key": "8354bcdb-be2d-4d33-ac52-d90a645d3359",
+              "title": "Defining The Derivative",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "043a3JRE1hU",
+                "china_cdn_id": "043a3JRE1hU.mp4"
+              }
+            },
+            {
+              "id": 468507,
+              "key": "bc40c538-4420-456d-9440-768aeef3b2ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "1. **Velocity** is the instantaneous rate of change of **position**\n2. **Velocity** is the slope of the tangent line of **position**\n3. **Velocity** is the **derivative** of **position**",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466912,
+          "key": "bfa66624-33cc-4326-a7a7-26c13c71bba7",
+          "title": "Understanding the Derivative",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bfa66624-33cc-4326-a7a7-26c13c71bba7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 467964,
+              "key": "b27f4218-db96-43fc-9d50-40006dac5084",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view090d131d",
+              "pool_id": "jupyter",
+              "view_id": "109402bc-e716-4490-9fb3-9b412b7fef56",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Understanding%20the%20Derivative.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466915,
+          "key": "810e0924-7749-480e-bb61-950d2b7aa7a3",
+          "title": "Differential Notation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "810e0924-7749-480e-bb61-950d2b7aa7a3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468513,
+              "key": "afe682e0-26f1-440f-b406-b85f678afeb1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Differential Notation\n\n<span class=\"mathquill\">\\dot{f}(t) = \\lim_{\\Delta t \\to 0} \\frac{f(t+\\Delta t) - f(t)}{\\Delta t}</span>\n\n\nThis \"dot\" notation is one of two common ways of representing the derivative.\n\nCalculus was simultaneously invented by two people: Gottfried Wilhelm Liebniz and Isaac Newton.\n\nAnd each came up with his own notation for representing derivatives. The [Wikipedia article on Notation for Differentiation](https://en.wikipedia.org/wiki/Notation_for_differentiation) does a good job of explaining them thoroughly but I will summarize here.\n\n### 0. What Newton and Liebniz share (d/dt)\n\nIn both notations, <span class=\"mathquill\">\\frac{d}{dt}</span> is an instruction to take the derivative. It means \"Take the derivative **with respect to <span class=\"mathquill\">t</span>** of whatever function shows up to the right.\"\n\nWhen you see something like this:\n\n<div class=\"mathquill\">\\frac{df}{dt}</div>\n\n<br>\n\nYou should think \"the derivative of some function <span class=\"mathquill\">f</span> with respect to <span class=\"mathquill\">t</span>\"\n\n### 1. Liebniz Notation (prime)\n\nIf some variable <span class=\"mathquill\">y</span> is a function of <span class=\"mathquill\">x</span> we can write: \n\n<span class=\"mathquill\">y=f(x)</span>\n\nThe derivative of <span class=\"mathquill\">y</span> with respect to <span class=\"mathquill\">x</span> is given by:\n\n<span class=\"mathquill\">\\frac{dy}{dx} = f '(x)</span>\n\nand this could be spoken as \"dee y dee x equals f **prime** of x\"\n\nWe will not be using this notation in this Nanodegree.\n\n### 2. Newton's Notation (dot)\n\nNewton invented Calculus as a tool to help him understand motion. As a result, he was usually thinking of derivatives *with respect to **time*** (not some abstract <span class=\"mathquill\">x</span> variable).\n\nLikewise, his functions weren't abstract <span class=\"mathquill\">f(x)</span>'s and <span class=\"mathquill\">g(f(x))</span>'s. The functions he was interested in actually meant something about the physical world! He wanted to describe:\n\nposition <span class=\"mathquill\">x(t)</span>\n\nvelocity <span class=\"mathquill\">v(t)</span>\n\nand acceleration <span class=\"mathquill\">a(t)</span>\n\nAnd he wanted to capture the relationships between these quantities compactly. So for Newton: **differentiation with respect to time is indicated by placing a dot over the variable**.\n\nSo, for example:\n\n<div class=\"mathquill\">v(t) = \\frac{d}{dt}x(t) = \\dot{x}(t)</div>\n\n<br>\nor for *second derivatives*:\n\n<div class=\"mathquill\">a(t) = \\frac{d}{dt} v(t) = \\frac{d}{dt} \\dot{x}(t) = \\ddot{x}(t)</div>\n\n<br>\n\nA second derivative can also be represented as follows:\n\n<div class=\"mathquill\">a(t) = \\frac{d^2}{dt^2} x(t) =  \\frac{d^2x}{dt^2}</div>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466917,
+          "key": "ffa49161-0d11-499c-9080-9fb1dc4f05c0",
+          "title": "A \"Typical\" Calculus Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ffa49161-0d11-499c-9080-9fb1dc4f05c0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468527,
+              "key": "962108e3-0795-4af7-b3d6-66b00ad7be29",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# A \"Typical\" Calculus Problem\nIf you’ve taken calculus before you probably have vague recollections of terms like “the chain rule” or “the product rule” or “the quotient rule”... these are all techniques for calculating the derivative of a function when you know the function’s algebraic form. Calculating the derivative of a function is also known as differentiation. And in a typical calculus class you would spend a LOT of time learning how to differentiate various functions… \n\nBelow you will see a differentiation problem that is similar to what you might find in a typical calculus class. Read through this problem and think about what it’s asking. Afterwards I’m going to explain why we are **not** going to spend time solving these kinds of problems in this course.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468532,
+              "key": "5a7941de-31c4-42eb-b828-c479a6859728",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Differentiation Example Problem\n\n1. A self driving car's position is described as a function of time from <span class=\"mathquill\">t=0</span> to <span class=\"mathquill\">t=10</span> by the following equation:\n\n  <span class=\"mathquill\">x(t) = -t^2 + 10t + 5</span>\n\n  >What is the derivative, <span class=\"mathquill\">\\dot{x}(t)\n</span> of this function?\n  A graph of <span class=\"mathquill\">x(t)\n</span> is included below. \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468545,
+              "key": "b77eadc6-a7f7-4e5e-85d9-50b7aa3e318f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a25e07e_screen-shot-2017-12-04-at-3.55.18-pm/screen-shot-2017-12-04-at-3.55.18-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b77eadc6-a7f7-4e5e-85d9-50b7aa3e318f",
+              "caption": "Graph of <span class=\"mathquill\">x(t) = -t^2 + 10t + 5</span>",
+              "alt": "",
+              "width": 335,
+              "height": 264,
+              "instructor_notes": null
+            },
+            {
+              "id": 486291,
+              "key": "ca8aa68e-6109-4914-a7b0-cb087da68f20",
+              "title": "Nd113 C6 L1 14 L A Typical Calculus Problem Part2 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0ww_q51P8uY",
+                "china_cdn_id": "0ww_q51P8uY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466918,
+          "key": "ad610731-deb6-4df1-8862-cdad0c990420",
+          "title": "How Odometers Work",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ad610731-deb6-4df1-8862-cdad0c990420",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485950,
+              "key": "55c67a2d-4463-408a-b2f8-93bed8f5e3de",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# How Odometers Work\n\nA mechanical odometer works by coupling the rotation of a vehicle's wheels to the rotation of numbers on a gauge like this:  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485952,
+              "key": "aaf3b2c8-c587-412b-a19d-f2cb06a69d4f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3433fc_odometer/odometer.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/aaf3b2c8-c587-412b-a19d-f2cb06a69d4f",
+              "caption": "",
+              "alt": "",
+              "width": 638,
+              "height": 493,
+              "instructor_notes": null
+            },
+            {
+              "id": 485954,
+              "key": "361b3fe9-e8b5-41ac-9a0b-db8b6cf19dbc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Each of these numbers is written on a dial which has the numbers 0 - 9 written on it. \n\nBut that last digit on the gauge needs to rotate **very slowly** compared to the rotation rate of the vehicle's tires. Typically, a car's wheels will have to complete **750** rotations to move 1 mile. And since there are 10 digits on each dial, that means the last digit should only complete one rotation after the wheels have completed **7,500** rotations! \n\nWe can even express this mathematically:\n\n<div class=\"mathquill\">\\frac{\\Delta \\theta_\\text{odometer}}{\\Delta \\theta_\\text{tires}} = \\frac{1}{7,500}</div>\n\n<br>\n\nThis reduction of rotation rate is accomplished through *gear reduction*. If you look at the blue and green gears in the image below you should get a sense for how that works.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485951,
+              "key": "3c2bc6f8-176a-478b-a95a-57e49f3f47a7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a343382_animatedgears/animatedgears.gif",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3c2bc6f8-176a-478b-a95a-57e49f3f47a7",
+              "caption": "",
+              "alt": "",
+              "width": 815,
+              "height": 420,
+              "instructor_notes": null
+            },
+            {
+              "id": 485955,
+              "key": "ec41ad4f-aa31-422e-b835-1a35f1d68624",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You don't need to remember any of this. Digital odometers don't even work this way (though they are pretty cool too).\n\nI just think animations of gears are too fun to pass up!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466919,
+          "key": "bdb278f6-610c-4b34-80ea-96dcda1d12c8",
+          "title": "Speed from Position Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bdb278f6-610c-4b34-80ea-96dcda1d12c8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478998,
+              "key": "23f8f98c-d233-46b6-ad63-3373b7079a7d",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view090d131d",
+              "pool_id": "jupyter",
+              "view_id": "a94c62be-a0ab-4529-9522-1917679b1f0e",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Speed%20from%20Position%20Data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466920,
+          "key": "340d79f5-ccaf-4150-8a03-e3a1a61703fc",
+          "title": "Position, Velocity, and Acceleration",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "340d79f5-ccaf-4150-8a03-e3a1a61703fc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468568,
+              "key": "7dc97c0b-e8f4-4b78-a65b-fd66832bb7da",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Position, Velocity, and Acceleration\n\nAllow me to say the same thing about **position** and **velocity** in 5 different ways.\n\n1. **Velocity** is the derivative of **position**. \n\n2. **Velocity** is the *instantaneous rate of change of **position** with respect to **time**.*\n\n3. An object's **velocity** tells us how much it's **position** will change when time changes.\n\n4. **Velocity** at some time is just the slope of a line tangent to a graph of **position** vs. **time**\n\n5. <span class=\"mathquill\">v(t) = \\frac{dx}{dt} = \\dot{x}(t)</span>\n\nIt turns out you can say the same 5 things about **velocity** and **acceleration**.\n\n1. **Acceleration** is the derivative of **velocity**. \n\n2. **Acceleration** is the *instantaneous rate of change of **velocity** with respect to **time**.*\n\n3. An object's **acceleration** tells us how much it's **velocity** will change when time changes.\n\n4. **Acceleration** at some time is just the slope of a line tangent to a graph of **velocity** vs. **time**\n\n5. <span class=\"mathquill\">a(t) = \\frac{dv}{dt} = \\dot{v}(t)</span>\n\nWe can also make a couple interesting statements about the relationship between **position** and **acceleration**:\n\n1. **Acceleration** is the second derivative of **position**.\n2. <span class=\"mathquill\"> a(t) = \\frac{d^2}{dt^2}x(t) = \\frac{d^2x}{dt^2} = \\ddot{x}(t)</span>\n\nWe'll explore this more in the next lesson. For now, just know that differentiating position twice gives acceleration! ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466921,
+          "key": "991ae271-e5c9-4fad-aa7b-5246fa841f7c",
+          "title": "Implement an Accelerometer",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "991ae271-e5c9-4fad-aa7b-5246fa841f7c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 479063,
+              "key": "b8f0b1f4-f1bb-423f-b0fd-a37ca1becf8a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view090d131d",
+              "pool_id": "jupyter",
+              "view_id": "cd309476-9a28-43b6-8a96-985afd9fae84",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Implement%20an%20Accelerometer.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466922,
+          "key": "000bc913-d3b4-4333-848b-6cf09a444a44",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "000bc913-d3b4-4333-848b-6cf09a444a44",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485993,
+              "key": "78fc87c1-9250-4246-b73e-4ca159ed2be3",
+              "title": "Outro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "K1Pj-cr1nFc",
+                "china_cdn_id": "K1Pj-cr1nFc.mp4"
+              }
+            },
+            {
+              "id": 485875,
+              "key": "4887356e-8c93-49c3-ac07-10489cfd3b32",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Congratulations! Up next: integrals!",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

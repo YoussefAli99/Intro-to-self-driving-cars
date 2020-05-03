@@ -1,0 +1,158 @@
+{
+  "id": 1210,
+  "project_id": 358,
+  "upload_types": [
+    "file"
+  ],
+  "file_filter_regex": "\\A(?!(((.*/)?(__MACOSX|\\.git|node_modules|bower_components|jspm_packages|\\.idea|build|.ipynb_checkpoints|\\.Trash-0|logs)(\\Z|/))))((.*\\.(css|docx|gradle|htm|html|ipynb|java|js|markdown|md|pdf|py|rmd|rst|sql|swift|txt|xml|yaml|yml)\\Z)|((.*/)?(README|Readme|readme|Makefile)\\Z))",
+  "nomination_eligible": false,
+  "stand_out": "",
+  "hide_criteria": false,
+  "created_at": "2017-09-14T05:00:13.778Z",
+  "updated_at": "2020-01-17T10:04:07.806Z",
+  "hashtag": "",
+  "max_upload_size_mb": 500,
+  "estimated_sla": null,
+  "project_assistant_enabled": false,
+  "checkmate_enabled": false,
+  "checkmate_metadata": null,
+  "available_for_cert_project": false,
+  "classroom_node_id": 395973,
+  "classroom_project_key": "09fc85f6-764f-4f82-a29a-a78b9f94a39e",
+  "language": "en-us",
+  "ndkeys": [
+    "nd113",
+    "nd004-indsa",
+    "nd113-mena-connect",
+    "nd113-ent",
+    "nd113-cn-ent",
+    "nd113-cn",
+    "nd002-inaif",
+    "nd113-beta"
+  ],
+  "coursekeys": [],
+  "sections": [
+    {
+      "id": 2654,
+      "name": "Correctness",
+      "created_at": "2017-10-16T21:06:22.114Z",
+      "updated_at": "2017-10-16T21:07:00.466Z",
+      "deleted_at": null,
+      "position": 0,
+      "rubric_id": 1210,
+      "rubric_items": [
+        {
+          "id": 7835,
+          "section_id": 2654,
+          "passed_description": "Running test.py shows \"all tests pass\".",
+          "exceeded_description": "",
+          "created_at": "2017-10-16T21:07:00.585Z",
+          "updated_at": "2017-11-11T00:25:13.998Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Does the submission pass all tests?",
+          "exceedable": false
+        },
+        {
+          "id": 7840,
+          "section_id": 2654,
+          "passed_description": "The student implements all required methods.",
+          "exceeded_description": "",
+          "created_at": "2017-10-16T21:17:18.375Z",
+          "updated_at": "2018-11-15T23:04:38.517Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "Does student implement A* search methods?",
+          "exceedable": false
+        },
+        {
+          "id": 7841,
+          "section_id": 2654,
+          "passed_description": "The heuristic function used to estimate the distance between two intersections is guaranteed to return a distance which is less than or equal to the true path length between the intersections.",
+          "exceeded_description": "",
+          "created_at": "2017-10-16T21:18:12.242Z",
+          "updated_at": "2017-11-11T00:25:14.019Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 2,
+          "criteria": "Is the heuristic used in A* search admissible?",
+          "exceedable": false
+        },
+        {
+          "id": 10645,
+          "section_id": 2654,
+          "passed_description": "Student answered all question correctly.",
+          "exceeded_description": null,
+          "created_at": "2018-04-02T16:12:38.123Z",
+          "updated_at": "2018-11-15T22:43:09.134Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 4,
+          "criteria": "Did Student answer all of the questions correctly?",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 2655,
+      "name": "Choice and Usage of Data Structures",
+      "created_at": "2017-10-16T21:11:56.866Z",
+      "updated_at": "2017-10-16T21:36:55.467Z",
+      "deleted_at": null,
+      "position": 1,
+      "rubric_id": 1210,
+      "rubric_items": [
+        {
+          "id": 7839,
+          "section_id": 2655,
+          "passed_description": "Code avoids obvious inappropriate use of lists and takes advantage of the performance improvement afforded by sets / dictionaries where appropriate. For example, a data structure like the \"open_set\" on which membership checks are frequently performed (e.g. `if node in open_set`) should not be a list. ",
+          "exceeded_description": "",
+          "created_at": "2017-10-16T21:12:25.548Z",
+          "updated_at": "2017-11-11T00:25:14.027Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Does code avoid slow lookups through correct choice of data structures?",
+          "exceedable": false
+        },
+        {
+          "id": 7842,
+          "section_id": 2655,
+          "passed_description": "This item is a judgement call. Student code doesn't need to be perfect but it should avoid big performance degrading issues like...\r\n\r\n...unnecessary duplication of lists\r\n...looping through a large set or dictionary when a single constant-time lookup is possible\r\n",
+          "exceeded_description": "",
+          "created_at": "2017-10-16T21:36:55.606Z",
+          "updated_at": "2017-11-11T00:25:14.035Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "Does code avoid flagrant unnecessary performance problems? ",
+          "exceedable": false
+        }
+      ]
+    }
+  ],
+  "project": {
+    "id": 358,
+    "name": "Implement Route Planner",
+    "nanodegree_key": "nd113",
+    "is_cert_project": false,
+    "audit_project_id": null,
+    "hashtag": null,
+    "audit_rubric_id": 1144,
+    "entitlement_required": null,
+    "is_career": null,
+    "recruitment_family_id": 9,
+    "awaiting_review_count": 0,
+    "awaiting_review_count_by_language": {},
+    "awaiting_audit_count": 0,
+    "awaiting_quality_audit_count": 0,
+    "awaiting_training_audit_count": 0,
+    "created_at": "2017-10-18T22:58:42.706Z",
+    "updated_at": "2020-05-03T17:31:53.817Z",
+    "price": "5.5",
+    "ungradeable_price": "3.0",
+    "audit_price": "0.0"
+  }
+}

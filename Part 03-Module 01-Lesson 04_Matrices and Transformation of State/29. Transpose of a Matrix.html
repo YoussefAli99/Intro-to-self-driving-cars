@@ -1,0 +1,409 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transpose of a Matrix</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Matrices and Transformation of State</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Connection to Kalman Filters.html">01. Connection to Kalman Filters</a>
+    </li>
+    <li class="">
+      <a href="02. Kalman Prediction.html">02. Kalman Prediction</a>
+    </li>
+    <li class="">
+      <a href="03. Kalman Filter Land.html">03. Kalman Filter Land</a>
+    </li>
+    <li class="">
+      <a href="04. Kalman Filter Prediction.html">04. Kalman Filter Prediction</a>
+    </li>
+    <li class="">
+      <a href="05. Another Prediction.html">05. Another Prediction</a>
+    </li>
+    <li class="">
+      <a href="06. More Kalman Filters.html">06. More Kalman Filters</a>
+    </li>
+    <li class="">
+      <a href="07. A Note on Notation.html">07. A Note on Notation</a>
+    </li>
+    <li class="">
+      <a href="08. Kalman Filter Design.html">08. Kalman Filter Design</a>
+    </li>
+    <li class="">
+      <a href="09. Let&#x27;s Look at Where we Are.html">09. Let&#x27;s Look at Where we Are</a>
+    </li>
+    <li class="">
+      <a href="10. The Kalman Filter Equations.html">10. The Kalman Filter Equations</a>
+    </li>
+    <li class="">
+      <a href="11. Simplifying the Kalman Filter Equations.html">11. Simplifying the Kalman Filter Equations</a>
+    </li>
+    <li class="">
+      <a href="12. The Rest of the Lesson.html">12. The Rest of the Lesson</a>
+    </li>
+    <li class="">
+      <a href="13. Representing State with Matrices.html">13. Representing State with Matrices</a>
+    </li>
+    <li class="">
+      <a href="14. Kalman Equation Reference.html">14. Kalman Equation Reference</a>
+    </li>
+    <li class="">
+      <a href="15. What is a vector.html">15. What is a vector?</a>
+    </li>
+    <li class="">
+      <a href="16. Vectors in Python.html">16. Vectors in Python</a>
+    </li>
+    <li class="">
+      <a href="17. Coding Vectors.html">17. Coding Vectors</a>
+    </li>
+    <li class="">
+      <a href="18. Coding Vectors (solution).html">18. Coding Vectors (solution)</a>
+    </li>
+    <li class="">
+      <a href="19. Guide to Mathematical Notation.html">19. Guide to Mathematical Notation</a>
+    </li>
+    <li class="">
+      <a href="20. Matrices in Python.html">20. Matrices in Python</a>
+    </li>
+    <li class="">
+      <a href="21. Coding Matrices.html">21. Coding Matrices</a>
+    </li>
+    <li class="">
+      <a href="22. Coding Matrices (Solution).html">22. Coding Matrices (Solution)</a>
+    </li>
+    <li class="">
+      <a href="23. Matrix Addition.html">23. Matrix Addition</a>
+    </li>
+    <li class="">
+      <a href="24. Coding Matrix Addition.html">24. Coding Matrix Addition</a>
+    </li>
+    <li class="">
+      <a href="25. Coding Matrix Addition (Solution).html">25. Coding Matrix Addition (Solution)</a>
+    </li>
+    <li class="">
+      <a href="26. Matrix Multiplication.html">26. Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="27. Coding Matrix Multiplication.html">27. Coding Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="28. Coding Matrix Multiplication (Solution).html">28. Coding Matrix Multiplication (Solution)</a>
+    </li>
+    <li class="">
+      <a href="29. Transpose of a Matrix.html">29. Transpose of a Matrix</a>
+    </li>
+    <li class="">
+      <a href="30. Coding the Transpose.html">30. Coding the Transpose</a>
+    </li>
+    <li class="">
+      <a href="31. Coding the Transpose (Solution).html">31. Coding the Transpose (Solution)</a>
+    </li>
+    <li class="">
+      <a href="32. The Identity Matrix.html">32. The Identity Matrix</a>
+    </li>
+    <li class="">
+      <a href="33. Coding Identity Matrix.html">33. Coding Identity Matrix</a>
+    </li>
+    <li class="">
+      <a href="34. Coding Identity Matrix (Solution).html">34. Coding Identity Matrix (Solution)</a>
+    </li>
+    <li class="">
+      <a href="35. Matrix Inverse.html">35. Matrix Inverse</a>
+    </li>
+    <li class="">
+      <a href="36. Coding Matrix Inverse.html">36. Coding Matrix Inverse</a>
+    </li>
+    <li class="">
+      <a href="37. Coding Matrix Inverse (Solution).html">37. Coding Matrix Inverse (Solution)</a>
+    </li>
+    <li class="">
+      <a href="38. What to Take Away from this Lesson.html">38. What to Take Away from this Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">29. Transpose of a Matrix</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="transpose-of-a-matrix">Transpose of a Matrix</h1>
+<p>There were a few Kalman filter equations that required the transpose of a matrix. You can identify these matrices because they have a T superscript. For example the transpose of matrix <span class="mathquill ud-math">\mathbf{A}</span> is written <span class="mathquill ud-math">\mathbf{A^T}</span></p>
+<p>These were the three equations that contained the transpose of a matrix:</p>
+<p><span class="mathquill ud-math">\mathbf{P_{k|k-1}} = \mathbf{F_{k}} \mathbf{P_{k-1|k-1}} \mathbf{F_{k}^T}  + \mathbf{Q_{k}}</span></p>
+<p><span class="mathquill ud-math">\mathbf{S_{k}} = \mathbf{H_{k}} \mathbf{P_{k|k-1}} \mathbf{H_{k}^T} + \mathbf{R_{k}}</span></p>
+<p><span class="mathquill ud-math">\mathbf{K_{k}} = \mathbf{P_{k|k-1}} \mathbf{H_{k}^T} \mathbf{S_{k}}^{-1}</span></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="what-exactly-is-the-transpose">What exactly is the transpose?</h3>
+<p>You can think of the tranpose as switching rows and columns. The matrix rows become the columns or alternatively you can consider the columns become the rows. </p>
+<p>Here is an example. If you start with this matrix,</p>
+<p><span class="mathquill ud-math">\begin{bmatrix}3 & 25 & 9 & 2 & 4 \\ 7  & 15 & 6 & 92 & 17 \\31 & 18 & 0 & 11 & 8\end{bmatrix}</span></p>
+<p>the transpose would be</p>
+<p><span class="mathquill ud-math">\begin{bmatrix}3 & 7 & 31 \\ 25  & 15 & 18  \\ 9 & 6 & 0 \\ 2 & 92 & 11 \\ 4 & 17 & 8\end{bmatrix}</span></p>
+<p>The original matrix was size 3x5. The transpose is 5x3. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>To get a better understanding of what is happening, this image is color coded to match values from the original matrix and the transpose of the matrix. If you think of switching the rows and making them into columns, the matrix operation looks like this:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/transpose-1.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>But you could also think of transposing the columns into rows:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/transpose-2.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Mathematically, you are switching around the i and j values for every element in the matrix. For example, the element in the 3rd row, 4th column is 11. For the transpose of the matrix, 11 is now in the 4th row, 3rd column. The formal mathematical definition of the transpose of a matrix is</p>
+<p><span class="mathquill ud-math">[\mathbf{A^T}]<em>{ij} = [\mathbf{A}]</em>{ji}</span></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="motivation-for-calculating-the-transpose">Motivation for Calculating the Transpose</h3>
+<p>In order to use the Kalman filter equations, you need to calculate the transpose of both the <span class="mathquill ud-math">\mathbf{F} \text{ and } \mathbf{H}</span> matrices. </p>
+<p>But there is also another place where you could use a matrix transposition: when carrying out matrix multiplication. In the previous exercises for matrix multiplication, you wrote a function that returned a column of a matrix. You needed matrix columns in order to find the dot product of a row from matrix <span class="mathquill ud-math">\mathbf{A}</span>  and a column from matrix <span class="mathquill ud-math">\mathbf{B}</span>.</p>
+<p>Here is a reminder of what that looked like:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/matrix-multiplication-step1.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>But what happens if you take the transpose of matrix <span class="mathquill ud-math">\mathbf{B}</span>? All of the columns in <span class="mathquill ud-math">\mathbf{B}</span> become rows. Your matrix multiplication function  then involves finding the dot product between rows of <span class="mathquill ud-math">\mathbf{A}</span> and rows of <span class="mathquill ud-math">\mathbf{B^T}</span>:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/matrix-multiplication-transpose-1.png" alt="Dot product between rows of A and transpose of matrix B" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Dot product between rows of A and transpose of matrix B</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You are not calculating the product of <span class="mathquill ud-math">AB^T</span>. Instead, you are taking advantage of matrix transposition to make matrix multiplication easier to code.</p>
+<p>In the previous coding exercises, the get_column function you built to change a matrix column into a horizontal vector was essentially a transpose.</p>
+<p>In the coding exercises for this part of the lesson, you will not only write a transpose function but also write a new multiplication function that takes advantage of the matrix transpose.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="coding-the-transpose-of-a-matrix">Coding the Transpose of a Matrix</h3>
+<p>This is a similar problem to what you have already seen; you'll need to use nested for loops. But what exactly will this nested for loop look like? </p>
+<p>You could iterate through the matrix like you've done already with the rows in the outer loop and the columns in the inner loop:</p>
+<pre><code class="python language-python">for i in range(len(matrixA)):
+    for j in range(len(matrixA[0])):
+        print(matrixA[i][j])</code></pre>
+<p>The transpose of the matrix would need to store each i, j element inside a new matrix with position j, i. But how are you going to populate this new matrix? You would probably first need to create an n x m list within a list and populate this nested list with empty values. That sounds complicated.</p>
+<p>Is there a more efficient way to code matrix transposition? Think about how you could start iterating through the columns in the outside for loop and the rows on the inside for loop. </p>
+<p>Go to the next part of the lesson to write your code.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="30. Coding the Transpose.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('29. Transpose of a Matrix')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+{
+  "data": {
+    "lesson": {
+      "id": 488940,
+      "key": "4c1d184c-8bfd-4efd-8b96-5e89644075d2",
+      "title": "Your next Nanodegree",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Enroll in a Career-Ready Nanodegree program",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 488941,
+          "key": "81bdcea9-7a08-45a5-8cf5-6bec66bdce96",
+          "title": "Enroll in your next Nanodegree program",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81bdcea9-7a08-45a5-8cf5-6bec66bdce96",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 488943,
+              "key": "2ca8e654-e5e9-4bcf-ad1e-47d44ba58a8a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Congratulations 🎉\n\nCongratulations on graduating from the Intro to Self-Driving Cars Nanodegree program! We're proud of you as this was no small feat!\n\nAs you continue on your learning journey, you are now ready and qualified to take one of the core programs in the School of Autonomous Systems. By finishing Intro to Self-Driving Cars, you can directly enroll into one of these core programs that help prepare you for a career as a:\n\n* **[Self-Driving Car Engineer](https://www.udacity.com/drive)**\n* **[Robotics Software Engineer](https://www.udacity.com/robotics)**\n* **[Flying Car and Autonomous Flight Engineer](https://www.udacity.com/flying-car)**\n\nOnce you've chosen a program, **click below** to enroll directly into the program.\n\n#### Self-Driving Car Engineer Nanodegree program - **[Enroll Now](https://www.udacity.com/drive)** \n\n#### Robotics Software Engineer Nanodegree program - **[Enroll Now](https://www.udacity.com/robotics)** \n\n#### Flying Car and Autonomous Flight Nanodegree program - **[Enroll Now](https://www.udacity.com/flying-car)** ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 675854,
+              "key": "40cf52d5-5f6d-42a5-860c-d1e1931e2a5b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/April/5cbf9491_sas-infographic-v6/sas-infographic-v6.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/40cf52d5-5f6d-42a5-860c-d1e1931e2a5b",
+              "caption": "",
+              "alt": "",
+              "width": 1430,
+              "height": 1560,
+              "instructor_notes": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

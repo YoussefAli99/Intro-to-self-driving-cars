@@ -1,0 +1,207 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assembly Language</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Intro to Optimization</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Introduction.html">01. Course Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Empathize with the Computer.html">02. Empathize with the Computer</a>
+    </li>
+    <li class="">
+      <a href="03. Intro to Computer Hardware.html">03. Intro to Computer Hardware</a>
+    </li>
+    <li class="">
+      <a href="04. Embedded Terminal Explanation.html">04. Embedded Terminal Explanation</a>
+    </li>
+    <li class="">
+      <a href="05. Demo Machine Code.html">05. Demo: Machine Code</a>
+    </li>
+    <li class="">
+      <a href="06. Assembly Language.html">06. Assembly Language</a>
+    </li>
+    <li class="">
+      <a href="07. Binary.html">07. Binary</a>
+    </li>
+    <li class="">
+      <a href="08. Demo Binary.html">08. Demo: Binary</a>
+    </li>
+    <li class="">
+      <a href="09. Demo Binary Floats.html">09. Demo: Binary Floats</a>
+    </li>
+    <li class="">
+      <a href="10. Memory and the CPU.html">10. Memory and the CPU</a>
+    </li>
+    <li class="">
+      <a href="11. Demo Stack vs Heap.html">11. Demo: Stack vs Heap</a>
+    </li>
+    <li class="">
+      <a href="12. Outro.html">12. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Assembly Language</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="assembly-language">Assembly Language</h3>
+<p>In between C++ and machine code there is actually another language called <em>assembly language</em>. Assembly language is a human readable low-level language that gets you even closer to the hardware than C++. </p>
+<p>Your compiler might not actually produce assembly language code and instead go directly to machine code. But you can still see assembly language code if you're curious. And there might be rare cases when you are trying to improve code efficiency and write assembly language directly in order to improve performance.</p>
+<p>In the previous demonstration, you can use the following commands to output the assembly language code:</p>
+<pre><code>cd ~/home/workspace/demo_machine_code
+g++ -S machine_code.cpp</code></pre>
+<p>This will output a file called machine_code.s, which you can then double-click to see its contents. </p>
+<p>Assembly language is not nearly as intuitive as C++, but it is still human readable. When you do something as simple as declaring and defining a variable,<code>int x = 5;</code>. the computer has to break this up into a series of steps like assigning a space in memory to the variable x and then placing the value 5 into the assigned space. </p>
+<p>You can write out each of these steps directly in assembly language. For the purposes of this course, you do not need to be familiar with assembly language. But just looking at assembly code will prove to you that every line of C++ code has consequences in terms of efficiency. Look at the number of steps involved with just assigning the value to x.</p>
+<p>Unnecessary lines of code mean that the CPU will take more time to execute a program than what is actually needed.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Binary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Assembly Language')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,358 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1D Vector Playground</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Vectors</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. C++ Vectors.html">01. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="02. Namespaces.html">02. Namespaces</a>
+    </li>
+    <li class="">
+      <a href="03. Python Lists vs. C++ Vectors.html">03. Python Lists vs. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="04. Initializing Vector Values.html">04. Initializing Vector Values</a>
+    </li>
+    <li class="">
+      <a href="05. Vector Methods.html">05. Vector Methods</a>
+    </li>
+    <li class="">
+      <a href="06. Vectors and For Loops.html">06. Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="07. Math and Vectors.html">07. Math and Vectors</a>
+    </li>
+    <li class="">
+      <a href="08. 1D Vector Playground.html">08. 1D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="09. 2D Vectors.html">09. 2D Vectors</a>
+    </li>
+    <li class="">
+      <a href="10. 2D Vectors and For Loops.html">10. 2D Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="11. 2D Vector Playground.html">11. 2D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="12. Next Lesson.html">12. Next Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. 1D Vector Playground</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="playground">Playground</h1>
+<p>Now it's your turn to make some programs with vectors. Here is a playground where you can write your program.</p>
+<h4 id="idea-1">Idea 1</h4>
+<p>First, try writing a program that initializes a vector of size 3. The values for this vector are <span class="mathquill ud-math">[5, 10, 27]</span>. Initialize another vector of size 3 with the values <span class="mathquill ud-math">[3, 17, 12]</span>. Now subtract the two vectors from each other and output the results.</p>
+<p>To get even more practice, write a function that takes in two vectors and then outputs the difference between the vectors. Assume that the two vectors are the same size; otherwise you would have to check that they are the same size and include some error checking.</p>
+<h4 id="idea-2">Idea 2</h4>
+<p>Initialize a vector with the values <span class="mathquill ud-math">[17, 10, 31, 5, 7]</span>. Initialize another vector with the values <span class="mathquill ud-math">[3, 1, 6, 19, 8]</span>. Then, output another vector that contains the product of each element. In other words, the vector should have <span class="mathquill ud-math">[17\times3, \space10\times1, \space 31\times6, \space 5\times19, \space 7\times8]</span>.</p>
+<p>To get even more practice, write a function that takes in two vectors and then outputs a new vector that is the result of element by element multiplication. Assume that the two vectors are the same size; otherwise you would have to check that they are the same size and do some error checking.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468611-main-cpp" class="nav-item nav-link  active show" id="tab-468611-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="468611-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#468611-solution_one-cpp" class="nav-item nav-link " id="tab-468611-solution_one-cpp" data-toggle="tab" role="tab"
+      aria-controls="468611-solution_one-cpp" aria-selected="false">solution_one.cpp</a>
+    <a href="#468611-solution_two-cpp" class="nav-item nav-link " id="tab-468611-solution_two-cpp" data-toggle="tab" role="tab"
+      aria-controls="468611-solution_two-cpp" aria-selected="false">solution_two.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468611-main-cpp" aria-labelledby="tab-468611-main-cpp" role="tabpanel">
+      <pre><code></code>//TODO: Use this as a playground to practice with vectors
+
+
+//TODO:
+// Fill out your program&#x27;s header. The header should contain any necessary
+// include statements and also function declarations
+
+
+//TODO:
+// Write your main program. Remember that all C++ programs need
+// a main function. The most important part of your program goes
+// inside the main function. </code></pre>
+    </div>
+    <div class="tab-pane " id="468611-solution_one-cpp" aria-labelledby="tab-468611-solution_one-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+// function declaration
+vector&lt;float&gt; vectorsubtraction(vector&lt;float&gt; vector1, vector&lt;float&gt; vector2);
+
+// program that computes the difference between two vectors
+int main() {
+
+	// declare and initialize vectors
+	vector&lt;float&gt; v1(3);
+	vector&lt;float&gt; v2(3);
+	
+	v1[0] &#x3D; 5.0;
+	v1[1] &#x3D; 10.0;
+	v1[2] &#x3D; 27.0;
+	
+	v2[0] &#x3D; 2.0;
+	v2[1] &#x3D; 17.0;
+	v2[2] &#x3D; 12.0;
+	
+	vector&lt;float&gt; v3 (v1.size());
+
+	// calculate the difference between the two vectors
+	v3 &#x3D; vectorsubtraction(v1, v2);
+
+	// print out the results of the vector subtraction
+	for (int i &#x3D; 0; i &lt; v3.size(); i++) {
+		cout &lt;&lt; v3[i] &lt;&lt; &quot; &quot;;
+	}
+
+	cout &lt;&lt; endl;
+	
+	return 0;
+
+}
+
+// define the function - 
+// INPUTS: two vectors
+// OUTPUT: the difference between the two vectors
+vector&lt;float&gt; vectorsubtraction(vector&lt;float&gt; vector1, vector&lt;float&gt; vector2) {
+
+	vector&lt;float&gt; vectordifference (vector1.size());
+
+	for (int i &#x3D; 0; i &lt; vector1.size(); i++) {
+		vectordifference[i] &#x3D; vector1[i] - vector2[i];
+	}
+
+	return vectordifference;
+
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="468611-solution_two-cpp" aria-labelledby="tab-468611-solution_two-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+// function declaration
+vector&lt;float&gt; vectormultiply(vector&lt;float&gt; vector1, vector&lt;float&gt; vector2);
+
+// program that computes the element-wise multiplication of two vectors
+int main() {
+
+	// declare and initialize vectors
+	vector&lt;float&gt; v1(5);
+	vector&lt;float&gt; v2(5);
+	
+	v1[0] &#x3D; 17.0;
+	v1[1] &#x3D; 10.0;
+	v1[2] &#x3D; 31.0;
+	v1[3] &#x3D; 5.0;
+	v1[4] &#x3D; 7.0;
+
+	v2[0] &#x3D; 3.0;
+	v2[1] &#x3D; 1.0;
+	v2[2] &#x3D; 6.0;
+	v2[3] &#x3D; 19.0;
+	v2[4] &#x3D; 8.0;
+
+	vector&lt;float&gt; v3 (v1.size());
+
+	// calculate the difference between the two vectors
+	v3 &#x3D; vectormultiply(v1, v2);
+
+	// print out the results of the vector multiplication
+	for (int i &#x3D; 0; i &lt; v3.size(); i++) {
+		cout &lt;&lt; v3[i] &lt;&lt; &quot; &quot;;
+	}
+
+	cout &lt;&lt; endl;
+	
+	return 0;
+
+}
+
+// define the function - 
+// INPUTS: two vectors
+// OUTPUT: multiplies elements together into a new vector
+vector&lt;float&gt; vectormultiply(vector&lt;float&gt; vector1, vector&lt;float&gt; vector2) {
+
+	vector&lt;float&gt; vectorproduct (vector1.size());
+
+	for (int i &#x3D; 0; i &lt; vector1.size(); i++) {
+		vectorproduct[i] &#x3D; vector1[i] * vector2[i];
+	}
+
+	return vectorproduct;
+
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. 2D Vectors.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 1D Vector Playground')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

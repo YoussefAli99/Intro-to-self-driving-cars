@@ -1,0 +1,292 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C++ Vectors</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Vectors</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. C++ Vectors.html">01. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="02. Namespaces.html">02. Namespaces</a>
+    </li>
+    <li class="">
+      <a href="03. Python Lists vs. C++ Vectors.html">03. Python Lists vs. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="04. Initializing Vector Values.html">04. Initializing Vector Values</a>
+    </li>
+    <li class="">
+      <a href="05. Vector Methods.html">05. Vector Methods</a>
+    </li>
+    <li class="">
+      <a href="06. Vectors and For Loops.html">06. Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="07. Math and Vectors.html">07. Math and Vectors</a>
+    </li>
+    <li class="">
+      <a href="08. 1D Vector Playground.html">08. 1D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="09. 2D Vectors.html">09. 2D Vectors</a>
+    </li>
+    <li class="">
+      <a href="10. 2D Vectors and For Loops.html">10. 2D Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="11. 2D Vector Playground.html">11. 2D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="12. Next Lesson.html">12. Next Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. C++ Vectors</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="vectors-and-matrix-algebra">Vectors and Matrix Algebra</h1>
+<p>Great work! You made it through a bunch of C++ syntax. As you've probably realized, programming in C++ is  arguably harder than programming in Python. C++ was designed for fast execution, and the language gives you a lot of different ways to get the same results. Python was designed for writing code quickly but at the expense of execution speed.</p>
+<p>There is one last piece of syntax you'll need to translate your Python code from earlier in the nanodegree: C++ vectors, which are like Python lists.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="the-vector-library">The Vector Library</h1>
+<p>When you were writing Python programs to store and manipulate matrices, you used Python lists. C++ vectors are just like Python lists. In this lesson, you are going to practice using C++ vectors in preparation for translating Python code to C++.</p>
+<p>But hold on! C++ also has something called a list. But this is where things get confusing. However, C++ lists do not work the same way as Python lists.</p>
+<p>C++ lists and C++ vectors are both in a family of structures called <a href="http://en.cppreference.com/w/cpp/container" rel="noopener noreferrer" target="_blank">sequence containers</a>. These containers allow you to store values in series and then access those values. C++ has a handful of sequence containers including lists, vectors, and arrays. </p>
+<p>Don't get confused! C++ vectors are the closest to Python lists. You can add elements to a C++ vector just like you can in a Python list. You can remove elements as well and also easily access any element in the vector. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="declaring-c-vectors">Declaring C++ Vectors</h3>
+<p>Declaring C++ vector variables is like declaring any other type of variable:</p>
+<pre><code class="c++ language-c++">typedefinition variablename;</code></pre>
+<p>But the vector type definition has a funny looking syntax because you also need to declare what kind of values will go inside the vector such as integer, char, float, string, etc. Here are some examples of variable declarations using vectors:</p>
+<pre><code class="c++ language-c++">std::vector&lt;char&gt; charactervectorvariable;
+std::vector&lt;int&gt; integervectorvariable;
+std::vector&lt;float&gt; floatvectorvariable;
+std::vector&lt;double&gt; doublevectorvariable:</code></pre>
+<h3 id="including-the-vector-library">Including the Vector Library</h3>
+<p>In an actual program, you would need to include the vector file from the Standard Library:</p>
+<pre><code class="c++ language-c++">#include &lt;vector&gt;
+
+int main() {
+      std::vector&lt;float&gt; floatvectorvariable;
+      return 0;
+}</code></pre>
+<p>The above code will declare an empty vector of type float.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>More generically, you declare a vector with:</p>
+<pre><code class="c++ language-c++">std::vector&lt;datatype&gt; variablename;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="practice-declaring-vectors">Practice Declaring Vectors</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468851-main-cpp" class="nav-item nav-link  active show" id="tab-468851-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="468851-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#468851-solution-cpp" class="nav-item nav-link " id="tab-468851-solution-cpp" data-toggle="tab" role="tab"
+      aria-controls="468851-solution-cpp" aria-selected="false">solution.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468851-main-cpp" aria-labelledby="tab-468851-main-cpp" role="tabpanel">
+      <pre><code></code>// TODO: import the vector library
+
+// TODO: write a program that declares three integer vectors named:
+//       vector1
+//       vector2
+//       vector3</code></pre>
+    </div>
+    <div class="tab-pane " id="468851-solution-cpp" aria-labelledby="tab-468851-solution-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;vector&gt;
+
+int main() {
+    
+    std::vector&lt;int&gt; vector1;
+    std::vector&lt;int&gt; vector2;
+    std::vector&lt;int&gt; vector3;
+    
+    return 0;
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Namespaces.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. C++ Vectors')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matrix Inverse</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Matrices and Transformation of State</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Connection to Kalman Filters.html">01. Connection to Kalman Filters</a>
+    </li>
+    <li class="">
+      <a href="02. Kalman Prediction.html">02. Kalman Prediction</a>
+    </li>
+    <li class="">
+      <a href="03. Kalman Filter Land.html">03. Kalman Filter Land</a>
+    </li>
+    <li class="">
+      <a href="04. Kalman Filter Prediction.html">04. Kalman Filter Prediction</a>
+    </li>
+    <li class="">
+      <a href="05. Another Prediction.html">05. Another Prediction</a>
+    </li>
+    <li class="">
+      <a href="06. More Kalman Filters.html">06. More Kalman Filters</a>
+    </li>
+    <li class="">
+      <a href="07. A Note on Notation.html">07. A Note on Notation</a>
+    </li>
+    <li class="">
+      <a href="08. Kalman Filter Design.html">08. Kalman Filter Design</a>
+    </li>
+    <li class="">
+      <a href="09. Let&#x27;s Look at Where we Are.html">09. Let&#x27;s Look at Where we Are</a>
+    </li>
+    <li class="">
+      <a href="10. The Kalman Filter Equations.html">10. The Kalman Filter Equations</a>
+    </li>
+    <li class="">
+      <a href="11. Simplifying the Kalman Filter Equations.html">11. Simplifying the Kalman Filter Equations</a>
+    </li>
+    <li class="">
+      <a href="12. The Rest of the Lesson.html">12. The Rest of the Lesson</a>
+    </li>
+    <li class="">
+      <a href="13. Representing State with Matrices.html">13. Representing State with Matrices</a>
+    </li>
+    <li class="">
+      <a href="14. Kalman Equation Reference.html">14. Kalman Equation Reference</a>
+    </li>
+    <li class="">
+      <a href="15. What is a vector.html">15. What is a vector?</a>
+    </li>
+    <li class="">
+      <a href="16. Vectors in Python.html">16. Vectors in Python</a>
+    </li>
+    <li class="">
+      <a href="17. Coding Vectors.html">17. Coding Vectors</a>
+    </li>
+    <li class="">
+      <a href="18. Coding Vectors (solution).html">18. Coding Vectors (solution)</a>
+    </li>
+    <li class="">
+      <a href="19. Guide to Mathematical Notation.html">19. Guide to Mathematical Notation</a>
+    </li>
+    <li class="">
+      <a href="20. Matrices in Python.html">20. Matrices in Python</a>
+    </li>
+    <li class="">
+      <a href="21. Coding Matrices.html">21. Coding Matrices</a>
+    </li>
+    <li class="">
+      <a href="22. Coding Matrices (Solution).html">22. Coding Matrices (Solution)</a>
+    </li>
+    <li class="">
+      <a href="23. Matrix Addition.html">23. Matrix Addition</a>
+    </li>
+    <li class="">
+      <a href="24. Coding Matrix Addition.html">24. Coding Matrix Addition</a>
+    </li>
+    <li class="">
+      <a href="25. Coding Matrix Addition (Solution).html">25. Coding Matrix Addition (Solution)</a>
+    </li>
+    <li class="">
+      <a href="26. Matrix Multiplication.html">26. Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="27. Coding Matrix Multiplication.html">27. Coding Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="28. Coding Matrix Multiplication (Solution).html">28. Coding Matrix Multiplication (Solution)</a>
+    </li>
+    <li class="">
+      <a href="29. Transpose of a Matrix.html">29. Transpose of a Matrix</a>
+    </li>
+    <li class="">
+      <a href="30. Coding the Transpose.html">30. Coding the Transpose</a>
+    </li>
+    <li class="">
+      <a href="31. Coding the Transpose (Solution).html">31. Coding the Transpose (Solution)</a>
+    </li>
+    <li class="">
+      <a href="32. The Identity Matrix.html">32. The Identity Matrix</a>
+    </li>
+    <li class="">
+      <a href="33. Coding Identity Matrix.html">33. Coding Identity Matrix</a>
+    </li>
+    <li class="">
+      <a href="34. Coding Identity Matrix (Solution).html">34. Coding Identity Matrix (Solution)</a>
+    </li>
+    <li class="">
+      <a href="35. Matrix Inverse.html">35. Matrix Inverse</a>
+    </li>
+    <li class="">
+      <a href="36. Coding Matrix Inverse.html">36. Coding Matrix Inverse</a>
+    </li>
+    <li class="">
+      <a href="37. Coding Matrix Inverse (Solution).html">37. Coding Matrix Inverse (Solution)</a>
+    </li>
+    <li class="">
+      <a href="38. What to Take Away from this Lesson.html">38. What to Take Away from this Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">35. Matrix Inverse</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="matrix-inverse">Matrix Inverse</h1>
+<p>There is one more matrix operation that you will need in order to use the Kalman Filter equations: the inverse of a matrix.</p>
+<p>Specifically when calculating the Kalman filter gain matrix <span class="mathquill ud-math">\mathbf{K}</span>, you will need to take the inverse of the <span class="mathquill ud-math">\mathbf{S}</span> matrix. The superscript <span class="mathquill ud-math">^{-1}</span> represents the inverse of a matrix. Here is a reminder of the Kalman Filter gain equations where you can see the need for the inverse of S. </p>
+<p><span class="mathquill ud-math">\mathbf{S_{k}} = \mathbf{H_{k}} \mathbf{P_{k|k-1}} \mathbf{H_{k}^T} + \mathbf{R_{k}}</span></p>
+<p><span class="mathquill ud-math">\mathbf{K_{k}} = \mathbf{P_{k|k-1}} \mathbf{H_{k}^T} \mathbf{S_{k}}^{-1}</span></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="formal-definition-of-inverse-of-a-matrix">Formal Definition of Inverse of a Matrix</h3>
+<p>As mentioned, the inverse of a matrix <span class="mathquill ud-math">\mathbf{A}</span> would be denoted by <span class="mathquill ud-math">\mathbf{A^{-1}}</span>. </p>
+<p>Formally, if matrix <span class="mathquill ud-math">\mathbf{A}</span> has an inverse, then </p>
+<p><span class="mathquill ud-math">\mathbf{A} \times \mathbf{A^{-1}}</span> = <span class="mathquill ud-math">\mathbf{A^{-1}} \times \mathbf{A}</span> = <span class="mathquill ud-math">\mathbf{I}</span></p>
+<p>where <span class="mathquill ud-math">\mathbf{I}</span> is an identity matrix. </p>
+<p>Only square matrices, or in other words matrices with the same number of columns as rows, have inverses.  You can see that this must be true based on the definition of the inverse and the identity matrix. The identity matrix is always a square matrix, so</p>
+<p>if <span class="mathquill ud-math">\mathbf{A}</span> is m x n, then <span class="mathquill ud-math">\mathbf{A^{-1}}</span> has to be n x m to get a square identity matrix of m x m.</p>
+<p>Multiplying <span class="mathquill ud-math">\mathbf{A^{-1}} \mathbf{A} </span> gives (n x m)(n x m) = n x m, which is not a square matrix unless n = m. </p>
+<p>So in order for a matrix to have an inverse, the matrix must be square. At the same time, not all square matrices have inverses.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="relationship-between-a-scalar-inverse-and-a-matrix-inverse">Relationship between a Scalar Inverse and a Matrix Inverse</h3>
+<p>In scalar math, the inverse of a number <span class="mathquill ud-math">x</span> is <span class="mathquill ud-math">1/x</span>.</p>
+<p>If you multiply a scalar by its inverse, you get 1:</p>
+<p><span class="mathquill ud-math">x \times \frac{1}{x} = 1</span></p>
+<p>In linear algebra, the inverse of a matrix is analogous to the scalar inverse:</p>
+<p><span class="mathquill ud-math">\mathbf{A} \times \mathbf{A^{-1}} = \mathbf{I}</span></p>
+<p>As you saw in the previous part of the lesson, the identity matrix has a similar role to the number 1.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="calculating-the-inverse-of-a-matrix">Calculating the Inverse of a Matrix</h3>
+<p>For the purposes of this class, you will learn to calculate the inverse of a 1x1 matrix and a 2x2 matrix. </p>
+<p>For matrices with more dimensions, the <a href="https://en.wikipedia.org/wiki/Invertible_matrix" rel="noopener noreferrer" target="_blank">calculations become more complicated</a>. Both Python and C++ have libraries that can calculate the inverse of a matrix such as the <a href="http://www.numpy.org/" rel="noopener noreferrer" target="_blank">NumPy Library</a> and the <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page" rel="noopener noreferrer" target="_blank">Eigen Library</a>.</p>
+<h4 id="inverse-of-a-1-x-1-matrix">Inverse of a 1 x 1 matrix</h4>
+<p>For a <span class="mathquill ud-math">1 \times 1</span> matrix with a single element with value <span class="mathquill ud-math">a</span>, the inverse is simply <span class="mathquill ud-math">\frac{1}{a}</span>.</p>
+<p>So the inverse of </p>
+<p><span class="mathquill ud-math">\begin{bmatrix}25\end{bmatrix}</span> is</p>
+<p><span class="mathquill ud-math">\begin{bmatrix}\frac{1}{25}\end{bmatrix}</span>.</p>
+<h4 id="inverse-of-a-2-x-2-matrix">Inverse of a 2 x 2 matrix</h4>
+<p>Say you have a matrix</p>
+<p><span class="mathquill ud-math">\begin{bmatrix}a & b \\ c & d\end{bmatrix}</span></p>
+<p>The inverse of this 2 x 2 matrix is</p>
+<p><span class="mathquill ud-math">\frac{1}{ad - bc}\begin{bmatrix}d & -b \\ -c & a\end{bmatrix}</span></p>
+<p>And you can see that if <span class="mathquill ud-math">ad = bc</span>, then the matrix does not have an inverse. </p>
+<h5 id="another-formula-for-2x2-inverse-matrix">Another formula for 2x2 inverse matrix</h5>
+<p>Here is a more formal formula for the 2x2 inverse matrix. </p>
+<p><span class="mathquill ud-math">\mathbf{A}^{-1} = \frac{1}{\text{det }\mathbf{A}} \left[\left(\text{tr } \mathbf{A}\right) \mathbf{I} - \mathbf{A}\right]</span></p>
+<p>where</p>
+<p><span class="mathquill ud-math">\text{det }\mathbf{A}</span> is called the determinant of a matrix. For a 2x2 matrix, the determinant is ad - bc. </p>
+<p><span class="mathquill ud-math">\text{tr } \mathbf{A}</span>  is called the trace of a matrix. The trace is the sum across the major diagonal, which in this case would be a + d.</p>
+<p>If you multiply everything, you end up with the same equation already presented, namely:</p>
+<p><span class="mathquill ud-math">\mathbf{A^{-1}} = \frac{1}{ad - bc}\begin{bmatrix}d & -b \\ -c & a\end{bmatrix}</span></p>
+<h3 id="inverse-of-a-3-x-3-or-larger-matrix">Inverse of a 3 x 3 or larger matrix</h3>
+<p>Calculating the inverse of a larger matrix involves relatively complex matrix algebra theory. In this course, you will only need to calculate the inverse of a 2 x 2 matrix.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="coding-the-inverse-of-a-matrix">Coding the Inverse of a Matrix</h3>
+<p>You are going to write a function that calculates the inverse of a matrix. Remember that you will need to check the size of the matrix because a 1x1 matrix and a 2x2 matrix have different formulas.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="36. Coding Matrix Inverse.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('35. Matrix Inverse')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

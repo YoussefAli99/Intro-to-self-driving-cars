@@ -1,0 +1,363 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vectors and For Loops</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Vectors</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. C++ Vectors.html">01. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="02. Namespaces.html">02. Namespaces</a>
+    </li>
+    <li class="">
+      <a href="03. Python Lists vs. C++ Vectors.html">03. Python Lists vs. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="04. Initializing Vector Values.html">04. Initializing Vector Values</a>
+    </li>
+    <li class="">
+      <a href="05. Vector Methods.html">05. Vector Methods</a>
+    </li>
+    <li class="">
+      <a href="06. Vectors and For Loops.html">06. Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="07. Math and Vectors.html">07. Math and Vectors</a>
+    </li>
+    <li class="">
+      <a href="08. 1D Vector Playground.html">08. 1D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="09. 2D Vectors.html">09. 2D Vectors</a>
+    </li>
+    <li class="">
+      <a href="10. 2D Vectors and For Loops.html">10. 2D Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="11. 2D Vector Playground.html">11. 2D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="12. Next Lesson.html">12. Next Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Vectors and For Loops</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="vectors-and-for-loops">Vectors and For Loops</h1>
+<p>Much of the time, you will be using for loops to manipulate vectors. Once you are comfortable using for loops with vectors, you can do things like:</p>
+<ul>
+<li>populate a vector with values</li>
+<li>do math with vectors</li>
+</ul>
+<p>Here is a program that initializes a vector and then uses a for loop to populate the vector with values. Then another for loop reads out the vector values.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+    vector&lt;float&gt; example;
+
+    for (int i = 0; i &lt; 5; i++) {
+        example.push_back(i*5.231);
+    }
+
+    for (int i = 0; i &lt; example.size(); i++) {
+        cout &lt;&lt; example[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The output looks like this:</p>
+<pre><code>0
+5.231
+10.462
+15.693
+20.924</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="using-i-versus-i">Using i++ Versus ++i</h2>
+<p>So far, you've learned to write C++ for loops like the following:</p>
+<pre><code>for (int i = 0; i &lt; 10; i++) {}</code></pre>
+<p>This syntax matches closely to the Python for loop syntax; however, you can also write a for loop like this:</p>
+<pre><code>for (int i = 0; i &lt; 10; ++i) {}</code></pre>
+<p><strong>What is the difference and why do both ways work?</strong></p>
+<p>In practice, both i++ and ++i will give you the same results; these are a shorthand way of writing i = i + 1. The difference between the two is subtle.</p>
+<pre><code>int i = 5;
+int x = i++; // x = 5, i = 6 (called postfix)
+int x = ++i; // x = 6, i = 6 (called prefix)</code></pre>
+<p>In both cases, the i variable increases by 1. In the postfix case, i++, int x = i is evaluated first and then i = i + 1 occurs.</p>
+<p>In the prefix case, ++i, i = i + 1 occurs first and then int x = i executes.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Many code guidelines recommend using ++i over i++. In reality neither one is more efficient than the other when using integer variables.</p>
+<p>However, there is a difference when you write a C++ class that overloads the ++ operator. You saw operational overloading in the Python matrix project; the code overloaded mathematical signs to carry out matrix addition, subtraction, multiplication, etc.</p>
+<p>When overloading the postfix operator, C++ needs to keep track of two values. In the example, the values would be 5 and 6. For the prefix operator, C++ only needs to keep track of one value: 6. Hence, when overloading the ++ operator, it's generally more efficient to use prefix than the postfix.</p>
+<p>Overloading is an advanced C++ topic that isn't covered in depth here. If you'd like to learn more, here are a few resources:</p>
+<p><a href="https://stackoverflow.com/questions/3846296/how-to-overload-the-operator-in-two-different-ways-for-postfix-a-and-prefix" rel="noopener noreferrer" target="_blank">Stackoverflow</a></p>
+<p><a href="https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.2.0/com.ibm.zos.v2r2.cbclx01/cplr330.htm" rel="noopener noreferrer" target="_blank">IBM Knowledge Center</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="practice-with-vector-methods-and-for-loops">Practice with Vector Methods and For Loops</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468882-main-cpp" class="nav-item nav-link  active show" id="tab-468882-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="468882-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#468882-solution-cpp" class="nav-item nav-link " id="tab-468882-solution-cpp" data-toggle="tab" role="tab"
+      aria-controls="468882-solution-cpp" aria-selected="false">solution.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468882-main-cpp" aria-labelledby="tab-468882-main-cpp" role="tabpanel">
+      <pre><code></code>//TODO: include the iostream and vector libraries
+
+//TODO: Use the standard namespace
+
+int main() {
+    
+    // Part 1: declare and define a vector with values
+    //        {5.0, 5.0, 5.0} and print 
+    //         the vector to the terminal using cout
+    // Hint: the syntax vector&lt;datatype&gt; varname(length, value) might help
+
+    // Part 2: Use push back to add the values 3.0, 2.5, 1.4 
+    //      to the back of the vector
+
+    // Part 3: Print out the vector again using cout
+
+    // Part 4: Use the vector assign method to override the current vector. 
+    // The overriden vector should have 3 elements with 
+    // the values {5.0, 5.0, 5.0}
+
+    // Part 5: Print out the vector
+
+    return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="468882-solution-cpp" aria-labelledby="tab-468882-solution-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+    
+    // Part 1: declare and define a vector {5.0, 5.0, 5.0} and print it out
+    vector&lt;float&gt; vectorvar(3, 5.0);
+    
+    for (int i &#x3D; 0; i &lt; vectorvar.size(); i++) {
+        cout &lt;&lt; vectorvar[i] &lt;&lt; &quot; &quot;;
+    }
+    
+    cout &lt;&lt; endl;
+    
+    // Part 2: Use push back to add the values 3.0, 2.5, 1.4 to the back of the vector
+    vectorvar.push_back(3.0);
+    vectorvar.push_back(2.5);
+    vectorvar.push_back(1.4);
+    
+    // Part 3: Print out the vector
+    for (int i &#x3D; 0; i &lt; vectorvar.size(); i++) {
+        cout &lt;&lt; vectorvar[i] &lt;&lt; &quot; &quot;;
+    }
+    cout &lt;&lt; &quot;\n&quot;;
+    
+    // Part 4: Use the assign method so that the current vector has values 
+    // {5.0, 5.0, 5.0}
+    vectorvar.assign(3, 5.0);
+    
+    // Part 5: Print out the vector
+    for (int i &#x3D; 0; i &lt; vectorvar.size(); i++) {
+        cout &lt;&lt; vectorvar[i] &lt;&lt; &quot; &quot;;
+    }
+    
+    cout &lt;&lt; &quot;\n&quot;;
+
+    return 0;
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Math and Vectors.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Vectors and For Loops')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

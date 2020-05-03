@@ -1,0 +1,316 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dead Code</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Optimization Practice</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Software Development and Optimization.html">02. Software Development and Optimization</a>
+    </li>
+    <li class="">
+      <a href="03. Optimization Techniques.html">03. Optimization Techniques</a>
+    </li>
+    <li class="">
+      <a href="04. Dead Code.html">04. Dead Code</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Remove Dead Code.html">05. Exercise: Remove Dead Code</a>
+    </li>
+    <li class="">
+      <a href="06. If Statements.html">06. If Statements</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise If Statements.html">07. Exercise: If Statements</a>
+    </li>
+    <li class="">
+      <a href="08. For Loops.html">08. For Loops</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise For Loops.html">09. Exercise: For Loops</a>
+    </li>
+    <li class="">
+      <a href="10. Intermediate Variables.html">10. Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Intermediate Variables.html">11. Exercise: Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="12. Vector Storage.html">12. Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Vector Storage.html">13. Exercise: Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="14. References.html">14. References</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise References.html">15. Exercise: References</a>
+    </li>
+    <li class="">
+      <a href="16. Sebastian&#x27;s Synchronization Story.html">16. Sebastian&#x27;s Synchronization Story</a>
+    </li>
+    <li class="">
+      <a href="17. Static Keyword.html">17. Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="18. Exercise Static Keyword.html">18. Exercise: Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="19. Speed Challenge.html">19. Speed Challenge</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Dead Code</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="what-is-dead-code">What is Dead Code?</h1>
+<p>Dead code is extra code in your program that no longer serves a purpose. Maybe while implementing a solution, you started down a path that did not end up working out. Or you put in extra code for debugging purposes, but this code is not actually part of the solution. The dead code just sits in your program without affecting the implementation.</p>
+<p>Dead code can slow down a program;  the code will still be executed on the CPU and might include reads and writes to memory although the code is never used. </p>
+<p>Two other issues related to dead code, and sometimes also considered to be dead code, are <strong>redundant code</strong> and <strong>unreachable code</strong>. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="redundant-code">Redundant Code</h3>
+<p>Redundant code is just like it sounds; this is code that gets repeated multiple times although isn't necessary. Here's a quick example:</p>
+<pre><code class="c++ language-c++">// example of redundant code
+int x = 6;
+if (x &gt; 5) {
+   return true;
+}
+else {
+   return false;
+}</code></pre>
+<p>Essentially, saying x &gt; 5 and then returning True is redundant. You could eliminate the if statement by just saying </p>
+<pre><code class="c++ language-c++">return x &gt; 5;</code></pre>
+<p>Here's another example</p>
+<pre><code class="c++ language-c++">    if (x &lt; 5) {
+           x = x + 1;
+    }
+    else if (x &gt;= 5 &amp;&amp; x &lt; 10) {
+        x = x + 2;
+    }</code></pre>
+<p>There is no need to check if <code>x &gt;= 5</code>; the first if statement has essentially already proven whether x is greater than or less than five.</p>
+<p>Finding redundant code, however, might not be so easy. It could be an extra variable declaration or maybe some extra logical statements like in the above example.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="unreachable-code">Unreachable Code</h2>
+<p>Unreachable code never gets executed. Unreachable code might not have too much of an effect on code speed, but the code still takes up space in memory and can make memory management less efficient.</p>
+<p>A simple example would be the following:</p>
+<pre><code class="c++ language-c++">unsigned int x;
+
+... 
+
+if (x &gt;= 0) {
+   do_something ..
+}
+else {
+  do_something ..
+}</code></pre>
+<p>An unsigned integer is always zero or positive, so the else statement will never execute. The code inside the else statement is unreachable.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>When you get to Andy's code at the end of the lesson, just keep an eye out for dead code or redundant code. You might find a couple of spots.</p>
+<p>In the next part of the lesson, you will see a program that adds two matrices together. You'll execute the code to see how fast it runs. But the program contains dead code. So you will remove the dead code to see if the program runs faster.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>dead code</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Mark the statement or statements that are TRUE.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1510117294073" name="458215" id="a1510117294073">
+      <label for="a1510117294073"><p>Redundant code is always bad.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1510117317799" name="458215" id="a1510117317799">
+      <label for="a1510117317799"><p>Unreachable code is repetitive code that could be eliminated without affecting the program.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1510117318332" name="458215" id="a1510117318332">
+      <label for="a1510117318332"><p>It's generally obvious when your program contains dead code.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1510117318820" name="458215" id="a1510117318820">
+      <label for="a1510117318820"><p>All unreachable code involves if statements.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1510118552536" name="458215" id="a1510118552536">
+      <label for="a1510118552536"><p>Getting rid of dead code, redundant code or unreachable code increases efficiency.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Getting rid of dead code, redundant code or unreachable code increases efficiency.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Exercise Remove Dead Code.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Dead Code')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

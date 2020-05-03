@@ -1,0 +1,344 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quantifying State</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State and Object-Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Localization Steps.html">01. Localization Steps</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to State.html">02. Intro to State</a>
+    </li>
+    <li class="">
+      <a href="03. Motion Models.html">03. Motion Models</a>
+    </li>
+    <li class="">
+      <a href="04. Quiz Predicting State.html">04. Quiz: Predicting State</a>
+    </li>
+    <li class="">
+      <a href="05. A Different Model.html">05. A Different Model</a>
+    </li>
+    <li class="">
+      <a href="06. Kinematics.html">06. Kinematics</a>
+    </li>
+    <li class="">
+      <a href="07. Quantifying State.html">07. Quantifying State</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Outline.html">08. Lesson Outline</a>
+    </li>
+    <li class="">
+      <a href="09. Always Moving.html">09. Always Moving</a>
+    </li>
+    <li class="">
+      <a href="10. Objects.html">10. Objects</a>
+    </li>
+    <li class="">
+      <a href="11. Car Object.html">11. Car Object</a>
+    </li>
+    <li class="">
+      <a href="12. Interacting with a Car Object.html">12. Interacting with a Car Object</a>
+    </li>
+    <li class="">
+      <a href="13. Car Class.html">13. Car Class</a>
+    </li>
+    <li class="">
+      <a href="14. Car Class File.html">14. Car Class File</a>
+    </li>
+    <li class="">
+      <a href="15. Look at the Class Code.html">15. Look at the Class Code</a>
+    </li>
+    <li class="">
+      <a href="16. Turn Right.html">16. Turn Right</a>
+    </li>
+    <li class="">
+      <a href="17. Adding Color.html">17. Adding Color</a>
+    </li>
+    <li class="">
+      <a href="18. Instantiate Multiple Cars.html">18. Instantiate Multiple Cars</a>
+    </li>
+    <li class="">
+      <a href="19. Color Class.html">19. Color Class</a>
+    </li>
+    <li class="">
+      <a href="20. Overloading Functions.html">20. Overloading Functions</a>
+    </li>
+    <li class="">
+      <a href="21. Overloading Color Addition.html">21. Overloading Color Addition</a>
+    </li>
+    <li class="">
+      <a href="22. State Vector.html">22. State Vector</a>
+    </li>
+    <li class="">
+      <a href="23. State Transformation Matrix.html">23. State Transformation Matrix</a>
+    </li>
+    <li class="">
+      <a href="24. Matrix Multiplication.html">24. Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="25. 1D State Vector and More Multiplication.html">25. 1D State Vector and More Multiplication</a>
+    </li>
+    <li class="">
+      <a href="26. Modify Predict State.html">26. Modify Predict State</a>
+    </li>
+    <li class="">
+      <a href="27. Working with Matrices.html">27. Working with Matrices</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Quantifying State</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Quantifying State</p></h3>
+  
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="different-motion-models">Different Motion Models</h3>
+<h4 id="constant-velocity">Constant Velocity</h4>
+<p>In the first movement example, you saw that if we assumed our car was moving at a constant speed, 50 m/s, we came up with one prediction for it’s new state: at the 150 m mark, with no change in velocity.</p>
+<p>```python </p>
+<h1 id="constant-velocity-case">Constant velocity case</h1>
+<h1 id="initial-variables">initial variables</h1>
+<p>x = 0<br />
+velocity = 50<br />
+initial_state = [x, velocity]</p>
+<h1 id="predicted-state-after-three-seconds">predicted state (after three seconds)</h1>
+<h1 id="this-state-has-a-new-value-for-x-but-the-same-velocity-as-in-the-initial-state">this state has a new value for x, but the same velocity as in the initial state</h1>
+<p>dt = 3<br />
+new_x = x + velocity*dt<br />
+predicted_state = [new_x, velocity]  # predicted_state = [150, 50]<br />
+```</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For this constant velocity model, we had:</p>
+<ul>
+<li>initial state = <code>[0, 50]</code></li>
+<li>predicted state (after 3 seconds) = <code>[150, 50]</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="constant-acceleration">Constant Acceleration</h4>
+<p>But in the second case, we said that the car was slowing down at a rate of 20 m/s^2 and, after 3 seconds had elapsed,  we ended up with a different estimate for its state. </p>
+<p>To solve this localization problem, we had to use a different motion model and <strong>we had to include a new value in our state: the acceleration of the car</strong>.</p>
+<p>The motion model was for constant acceleration:</p>
+<ul>
+<li><code>distance = velocity*dt + 0.5*acceleration*dt^2</code> and </li>
+<li><code>velocity = acceleration*dt</code></li>
+</ul>
+<p>The state includes acceleration in this model and looks like this: <code>[x, velocity, acc]</code>.</p>
+<pre><code class="python language-python"># Constant acceleration, changing velocity
+
+# initial variables
+x = 0
+velocity = 50
+acc = -20
+
+initial_state = [x, velocity, acc]
+
+# predicted state after three seconds have elapsed
+# this state has a new value for x, and a new value for velocity (but the acceleration stays the same)
+dt = 3
+
+new_x = x + velocity*dt + 0.5*acc*dt**2
+new_vel = velocity + acc*dt
+
+predicted_state = [new_x, new_vel, acc]  # predicted_state = [60, -10, -20]</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For this constant <em>acceleration</em> model, we had:</p>
+<ul>
+<li>initial state = <code>[0, 50, -20]</code></li>
+<li>predicted state (after 3 seconds) = <code>[60, -10, -20]</code></li>
+</ul>
+<p>As you can see, our state and our state estimates vary based on the motion model we used and how we assumed the car was moving!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="how-many-state-variables">How Many State Variables?</h3>
+<p>In fact, how many variables our state requires, depends on what motion model we are using. </p>
+<p>For a constant velocity model, <code>x</code> and <code>velocity</code> will suffice. </p>
+<p>But for a constant acceleration model, you'll also need our acceleration:<code>acc</code>. </p>
+<p>But these are all just models. </p>
+<h3 id="the-takeaway">The Takeaway</h3>
+<p>For our state, we always choose <strong>the smallest representation</strong> (the smallest number of variables) that will work for our model.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reflect</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>What are some applications or challenges you can think of, in which the <em>color</em> of a car would be an important state variable?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>You can imagine, if you are a quality assurance engineer, you have to make sure the color of a car is correct before shipping. Another example would be for marketing; you have to make sure that the color of the car matches the logo of the brand or sports team you are trying to match. In these cases, color is very important and would be a valuable state variable!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Lesson Outline.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Quantifying State')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

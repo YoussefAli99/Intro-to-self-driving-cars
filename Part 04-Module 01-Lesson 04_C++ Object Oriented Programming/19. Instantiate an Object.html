@@ -1,0 +1,535 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instantiate an Object</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">19. Instantiate an Object</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="instantiate-an-object">Instantiate an Object</h1>
+<p>Now it's time to use your matrix class in a program! The C++ syntax for instantiating an object is like this:</p>
+<pre><code class="c++ language-c++">Classname objectname(inputs for initializing an object of Classname);</code></pre>
+<p>Then you can access any public variables like:</p>
+<pre><code class="c++ language-c++">objectname.variablename</code></pre>
+<p>And you can access your public functions with:</p>
+<pre><code class="c++ language-c++">objectname.methodname(inputs)</code></pre>
+<p>Remember that any private variables or functions will not be available to your program. That was why you wrote the public get and set functions for your private variables.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="gaussiancpp-example">Gaussian.cpp Example</h1>
+<p>Before you start using your matrix class, here is a reminder of what the main.cpp looked like for the Gaussian.cpp example:</p>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+#include "gaussian.h"
+
+int main ()
+{
+
+    Gaussian mygaussian(30.0,20.0);
+    Gaussian othergaussian(10.0,30.0);
+
+    std::cout &lt;&lt; "average " &lt;&lt; mygaussian.getMu() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "evaluation " &lt;&lt; mygaussian.evaluate(15.0) &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; "mul results sigma " &lt;&lt; 
+               mygaussian.mul(othergaussian).getSigma2() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "mul results average " &lt;&lt; 
+               mygaussian.mul(othergaussian).getMu() &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; "add results sigma " &lt;&lt; 
+               mygaussian.add(othergaussian).getSigma2() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "add results average " &lt;&lt; 
+               mygaussian.add(othergaussian).getMu() &lt;&lt; std::endl;
+
+    return 0;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Now it's your turn to instantiate a Matrix object. You will find some starter code below with a few TODOs.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#413120-main-cpp" class="nav-item nav-link  active show" id="tab-413120-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="413120-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#413120-matrix-cpp" class="nav-item nav-link " id="tab-413120-matrix-cpp" data-toggle="tab" role="tab"
+      aria-controls="413120-matrix-cpp" aria-selected="false">matrix.cpp</a>
+    <a href="#413120-matrix-h" class="nav-item nav-link " id="tab-413120-matrix-h" data-toggle="tab" role="tab"
+      aria-controls="413120-matrix-h" aria-selected="false">matrix.h</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="413120-main-cpp" aria-labelledby="tab-413120-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &quot;matrix.h&quot;
+
+int main () {
+    
+    // assign a 7x5 matrix to the variable initial_grid
+    // all values in the matrix are 0.4
+	std::vector &lt;std:: vector &lt;float&gt; &gt; 
+	    initial_grid (7, std::vector &lt;float&gt;(5, 0.4));
+
+    // TODO: Use the initial grid variable to instantiate a matrix object
+    // The matrix object should be called matrixa
+    
+    // TODO: Use the matrix_print() method to print out matrixa
+    
+    // TODO: Print out the number of rows in matrixa. You will need
+    // to use the getRows() function and std::cout
+    
+    // TODO: Print out the number of columns in matrixa 
+    
+    // TODO: Take the transpose of matrixa and store the results in
+    // a variable called transposea
+
+    // TODO: Print out transposea
+
+    // Now you will use another 7x5 matrix called matrixb to 
+    // give the results of the matrix_addition function
+    
+    // 7x5 2-dimensional vector with values 0.2
+	std::vector &lt;std:: vector &lt;float&gt; &gt; 
+	    second_grid (7, std::vector &lt;float&gt;(5, 0.2));
+    
+    // TODO: Instantiate an object called matrixb. Use the second_grid
+    // variable as the input to initialize matrixb
+    
+    // TOOD: Add matrixa and matrixb. Store the results in a new matrix
+    // variable called matrixsum
+    
+    // TODO: Print out the matrix contained in the matrixsum variable
+
+    return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="413120-matrix-cpp" aria-labelledby="tab-413120-matrix-cpp" role="tabpanel">
+      <pre><code></code>// Nothing to do here
+
+#include &quot;matrix.h&quot;
+
+Matrix::Matrix() {
+    std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid (10, std::vector &lt;float&gt;(5, 0.5));
+    grid &#x3D; initial_grid;
+    rows &#x3D; initial_grid.size();
+    cols &#x3D; initial_grid[0].size();
+
+}
+
+Matrix::Matrix(std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid) {
+    grid &#x3D; initial_grid;
+    rows &#x3D; initial_grid.size();
+    cols &#x3D; initial_grid[0].size();
+}
+
+void Matrix::setGrid(std::vector&lt; std::vector&lt;float&gt; &gt; new_grid) {
+    grid &#x3D; new_grid;
+    rows &#x3D; new_grid.size();
+    cols &#x3D; new_grid[0].size();
+
+}
+
+std::vector&lt; std::vector&lt;float&gt; &gt; Matrix::getGrid() {
+    return grid;
+}
+
+std::vector&lt;float&gt;::size_type Matrix::getRows() {
+    return rows;
+}
+
+std::vector&lt;float&gt;::size_type Matrix::getCols() {
+    return cols;
+}
+
+Matrix Matrix::matrix_transpose() {
+    std::vector&lt; std::vector&lt;float&gt; &gt; new_grid;
+    std::vector&lt;float&gt; row;
+
+    for (int i &#x3D; 0; i &lt; cols; i++) {
+        row.clear();
+
+        for (int j &#x3D; 0; j &lt; rows; j++) {
+            row.push_back(grid[j][i]); 
+        }
+        new_grid.push_back(row);
+    }
+
+    return Matrix(new_grid);
+}
+
+Matrix Matrix::matrix_addition(Matrix other) {
+
+    if ((rows !&#x3D; other.getRows()) || (cols !&#x3D; other.getCols())) {
+        throw std::invalid_argument( &quot;matrices are not the same size&quot; );
+    }
+
+    std::vector&lt; std::vector&lt;float&gt; &gt; othergrid &#x3D; other.getGrid();
+
+    std::vector&lt; std::vector&lt;float&gt; &gt; result;
+
+    std::vector&lt;float&gt; new_row;
+
+    for (int i &#x3D; 0; i &lt; rows; i++) {
+        new_row.clear();
+        for (int j &#x3D; 0; j &lt; cols; j++) {
+            new_row.push_back(grid[i][j] + othergrid[i][j]);
+        }
+        result.push_back(new_row);
+    }
+
+    return Matrix(result);
+}
+
+void Matrix::matrix_print() {
+
+    std::cout &lt;&lt; std::endl;
+
+    for (int i &#x3D; 0; i &lt; rows; i++)
+    {
+        for (int j &#x3D; 0; j &lt; cols; j++)
+        {
+            std::cout &lt;&lt; grid[i][j] &lt;&lt; &quot; &quot;;
+        }
+        std::cout &lt;&lt; std::endl;
+    }
+    std::cout &lt;&lt; std::endl;
+}
+</code></pre>
+    </div>
+    <div class="tab-pane " id="413120-matrix-h" aria-labelledby="tab-413120-matrix-h" role="tabpanel">
+      <pre><code></code>// Nothing to do here
+#ifndef MATRIX_H
+#define MATRIX_H
+
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+#include &lt;vector&gt;
+
+class Matrix
+{
+    private:
+
+        std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+        std::vector&lt;float&gt;::size_type rows;
+        std::vector&lt;float&gt;::size_type cols;
+
+    public:
+
+        // constructor functions
+        Matrix ();
+        Matrix (std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // set functions
+        void setGrid(std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // get functions
+        std::vector&lt; std::vector&lt;float&gt; &gt; getGrid();
+        std::vector&lt;float&gt;::size_type getRows();
+        std::vector&lt;float&gt;::size_type getCols();
+
+        // matrix functions
+        Matrix matrix_transpose();
+        Matrix matrix_addition(Matrix);
+
+        // matrix printing
+        void matrix_print();
+
+};
+
+#endif /* MATRIX_H */
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-maincpp">Solution main.cpp</h1>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include "matrix.h"
+
+int main () {
+
+    // assign a 7x5 matrix to the variable initial_grid
+    // all values in the matrix are 0.4
+    std::vector &lt;std:: vector &lt;float&gt; &gt; 
+        initial_grid (7, std::vector &lt;float&gt;(5, 0.4));
+
+    // TODO: Use the initial grid variable to instantiate a matrix object
+    // The matrix object should be called matrixa
+    Matrix matrixa(initial_grid);
+
+    // TODO: Use the matrix_print() method to print out matrixa
+    matrixa.matrix_print();
+
+    // TODO: Print out the number of rows in matrixa. You will need
+    // to use the getRows() function and std::cout
+    std::cout &lt;&lt; matrixa.getRows();
+
+    // TODO: Print out the number of columns in matrixa 
+    std::cout &lt;&lt; matrixa.getCols();
+
+    // TODO: Take the transpose of matrixa and store the results in
+    // a variable called transposea
+    Matrix transposea = matrixa.matrix_transpose();
+
+    // TODO: Print out transposea
+    transposea.matrix_print();
+
+    // Now you will use another 7x5 matrix called matrixb to 
+    // give the results of the matrix_addition function
+
+    // 7x5 2-dimensional vector with values 0.2
+    std::vector &lt;std:: vector &lt;float&gt; &gt; 
+        second_grid (7, std::vector &lt;float&gt;(5, 0.2));
+
+    // TODO: Instantiate an object called matrixb. Use the second_grid
+    // variable as the input to initialize matrixb
+    Matrix matrixb(second_grid);
+
+    // TOOD: Add matrixa and matrixb. Store the results in a new matrix
+    // variable called matrixsum
+    Matrix matrixsum(matrixa.matrix_addition(matrixb));
+
+    // TODO: Print out the matrix contained in the matrixsum variable
+    matrixsum.matrix_print();
+
+    return 0;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="20. Running your Program Locally.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('19. Instantiate an Object')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

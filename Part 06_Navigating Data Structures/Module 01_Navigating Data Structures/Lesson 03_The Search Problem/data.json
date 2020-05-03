@@ -1,0 +1,2185 @@
+{
+  "data": {
+    "lesson": {
+      "id": 433554,
+      "key": "8e4bc84c-3647-4ca3-b4d9-698f5a0dae6a",
+      "title": "The Search Problem",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "When programming a car to drive itself you run into problems. Many of these are \"search\" problems. In this lesson you'll learn what search problems are and several algorithms for solving them.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/8e4bc84c-3647-4ca3-b4d9-698f5a0dae6a/433554/1558584381549/The+Search+Problem+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/8e4bc84c-3647-4ca3-b4d9-698f5a0dae6a/433554/1558584375725/The+Search+Problem+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 433566,
+          "key": "463a6ae6-f28a-4a07-af32-5535814c54c3",
+          "title": "Lesson Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "463a6ae6-f28a-4a07-af32-5535814c54c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458607,
+              "key": "3acae834-0337-4591-9d5a-09c394ba5d90",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lesson Overview\nThis lesson is taught by [Peter Norvig](https://en.wikipedia.org/wiki/Peter_Norvig). \n\nPeter Norvig is a true expert in robotics, artificial intelligence, and computer science. Back before Udacity even existed Peter and Sebastian co-taught a course on self-driving cars. The popularity this course generated when they put it online was a big part of the decision to start this company. Peter is also a writer and his essay [Teach Yourself Programming in 10 Years](http://norvig.com/21-days.html) is something I would *highly* recommend to new programmers.\n\nIn this lesson you will learn about \"search problems\" and several algorithms to solve them. \n\nOne particular search problem is especially relevant to self driving cars: finding the best route from point A to point B. When this lesson is over you will take everything you've learned in this course and actually implement a Google-maps style route planner. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 229072,
+          "key": "22414608-e1df-4811-8839-7176475ea937",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "22414608-e1df-4811-8839-7176475ea937",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 230454,
+              "key": "1ec20e26-d404-4a28-9de6-e1ca119ee553",
+              "title": "Welcome to Search!",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pHySYq-wghU",
+                "china_cdn_id": "pHySYq-wghU.mp4"
+              }
+            },
+            {
+              "id": 247675,
+              "key": "cd02793d-d5a7-47cf-a723-af4c936d6b51",
+              "title": "Quiz: Arad to Bucharest",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cd02793d-d5a7-47cf-a723-af4c936d6b51",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Can we find a path from Arad to Bucharest?",
+                "answers": [
+                  {
+                    "id": "a1483738226081",
+                    "text": "Yes",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483738253504",
+                    "text": "No",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229073,
+          "key": "2edb9de0-aa4c-4883-9d76-a942f94c66c9",
+          "title": "What Is A Problem?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2edb9de0-aa4c-4883-9d76-a942f94c66c9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 267216,
+              "key": "82bb6dc0-f75a-4548-841c-db98c72c8571",
+              "title": "What Is A Problem",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gepUYmWERZA",
+                "china_cdn_id": "gepUYmWERZA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229074,
+          "key": "8e351aad-d85a-4932-b685-14db81fa9fac",
+          "title": "Example: Route Finding",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8e351aad-d85a-4932-b685-14db81fa9fac",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 230456,
+              "key": "10ed50f7-99f6-4702-ae77-848e91158df1",
+              "title": "Example Route Finding",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Note here that we're only looking at how many \"steps\", or nodes visited, we have to take to go from one node to another. The paths also show a cost value, but we're ignoring those for now.\n<br><br>",
+              "video": {
+                "youtube_id": "5lrkPKQwOFE",
+                "china_cdn_id": "5lrkPKQwOFE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229075,
+          "key": "9d4c85d6-5e16-45d0-8dca-6d8ec0b108f9",
+          "title": "Quiz: Tree Search",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9d4c85d6-5e16-45d0-8dca-6d8ec0b108f9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 230700,
+              "key": "31d1fb45-1b81-48c4-bc86-272563d7d28a",
+              "title": "Tree Search",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lCuwrHKxNlU",
+                "china_cdn_id": "lCuwrHKxNlU.mp4"
+              }
+            },
+            {
+              "id": 781912,
+              "key": "bd99156e-80b0-4ed7-8d17-22aa459b7d86",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here's the graph from the video.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 781911,
+              "key": "0f99bd5a-2350-41f4-b671-7e4d7eda5940",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be4ddde_tree-search-image/tree-search-image.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0f99bd5a-2350-41f4-b671-7e4d7eda5940",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 446,
+              "instructor_notes": null
+            },
+            {
+              "id": 781988,
+              "key": "15b6a2a1-0c2b-4a9b-b57a-d8f87e00cc13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Zerind | \n| Sibiu     | Timisoara | ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247664,
+              "key": "bfd390b9-681b-41b4-b968-459e002492c9",
+              "title": "Breadth-First Search Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bfd390b9-681b-41b4-b968-459e002492c9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What path will be added next with a breadth-first search that has traversed Arad -> Sibiu? Remember, this algorithm does not yet track places it has already visited.",
+                "answers": [
+                  {
+                    "id": "a1483735589305",
+                    "text": "Lugoj",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735613129",
+                    "text": "Mehadia",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735618244",
+                    "text": "Fagaras",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483735623014",
+                    "text": "Pitesti",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735627571",
+                    "text": "Zerind",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735632364",
+                    "text": "Arad",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483735636818",
+                    "text": "Rimnicu Vilcea",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483735641746",
+                    "text": "Oradea",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483735646380",
+                    "text": "Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735650926",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229076,
+          "key": "d0721c14-91d4-4934-ab31-a6c37835c25a",
+          "title": "Tree Search Continued",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0721c14-91d4-4934-ab31-a6c37835c25a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 230701,
+              "key": "26bc5d61-9924-4c08-8d81-ec8b51439187",
+              "title": "Tree Search Continued",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "In the video from 1:55 onward, we are looking ahead to a modified algorithm that keeps track of explored states so that they aren't repeated. In the preliminary algorithm, A is repeated since we are not keeping track of explored states. Ideally, we would not add duplicates from backtracking, which we introduce in the following video.",
+              "video": {
+                "youtube_id": "8yID2dTeBSM",
+                "china_cdn_id": "8yID2dTeBSM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229077,
+          "key": "79e6d165-3248-4aea-87d7-048afd718e11",
+          "title": "Quiz: Graph Search",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79e6d165-3248-4aea-87d7-048afd718e11",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232379,
+              "key": "026cefdf-f02c-4ca3-b57a-949235979f84",
+              "title": "Graph Search ",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "A8GjRaPJQ5E",
+                "china_cdn_id": "A8GjRaPJQ5E.mp4"
+              }
+            },
+            {
+              "id": 781914,
+              "key": "d4152484-f704-4573-a4fc-bcf0bb887df1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here's the graph from the video.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 781915,
+              "key": "8e310e95-b6be-4111-ac33-bcff36f382d4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be4e0fe_graph-search-image/graph-search-image.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8e310e95-b6be-4111-ac33-bcff36f382d4",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 461,
+              "instructor_notes": null
+            },
+            {
+              "id": 781989,
+              "key": "e3cab178-2124-4145-b1f9-19fcf245784e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Oradea | \n| Sibiu     | Zerind | \n|               | Timisoara |\n|               | Rimnicu Vilcea |\n|               | Fagaras |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247665,
+              "key": "78e85495-dad0-46cb-a43d-0f2afbfe78f6",
+              "title": "Graph Search Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "78e85495-dad0-46cb-a43d-0f2afbfe78f6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Given these 5 paths, which are candidates to be expanded next? I.e., which have the shortest paths from our starting point, and have not yet been explored?",
+                "answers": [
+                  {
+                    "id": "a1483735824972",
+                    "text": "Zerind",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483735845328",
+                    "text": "Oradea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735853698",
+                    "text": "Fagaras",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735858976",
+                    "text": "Rimnicu Vilcea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483735863059",
+                    "text": "Timisoara",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483735867840",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229078,
+          "key": "72370b79-4462-4af8-8ffd-a256d7b3401c",
+          "title": "Quiz: Breadth First Search 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "72370b79-4462-4af8-8ffd-a256d7b3401c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232421,
+              "key": "85c80328-8745-45af-b2ee-b0a46a0946ea",
+              "title": "Breath First Search 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "70yXCOfKMPA",
+                "china_cdn_id": "70yXCOfKMPA.mp4"
+              }
+            },
+            {
+              "id": 781990,
+              "key": "d7fce3b5-119c-45bb-b7d9-6e4098897be5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Oradea | \n| Sibiu     | Timisoara | \n| Zerind  | Rimnicu Vilcea |\n|               | Fagaras |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247689,
+              "key": "21e4d5d5-614a-4b82-94a5-49ad46f839dc",
+              "title": "Breadth First Search 1 Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "21e4d5d5-614a-4b82-94a5-49ad46f839dc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": " What paths will be added in the next step? Hint: which, if any, of these is not yet categorized?",
+                "answers": [
+                  {
+                    "id": "a1483740553484",
+                    "text": "Oradea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740574943",
+                    "text": "Fagaras",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740583291",
+                    "text": "Rimnicu Vilcea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740587926",
+                    "text": "Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740592201",
+                    "text": "Arad",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740597849",
+                    "text": "None of the above",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229079,
+          "key": "492a9382-cbcb-4f81-ad29-54c4434fd72f",
+          "title": "Breadth First Search 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "492a9382-cbcb-4f81-ad29-54c4434fd72f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232423,
+              "key": "5f3560f3-2fc1-4a79-895e-61c4e9f7b15d",
+              "title": "Breath First Search 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1VykygxreWg",
+                "china_cdn_id": "1VykygxreWg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229080,
+          "key": "f428e1cf-f1b4-4c47-ad77-6170de0bb927",
+          "title": "Quiz: Breadth First Search 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f428e1cf-f1b4-4c47-ad77-6170de0bb927",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232425,
+              "key": "7dfe86fd-c8b0-4286-bd25-43eafe03b4e7",
+              "title": "Breath First Search 3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "-ed_C9x8rWs",
+                "china_cdn_id": "-ed_C9x8rWs.mp4"
+              }
+            },
+            {
+              "id": 781984,
+              "key": "38e3fb34-521c-44ca-8cab-7d8dbc31cb8e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here's the graph from the video. Note the arrow pointing at Fagaras - this is the city Dr. Norvig is pointing to.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 781985,
+              "key": "71967dfb-1f92-480d-b296-74211bd2a744",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be5cd9c_breadth-first-search-3-image/breadth-first-search-3-image.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/71967dfb-1f92-480d-b296-74211bd2a744",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 462,
+              "instructor_notes": null
+            },
+            {
+              "id": 781991,
+              "key": "e79ed4e1-d588-4130-93cf-e1a3af7b2ec1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Oradea | \n| Sibiu     | Rimnicu Vilcea | \n| Zerind  | Fagaras |\n| Timisoara | Lugoj |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247690,
+              "key": "b0f4d710-d5ec-461a-905b-76ac5c665cde",
+              "title": "Breadth First Search 3 Quiz 1",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b0f4d710-d5ec-461a-905b-76ac5c665cde",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": " Which states do we add to the path?",
+                "answers": [
+                  {
+                    "id": "a1483740634293",
+                    "text": "Sibiu",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740656000",
+                    "text": "Pitesti",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740660702",
+                    "text": "Craiova",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740665037",
+                    "text": "Mehadia",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740669557",
+                    "text": "Bucharest",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483740675542",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 247691,
+              "key": "d087e699-68f1-4fbb-a083-ca73785239e4",
+              "title": "Breadth First Search 3 Quiz 2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d087e699-68f1-4fbb-a083-ca73785239e4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Are we ready to terminate?\n",
+                "answers": [
+                  {
+                    "id": "a1483740718612",
+                    "text": "Yes",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740734527",
+                    "text": "No",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229081,
+          "key": "a2d20ebb-c8a8-4055-9809-27602d44660c",
+          "title": "Breadth First Search 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a2d20ebb-c8a8-4055-9809-27602d44660c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232426,
+              "key": "c0424a99-b64e-4fa5-b3cc-36e1c72d2195",
+              "title": "Breath First Search 4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WOANyG8rf0k",
+                "china_cdn_id": "WOANyG8rf0k.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229082,
+          "key": "61a3ffcc-011e-4193-a383-6551bacf0bd6",
+          "title": "Breadth First Search 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "61a3ffcc-011e-4193-a383-6551bacf0bd6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232428,
+              "key": "b9172765-87e3-4bd4-b766-cce5fb70762c",
+              "title": "Breath First Search 5",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eyN4162UjH8",
+                "china_cdn_id": "eyN4162UjH8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229083,
+          "key": "43e19e6c-efff-4b4f-8062-f7d2be09918c",
+          "title": "Uniform Cost Search",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43e19e6c-efff-4b4f-8062-f7d2be09918c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 230702,
+              "key": "7021b437-d2fb-42bf-a725-cb1f3730fde5",
+              "title": "Uniform Cost Search",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "oPe45CJ_o0k",
+                "china_cdn_id": "oPe45CJ_o0k.mp4"
+              }
+            },
+            {
+              "id": 781986,
+              "key": "0659d9a0-9104-4b53-a4a1-35a43b6d3beb",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be5d072_uniform-cost-search-image/uniform-cost-search-image.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0659d9a0-9104-4b53-a4a1-35a43b6d3beb",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 514,
+              "instructor_notes": null
+            },
+            {
+              "id": 781992,
+              "key": "4cf382f9-e749-4348-a964-ae4719b2ffa6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<table>\n<tr><td><table></table>\n\n| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Zerind | \n|               | Sibiu | \n|               | Timisoara |\n\n<td>\n\n| **Path** | **Cost ** |\n| :----------: | :----------: |\n| Arad >> Zerind | 75 |\n| Arad >> Sibiu | 140 |\n| Arad >> Timisoara | 118 |\n\n</td></tr> </table>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247692,
+              "key": "25322dc3-5d97-42eb-94bf-99618c2f7098",
+              "title": "Uniform Cost Search Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "25322dc3-5d97-42eb-94bf-99618c2f7098",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": " Which path do we pick next to expand according to the rules of cheapest first?\n",
+                "answers": [
+                  {
+                    "id": "a1483740767083",
+                    "text": "Zerind",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483740780023",
+                    "text": "Sibiu",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740787931",
+                    "text": "Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740792206",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229088,
+          "key": "db65fa2d-06c8-489a-a476-73f1981341be",
+          "title": "Uniform Cost Search 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "db65fa2d-06c8-489a-a476-73f1981341be",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 848199,
+              "key": "936a4811-0b75-4c7b-9756-aada6c32f27c",
+              "title": "Uniform Cost Search 1 V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rTddvJ0qd6c",
+                "china_cdn_id": "rTddvJ0qd6c.mp4"
+              }
+            },
+            {
+              "id": 781987,
+              "key": "b86cb93a-1087-4bee-9f21-b7fd0b19ace1",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be5d117_uniform-cost-search-1/uniform-cost-search-1.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b86cb93a-1087-4bee-9f21-b7fd0b19ace1",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 485,
+              "instructor_notes": null
+            },
+            {
+              "id": 781993,
+              "key": "7da94473-de5c-45e4-b0ee-7f2602ff29e3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<table>\n<tr><td><table></table>\n\n| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Oradea | \n| Zerind  | Sibiu | \n|               | Timisoara |\n\n<td>\n\n| **Path** | **Cost ** |\n| :----------: | :----------: |\n| Arad >> Zerind  >> Oradea| 146 |\n| Arad >> Sibiu | 140 |\n| Arad >> Timisoara | 118 |\n\n</td></tr> </table>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247693,
+              "key": "dbd75ac4-a98a-48e5-aeb4-ade1b3b875f5",
+              "title": "Uniform Cost Search 1 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dbd75ac4-a98a-48e5-aeb4-ade1b3b875f5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which path gets expanded next?",
+                "answers": [
+                  {
+                    "id": "a1483740818423",
+                    "text": "Oradea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740841685",
+                    "text": "Sibiu",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740846185",
+                    "text": "Timisoara",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483740851258",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229084,
+          "key": "83b566a6-4a93-41b9-bd59-a507eec7e470",
+          "title": "Uniform Cost Search 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "83b566a6-4a93-41b9-bd59-a507eec7e470",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 848201,
+              "key": "60f511bb-a119-4202-8e3d-987cdd20b6aa",
+              "title": "Uniform Cost Search 2 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QSjh-ypUhto",
+                "china_cdn_id": "QSjh-ypUhto.mp4"
+              }
+            },
+            {
+              "id": 781994,
+              "key": "2d18e046-e906-40cf-a617-01834b496b56",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be5de47_uniform-cost-search-2/uniform-cost-search-2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2d18e046-e906-40cf-a617-01834b496b56",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 478,
+              "instructor_notes": null
+            },
+            {
+              "id": 781996,
+              "key": "9af3829d-529c-4d5e-816c-620ccf6b697f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<table>\n<tr><td><table></table>\n\n| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Oradea | \n| Zerind  | Fagaras | \n| Sibiu     | Rimnicu Vilcea |\n| Timisoara | Lugoj |\n\n<td>\n\n| **Path** | **Cost ** |\n| :----------: | :----------: |\n| Arad >> Zerind  >> Oradea| 146 |\n| Arad >> Sibiu >> Fagaras | 239 |\n| Arad >> Sibiu >> Rimnicu Vilcea | 220 |\n| Arad >> Timisoara >> Lugoj | 229|\n\n</td></tr> </table>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247694,
+              "key": "620210a4-db77-4b95-bb6b-da4ce766c543",
+              "title": "Uniform Cost Search 2 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "620210a4-db77-4b95-bb6b-da4ce766c543",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which path gets expanded next?",
+                "answers": [
+                  {
+                    "id": "a1483740876509",
+                    "text": "Oradea",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483740896203",
+                    "text": "Lugoj",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740904033",
+                    "text": "Rimnicu Vilcea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740908071",
+                    "text": "Fagaras",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740912493",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229085,
+          "key": "c7d8d79d-5391-4039-93d3-cacc42b2502c",
+          "title": "Uniform Cost Search 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c7d8d79d-5391-4039-93d3-cacc42b2502c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 848202,
+              "key": "4e277bb3-88d9-4f86-a945-91fe4aba8777",
+              "title": "Uniform Cost Search 3 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bEfXeDfoIY8",
+                "china_cdn_id": "bEfXeDfoIY8.mp4"
+              }
+            },
+            {
+              "id": 782002,
+              "key": "27a93959-e66f-436d-bdfa-e377f9dbf6de",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5be5f76c_uniform-cost-search-3/uniform-cost-search-3.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/27a93959-e66f-436d-bdfa-e377f9dbf6de",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 472,
+              "instructor_notes": null
+            },
+            {
+              "id": 782003,
+              "key": "01bc085b-82a6-4e70-b256-5f6b61c764aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<table>\n<tr><td><table></table>\n\n| **Explored** | **Frontier** |\n| :-------------: |:-------------:|\n| Arad     | Fagaras | \n| Zerind  | Rimnicu Vilcea | \n| Sibiu     | Lugoj |\n| Timisoara |  |\n|Oradea |  |\n\n<td>\n\n| **Path** | **Cost ** |\n| :----------: | :----------: |\n| Arad >> Zerind  >> Oradea| stuck |\n| Arad >> Sibiu >> Fagaras | 239 |\n| Arad >> Sibiu >> Rimnicu Vilcea | 220 |\n| Arad >> Timisoara >> Lugoj | 229|\n\n</td></tr> </table>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247695,
+              "key": "1879b60a-5a15-404f-9ff2-84617c3006c2",
+              "title": "Uniform Cost Search 3 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1879b60a-5a15-404f-9ff2-84617c3006c2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which path gets expanded next?\n",
+                "answers": [
+                  {
+                    "id": "a1483740939742",
+                    "text": "Lugoj",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740957032",
+                    "text": "Fagaras",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483740961746",
+                    "text": "Rimnicu Vilcea",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483740966449",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229086,
+          "key": "aeb2df77-cba4-472f-a9e3-8fbd3a0aa09c",
+          "title": "Uniform Cost Search 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aeb2df77-cba4-472f-a9e3-8fbd3a0aa09c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 848204,
+              "key": "77588a95-081a-4854-9477-ee4d7a5961c1",
+              "title": "Uniform Cost Search 4 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zpOf15umlkE",
+                "china_cdn_id": "zpOf15umlkE.mp4"
+              }
+            },
+            {
+              "id": 782004,
+              "key": "a1b45a84-a637-49b3-bd88-2f73e350a7d2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Path** | **Cost ** |\n| :----------: | :----------: |\n| Arad >> Zerind  >> Oradea| stuck |\n| Arad >> Sibiu >> Fagaras >> **Bucharest** | 450 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Pitesti| 317 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Craiova | 366 |\n| Arad >> Timisoara >> Lugoj >> Mehadia | 299 |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247696,
+              "key": "df2fd79d-903f-4a3e-926b-c14f9d7742aa",
+              "title": "Uniform Cost Search 4 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "df2fd79d-903f-4a3e-926b-c14f9d7742aa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Are we done? Can we terminate the algorithm?",
+                "answers": [
+                  {
+                    "id": "a1483740998122",
+                    "text": "Yes",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741021170",
+                    "text": "No",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229087,
+          "key": "7c7e8256-3985-4574-8c98-b9dd49ca24fc",
+          "title": "Uniform Cost Search 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7c7e8256-3985-4574-8c98-b9dd49ca24fc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 297501,
+              "key": "5f48d411-3f2e-4f94-9191-ad1dd8d4e5bb",
+              "title": "17  Uniform Cost Search 5 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Now that we've added quite a few paths to our map, it can be a bit difficult to follow which paths are being checked at each step. \n\nStarting at 1:30, we are checking the path coming into Craiova from Rimnicu Vilcea, and heading toward either Drobeta (366+120 = 486) or Pitesti (366+318 = 504), both of which are worse than our current best of 418.\n\nAfter that, we already know the path to get to Drobeta was worse than the path to get to Craiova, so there cannot be a more beneficial path heading to that already explored location.\n\n<br><br>",
+              "video": {
+                "youtube_id": "MoyBcrw-n_M",
+                "china_cdn_id": "MoyBcrw-n_M.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229089,
+          "key": "ff4416e9-e78d-4672-a4a5-06207aa97514",
+          "title": "Quiz: Search Comparison",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ff4416e9-e78d-4672-a4a5-06207aa97514",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232757,
+              "key": "cc7d3d53-2a4e-46cb-bf82-cd371c5e26ac",
+              "title": "Search Comparison",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "RMt_NiyY4nU",
+                "china_cdn_id": "RMt_NiyY4nU.mp4"
+              }
+            },
+            {
+              "id": 782018,
+              "key": "a257cfc6-5812-4eea-b8d3-fd190e60e0fd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Depth-First search will expand all the way down one route first to look for a goal. If it finds it cannot reach that goal down that path, it turns around to go back to the next-furthest node and searches along that route.  It it does find the goal down that route, no matter how far, it will terminate.\n\nAs a reminder, Cheapest-First and Uniform Cost refer to the same search method.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247697,
+              "key": "1e5ca578-f873-43ec-a058-f5b7367291c4",
+              "title": "Search Comparison Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1e5ca578-f873-43ec-a058-f5b7367291c4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of these searches are Optimal? Optimal here means \"guaranteed to find the shortest path\". Check all that apply.",
+                "answers": [
+                  {
+                    "id": "a1483741045238",
+                    "text": "Breadth-First",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741070604",
+                    "text": "Cheapest-First",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741075024",
+                    "text": "Depth-First",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741079412",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229090,
+          "key": "4e06a0da-40b1-48a4-a4d3-a95ceebfb468",
+          "title": "Search Comparison 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4e06a0da-40b1-48a4-a4d3-a95ceebfb468",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232758,
+              "key": "2871d3be-95c9-44ce-a568-f64fa2268078",
+              "title": "Search Comparison 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "JbJMxp3Lva4",
+                "china_cdn_id": "JbJMxp3Lva4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229091,
+          "key": "012b8f6c-3403-472a-a318-ba1ab3a2875f",
+          "title": "Quiz: Search Comparison 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "012b8f6c-3403-472a-a318-ba1ab3a2875f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232759,
+              "key": "47072f52-98b0-4d70-90db-02bc9cb3aba0",
+              "title": "Search Comparison 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Fh5b8xVJhR8",
+                "china_cdn_id": "Fh5b8xVJhR8.mp4"
+              }
+            },
+            {
+              "id": 782019,
+              "key": "a1737f40-3c22-4429-9509-42fc7e5b6aa3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Search Method** | **Optimal?** | **Frontier size** | **Size @ n = 20**\n| :----------: | :----------: | :----------: | :----------: |\n| Breadth-First | Yes | <span class='mathquill'>\\large 2^n</span>| 1,048,576 |\n| Cheapest-First | Yes | <span class='mathquill'>\\large 2^n</span> | 1,048,576 |\n| Depth-First | No | <span class='mathquill'>\\large n</span> | 20 |\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247701,
+              "key": "56475bd1-eea1-4d91-80d0-026dd707248e",
+              "title": "Search Comparison 2 Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "56475bd1-eea1-4d91-80d0-026dd707248e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of these searches are complete? Hint: What if one of the paths (whether containing the goal or not) was infinite in length?",
+                "answers": [
+                  {
+                    "id": "a1483741213995",
+                    "text": "Breadth-First",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741233294",
+                    "text": "Cheapest-First",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741237814",
+                    "text": "Depth-First",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741242292",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229092,
+          "key": "d6804853-b929-4e66-b05b-1132e38fa28c",
+          "title": "Search Comparison 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d6804853-b929-4e66-b05b-1132e38fa28c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232760,
+              "key": "75e90fbb-115a-4d59-a056-577237ba0f41",
+              "title": "Search Comparison 3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "| **Search Method** | **Optimal?** | **Frontier size** | **Size @ n = 20** | **Complete?** |\n| :----------: | :----------: | :----------: | :----------: | :----------: |\n| Breadth-First | Yes | <span class='mathquill'>\\large 2^n</span>| 1,048,576 | Yes |\n| Cheapest-First | Yes | <span class='mathquill'>\\large 2^n</span> | 1,048,576 | Yes |\n| Depth-First | No | <span class='mathquill'>\\large n</span> | 20 | No |",
+              "video": {
+                "youtube_id": "4KHmQEoqmeI",
+                "china_cdn_id": "4KHmQEoqmeI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229093,
+          "key": "071fa842-c9a4-4653-9b20-34cc6840e65e",
+          "title": "On Uniform Cost",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "071fa842-c9a4-4653-9b20-34cc6840e65e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232761,
+              "key": "75d575ec-5422-4468-8e3e-e8deacaa23c8",
+              "title": "More Uniform Cost",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "**Uniform Cost search** - expands out equally in all directions, may expend additional effort getting to a fairly direct path to the goal.\n<br>\n**Greedy best-first search** - expands outward toward locations estimated as closer to the goal. If a direct path is available, expends much less effort than Uniform Cost; however, it does not consider any routes in which it may need to temporarily take a further away path in order to arrive at an overall shorter path.\n<br>\n**A* Search** - utilizes both of these - will try to optimize with both the shortest path and the goal in mind. We'll see how this works in the next video.\n<br><br>",
+              "video": {
+                "youtube_id": "8xH-3WtswDs",
+                "china_cdn_id": "8xH-3WtswDs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229094,
+          "key": "fa389fff-33fc-4e9e-be01-4baeaad46b4d",
+          "title": "A* Search",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fa389fff-33fc-4e9e-be01-4baeaad46b4d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232448,
+              "key": "9c8f0240-901d-4cc9-a7a2-c342bcb59312",
+              "title": "A* Search",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "HNdOFYCtfu4",
+                "china_cdn_id": "HNdOFYCtfu4.mp4"
+              }
+            },
+            {
+              "id": 782765,
+              "key": "87854d3c-a05d-4441-b845-af1430b50533",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Path** | **Path Cost (g)** | **Est. Distance (h)** |  **Total (f)** |\n| :----------: | :----------: | :----------: | :----------: |\n| Arad >> Zerind | 75 | 374 | 449 |\n| Arad >> Sibiu | 140 | 253 | 393 |\n| Arad >> Timisoara | 118 | 329 | 447 |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247702,
+              "key": "73aed342-1690-4aff-b4cb-3cee842c4bd2",
+              "title": "A* Search Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "73aed342-1690-4aff-b4cb-3cee842c4bd2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Out of all the paths on the frontier, which will be expanded next under the A* algorithm?",
+                "answers": [
+                  {
+                    "id": "a1483741303489",
+                    "text": "Zerind",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741329188",
+                    "text": "Sibiu",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741334959",
+                    "text": "Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741339257",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 232449,
+              "key": "71895641-3cfd-40f0-a71a-f2cf863495b7",
+              "title": "A* Search Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_cPSOQ-sC2k",
+                "china_cdn_id": "_cPSOQ-sC2k.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229095,
+          "key": "4b256ce8-b045-4d13-9af5-cb58b37c59f4",
+          "title": "A* Search 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4b256ce8-b045-4d13-9af5-cb58b37c59f4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232450,
+              "key": "8c3713a2-9c45-4997-b5e8-f3d9a502d3cd",
+              "title": "A* Search 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yMUqkCzFXts",
+                "china_cdn_id": "yMUqkCzFXts.mp4"
+              }
+            },
+            {
+              "id": 782767,
+              "key": "48c74d0d-1ab7-4e8a-9e58-5a11a0f408b9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Path** | **Path Cost (g)** | **Est. Distance (h)** |  **Total (f)** |\n| :----------: | :----------: | :----------: | :----------: |\n| Arad >> Zerind | 75 | 374 | 449 |\n| Arad >> Sibiu >> Oradea | 291 | 380 | 671 |\n| Arad >> Sibiu >> Fagaras | 239 | 176 | 415 |\n| Arad >> Sibiu >> Rimnicu Vilcea | 220 | 193 | 413 |\n| Arad >> Timisoara | 118 | 329 | 447 |\n\nNote that the path costs here add up together (i.e. Arad >> Sibiu >> Oradea is 140 + 151 = 291), while the estimated distance is given only from the current end node of the path.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247703,
+              "key": "9d3b7406-d01d-4140-97b5-137541abc86e",
+              "title": "A* Search 1 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9d3b7406-d01d-4140-97b5-137541abc86e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which state do we expand next using the A* algorithm?",
+                "answers": [
+                  {
+                    "id": "a1483741359455",
+                    "text": "Zerind",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741380163",
+                    "text": "Oradea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741384539",
+                    "text": "Sibiu",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741388627",
+                    "text": "Fagaras",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741393067",
+                    "text": "Rimnicu Vilcea",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741397937",
+                    "text": "Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741403350",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 232451,
+              "key": "99202f2e-8fe9-400f-bf8b-6bab5c5846bb",
+              "title": "A* Search 1 Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pfSya9ScozE",
+                "china_cdn_id": "pfSya9ScozE.mp4"
+              }
+            },
+            {
+              "id": 782772,
+              "key": "997416bd-bc59-4bdf-98ad-976b35d45ad2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Rimnicu Vilcea and Fagaras hardly increased in total value under <span class='mathquill'>\\large f</span> even though they added 80 and 99, respectively, in path cost, as their estimated distance to the goal decreased. Since they are much more in the specific direction of our goal of Bucharest, the search space is much more inclined to expand to them under A*, similar to greedy best-first search.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 229096,
+          "key": "a4a5dd47-9fa2-48a0-836a-21198f19f128",
+          "title": "A* Search 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a4a5dd47-9fa2-48a0-836a-21198f19f128",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232453,
+              "key": "0a3dfa14-4061-437a-ba7e-2334f1060388",
+              "title": "A* Search 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gYKBDz2kQJ8",
+                "china_cdn_id": "gYKBDz2kQJ8.mp4"
+              }
+            },
+            {
+              "id": 782774,
+              "key": "88d13d7a-f2a0-498b-8eae-6e9b601dece7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Path** | **Path Cost (g)** | **Est. Distance (h)** |  **Total (f)** |\n| :----------: | :----------: | :----------: | :----------: |\n| Arad >> Zerind | 75 | 374 | 449 |\n| Arad >> Sibiu >> Oradea | 291 | 380 | 671 |\n| Arad >> Sibiu >> Fagaras | 239 | 176 | 415 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Pitesti | 317 | 100 | 417 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Craiova | 366 | 160 | 526 |\n| Arad >> Timisoara | 118 | 329 | 447 |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247704,
+              "key": "d4a82922-5b25-4d4f-8dfd-31037d94cf17",
+              "title": "A* Search 2 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d4a82922-5b25-4d4f-8dfd-31037d94cf17",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which state do we expand next using the A* algorithm?",
+                "answers": [
+                  {
+                    "id": "a1483741422493",
+                    "text": "Zerind",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741441229",
+                    "text": "Oradea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741445306",
+                    "text": "Fagaras",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741449599",
+                    "text": "Pitesti",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741453570",
+                    "text": "Craiova",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741457924",
+                    "text": "Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741462248",
+                    "text": "None of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 232454,
+              "key": "4e16a54e-052a-4b3b-a959-2e1f51a3bbf4",
+              "title": "A* Search 2 Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kvDVL4G_njI",
+                "china_cdn_id": "kvDVL4G_njI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229097,
+          "key": "a58ca642-8ac5-46f4-8ea5-8af060a4088f",
+          "title": "A* Search 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a58ca642-8ac5-46f4-8ea5-8af060a4088f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 848196,
+              "key": "b4c1cf5f-2718-45ce-a097-e910d5a01cbc",
+              "title": "A* Search 3 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DRreaZXn72E",
+                "china_cdn_id": "DRreaZXn72E.mp4"
+              }
+            },
+            {
+              "id": 782780,
+              "key": "bf08aa76-d250-4814-a8f9-71d9c13e9ee4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Path** | **Path Cost (g)** | **Est. Distance (h)** |  **Total (f)** |\n| :----------: | :----------: | :----------: | :----------: |\n| Arad >> Zerind | 75 | 374 | 449 |\n| Arad >> Sibiu >> Oradea | 291 | 380 | 671 |\n| Arad >> Sibiu >> Fagaras >> **Bucharest** | 450 | 0 | 450 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Pitesti | 317 | 100 | 417 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Craiova | 366 | 160 | 526 |\n| Arad >> Timisoara | 118 | 329 | 447 |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247705,
+              "key": "c97d6d29-5c56-472c-a330-18ca273bcbba",
+              "title": "A* Search 3 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c97d6d29-5c56-472c-a330-18ca273bcbba",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What do we do next?",
+                "answers": [
+                  {
+                    "id": "a1483741500961",
+                    "text": "Expand Pitesti",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741520948",
+                    "text": "Expand Craiova",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741525403",
+                    "text": "Expand Timisoara",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741529779",
+                    "text": "Expand Oradea",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741534931",
+                    "text": "Expand Zerind",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741539354",
+                    "text": "End",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 232456,
+              "key": "26e64d5d-407f-44c5-81b2-6487cdbc75ae",
+              "title": "A* Search 3 Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Njd5k_I6Sqo",
+                "china_cdn_id": "Njd5k_I6Sqo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229098,
+          "key": "549cda9c-b9cd-4270-8d7d-e89ce4fe886c",
+          "title": "A* Search 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "549cda9c-b9cd-4270-8d7d-e89ce4fe886c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232457,
+              "key": "b0be9675-fef6-4781-badd-36fc5060a00b",
+              "title": "A* Search 4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "B_rOIxwLzr8",
+                "china_cdn_id": "B_rOIxwLzr8.mp4"
+              }
+            },
+            {
+              "id": 782781,
+              "key": "786f56a0-5438-4693-be62-917810c371bd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "| **Path** | **Path Cost (g)** | **Est. Distance (h)** |  **Total (f)** |\n| :----------: | :----------: | :----------: | :----------: |\n| Arad >> Zerind | 75 | 374 | 449 |\n| Arad >> Sibiu >> Oradea | 291 | 380 | 671 |\n| Arad >> Sibiu >> Fagaras >> **Bucharest** | 450 | 0 | 450 |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Pitesti >> **Bucharest** | 418 | 0 | **418** |\n| Arad >> Sibiu >> Rimnicu Vilcea >> Craiova | 366 | 160 | 526 |\n| Arad >> Timisoara | 118 | 329 | 447 |\n\nThere are no additional paths with lower totals, so the path with <span class='mathquill'>\\large f</span> of **418** is our shortest path.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247706,
+              "key": "2b87afad-fd17-4a3e-89ee-86f57754f31e",
+              "title": "A* Search 4 Quiz",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2b87afad-fd17-4a3e-89ee-86f57754f31e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Will A* always find the shortest cost path?",
+                "answers": [
+                  {
+                    "id": "a1483741562251",
+                    "text": "Yes, always",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741580281",
+                    "text": "No, it depends on the problem",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1483741584635",
+                    "text": "No, it depends on the heuristic estimate function h",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 229099,
+          "key": "d238bdfa-f49f-4f95-a14b-44a2e9cb184d",
+          "title": "A* Search 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d238bdfa-f49f-4f95-a14b-44a2e9cb184d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232458,
+              "key": "357a7984-8171-4fa3-8cb2-50e39ad5fff4",
+              "title": "A* Search 5",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7d4iHfJXPso",
+                "china_cdn_id": "7d4iHfJXPso.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 229100,
+          "key": "922cf0f6-6409-4796-a8f5-57b9ae377f4b",
+          "title": "Optimistic Heuristic",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "922cf0f6-6409-4796-a8f5-57b9ae377f4b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232767,
+              "key": "8d2f6be7-dad8-4a20-a96b-952f1976fc4b",
+              "title": "Optimistic Heuristic",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "It's key to note here than any remaining frontiers outside of our goal path, i.e. any additional unexplored paths, must now have true costs greater than our selected shortest path, p.\n<br><br>",
+              "video": {
+                "youtube_id": "Q5YJtZc37uc",
+                "china_cdn_id": "Q5YJtZc37uc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 232764,
+          "key": "f1d6bbc6-9043-4dfe-934f-977e718e17e0",
+          "title": "Quiz: Sliding Blocks Puzzle",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f1d6bbc6-9043-4dfe-934f-977e718e17e0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232772,
+              "key": "f95bc51a-5302-46e3-8d2d-45cb2b9438f3",
+              "title": "Sliding Blocks Puzzle",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Dzah_49isp8",
+                "china_cdn_id": "Dzah_49isp8.mp4"
+              }
+            },
+            {
+              "id": 782786,
+              "key": "aad923bd-2c7c-4716-bf8a-0819ce808df2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You can check out the definition of *admissible* [here](https://en.wikipedia.org/wiki/Admissible_heuristic), if needed.\n\nEssentially, are either (or both) of these heuristics capable of **overestimating** the true cost to reach our goal state?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 247710,
+              "key": "02c5963e-63d0-4736-8ef7-9f0317b0b53d",
+              "title": "Sliding Blocks Puzzle Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "02c5963e-63d0-4736-8ef7-9f0317b0b53d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which, if any, of these heuristics are admissible?",
+                "answers": [
+                  {
+                    "id": "a1483741764281",
+                    "text": "h1 = # of misplaced blocks",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741785601",
+                    "text": "h2 = sum(distances of blocks)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1483741789870",
+                    "text": "Neither of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 232765,
+          "key": "8ab599aa-af15-4203-a333-6cc1116c15aa",
+          "title": "Sliding Blocks Puzzle 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8ab599aa-af15-4203-a333-6cc1116c15aa",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232773,
+              "key": "545fbf94-1e23-4ba2-83ea-284b31ef1960",
+              "title": "Sliding Blocks Puzzle 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "`h2` is always greater than `h1` as each misplaced block must always need to move at least a distance of 1, but that distance could be greater than 1.\n\nWhy does `h2` expand fewer nodes than `h1`?\n\nAs Peter says, `h2` is always greater than or equal to `h1`. To see why this should expand fewer paths, let's imagine a heuristic `h3` that always had the exact cost at every node. This heuristic would naturally expand the least number of nodes, as it would know the actual best path to take at each step.\n\nOn the other hand, imagine a heuristic `h4` that was always 0. This heuristic would expand the most number of nodes of all possible heuristics, as it would have essentially no knowledge of estimated \"distance\" to the goal, and therefore be more similar to Uniform Cost search.\n\nYou can see then that a heuristic that is strictly greater than or equal to another one (assuming it is still admissible!) gets us closer to the perfect heuristic and thereby expands at least the same number of nodes or fewer.\n\n<br><br>",
+              "video": {
+                "youtube_id": "jchVkcBg9HQ",
+                "china_cdn_id": "jchVkcBg9HQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 232766,
+          "key": "f51d68d2-6bde-48fb-b6bd-85502bcffcf9",
+          "title": "Sliding Blocks Puzzle 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f51d68d2-6bde-48fb-b6bd-85502bcffcf9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 232774,
+              "key": "735ec2e0-9d78-48b5-801f-c7f733b39456",
+              "title": "Sliding Blocks Puzzle 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7vExAvX3LbI",
+                "china_cdn_id": "7vExAvX3LbI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 232775,
+          "key": "e7ead685-0752-4b5b-83af-e161f0480eec",
+          "title": "Problems with Search",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e7ead685-0752-4b5b-83af-e161f0480eec",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 246246,
+              "key": "a7328ad1-b0ce-4ff0-807a-06864e2c71d1",
+              "title": "Problems With Search",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "5RmTKsNoG6M",
+                "china_cdn_id": "5RmTKsNoG6M.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 232776,
+          "key": "a5f75ff4-0933-4415-bdf8-c7fcbbf62070",
+          "title": "A Note on Implementation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a5f75ff4-0933-4415-bdf8-c7fcbbf62070",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 233066,
+              "key": "6f0ea616-65e3-494f-b2df-b5e8088a17e6",
+              "title": "A Note On Implementation",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "You can consider the path Dr. Norvig is using here as one from Arad (A) to Sibiu (S) to Fagaras (F), it it helps. The cost path is not the exact one used in the previous examples.\n\n<br><br>",
+              "video": {
+                "youtube_id": "P3mkDcB-nqY",
+                "china_cdn_id": "P3mkDcB-nqY.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

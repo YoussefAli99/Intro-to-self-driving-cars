@@ -1,0 +1,325 @@
+{
+  "data": {
+    "lesson": {
+      "id": 348281,
+      "key": "ef06c80e-0385-422d-bf99-cae52928963c",
+      "title": "Implement Matrix Class",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Practice using your object oriented programming and matrix math skills by filling out the methods in a partially-completed `Matrix` class.\n",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/ef06c80e-0385-422d-bf99-cae52928963c/348281/1544452547487/Implement+Matrix+Class+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/ef06c80e-0385-422d-bf99-cae52928963c/348281/1544452545087/Implement+Matrix+Class+Subtitles.zip"
+          },
+          {
+            "name": "P2 Implement Matrix Class",
+            "uri": "https://video.udacity-data.com/topher/2017/August/599ca7fc_p2-implement-matrix-class/p2-implement-matrix-class.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "9af52c1f-e5de-4747-ab13-c7bf86c32c09",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 50400,
+        "semantic_type": "Project",
+        "title": "Implement a Matrix Class",
+        "description": "Go back to the [Matrix Workspace](https://classroom.udacity.com/nanodegrees/nd113/parts/7d80794c-51ff-4d34-b777-8a88f811c3ee/modules/dda7c015-f594-4a86-b8c0-bf850273f53c/lessons/ef06c80e-0385-422d-bf99-cae52928963c/concepts/2517225d-5667-4b73-b87f-6669d828c8c4) and click the `SUBMIT` button on the lower-right corner of the screen.\n\n## Project Submission Checklist\n\n**Before submitting your project, please review and confirm the following items.** \n<input type=\"checkbox\"> I am confident all rubric items have been met and my project will pass as submitted.\n<input type=\"checkbox\"> Project builds correctly without errors and runs.\n<input type=\"checkbox\"> All required functionality exists and my project behaves as expected per the project's specifications.\n\n**Once you have checked all these items, you are ready to submit!**\n\n",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1154",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 419642,
+          "key": "93718c8e-8ddc-4284-ba71-375ee581694a",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "93718c8e-8ddc-4284-ba71-375ee581694a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419646,
+              "key": "9950a0e5-f894-4093-b294-d9ace05af61a",
+              "title": "Nd113P2 C2 L5 01 L Implement Matrix",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0Ie9IxW9VDw",
+                "china_cdn_id": "0Ie9IxW9VDw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 348282,
+          "key": "ba9b0c12-52f2-454a-968e-675df60a3c4e",
+          "title": "Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ba9b0c12-52f2-454a-968e-675df60a3c4e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 348283,
+              "key": "34916890-7110-4a67-9495-293586915463",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Implementing a Matrix Class\nIn this project you will implement a `Matrix` class in Python. Specifically, you will implement the following methods:\n\n```python\nclass Matrix:\n  def determinant(self):\n      # your code\n\n  def trace(self):\n      # your code\n\n  def inverse(self):\n      # your code\n\n  def transpose(self):\n     # your code\n\n  # Overloaded operators\n\n  def __add__(self,other):\n    # your code\n  \n  def __sub__(self,other):\n    # your code\n\n  def __mul__(self,other):\n    # your code\n```\n\nWhen your class is working properly you will be able to manipulate matrices in code as if they were regular numbers (for the most part). For example:\n\n```python\n> A = Matrix([ \n    [2,4], \n    [3,1] \n])\n> print( A.transpose())\n  2.0  3.0\n  4.0  1.0\n>\n> I = Matrix([ \n    [1,0], \n    [0,1] \n])\n>\n> print(A*I)\n  2.0  4.0\n  3.0  1.0\n>\n> print(A * A.inverse())\n  1.0  0.0\n  0.0  1.0\n```\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 378160,
+          "key": "d54d2896-cdf5-48c3-b0c4-22609e055e3e",
+          "title": "Project Instructions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d54d2896-cdf5-48c3-b0c4-22609e055e3e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 378162,
+              "key": "d3b8b322-f227-4394-9406-a5c17a996942",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Instructions\n\nYour project workspace will contain several files. On the next page, you will see something like this:\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419820,
+              "key": "33686894-8460-4a12-8583-c1758058b5f6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d7c81e_notebooks-screenshot/notebooks-screenshot.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/33686894-8460-4a12-8583-c1758058b5f6",
+              "caption": "",
+              "alt": "",
+              "width": 246,
+              "height": 382,
+              "instructor_notes": null
+            },
+            {
+              "id": 419821,
+              "key": "dfa74868-1575-48d1-a515-28cfe42c9733",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We recommend that you open all of these files (except for two noted below) in new tabs so that your browser looks something like this:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419822,
+              "key": "bc17a687-6b26-4a23-bee3-2c578c4becca",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d7c85b_multiple-tabs/multiple-tabs.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/bc17a687-6b26-4a23-bee3-2c578c4becca",
+              "caption": "",
+              "alt": "",
+              "width": 826,
+              "height": 380,
+              "instructor_notes": null
+            },
+            {
+              "id": 562094,
+              "key": "9cf11e39-96b7-42bf-80af-85bbc2de36d5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**You can *ignore* datagenerator.py and test.py, which you won't need to modify**",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419823,
+              "key": "9e976b77-8ed1-49bc-875f-20b036a8e447",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "1. **`matrix.py`** - This contains the beginnings of a `Matrix` class (which you will complete) as well as some helper functions `zeroes` and `identity`. **This is the file you will be doing most of your work in.**\n2. **`matrix_playground.ipynb`** - A notebook that imports your Matrix class and calls the test code. You may find it useful to use this notebook as a place to **use** the matrix math code you will write in matrix.py.\n3. **`matrix_cheat_sheet.ipynb`** - A Jupyter notebook with a **glossary**, **explanation of matrix notation** and list of **matrix equations**. Use this as a reference when filling out the methods in the `Matrix` class!\n4. **`kalman_filter_demo.ipynb`** - You don't need to do anything with this notebook but you may find it interesting. Once your matrix class is working properly, the KF implemented here will actually work!\n\n**Other Files** (feel free to ignore).\n2. **`test.py`** - Contains test code which demonstrates the expected functionality of your code. \n2. **`datagenerator.py`** - this just contains some helper code which is used by the Kalman Filter.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 543463,
+              "key": "b9598226-ff0e-4a59-8d26-bd23f7866a58",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Evaluation\nOnce you have completed your project, use the [Project Rubric](https://review.udacity.com/#!/rubrics/1154/view) to review the project. If you have covered all of the points in the rubric, then you are ready to submit! If you see room for improvement in any category in which you do not meet specifications, keep working!\n\nYour project will be evaluated by a Udacity reviewer according to the same Project Rubric. Your project must \"meet specifications\" in each category in order for your submission to pass.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 378461,
+          "key": "2517225d-5667-4b73-b87f-6669d828c8c4",
+          "title": "Notebook - Implement Matrix Class",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2517225d-5667-4b73-b87f-6669d828c8c4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 378485,
+              "key": "18419b7b-d26d-4440-b35e-9bbc85b396ea",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view562a1bd4",
+              "pool_id": "jupyter",
+              "view_id": "562a1bd4-9126-4e55-8d0e-b1dfe74c5e13",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": true,
+                    "defaultPath": "/"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 402333,
+          "key": "5a626d5a-5886-4a50-b7b9-f3f417f7970f",
+          "title": "Kalman Filter and your Matrix Class",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5a626d5a-5886-4a50-b7b9-f3f417f7970f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402335,
+              "key": "aa2243b1-7a51-4fce-a4f0-3ff2d5b9c0d2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view562a1bd4",
+              "pool_id": "jupyter",
+              "view_id": "26d6703f-8c0d-4af4-8ecd-3bf3094be4a1",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/kalman_filter_demo.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 458587,
+          "key": "5362c65e-d382-4a48-ba8c-a056cecd933f",
+          "title": "Congratulations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5362c65e-d382-4a48-ba8c-a056cecd933f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458589,
+              "key": "91353473-90ff-4806-8186-12f12a8b70b6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Congratulations!\n\nYou implemented your own matrix class! This is a **huge** accomplishment!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 458588,
+              "key": "d4a51a08-25e5-48d6-9e63-0b819724de7f",
+              "title": "Nd113 Story 3 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Wa1CFHf3k54",
+                "china_cdn_id": "Wa1CFHf3k54.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Position, Velocity, and Acceleration</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Odometers, Speedometers and Derivatives</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Teleoperation at Phantom Auto.html">01. Teleoperation at Phantom Auto</a>
+    </li>
+    <li class="">
+      <a href="02. Inertial Navigation.html">02. Inertial Navigation</a>
+    </li>
+    <li class="">
+      <a href="03. Course Overview.html">03. Course Overview</a>
+    </li>
+    <li class="">
+      <a href="04. Inertial Navigation Sensors.html">04. Inertial Navigation Sensors</a>
+    </li>
+    <li class="">
+      <a href="05. Afternoon Drive.html">05. Afternoon Drive</a>
+    </li>
+    <li class="">
+      <a href="06. Delta x over Delta t.html">06. Delta x over Delta t</a>
+    </li>
+    <li class="">
+      <a href="07. Reducing Delta t.html">07. Reducing Delta t</a>
+    </li>
+    <li class="">
+      <a href="08. Plotting Position vs. Time.html">08. Plotting Position vs. Time</a>
+    </li>
+    <li class="">
+      <a href="09. Interpreting Position vs. Time Graphs.html">09. Interpreting Position vs. Time Graphs</a>
+    </li>
+    <li class="">
+      <a href="10. Average vs. Instantaneous Speed.html">10. Average vs. Instantaneous Speed</a>
+    </li>
+    <li class="">
+      <a href="11. Defining the Derivative.html">11. Defining the Derivative</a>
+    </li>
+    <li class="">
+      <a href="12. Understanding the Derivative.html">12. Understanding the Derivative</a>
+    </li>
+    <li class="">
+      <a href="13. Differential Notation.html">13. Differential Notation</a>
+    </li>
+    <li class="">
+      <a href="14. A Typical Calculus Problem.html">14. A &quot;Typical&quot; Calculus Problem</a>
+    </li>
+    <li class="">
+      <a href="15. How Odometers Work.html">15. How Odometers Work</a>
+    </li>
+    <li class="">
+      <a href="16. Speed from Position Data.html">16. Speed from Position Data</a>
+    </li>
+    <li class="">
+      <a href="17. Position, Velocity, and Acceleration.html">17. Position, Velocity, and Acceleration</a>
+    </li>
+    <li class="">
+      <a href="18. Implement an Accelerometer.html">18. Implement an Accelerometer</a>
+    </li>
+    <li class="">
+      <a href="19. Summary.html">19. Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">17. Position, Velocity, and Acceleration</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="position-velocity-and-acceleration">Position, Velocity, and Acceleration</h1>
+<p>Allow me to say the same thing about <strong>position</strong> and <strong>velocity</strong> in 5 different ways.</p>
+<ol>
+<li><p><strong>Velocity</strong> is the derivative of <strong>position</strong>. </p></li>
+<li><p><strong>Velocity</strong> is the <em>instantaneous rate of change of <strong>position</strong> with respect to <strong>time</strong>.</em></p></li>
+<li><p>An object's <strong>velocity</strong> tells us how much it's <strong>position</strong> will change when time changes.</p></li>
+<li><p><strong>Velocity</strong> at some time is just the slope of a line tangent to a graph of <strong>position</strong> vs. <strong>time</strong></p></li>
+<li><p><span class="mathquill ud-math">v(t) = \frac{dx}{dt} = \dot{x}(t)</span></p></li>
+</ol>
+<p>It turns out you can say the same 5 things about <strong>velocity</strong> and <strong>acceleration</strong>.</p>
+<ol>
+<li><p><strong>Acceleration</strong> is the derivative of <strong>velocity</strong>. </p></li>
+<li><p><strong>Acceleration</strong> is the <em>instantaneous rate of change of <strong>velocity</strong> with respect to <strong>time</strong>.</em></p></li>
+<li><p>An object's <strong>acceleration</strong> tells us how much it's <strong>velocity</strong> will change when time changes.</p></li>
+<li><p><strong>Acceleration</strong> at some time is just the slope of a line tangent to a graph of <strong>velocity</strong> vs. <strong>time</strong></p></li>
+<li><p><span class="mathquill ud-math">a(t) = \frac{dv}{dt} = \dot{v}(t)</span></p></li>
+</ol>
+<p>We can also make a couple interesting statements about the relationship between <strong>position</strong> and <strong>acceleration</strong>:</p>
+<ol>
+<li><strong>Acceleration</strong> is the second derivative of <strong>position</strong>.</li>
+<li><span class="mathquill ud-math"> a(t) = \frac{d^2}{dt^2}x(t) = \frac{d^2x}{dt^2} = \ddot{x}(t)</span></li>
+</ol>
+<p>We'll explore this more in the next lesson. For now, just know that differentiating position twice gives acceleration! </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="18. Implement an Accelerometer.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('17. Position, Velocity, and Acceleration')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

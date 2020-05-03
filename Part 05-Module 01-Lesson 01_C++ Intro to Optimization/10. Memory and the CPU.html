@@ -1,0 +1,331 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Memory and the CPU</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Intro to Optimization</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Course Introduction.html">01. Course Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Empathize with the Computer.html">02. Empathize with the Computer</a>
+    </li>
+    <li class="">
+      <a href="03. Intro to Computer Hardware.html">03. Intro to Computer Hardware</a>
+    </li>
+    <li class="">
+      <a href="04. Embedded Terminal Explanation.html">04. Embedded Terminal Explanation</a>
+    </li>
+    <li class="">
+      <a href="05. Demo Machine Code.html">05. Demo: Machine Code</a>
+    </li>
+    <li class="">
+      <a href="06. Assembly Language.html">06. Assembly Language</a>
+    </li>
+    <li class="">
+      <a href="07. Binary.html">07. Binary</a>
+    </li>
+    <li class="">
+      <a href="08. Demo Binary.html">08. Demo: Binary</a>
+    </li>
+    <li class="">
+      <a href="09. Demo Binary Floats.html">09. Demo: Binary Floats</a>
+    </li>
+    <li class="">
+      <a href="10. Memory and the CPU.html">10. Memory and the CPU</a>
+    </li>
+    <li class="">
+      <a href="11. Demo Stack vs Heap.html">11. Demo: Stack vs Heap</a>
+    </li>
+    <li class="">
+      <a href="12. Outro.html">12. Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Memory and the CPU</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>04 L C   And RAM V1 RENDER V1</p></h3>
+  
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="stack-vs-heap">Stack vs Heap</h2>
+<h5 id="stack">Stack</h5>
+<p>When you declare a variable in C++, the variable will automatically be placed on the stack. Once a function terminates, for example the main function, then the variable is removed from the stack; however, in terms of the code you've written so far in the nanodegree, there is one exception. The elements in a vector actually get placed on the heap, but the compiler still  manages the allocation and deallocation of memory for you. </p>
+<p>The stack removes variables by the "last in first out" rule; in other words, the last variable to be placed on the stack will be the first variable removed from the stack. This makes sense given that when a function is called, variables will be allocated to memory and then when the function terminates, variables will be removed from memory.</p>
+<p>The stack also tends to be relatively small: perhaps 1 MB depending on your system. One advantage to keeping the stack small is for multi-threading. Let's say you only have 50 MB of RAM for the stack. Your CPU could do about 50 simultaneous tasks because of the smaller stack size. But because the stack is small, the stack can run out of memory; this is called stack overflow.</p>
+<h4 id="heap">Heap</h4>
+<p>The heap, on the other hand, is only limited by the amount of RAM currently available. So variables that hold a lot of memory have to go on the heap. But when you declare a variable on the heap, you are responsible for removing the variable from memory. If you don't, then it becomes more likely that your program will run out of memory before the program terminates. And then your program will crash.</p>
+<p>The heap also tends to be slower; a compiler organizes the stack for you and knows where the next available memory slot is; on the other hand, a program might have to search for an empty spot to put a variable on the heap.</p>
+<p>In relation to code efficiency, only use the heap when necessary. Although you will not need to use the heap in the nanodegree, you'll at least become familiar with the syntax so that you can recognize when a program is using the heap. In the next section, you'll also see a demonstration about the stack versus the heap.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="variables-and-memory">Variables and Memory</h2>
+<p>Variables make programming much easier. Imagine what programming would be like if variables did not exist; you would have to determine</p>
+<ul>
+<li>determine how many bytes your variable needs</li>
+<li>find an available address to store the value</li>
+<li>make sure there are enough consecutive bytes available for storage</li>
+<li>you would also have to remember what value was stored at each hexadecimal address so that you could retrieve the right value as needed.</li>
+</ul>
+<p>But with variables, the compiler does all of the memory management for you. And you can use descriptive names to help you remember what is contained in each variable.</p>
+<p>This is essentially what the compiler is doing for you in terms of variables and memory management; without you having to think about it, the compiler efficiently finds space for your variables and keeps track of their location.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="dynamic-memory">Dynamic Memory</h2>
+<p>To understand the next demo, you need to know about dynamic memory allocation and pointers. </p>
+<p>Dynamic memory allocation refers to when you, the programmer, assign variables to memory manually. These variables will go on the heap rather than the stack. </p>
+<p>The opposite of dynamic memory allocation would be static memory allocation. You've already been using static memory in your programs; when you declare variables in your programs, the compiler knows ahead of time how much memory each variable will need; the amount of memory your variables need does not change as the program executes, so this memory is "static".  The stack is used for static memory allocation. </p>
+<p>The compiler doesn't know how much memory will be needed for dynamically allocated variables; hence, dynamic memory gets allocated when you execute your programs. Dynamically allocated variables go on the heap.</p>
+<p>To use dynamic memory, you need to be familiar with <strong>pointers</strong> and the <strong>new</strong> and <strong>delete</strong> C++ syntax. A pointer is a special type of variable that holds a memory address rather than a value. You don't need to know how to use pointers, but they show up in the demo in the next part of the lesson.</p>
+<p>Here is an example of dynamic memory allocation using pointers:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="c++ language-c++">#include &lt;iostream&gt;
+
+int main() {
+
+    // asterisk syntax creates a pointer variable, which can hold a memory address
+    int * pointervariable;
+
+    // new is used to create a variable on the heap. This line
+    // assigns an addresss to pointervariable and reserves enough space
+    // told hold an integer.
+    pointervariable = new int;
+
+    // Pointer variable holds an addresss. The address allows placing a value in
+    // memory at the address.
+    *pointervariable = 10;
+
+    std::cout &lt;&lt; "pointer value:  " &lt;&lt; *pointervariable &lt;&lt; "\n";
+    std::cout &lt;&lt; "pointer address: " &lt;&lt; pointervariable &lt;&lt; "\n";
+
+    // remove pointervariable from the heap
+    delete pointervariable;
+    pointervariable = NULL;
+
+    return 0;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>With the result outputting something like:</p>
+<pre><code>pointer value: 10
+pointer address: 0x1004053c0</code></pre>
+<p>although the exact memory address will differ from machine to machine. The pointer address is a <a href="https://en.wikipedia.org/wiki/Hexadecimal" rel="noopener noreferrer" target="_blank">hexadecimal number</a> representing the location in memory.</p>
+<p>The new operator assigns memory to the heap. You are are responsible for removing the variable when you are done with it, which is what the delete operator is for. Setting the pointer to NULL is good practice.</p>
+<p>If you do not remove the variable, your program could run out of memory during execution; some operating systems might delete memory from the heap when your program terminates but some might not. Forgetting to remove dynamically allocated variables is called a <strong>memory leak</strong>.</p>
+<p>Newer versions of C++ also include <a href="https://msdn.microsoft.com/en-us/library/hh279674.aspx" rel="noopener noreferrer" target="_blank">smart pointers</a> that delete automatically when the program terminates.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Next, you'll see a demonstration of static versus dynamic memory allocation.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Stack vs Heap</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>When should you use dynamic memory allocation over static memory allocation?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1509395166642" name="440676" id="a1509395166642">
+      <label for="a1509395166642"><p>If you want the compiler to manage memory allocation and deallocation for you </p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509395168587" name="440676" id="a1509395168587">
+      <label for="a1509395168587"><p>If your variable uses more memory than what is available in the stack</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509395169842" name="440676" id="a1509395169842">
+      <label for="a1509395169842"><p>If you want to increase the speed of your programs</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509395170498" name="440676" id="a1509395170498">
+      <label for="a1509395170498"><p>If you want to share variables across different functions or parts of a program</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509402118035" name="440676" id="a1509402118035">
+      <label for="a1509402118035"><p>Whenever you want to use pointers</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>If your variable uses more memory than what is available in the stack</li>
+      <li>If you want to share variables across different functions or parts of a program</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Demo Stack vs Heap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Memory and the CPU')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

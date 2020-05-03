@@ -1,0 +1,340 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class Variables</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. Class Variables</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="class-variables">Class Variables</h1>
+<p>Your first task will be to declare the variables in your Matrix class. As a reminder, here is the general syntax for declaring a C++ class:</p>
+<pre><code class="C++ language-C++">class Classname
+{
+    private:
+        declare private variables;
+        declare private functions;
+
+    public:
+        declare public variables;
+        declare public functions;
+};</code></pre>
+<p>The lines for actually declaring the variables are the same as any other C++ variable declaration:</p>
+<pre><code class="c++ language-c++">datatype variablename;</code></pre>
+<p>The Matrix class has three private variables:</p>
+<ul>
+<li>grid - a 2D float vector to hold the matrix values</li>
+<li>rows - the number of rows in the matrix</li>
+<li>columns - the number of columns in the matrix</li>
+</ul>
+<p>The rows and columns variables should be declared as a size_type. A size_type variable holds the size of a vector. </p>
+<p>If your vector holds integers, the size_type declaration looks like this:</p>
+<pre><code class="c++ language-c++">std::vector&lt;int&gt;::size_type variablename;</code></pre>
+<p>If your vector holds floats, then the size_type declaration would look like this:</p>
+<pre><code class="c++ language-c++">std::vector&lt;float&gt;::size_type variablename;</code></pre>
+<p>The value that goes inside the brackets &lt;&gt; is based on whatever the original vector declaration was. A size_type variable is actually an unsigned int. The size_type variable is guaranteed to be able to hold up to the maximum size of a float vector.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Fill out the header file below with the variable declarations. This quiz is not graded, but the answer is included below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#410574-matrix-h" class="nav-item nav-link  active show" id="tab-410574-matrix-h" data-toggle="tab" role="tab"
+      aria-controls="410574-matrix-h" aria-selected="true">matrix.h</a>
+    <a href="#410574-main-cpp" class="nav-item nav-link " id="tab-410574-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="410574-main-cpp" aria-selected="false">main.cpp</a>
+    <a href="#410574-matrix-cpp" class="nav-item nav-link " id="tab-410574-matrix-cpp" data-toggle="tab" role="tab"
+      aria-controls="410574-matrix-cpp" aria-selected="false">matrix.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="410574-matrix-h" aria-labelledby="tab-410574-matrix-h" role="tabpanel">
+      <pre><code></code>#include &lt;vector&gt;
+
+// Header file for the Matrix class
+
+/* 
+**  TODO:
+**    Declare the following private variables:
+**      a 2D float vector variable called grid
+**      a vector size_type variable called rows
+**      a vector size_type variable called cols
+*/
+
+class Matrix 
+{
+    
+    
+    
+    
+    
+};</code></pre>
+    </div>
+    <div class="tab-pane " id="410574-main-cpp" aria-labelledby="tab-410574-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &quot;matrix.h&quot;
+
+int main () {
+    
+    // TODO: Nothing to do here
+    
+    return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="410574-matrix-cpp" aria-labelledby="tab-410574-matrix-cpp" role="tabpanel">
+      <pre><code></code>// TODO: Nothing to do here
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution">Solution</h1>
+<pre><code class="c++ language-c++">class Matrix 
+{
+
+        private:
+
+            std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+            std::vector&lt;float&gt;::size_type rows;
+            std::vector&lt;float&gt;::size_type cols;    
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In the next step, you will declare your class functions and then define your class functions.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. Class Function Declarations.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. Class Variables')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2D Vector Playground</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Vectors</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. C++ Vectors.html">01. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="02. Namespaces.html">02. Namespaces</a>
+    </li>
+    <li class="">
+      <a href="03. Python Lists vs. C++ Vectors.html">03. Python Lists vs. C++ Vectors</a>
+    </li>
+    <li class="">
+      <a href="04. Initializing Vector Values.html">04. Initializing Vector Values</a>
+    </li>
+    <li class="">
+      <a href="05. Vector Methods.html">05. Vector Methods</a>
+    </li>
+    <li class="">
+      <a href="06. Vectors and For Loops.html">06. Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="07. Math and Vectors.html">07. Math and Vectors</a>
+    </li>
+    <li class="">
+      <a href="08. 1D Vector Playground.html">08. 1D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="09. 2D Vectors.html">09. 2D Vectors</a>
+    </li>
+    <li class="">
+      <a href="10. 2D Vectors and For Loops.html">10. 2D Vectors and For Loops</a>
+    </li>
+    <li class="">
+      <a href="11. 2D Vector Playground.html">11. 2D Vector Playground</a>
+    </li>
+    <li class="">
+      <a href="12. Next Lesson.html">12. Next Lesson</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. 2D Vector Playground</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="program-your-own-matrix-function">Program your Own Matrix Function</h3>
+<p>Practice coding matrices in C++. In this exercise, write a function that has two integer matrices as inputs and then outputs the sum. Assume that the two input matrices have the same size (e.g. matrix one is 5x3 and matrix two is 5x3).</p>
+<p>You can find an implementation in the solution.cpp tab if you'd like to compare your solution.</p>
+<p>You can use the Test Run button to run your code.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468629-main-cpp" class="nav-item nav-link  active show" id="tab-468629-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="468629-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#468629-solution-cpp" class="nav-item nav-link " id="tab-468629-solution-cpp" data-toggle="tab" role="tab"
+      aria-controls="468629-solution-cpp" aria-selected="false">solution.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468629-main-cpp" aria-labelledby="tab-468629-main-cpp" role="tabpanel">
+      <pre><code></code>//TODO: Write a function that receives two integer matrices and outputs
+// the sum of the two matrices. Then in your main() function, input a few
+// examples to check your solution. Output the results of your function to 
+// cout. You could even write a separate function that prints an arbitrarily 
+// sized matric to cout.
+
+</code></pre>
+    </div>
+    <div class="tab-pane " id="468629-solution-cpp" aria-labelledby="tab-468629-solution-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+vector &lt; vector &lt;int&gt; &gt; matrixsum(vector &lt; vector &lt;int&gt; &gt; matrix1, vector &lt; vector &lt;int&gt; &gt; matrix2);
+void matrixprint(vector &lt; vector &lt;int&gt; &gt; inputmatrix);
+
+int main() {
+
+	// declare two matrices
+	vector &lt; vector &lt;int&gt; &gt; matrix1 (5, vector &lt;int&gt; (3, 2));
+	vector &lt; vector &lt;int&gt; &gt; matrix2 (5, vector &lt;int&gt; (3, 26));
+
+	//declare an empty matrix to hold the result
+	vector &lt; vector &lt;int&gt; &gt; matrixresult; 
+
+	//calculate the sum of the two matrices
+	matrixresult &#x3D; matrixsum(matrix1, matrix2);
+
+	// call the matrix print function to print out the results
+	matrixprint(matrixresult);
+
+	return 0;
+}
+
+//function to add two matrices together
+vector &lt; vector &lt;int&gt; &gt; matrixsum(vector &lt; vector &lt;int&gt; &gt; matrix1, vector &lt; vector &lt;int&gt; &gt; matrix2) {
+
+	// declare a matrix with the same size as matrix1 and matrix2
+	vector &lt; vector &lt;int&gt; &gt; matrixsumresult (matrix1.size(), vector &lt;int&gt; (matrix1[0].size(), 0));
+
+	// iterate through matrix1 and assign the sum of each element to the results matrix
+	for (int row &#x3D; 0; row &lt; matrix1.size(); row++) {
+		for (int column &#x3D; 0; column &lt; matrix1[0].size(); column++) {
+			matrixsumresult[row][column] &#x3D; matrix1[row][column] + matrix2[row][column];
+		}
+
+	}
+
+	return matrixsumresult;
+
+
+}
+
+// function to print an integer matrix
+void matrixprint(vector &lt; vector &lt;int&gt; &gt; inputmatrix) {
+
+	for (int row &#x3D; 0; row &lt; inputmatrix.size(); row++) {
+		for (int column &#x3D; 0; column &lt; inputmatrix[0].size(); column++) {
+			cout &lt;&lt; inputmatrix[row][column] &lt;&lt; &quot; &quot;;
+		}
+		cout &lt;&lt; endl;
+
+	}
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Next Lesson.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. 2D Vector Playground')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

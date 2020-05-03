@@ -1,0 +1,2554 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349920,
+      "key": "7b8dd720-f17d-4ac5-856f-d152481be273",
+      "title": "Robot Localization",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Sebastian Thrun will give you an overview of the theory behind localization!",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/7b8dd720-f17d-4ac5-856f-d152481be273/349920/1544452450873/Robot+Localization+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/7b8dd720-f17d-4ac5-856f-d152481be273/349920/1544452438444/Robot+Localization+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 408128,
+          "key": "65b142c8-8a85-46f9-befb-6dad19c7beee",
+          "title": "About this Lesson",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65b142c8-8a85-46f9-befb-6dad19c7beee",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419873,
+              "key": "6c92d4cd-5504-4fd8-a97d-507f924a0545",
+              "title": "About This Lesson",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xEBSzD-fwps",
+                "china_cdn_id": "xEBSzD-fwps.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 18901,
+          "key": "487350240923",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487350240923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 12295,
+              "key": "48735024",
+              "title": "Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "<p>Welcome to Artificial Intelligence for Robotics, also called \"Programming a Robotic Car\"!</p>\n\n<p>Don't forget to check out <a href=\"https://www.udacity.com/wiki/cs373\">wiki</a> for course notes, additional explanations, examples and extra materials!</p>",
+              "video": {
+                "youtube_id": "Uqt_pRbR8rI",
+                "china_cdn_id": "Uqt_pRbR8rI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 29249,
+          "key": "487122860923",
+          "title": "Localization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487122860923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 121613,
+              "key": "48712286",
+              "title": "Localization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "**Note:** Much of the content in this lesson assumes you have a good map first. Without it, the techniques here either won't work or won't work very well. There is also another version of localization called SLAM, or Simultaneous Localization and Mapping, that does not need a good map prior to beginning.",
+              "video": {
+                "youtube_id": "31xZhj2uPr4",
+                "china_cdn_id": "31xZhj2uPr4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 34183,
+          "key": "486736290923",
+          "title": "Total Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486736290923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 65521,
+              "key": "48673629",
+              "title": "Total Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Assume that the robot has a map of the world and knows what a door looks like.",
+              "video": {
+                "youtube_id": "n1EacrqyCs8",
+                "china_cdn_id": "n1EacrqyCs8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 19964,
+          "key": "487293510923",
+          "title": "Uniform Probability Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487293510923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 27549,
+              "key": "48729351",
+              "title": "Uniform Probability Quiz",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48729351",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "6tV5NY1HoNA",
+                  "china_cdn_id": "6tV5NY1HoNA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Uniform Probability Quiz",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/FpzHjkyFkrJK8Nk9lSvsqIKiLvgTMLVzKq2ZF3b1B3qNVYBksyqnfW4PdergtAiPAwkiamk3dBMBZg_9wA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48729351",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48735019",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert the probability of X of i where i is from 1 to 5 here.",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10507246376811594,
+                      "width": 0.18329177057356608,
+                      "x": 0.5963022132169576,
+                      "y": 0.5591740576496674
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "IZC33Tmy8Lo",
+                  "china_cdn_id": "IZC33Tmy8Lo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 30754,
+          "key": "486938190923",
+          "title": "Uniform Distribution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938190923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 72636,
+              "key": "48693819",
+              "title": "Uniform Distribution",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48693819",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "ysebYA6tDZ4",
+                  "china_cdn_id": "ysebYA6tDZ4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Uniform Distribution",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4331117574",
+                "initial_code_files": [
+                  {
+                    "text": "# Modify the empty list, p, so that it becomes a UNIFORM probability\n# distribution over five grid cells, as expressed in a list of \n# five probabilities.\n\np = []\n\nprint p\n",
+                    "name": "student_main.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "_sAkAALHyEg",
+                  "china_cdn_id": "_sAkAALHyEg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29573,
+          "key": "487421900923",
+          "title": "Generalized Uniform Distribution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487421900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 39357,
+              "key": "48742190",
+              "title": "Generalized Uniform Distribution",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48742190",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "e21oU80gwWc",
+                  "china_cdn_id": "e21oU80gwWc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Generalized Uniform Distribution",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48271859",
+                "initial_code_files": [
+                  {
+                    "text": "#  Modify your code to create probability vectors, p, of arbitrary \n#  size, n. Use n=5 to verify that your new solution matches \n#  the previous one.\n\np=[]\nn=5\n\nprint p",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "nsSvTTA0p8E",
+                  "china_cdn_id": "nsSvTTA0p8E.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 18869,
+          "key": "487235990923",
+          "title": "Probability After Sense",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487235990923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 23442,
+              "key": "48723599",
+              "title": "Probability After Sense",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723599",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "UFcTLCttNRI",
+                  "china_cdn_id": "UFcTLCttNRI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Probability After Sense",
+                "alt_text": "Probability After Sense   Table 1 has 1 row and five columns. Row 1 column 1 is green and labeled X sub 1 with a .2 probability. Row 1 column 2 is red and labeled X sub 2 with a .2 probability. Row 1 column 3 is red and labeled X sub 3 with a .2 probability. Row 1 column 4 is green and labeled X sub 4 with a .2 probability. Row 1 column 5 is green and labeled X sub 5 with a .2 probability.  There is a robot with a thought bubble that indicates it can see red. A red multiplication sign indicating multiply .6. A green multiplication sign indicating multiply .2.",
+                "background_image": "//lh3.ggpht.com/0QHUTy3cagxIQa_ypWT_f7deu_q1DDAS_s4nDsBXU9pyVqFclMxkSsJKp8USaBsnL4CLVsLf9rj2oMl6gpwa=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723599",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48737024",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Product on zero point two times zero point two.",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.10643015521064302,
+                      "width": 0.09476309226932668,
+                      "x": 0.25144878587223346,
+                      "y": 0.34150748242295764
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Product on zero point two times zero point six.wer5",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.0975609756097561,
+                      "width": 0.1084788029925187,
+                      "x": 0.35040237540913344,
+                      "y": 0.34150748242295764
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Product on zero point two times zero point six.",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 6,
+                    "placement": {
+                      "height": 0.10643015521064302,
+                      "width": 0.08977556109725686,
+                      "x": 0.46373765902626246,
+                      "y": 0.33486189070403444
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Product on zero point two times zero point two.",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 7,
+                    "placement": {
+                      "height": 0.12416851441241686,
+                      "width": 0.08728179551122195,
+                      "x": 0.5575017762600335,
+                      "y": 0.32377541620292577
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Product on zero point two times zero point two.",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 8,
+                    "placement": {
+                      "height": 0.13082039911308205,
+                      "width": 0.09351620947630923,
+                      "x": 0.6512305433316123,
+                      "y": 0.31268894170181716
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "dEiQObhi2J4",
+                  "china_cdn_id": "dEiQObhi2J4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 24821,
+          "key": "487421910923",
+          "title": "Compute Sum",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487421910923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 128790,
+              "key": "48742191",
+              "title": "Compute Sum",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48742191",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "qa9B4r5m8wM",
+                  "china_cdn_id": "qa9B4r5m8wM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Compute Sum",
+                "alt_text": "Compute Sum  Table 1 has 1 row and five columns. Row 1 column 1 is green and labeled X sub 1 with a .2 probability. Row 1 column 2 is red and labeled X sub 2 with a .2 probability. Row 1 column 3 is red and labeled X sub 3 with a .2 probability. Row 1 column 4 is green and labeled X sub 4 with a .2 probability. Row 1 column 5 is green and labeled X sub 5 with a .2 probability.  There is a table of boxes beneath this with one row and five columns. This table presents the probabilities we have just calculated.  The first one is 0.04. The second one is 0.12. The third one is 0.12. The fourth one is 0.04. The fifth one is 0.04.",
+                "background_image": "//lh4.ggpht.com/gRH9fOgoEt1u5wdjuxNfCnbZqARNNQ8sVS5ck0yKnGYaOcYlqbeTfvEFqalLiU6Th16XE9zNx9vtNCscnEXx=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48742191",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48673630",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is the summation of the probabilities? Insert your response in the text box here.",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07222222222222222,
+                      "width": 0.05364583333333333,
+                      "x": 0.859375,
+                      "y": 0.33333333333333326
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "WgX17_mmc1c",
+                  "china_cdn_id": "WgX17_mmc1c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 130982,
+          "key": "487421920923",
+          "title": "Normalize Distribution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487421920923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 120432,
+              "key": "48742192",
+              "title": "Normalize Distribution",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48742192",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Uc_rHR6U70U",
+                  "china_cdn_id": "Uc_rHR6U70U.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Normalize Distribution",
+                "alt_text": "Normalize Distribution  Table 1 has 1 row and five columns. Row 1 column 1 is green and labeled X sub 1 with a .2 probability. Row 1 column 2 is red and labeled X sub 2 with a .2 probability. Row 1 column 3 is red and labeled X sub 3 with a .2 probability. Row 1 column 4 is green and labeled X sub 4 with a .2 probability. Row 1 column 5 is green and labeled X sub 5 with a .2 probability.  There is a table of boxes beneath this with one row and five columns. This table contains relevant probabilities. The first one is 0.04. The second one is 0.12. The third one is 0.12. The fourth one is 0.04. The fifth one is 0.04.   To the right, we know the summation of these probabilities is equal to 0.36.  An additional table has been added below the other two tables. The probability of all of them equals 1.",
+                "background_image": "//lh6.ggpht.com/ghVmMyQT4sddPlwlU0XZ0g5TlRyItNEtm3NPmkSWBdO79_K5gZE5RsccORtA-8RaNZIN9dC034I6TSC0SOo=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48742192",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734092",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert response for first box. Truncate to 3 decimal places",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.0975609756097561,
+                      "width": 0.09226932668329177,
+                      "x": 0.2300888403990025,
+                      "y": 0.5677723683697685
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert response for second box. Truncate to 3 decimal places.",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.10473815461346633,
+                      "x": 0.3322659157160809,
+                      "y": 0.5496623172463969
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert response for third box. Truncate to 3 decimal places.",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.11529933481152993,
+                      "width": 0.09725685785536159,
+                      "x": 0.44386546451254677,
+                      "y": 0.5355837667596314
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert response for fourth box. Trucate to 3 decimal places",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.12638580931263857,
+                      "width": 0.08354114713216958,
+                      "x": 0.5467687212023652,
+                      "y": 0.5174422507275499
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert response for fifth box. Truncate to 3 decimal places",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.1286031042128603,
+                      "width": 0.09725685785536159,
+                      "x": 0.6387971797191592,
+                      "y": 0.5112376413958565
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "SW_wvez0izo",
+                  "china_cdn_id": "SW_wvez0izo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29559,
+          "key": "487214690923",
+          "title": "pHit and pMiss",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487214690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 119095,
+              "key": "48721469",
+              "title": "pHit and pMiss",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Reminder, we're looking for:\n\n[miss, hit, hit, miss, miss]",
+              "user_state": {
+                "node_key": "48721469",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "wOfAyDvun5w",
+                  "china_cdn_id": "wOfAyDvun5w.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "pHit and pMiss",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48691503",
+                "initial_code_files": [
+                  {
+                    "text": "#Write code that outputs p after multiplying each entry \n#by pHit or pMiss at the appropriate places. Remember that\n#the red cells 1 and 2 are hits and the other green cells\n#are misses.\n\n\np=[0.2,0.2,0.2,0.2,0.2]\npHit = 0.6\npMiss = 0.2\n\n#Enter code here\n\nprint p",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "FnhHQht4vDo",
+                  "china_cdn_id": "FnhHQht4vDo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 32231,
+          "key": "487393790923",
+          "title": "Sum of Probabilities",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487393790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 47536,
+              "key": "48739379",
+              "title": "Sum of Probabilities",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48739379",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "z0oijOqN8K8",
+                  "china_cdn_id": "z0oijOqN8K8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Sum of Probabilities",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48722171",
+                "initial_code_files": [
+                  {
+                    "text": "#Modify the program to find and print the sum of all \n#the entries in the list p.\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\npHit = 0.6\npMiss = 0.2\n\np[0]=p[0]*pMiss\np[1]=p[1]*pHit\np[2]=p[2]*pHit\np[3]=p[3]*pMiss\np[4]=p[4]*pMiss\n\n# Enter your code below\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "6c0XvswnGm0",
+                  "china_cdn_id": "6c0XvswnGm0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 32453,
+          "key": "486928050923",
+          "title": "Sense Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486928050923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 47817,
+              "key": "48692805",
+              "title": "Sense Function",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48692805",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "eIjyrQpDogg",
+                  "china_cdn_id": "eIjyrQpDogg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Sense Function",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48737022",
+                "initial_code_files": [
+                  {
+                    "text": "#Modify the code below so that the function sense, which \n#takes p and Z as inputs, will output the NON-normalized \n#probability distribution, q, after multiplying the entries \n#in p by pHit or pMiss according to the color in the \n#corresponding cell in world.\n\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\nworld=['green', 'red', 'red', 'green', 'green']\nZ = 'red'\npHit = 0.6\npMiss = 0.2\n\ndef sense(p, Z):\n    #\n    #ADD YOUR CODE HERE\n    #\n    return q\n\nprint sense(p,Z)",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Y5iFxWRTw1c",
+                  "china_cdn_id": "Y5iFxWRTw1c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 12789,
+          "key": "486928060923",
+          "title": "Normalized Sense Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486928060923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 104676,
+              "key": "48692806",
+              "title": "Normalized Sense Function",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48692806",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GqWszyHTYas",
+                  "china_cdn_id": "GqWszyHTYas.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Normalized Sense Function",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48735041",
+                "initial_code_files": [
+                  {
+                    "text": "#Modify your code so that it normalizes the output for \n#the function sense. This means that the entries in q \n#should sum to one.\n\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\nworld=['green', 'red', 'red', 'green', 'green']\nZ = 'red'\npHit = 0.6\npMiss = 0.2\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    return q\nprint sense(p,Z)\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "UX3W8TUKbJ0",
+                  "china_cdn_id": "UX3W8TUKbJ0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 16420,
+          "key": "487293520923",
+          "title": "Test Sense Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487293520923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 17200,
+              "key": "48729352",
+              "title": "Test Sense Function",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48729352",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Lf2DYUCsUH4",
+                  "china_cdn_id": "Lf2DYUCsUH4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Test Sense Function",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48712289",
+                "initial_code_files": [
+                  {
+                    "text": "#Try using your code with a measurement of 'green' and \n#make sure the resulting probability distribution is correct.\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\nworld=['green', 'red', 'red', 'green', 'green']\nZ = 'red'\npHit = 0.6\npMiss = 0.2\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(p)):\n        q[i]=q[i]/s \n    return q\nprint sense(p, Z)\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "F8AHaaJVmkw",
+                  "china_cdn_id": "F8AHaaJVmkw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 11462,
+          "key": "487393800923",
+          "title": "Multiple Measurements",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487393800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 121122,
+              "key": "48739380",
+              "title": "Multiple Measurements",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Do not modify the sense function. Add code so that p is the correct probability after making the two measurements. Make sure your code works for measurement lists of arbitrary length.",
+              "user_state": {
+                "node_key": "48739380",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "gDO4sF8gR9k",
+                  "china_cdn_id": "gDO4sF8gR9k.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Multiple Measurements",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48673604",
+                "initial_code_files": [
+                  {
+                    "text": "#Modify the code so that it updates the probability twice\n#and gives the posterior distribution after both \n#measurements are incorporated. Make sure that your code \n#allows for any sequence of measurement of any length.\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\npHit = 0.6\npMiss = 0.2\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n#\n#ADD YOUR CODE HERE\n#\nprint p\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-3qTapGGa-8",
+                  "china_cdn_id": "-3qTapGGa-8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 38199,
+          "key": "486928070923",
+          "title": "Exact Motion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486928070923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 71117,
+              "key": "48692807",
+              "title": "Exact Motion",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Enter posterior probability after a single move to the right, assuming the world is cyclic.",
+              "user_state": {
+                "node_key": "48692807",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "1mL6CtD3rAM",
+                  "china_cdn_id": "1mL6CtD3rAM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Exact Motion",
+                "alt_text": "Exact Motion  Robot Motion  Tablet 1 has 1 row with 5 columns. Under each column is a fraction. Row 1 column 1, one ninth. Row 1 column 2, one third. Row 1 column 3, one third. Row 1 column 4, one ninth. Row 1 column 5, one ninth. There is an arrow from row 1 column 5 to row 1 column row 1 column 1 with the wording Cyclic World.   Table two is underneath table one and is used for inputting your numeric answers. It has 1 row with 5 columns.",
+                "background_image": "//lh3.ggpht.com/gLPi4hen2E1rm_wIZXXkbrXtAsJaiKIDKTrR2a9voNlkrhytIN8rrjiGf9n1lQKFY3kAgEH5T_IpBfoJlSI=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48692807",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48532602",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "posterior probability 1",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08611111111111111,
+                      "width": 0.07447916666666667,
+                      "x": 0.22916666666666663,
+                      "y": 0.6944444444444444
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "posterior probability 2",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07592592592592592,
+                      "width": 0.0703125,
+                      "x": 0.3328125,
+                      "y": 0.6851851851851852
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "posterior probability 3",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.08055555555555555,
+                      "width": 0.0703125,
+                      "x": 0.43229166666666674,
+                      "y": 0.6666512383355034
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "posterior probability 4",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.08888888888888889,
+                      "width": 0.06927083333333334,
+                      "x": 0.5364583333333334,
+                      "y": 0.6573765507450812
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "posterior probability 5",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.1,
+                      "width": 0.06614583333333333,
+                      "x": 0.630199686686198,
+                      "y": 0.6481481481481481
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Iky7rJXQU_4",
+                  "china_cdn_id": "Iky7rJXQU_4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 39717,
+          "key": "487421930923",
+          "title": "Move Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487421930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 99345,
+              "key": "48742193",
+              "title": "Move Function",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Alternate solution:\n\n    U = U % len(p)\n    q = p[-U:] + p[:-U]",
+              "user_state": {
+                "node_key": "48742193",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "wfjE0mVADIk",
+                  "china_cdn_id": "wfjE0mVADIk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Move Function",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48673607",
+                "initial_code_files": [
+                  {
+                    "text": "#Program a function that returns a new distribution \n#q, shifted to the right by U units. If U=0, q should \n#be the same as p.\n\np=[0, 1, 0, 0, 0]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\npHit = 0.6\npMiss = 0.2\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n\ndef move(p, U):\n    #\n    #ADD CODE HERE\n    #\n    return q\n\nprint move(p, 1)\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "TnFq6hufsYs",
+                  "china_cdn_id": "TnFq6hufsYs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 35129,
+          "key": "486788970923",
+          "title": "Inexact Motion 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486788970923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 92812,
+              "key": "48678897",
+              "title": "Inexact Motion 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48678897",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "C3f-T9_GTpw",
+                  "china_cdn_id": "C3f-T9_GTpw.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Inexact Motion 1",
+                "alt_text": "Inexact Motion 1  Tablet 1 has 1 row with 5 columns. Row 1 column 1 has a zero in it. Row 1 column 2 has a one in it. Row 1 column 3 has a zero in it. Row 1 column 4 has a zero in it. Row 1 column 5 has a zero in it.   Table two is underneath table one and is used for inputting your numeric answers. It has 1 row with 5 columns.   To the left of the tables is a list of formulas. First, U equals 2. Second, p of (X sub i+2 given X sub i) equals 0.8. Third, p of (X sub i+1 given X sub i) equals 0.1. Fourth, p of (X sub i+3 given X sub i) = 0.1.",
+                "background_image": "//lh5.ggpht.com/jXmTzUGuSflAmsmxLvjdoyXs0c7zRasc2yiGZmz9_i0QitTFzNn2J-qv-XvDHgzCHOj0UxAYNnyT8qWgAA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48678897",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48720151",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 1",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08333333333333331,
+                      "width": 0.09635416666666669,
+                      "x": 0.23958333333333337,
+                      "y": 0.36111111111111105
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 2",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07962962962962963,
+                      "width": 0.07447916666666667,
+                      "x": 0.36979166666666674,
+                      "y": 0.36111111111111105
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 3",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.08055555555555555,
+                      "width": 0.08541666666666665,
+                      "x": 0.47395833333333326,
+                      "y": 0.36111111111111105
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 4",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.07407407407407407,
+                      "width": 0.09791666666666667,
+                      "x": 0.5833333333333334,
+                      "y": 0.36111111111111105
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 5",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.07222222222222222,
+                      "width": 0.0953125,
+                      "x": 0.703125,
+                      "y": 0.36111111111111105
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "mGWGhgZG_jM",
+                  "china_cdn_id": "mGWGhgZG_jM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 95022,
+          "key": "486938200923",
+          "title": "Inexact Motion 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938200923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 112369,
+              "key": "48693820",
+              "title": "Inexact Motion 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48693820",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "gZbPZLFKS68",
+                  "china_cdn_id": "gZbPZLFKS68.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Inexact Motion 2",
+                "alt_text": "Tablet 1 has 1 row with 5 columns. Row 1 column 1 has a zero in it. Row 1 column 2 has a one in it. Row 1 column 3 has a zero in it. Row 1 column 4 has a zero in it. Row 1 column 5 has a zero in it.   Table two is underneath table one and is used for inputting your numeric answers. It has 1 row with 5 columns.   To the left of the tables is a list of formulas. First, U equals 2. Second, p of (X sub i+2 given X sub i) equals 0.8. Third, p of (X sub i+1 given X sub i) equals 0.1. Fourth, p of (X sub i+3 given X sub i) = 0.1.",
+                "background_image": "//lh3.ggpht.com/xIaSLlugbz694UHAITIvll05Ot-c62860BjasW2L8N_gQFoKYvj3iDecmvvBK1WYMy0gO5Af2uP7A3-WNRzn=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48693820",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48716197",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 1",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09166666666666666,
+                      "width": 0.10729166666666666,
+                      "x": 0.23958333333333337,
+                      "y": 0.3703703703703704
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 2",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.10740740740740741,
+                      "width": 0.07864583333333333,
+                      "x": 0.36979166666666674,
+                      "y": 0.35185185185185186
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 3",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.09351851851851851,
+                      "width": 0.08541666666666665,
+                      "x": 0.47395833333333326,
+                      "y": 0.35185185185185186
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 4",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.08888888888888889,
+                      "width": 0.0984375,
+                      "x": 0.5833333333333334,
+                      "y": 0.35185185185185186
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 5",
+                    "marker": "5",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.0962962962962963,
+                      "width": 0.09166666666666666,
+                      "x": 0.703125,
+                      "y": 0.3425925925925926
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "jR7FERpsqe4",
+                  "china_cdn_id": "jR7FERpsqe4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 132743,
+          "key": "486938210923",
+          "title": "Inexact Motion 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938210923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 17606,
+              "key": "48693821",
+              "title": "Inexact Motion 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Please enter the calculated value of the probabilities.",
+              "user_state": {
+                "node_key": "48693821",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "BldUOLB2U1Y",
+                  "china_cdn_id": "BldUOLB2U1Y.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Inexact Motion 3",
+                "alt_text": "Inexact Motion 3  Tablet 1 has 1 row with 5 columns. Row 1 column 1 has a zero point two in it. Row 1 column 2 has a zero point two in it. Row 1 column 3 has a zero point two in it. Row 1 column 4 has a zero point two in it. Row 1 column 5 has a zero point two in it. Next to the tablet on the right side is a circular arrow.   Table two is underneath table one and is used for inputting your numeric answers. It has 1 row with 5 columns.   To the left of the tables is a list of formulas. First, U equals 2. Second, p of (X sub i+2 given X sub i) equals 0.8. Third, p of (X sub i+1 given X sub i) equals 0.1. Fourth, p of (X sub i+3 given X sub i) = 0.1.",
+                "background_image": "//lh3.ggpht.com/_uaN256Wpz6I50UJhnvAZgSuH76HvGrERKyK_h58FLf83cmmCpnDJAWwATh8wo1UfQ6inoVPQHxOwEiR5A=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48693821",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734150",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 1",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09814814814814815,
+                      "width": 0.1046875,
+                      "x": 0.23958333333333337,
+                      "y": 0.3703703703703704
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 2",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.10648148148148148,
+                      "width": 0.08125,
+                      "x": 0.36979166666666674,
+                      "y": 0.35185185185185186
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 3",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.09166666666666666,
+                      "width": 0.08802083333333334,
+                      "x": 0.47395833333333326,
+                      "y": 0.35185185185185186
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 4",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.0824074074074074,
+                      "width": 0.10208333333333335,
+                      "x": 0.5833333333333334,
+                      "y": 0.35185185185185186
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Distribution after motion  Answer 5",
+                    "marker": "5",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.12129629629629629,
+                      "width": 0.09635416666666669,
+                      "x": 0.703125,
+                      "y": 0.32407407407407407
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "7T1Rr7KLgdM",
+                  "china_cdn_id": "7T1Rr7KLgdM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 18486,
+          "key": "486938220923",
+          "title": "Inexact Move Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938220923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 107949,
+              "key": "48693822",
+              "title": "Inexact Move Function",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Do not modify the print statement at the end. You can use additional print statements to test your code, but make sure to comment them before you click Submit; if not, the autograder may reject your solution.",
+              "user_state": {
+                "node_key": "48693822",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "68Kao9dkIKA",
+                  "china_cdn_id": "68Kao9dkIKA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Inexact Move Function",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48735021",
+                "initial_code_files": [
+                  {
+                    "text": "#Modify the move function to accommodate the added \n#probabilities of overshooting or undershooting \n#the intended destination.\n\np=[0, 1, 0, 0, 0]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\npHit = 0.6\npMiss = 0.2\npExact = 0.8\npOvershoot = 0.1\npUndershoot = 0.1\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n\ndef move(p, U):\n    q = []\n    for i in range(len(p)):\n        q.append(p[(i-U)%len(p)])\n    return q\n    \n\nprint move(p, 1)\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "QCnPJcNprEU",
+                  "china_cdn_id": "QCnPJcNprEU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 13621,
+          "key": "486977280923",
+          "title": "Limit Distribution Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486977280923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 133602,
+              "key": "48697728",
+              "title": "Limit Distribution Quiz",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "The formula given is for U=2, not for U=1.\n\nThis mistake in the formula does not change the result, however: at the end we get a uniform distribution.",
+              "user_state": {
+                "node_key": "48697728",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "kfPWiMsnWFI",
+                  "china_cdn_id": "kfPWiMsnWFI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Limit Distribution Quiz",
+                "alt_text": "Limit Distribution Quiz  Quiz  Tablet 1 has 1 row with 5 columns. Row 1 column 1 has a one in it. Row 1 column 2 has a zero in it. Row 1 column 3 has a zero in it. Row 1 column 4 has a zero in it. Row 1 column 5 has a zero in it. Next to the table is a list of U = 1, U = 1, U = 1, U = 1, …, showing that is continues is written.   Under table 1, Limit Distribution is the title of table 2, which is used for inputting your numeric answers. It has 1 row with 5 columns.",
+                "background_image": "//lh6.ggpht.com/zKpywtZiRz8eMh-fNXd_DPvf6Jz73f0D0MxiWFx3UjOwqs-weGduioRx_DAOj4Evd-MdYVzmq2yYU-oe8X_Y=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48697728",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48641532",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Limit Distribution  Answer 1",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09166666666666666,
+                      "width": 0.0859375,
+                      "x": 0.11979166666666669,
+                      "y": 0.5462962962962963
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Limit Distribution  Answer 2",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.09351851851851851,
+                      "width": 0.08541666666666665,
+                      "x": 0.22916666666666663,
+                      "y": 0.5370370370370371
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Limit Distribution  Answer 3",
+                    "marker": "3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.1,
+                      "width": 0.09947916666666666,
+                      "x": 0.33333333333333326,
+                      "y": 0.5277777777777778
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Limit Distribution  Answer 4",
+                    "marker": "4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.10555555555555556,
+                      "width": 0.08645833333333335,
+                      "x": 0.453125,
+                      "y": 0.5185185185185185
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Limit Distribution  Answer 5",
+                    "marker": "5",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.11296296296296296,
+                      "width": 0.08958333333333333,
+                      "x": 0.5572916666666666,
+                      "y": 0.5185030901873553
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "SXSafquSoW8",
+                  "china_cdn_id": "SXSafquSoW8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29651,
+          "key": "487491490923",
+          "title": "Move Twice",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487491490923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 82083,
+              "key": "48749149",
+              "title": "Move Twice",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Sebastian uses the Python 2 print syntax here, but make sure to use Python 3!",
+              "user_state": {
+                "node_key": "48749149",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "sKiumVTdpgY",
+                  "china_cdn_id": "sKiumVTdpgY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Move Twice",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48728181",
+                "initial_code_files": [
+                  {
+                    "text": "# Write code that makes the robot move twice and then prints \n# out the resulting distribution, starting with the initial \n# distribution p = [0, 1, 0, 0, 0]\n\np=[0, 1, 0, 0, 0]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\npHit = 0.6\npMiss = 0.2\npExact = 0.8\npOvershoot = 0.1\npUndershoot = 0.1\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n\ndef move(p, U):\n    q = []\n    for i in range(len(p)):\n        s = pExact * p[(i-U) % len(p)]\n        s = s + pOvershoot * p[(i-U-1) % len(p)]\n        s = s + pUndershoot * p[(i-U+1) % len(p)]\n        q.append(s)\n    return q\n#\n# ADD CODE HERE\n#\n\n# Make sure to print out p!\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "oqlgQa1IdcY",
+                  "china_cdn_id": "oqlgQa1IdcY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 12735,
+          "key": "487214700923",
+          "title": "Move 1000",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487214700923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 18545,
+              "key": "48721470",
+              "title": "Move 1000",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48721470",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "x2o1g3J-1nw",
+                  "china_cdn_id": "x2o1g3J-1nw.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Move 1000",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48720158",
+                "initial_code_files": [
+                  {
+                    "text": "#write code that moves 1000 times and then prints the \n#resulting probability distribution.\n\np=[0, 1, 0, 0, 0]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\npHit = 0.6\npMiss = 0.2\npExact = 0.8\npOvershoot = 0.1\npUndershoot = 0.1\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n\ndef move(p, U):\n    q = []\n    for i in range(len(p)):\n        s = pExact * p[(i-U) % len(p)]\n        s = s + pOvershoot * p[(i-U-1) % len(p)]\n        s = s + pUndershoot * p[(i-U+1) % len(p)]\n        q.append(s)\n    return q\n#\n# ADD CODE HERE\n#\nprint p\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "nYt9b_pNvEE",
+                  "china_cdn_id": "nYt9b_pNvEE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 23801,
+          "key": "486928090923",
+          "title": "Sense and Move",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486928090923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 23211,
+              "key": "48692809",
+              "title": "Sense and Move",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48692809",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "K8g3Hss8Q1A",
+                  "china_cdn_id": "K8g3Hss8Q1A.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Sense and Move",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48733102",
+                "initial_code_files": [
+                  {
+                    "text": "#Given the list motions=[1,1] which means the robot \n#moves right and then right again, compute the posterior \n#distribution if the robot first senses red, then moves \n#right one, then senses green, then moves right again, \n#starting with a uniform prior distribution.\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\nmotions = [1,1]\npHit = 0.6\npMiss = 0.2\npExact = 0.8\npOvershoot = 0.1\npUndershoot = 0.1\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n\ndef move(p, U):\n    q = []\n    for i in range(len(p)):\n        s = pExact * p[(i-U) % len(p)]\n        s = s + pOvershoot * p[(i-U-1) % len(p)]\n        s = s + pUndershoot * p[(i-U+1) % len(p)]\n        q.append(s)\n    return q\n#\n# ADD CODE HERE\n#\nprint p         \n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "1s2dRczcu1A",
+                  "china_cdn_id": "1s2dRczcu1A.mp4"
+                }
+              }
+            },
+            {
+              "id": 303792,
+              "key": "7ea69362-4434-4872-a461-3d030e062084",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Clarification Regarding Entropy\n\nThe video mentions that entropy will decrease after the motion update step and that entropy will increase after measurement step.   What is meant is that that entropy will decrease after the measurement update (sense) step and that entropy will increase after the movement step (move). \n\nIn general, entropy represents the amount of uncertainty in a system. Since the measurement update step decreases uncertainty,  entropy will decrease. The movement step increases uncertainty, so entropy will increase after this step.\n\nLet's look at our current example where the robot could be at one of five different positions. The maximum uncertainty occurs when all positions have equal probabilities  <span class=\"mathquill\">[0.2, 0.2, 0.2, 0.2, 0.2]</span> \n\nFollowing the formula <span class=\"mathquill\">Entropy = \\Sigma  (-p \\times log(p))</span>, we get <span class=\"mathquill\">-5 \\times (.2)\\times log(0.2) = 0.699</span>.\n\nTaking a measurement will decrease uncertainty and entropy. Let's say after taking a measurement, the probabilities become <span class=\"mathquill\">[0.05, 0.05, 0.05, 0.8, 0.05]</span>. Now we have a more certain guess as to where the robot is located and our entropy has decreased to 0.338.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 40539,
+          "key": "486889430923",
+          "title": "Sense and Move 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486889430923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 18455,
+              "key": "48688943",
+              "title": "Sense and Move 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48688943",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-wT7h9Gdm_8",
+                  "china_cdn_id": "-wT7h9Gdm_8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Sense and Move 2",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48691529",
+                "initial_code_files": [
+                  {
+                    "text": "#Modify the previous code so that the robot senses red twice.\n\np=[0.2, 0.2, 0.2, 0.2, 0.2]\nworld=['green', 'red', 'red', 'green', 'green']\nmeasurements = ['red', 'green']\nmotions = [1,1]\npHit = 0.6\npMiss = 0.2\npExact = 0.8\npOvershoot = 0.1\npUndershoot = 0.1\n\ndef sense(p, Z):\n    q=[]\n    for i in range(len(p)):\n        hit = (Z == world[i])\n        q.append(p[i] * (hit * pHit + (1-hit) * pMiss))\n    s = sum(q)\n    for i in range(len(q)):\n        q[i] = q[i] / s\n    return q\n\ndef move(p, U):\n    q = []\n    for i in range(len(p)):\n        s = pExact * p[(i-U) % len(p)]\n        s = s + pOvershoot * p[(i-U-1) % len(p)]\n        s = s + pUndershoot * p[(i-U+1) % len(p)]\n        q.append(s)\n    return q\n\nfor k in range(len(measurements)):\n    p = sense(p, measurements[k])\n    p = move(p, motions[k])\n    \nprint p         \n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "rmWL_3r8MKo",
+                  "china_cdn_id": "rmWL_3r8MKo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 20028,
+          "key": "487201520923",
+          "title": "Localization Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487201520923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 128206,
+              "key": "48720152",
+              "title": "Localization Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "MVbo4OAgQCc",
+                "china_cdn_id": "MVbo4OAgQCc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 425321,
+          "key": "f9a8d2b9-9156-4d57-bafc-965baf3e32e6",
+          "title": "Nanodegree Note",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f9a8d2b9-9156-4d57-bafc-965baf3e32e6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 425322,
+              "key": "a18b5fc4-1cbe-4080-9f9d-b8c8e92c699f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Nanodegree Note\nThe last few segments of this lesson will be review of content you saw earlier in this course. You are welcome to skip ahead to the final project (Histogram Filter in Python).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 38164,
+          "key": "487236010923",
+          "title": "Formal Definition of Probability 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236010923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 21700,
+              "key": "48723601",
+              "title": "Formal Definition of Probability 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723601",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-F2gJXWbN6s",
+                  "china_cdn_id": "-F2gJXWbN6s.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Formal Definition of Probability 1",
+                "alt_text": "Formal Definition of Probability 1  Formal Definition  0 is less than or equal to P of X is less than or equal to 1.  P of X sub 1 equals 0.2",
+                "background_image": "//lh3.ggpht.com/7cS9FcP9vUAoJ9vdCucsYtj1IXXNdYDVNXWBG5ujPXFH2gYwfP7drhihnuo_gSIhs51wrUK1omyONSWMwxnM=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723601",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48733100",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is P of X sub 2 equal to? Insert your numeric answer in this text box.",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07407407407407407,
+                      "width": 0.11979166666666669,
+                      "x": 0.45833333333333326,
+                      "y": 0.6296296296296297
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "OQ2JS2wQzrs",
+                  "china_cdn_id": "OQ2JS2wQzrs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 44556,
+          "key": "486938230923",
+          "title": "Formal Definition of Probability 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938230923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 42150,
+              "key": "48693823",
+              "title": "Formal Definition of Probability 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48693823",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "PE-k3PGXeLY",
+                  "china_cdn_id": "PE-k3PGXeLY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Formal Definition of Probability 2",
+                "alt_text": "Formal Definition of Probability 2  Formal Definition  0 is less than or equal to P of X is less than or equal to 1.  Sigma P of x sub 1 is equal to 1.   P of X sub 1 equals 0.",
+                "background_image": "//lh5.ggpht.com/29-zi2ugYdOBfa_-HetI5Fu6tsWiPKkh3AUYa9oajVau2aXNAinxBo2r34_JiaiEeurgQcg4VdYU8jTe0-0=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48693823",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48722168",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is P of X sub 2 equal to? Insert your numeric answer in this text box.",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07777777777777778,
+                      "width": 0.11979166666666669,
+                      "x": 0.45833333333333326,
+                      "y": 0.6296296296296297
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "uw51WQDqXAI",
+                  "china_cdn_id": "uw51WQDqXAI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 13627,
+          "key": "486938240923",
+          "title": "Formal Definition of Probability 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938240923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 112556,
+              "key": "48693824",
+              "title": "Formal Definition of Probability 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48693824",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "oDPbdGXH5nE",
+                  "china_cdn_id": "oDPbdGXH5nE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Formal Definition of Probability 3",
+                "alt_text": "Formal Definition of Probability 3  Formal Definition  0 is less than or equal to P of X is less than or equal to 1.  Sigma P of x sub 1 is equal to 1.   Under this, there is a table with 1 row and 5 columns. The first column is .01. Column 2 is .01. Column 3 is .01. Column 4 is .01. Column 5 is a text box for your numeric response.",
+                "background_image": "//lh5.ggpht.com/OwGkkTUn23UpxdoxYGb5V1_cyZJURFZnP5k-RVQcdRLv5frKVYDDgFqkvTWOqEY5haLzq18PlULFJrlkLRM=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48693824",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48271826",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert your numeric answer here.",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08703703703703704,
+                      "width": 0.08697916666666666,
+                      "x": 0.6354166666666666,
+                      "y": 0.48148148148148145
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "TF6AWXSlOcY",
+                  "china_cdn_id": "TF6AWXSlOcY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 24473,
+          "key": "487221690923",
+          "title": "Bayes' Rule",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487221690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 19399,
+              "key": "48722169",
+              "title": "Bayes' Rule",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "sA5wv56qYc0",
+                "china_cdn_id": "sA5wv56qYc0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 40877,
+          "key": "487293530923",
+          "title": "Cancer Test",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487293530923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 29867,
+              "key": "48729353",
+              "title": "Cancer Test",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Bayes theorem reminder:\n\n    P(A|B) = P(B|A)*P(A) / P(B)",
+              "user_state": {
+                "node_key": "48729353",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "SZ6Jg1wS604",
+                  "china_cdn_id": "SZ6Jg1wS604.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Test",
+                "alt_text": "Cancer Test  probability of c equals  0.001 probability of not c equals 0.999 probability of positive given c = 0.8 probability of positive given not c = 0.1",
+                "background_image": "//lh4.ggpht.com/hna4A6k_Xzku6bpGJKpmVdiD9ikfVFgkZuYWmpdbbjyNYeBUnEp-lclJF94Jj7ZwPbTSTyimTVFRZdBHN1m-=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48729353",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734087",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is the probability of c given it is positive? Insert your numeric answer in this text box.",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07777777777777778,
+                      "width": 0.11875,
+                      "x": 0.7916580200195312,
+                      "y": 0.1851851851851852
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "OgC5M2XdIac",
+                  "china_cdn_id": "OgC5M2XdIac.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29178,
+          "key": "485326080923",
+          "title": "Theorem of Total Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "485326080923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 11031,
+              "key": "48532608",
+              "title": "Theorem of Total Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "byZ-BzbQA5M",
+                "china_cdn_id": "byZ-BzbQA5M.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 22945,
+          "key": "487491500923",
+          "title": "Coin Flip Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487491500923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 95402,
+              "key": "48749150",
+              "title": "Coin Flip Quiz",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48749150",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "hzDsYZ61D5M",
+                  "china_cdn_id": "hzDsYZ61D5M.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Coin Flip Quiz",
+                "alt_text": "Coin Flip Quiz  Coin tilde T, H indicating that if you flip a coin it can land on tails or heads.  P of T equals P of H equals one half.  T with an arrow pointing to the word accept. H with an arrow pointing to flip again, accept.",
+                "background_image": "//lh4.ggpht.com/hTVKsW4ccdlBlhppkD0-ZVUjFd0qQe2ez3MCL6kXSfM6QCWQfP7Tq4pupKw_u0VVr5AHtCKAKLBp6bOHfYQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48749150",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734084",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is the probability of heads? Insert your numeric response in this box.",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09351851851851851,
+                      "width": 0.13854166666666667,
+                      "x": 0.5520833333333334,
+                      "y": 0.5092592592592593
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ASUXN9Ay35M",
+                  "china_cdn_id": "ASUXN9Ay35M.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 20008,
+          "key": "487421950923",
+          "title": "Two Coin Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487421950923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 120271,
+              "key": "48742195",
+              "title": "Two Coin Quiz",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48742195",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "2PZHPjyYnMg",
+                  "china_cdn_id": "2PZHPjyYnMg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Coin Quiz",
+                "alt_text": "Two Coin Quiz   Fair coin P of H equals 0.5. Loaded coin P of H equals 0.1.   take coin with 50% chance fair   flip it  observe H",
+                "background_image": "//lh6.ggpht.com/gsRFoTvuEBXGFhyteJVXiCnkw-XSyDWSk9iFcDEa7JMKiyj9RwB3M_EfHAMpF1q2vpmTCtBYXlVmedfr5w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48742195",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48720159",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is the probability the coin was fair?",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.1274131274131274,
+                      "width": 0.17155266015200868,
+                      "x": 0.734375,
+                      "y": 0.44442901611328123
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "_AhoOd8YUK0",
+                  "china_cdn_id": "_AhoOd8YUK0.mp4"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

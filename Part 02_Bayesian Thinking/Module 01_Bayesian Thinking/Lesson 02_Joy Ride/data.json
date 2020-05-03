@@ -1,0 +1,308 @@
+{
+  "data": {
+    "lesson": {
+      "id": 394530,
+      "key": "8d04c12d-4214-443f-a933-d37f2544e718",
+      "title": "Joy Ride",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "A quick introduction to controlling a (simulated) car with code. Parts 1 and 2 will show you how to control gas and steering and in part 3 you'll program a car to parallel park.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/8d04c12d-4214-443f-a933-d37f2544e718/394530/1544290228944/Joy+Ride+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/8d04c12d-4214-443f-a933-d37f2544e718/394530/1544290226837/Joy+Ride+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "b9cb746b-16dc-4510-bd63-182f6108b1f8",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 10080,
+        "semantic_type": "Project",
+        "title": "Joy Ride",
+        "description": "If you haven't submitted yet, you can submit your project by pressing the `SUBMIT` button in the lower right corner of the notebook from [Part 3 - Parallel Parking](https://classroom.udacity.com/nanodegrees/nd113/parts/70e3b7ce-c552-4867-984e-ebbfb6c786ec/modules/bb316d89-3a59-4093-b62d-f36d7822e530/lessons/8d04c12d-4214-443f-a933-d37f2544e718/concepts/3b467d7f-2e87-4a49-b001-e5a69c75414b).\n\n** DO NOT HIT SUBMIT BUTTON ON THIS PAGE ** Use the button in Jupyter notebook node, where you wrote your code, to submit your project or it will be marked ungradable.\n\n## Project Submission Checklist\n\n**Before submitting your project, please review and confirm the following items.** \n<input type=\"checkbox\"> I am confident all rubric items have been met and my project will pass as submitted. \n<input type=\"checkbox\"> Project builds correctly without errors and runs.\n<input type=\"checkbox\"> All required functionality exists and my project behaves as expected per the project's specifications.\n\n**Once you have checked all these items, you are ready to submit!**\n",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1206",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 402753,
+          "key": "33f692ee-8356-49b6-bc48-2e45e95d5658",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "33f692ee-8356-49b6-bc48-2e45e95d5658",
+            "completed_at": "2020-04-19T13:04:53.367Z",
+            "last_viewed_at": "2020-04-19T13:04:55.554Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 430360,
+              "key": "da5dec41-59c1-4f06-9dbe-2fde33f1387f",
+              "title": "Project Overview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ij45-DpGejE",
+                "china_cdn_id": "Ij45-DpGejE.mp4"
+              }
+            },
+            {
+              "id": 430273,
+              "key": "02980a5b-8a44-45a5-ba74-a108d2ba2ff9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Joy Ride - Project Overview\nThis is a quick project that gives you a chance to write code that controls a simulated car. This project has three parts (but you will only submit part three). \n\n1. **Part One - Drag Race**: In this part you'll write code that lets a car jump over a grove of trees. This might not be a *common* scenario for a self driving car but it will get you familiar with the programming interface.\n2. **Part Two - Circular Track**: You'll write code that lets a car navigate a circular track. In doing so you'll explore the relationship between *steering angle* and *turning radius*. \n3. **Part Three - Parallel Park**: In this part you'll write a sequence of instructions that successfully parallel parks a car.\n\n#### Tip\nFor Part Three, the simulator contains a little bit of noise each time you launch it. To help account for this, consider spending a second or two of `time` traveling slowly forward in the simulator before reversing into your parallel parking. You should also consider using a fairly low vehicle velocity at all times.\n\n## Evaluation\nOnce you have completed your project, use the [Project Rubric](https://review.udacity.com/#!/rubrics/1206/view) to review the project. If you have covered all of the points in the rubric, then you are ready to submit! If you see room for improvement in any category in which you do not meet specifications, keep working!\n\nYour project will be evaluated by a Udacity reviewer according to the same Project Rubric. Your project must \"meet specifications\" in each category in order for your submission to pass.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 783726,
+              "key": "f1f9547a-7a5e-4218-b6f5-160a39852d2d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Troubleshooting\n\nFrom time to time, the simulators in the workspaces need updates. If there is a red marker in the bottom left of your workspace, that means there has been a recent change to the workspace, but it won't automatically load to make sure it doesn't accidentally delete any changes you may have made.\n\nIf there is a red marker, you can use the `reset data` option to load the updates - however, you'll want to save down any of your own work to your own computer, if necessary, prior to doing so.\n\nEven without the red marker, using `reset data` is a good option to sometimes clear up any issues. Alternatively, you may need to try accessing the workspace with a different browser.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 951658,
+          "key": "a2b9df95-651f-4f5f-bf08-99bf0a58ccf6",
+          "title": "Project Cheat Sheet",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a2b9df95-651f-4f5f-bf08-99bf0a58ccf6",
+            "completed_at": "2020-04-19T13:05:59.061Z",
+            "last_viewed_at": "2020-04-19T13:06:01.004Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Joy Ride Project Cheat Sheet - nd113 project 1",
+                "uri": "https://video.udacity-data.com/topher/2019/October/5da4ecb5_nd113-isdc-p1-lessons-cheat-sheet-joy-ride/nd113-isdc-p1-lessons-cheat-sheet-joy-ride.pdf"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 953172,
+              "key": "75b94335-8c78-495b-8312-f5816a95f05a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here is a one-page cheat sheet with some key information for the first project.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 951659,
+              "key": "92278e24-f8d3-491b-9530-b41ea155fea7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/October/5da4d64b_nd113-isdc-p1-lessons-cheat-sheet-joy-ride/nd113-isdc-p1-lessons-cheat-sheet-joy-ride.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/92278e24-f8d3-491b-9530-b41ea155fea7",
+              "caption": "",
+              "alt": "",
+              "width": 440,
+              "height": 550,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 402754,
+          "key": "991b9119-750b-49d8-82e9-3f0b3dba02f5",
+          "title": "Part 1 - Drag Race",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "991b9119-750b-49d8-82e9-3f0b3dba02f5",
+            "completed_at": "2020-04-19T13:06:05.791Z",
+            "last_viewed_at": "2020-04-19T13:06:08.013Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402766,
+              "key": "138c89f9-709d-4cd1-ba97-ad47306a16cb",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe7f28600",
+              "pool_id": "jupyter",
+              "view_id": "e7f28600-2a8e-4609-adc2-79ea7aff4be5",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/drag_race.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 402755,
+          "key": "d3356e46-aaf5-4669-8268-cdffb10e1357",
+          "title": "Part 2 - Circular Track",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d3356e46-aaf5-4669-8268-cdffb10e1357",
+            "completed_at": "2020-04-19T13:22:53.076Z",
+            "last_viewed_at": "2020-04-19T13:25:47.512Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403117,
+              "key": "2a991aef-4c7a-4f8c-a957-ca7d8483511b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view0f030246",
+              "pool_id": "jupyter",
+              "view_id": "0f030246-010d-46b9-9c31-d2597d8f1c49",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/circular_track.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 549653,
+          "key": "3b467d7f-2e87-4a49-b001-e5a69c75414b",
+          "title": "Part 3 - Parallel Parking",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3b467d7f-2e87-4a49-b001-e5a69c75414b",
+            "completed_at": "2020-04-19T13:45:22.260Z",
+            "last_viewed_at": "2020-04-30T12:40:46.698Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 551743,
+              "key": "806f533a-954b-485c-8d7e-d5eb43214a80",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8ab0d468",
+              "pool_id": "jupyter",
+              "view_id": "8ab0d468-97bc-47bd-b9b9-adb6fa0dfcd6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [
+                      3001
+                    ],
+                    "allowGrade": false,
+                    "allowSubmit": true,
+                    "defaultPath": "/notebooks/ParallelParking.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 394531,
+          "key": "4011572c-63b8-4be9-bb06-f1b0f7463966",
+          "title": "Reflection",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4011572c-63b8-4be9-bb06-f1b0f7463966",
+            "completed_at": "2020-04-19T14:38:18.857Z",
+            "last_viewed_at": "2020-04-30T12:40:29.365Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403971,
+              "key": "6ffebbad-7c50-4d6d-aae0-9948daaeb17b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Reflection\n\n*Note*: If you didn't already, make sure you **submit** part three by clicking the SUBMIT button in the lower of the Part 3 notebook.\n\nThe activities you just went through were simplified: when designing a self driving car we try to avoid writing special code that only applies to specific situations like staying on a circular track of some particular size. We prefer to write code that generalizes to many driving situations.\n\nIn order to do that, the car needs to know what's going on around it and it does that by using its sensors. Unfortunately the measurements these sensors make are UNAVOIDABLY unreliable. In the next part of this Nanodegree you'll learn probabilistic techniques for handling this unreliability.\n\n### A note on Control Noise\nWhile solving this project you may have noticed something strange: sometimes the same code didn't actually do the same thing! \n\nThis \"bug\" should help you understand what it feels like to try to program a self driving car or any system where **control noise** is present. A car is an imperfect mechanical system and that means that it's response to a fixed input can change over time. Near the end of this curriculum you will learn how we use **motion controllers** to respond to unexpected behavior from the car. ",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

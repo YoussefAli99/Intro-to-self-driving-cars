@@ -1,0 +1,2596 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349898,
+      "key": "5df6de35-1c09-4e96-8ffb-d11598d16cf2",
+      "title": "Probability",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn the basics of probability - the language of robotics. This lesson will focus on the math. In later lessons you'll apply this math in Python code.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/5df6de35-1c09-4e96-8ffb-d11598d16cf2/349898/1544452843905/Probability+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/5df6de35-1c09-4e96-8ffb-d11598d16cf2/349898/1544452835228/Probability+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 349960,
+          "key": "9daa6c64-28b2-4efb-9e0f-b89c72a4d691",
+          "title": "Uncertainty in Driving",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9daa6c64-28b2-4efb-9e0f-b89c72a4d691",
+            "completed_at": "2020-04-19T14:40:17.721Z",
+            "last_viewed_at": "2020-04-19T14:40:20.516Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 412961,
+              "key": "e47e399f-12e3-4c9a-a471-cbd49f8a177e",
+              "title": "Nd113 C1 L3 01 L Introducing Uncertainty V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NDOm-0qN8e8",
+                "china_cdn_id": "NDOm-0qN8e8.mp4"
+              }
+            },
+            {
+              "id": 412965,
+              "key": "1bd1e367-b0d2-4685-8280-46ddde78ecc9",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1bd1e367-b0d2-4685-8280-46ddde78ecc9",
+                "completed_at": "2020-04-19T14:52:49.353Z",
+                "last_viewed_at": "2020-04-19T14:54:36.260Z",
+                "unstructured": "{\"selected_id\":\"a1506706775711\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "When a self driving car drives down the road, which of the following quantities is it ever possible for the car to know **with certainty**?",
+                "answers": [
+                  {
+                    "id": "a1506706665663",
+                    "text": "What other traffic will do in the near future.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506706730205",
+                    "text": "Where it is.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506706737942",
+                    "text": "How fast it's going.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506706760278",
+                    "text": "What will happen to it's own motion when it turns the steering wheel.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506706775711",
+                    "text": "None of the above.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 349914,
+          "key": "c1846c9f-dd67-4e98-a5dd-f1de19bc11c2",
+          "title": "Uncertainty in Robotics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c1846c9f-dd67-4e98-a5dd-f1de19bc11c2",
+            "completed_at": "2020-04-19T14:55:25.627Z",
+            "last_viewed_at": "2020-04-19T14:55:28.469Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355564,
+              "key": "f96f4a15-4e57-4d0d-ad39-f32c4a957ba6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Uncertainty in Robotics\nUsing the word **certain** the way we'll use it in this Nanodegree, *nothing* in the previous question is ever certain. Let me explain.\n\n1. **What other traffic will do**: People are impossible to predict with certainty!\n2. **Where you are**: It may seem like you know where you are when you drive, but you don't. At least not with *complete* certainty. You may know where you are with *sufficient* certainty, but if I asked you how many millimeters away from the center lane you were, you wouldn't know. \n3. **How fast you're going**: The same reasoning applies to knowing your speed. You can get a good idea of how fast you're going by looking at your speedometer (which measures your speed), but these measurements are never perfect. \n4. **What will happen when you turn the wheel**: A car is an imperfect mechanical system. If you turned the steering wheel by the same amount 100 times, the car would turn a slightly different amount every time.\n\nAs humans we solve these problems in a variety of ways. Number **2** and **3** we solve by saying \"ehh, I actually don't need to know exactly where I am or how fast I'm going, I just need to know those quantities with a high degree of certainty\". Number **4** we solve by using our brain as a high performance adaptive controller. And number **1**... who knows how we handle number 1...? (just kidding, you'll learn more about this in the machine learning course at the end of this curriculum).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 357972,
+          "key": "fdea6566-6e4e-4390-80af-8b3511986555",
+          "title": "Learning Objectives Explained",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fdea6566-6e4e-4390-80af-8b3511986555",
+            "completed_at": "2020-04-19T14:58:26.483Z",
+            "last_viewed_at": "2020-04-19T14:58:28.851Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 412932,
+              "key": "fd8b13e5-566c-45b3-932d-b2493aa2ad41",
+              "title": "Learning Objectives Explained",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tAkq3iZLJ-c",
+                "china_cdn_id": "tAkq3iZLJ-c.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 349900,
+          "key": "f601ddf5-eadc-46ac-ac9d-7557b1855968",
+          "title": "Learning Objectives - Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f601ddf5-eadc-46ac-ac9d-7557b1855968",
+            "completed_at": "2020-04-19T15:02:58.995Z",
+            "last_viewed_at": "2020-04-22T03:06:02.671Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 357985,
+              "key": "020217f4-f6fd-4152-a336-950ad7f02ded",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning Objectives - Probability",
+              "instructor_notes": ""
+            },
+            {
+              "id": 349941,
+              "key": "bedd203b-6ce1-40b2-8a93-9a85491e73f6",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bedd203b-6ce1-40b2-8a93-9a85491e73f6",
+                "completed_at": "2020-04-19T15:03:22.460Z",
+                "last_viewed_at": "2020-04-19T15:03:25.094Z",
+                "unstructured": "{\"selected_ids\":[\"a1500921001559\",\"a1500921036907\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Which of the following are **true** statements about a fair coin?",
+                "answers": [
+                  {
+                    "id": "a1500921001559",
+                    "text": "The probability of heads is the same as the probability of tails.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921036907",
+                    "text": "When flipping a coin multiple times, each flip is an **independent event**.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921073649",
+                    "text": "When a flip comes up *heads*, it becomes more likely that the NEXT flip will come up *tails*.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921125821",
+                    "text": "When a flip comes up *heads*, it becomes more likely that the NEXT flip will come up *heads*.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349940,
+              "key": "3a2539d7-71f1-4fdf-ab07-62b23e0e14c0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/July/59763b9c_untitled-presentation-4/untitled-presentation-4.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3a2539d7-71f1-4fdf-ab07-62b23e0e14c0",
+              "caption": "",
+              "alt": null,
+              "width": 364,
+              "height": 370,
+              "instructor_notes": null
+            },
+            {
+              "id": 349939,
+              "key": "5f28669c-f8d8-4976-a2c8-a67e1d8b1c4d",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5f28669c-f8d8-4976-a2c8-a67e1d8b1c4d",
+                "completed_at": "2020-04-19T15:04:18.417Z",
+                "last_viewed_at": "2020-04-19T15:04:18.417Z",
+                "unstructured": "{\"answer\":\"0.35\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "At a particular intersection, cars can either:\n\n1. Turn left\n\n2. Go straight\n\n3. Turn right\n\nCars tend to turn left with a probability of 0.4 and go straight with a probability of 0.25.  What is the probability that a car turns right?",
+                "matchers": [
+                  {
+                    "expression": "^\\s*0?\\.350*\\s*"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349943,
+              "key": "47774f6e-7fd5-4afb-bb0d-3a692756f11d",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "47774f6e-7fd5-4afb-bb0d-3a692756f11d",
+                "completed_at": "2020-04-19T15:04:32.614Z",
+                "last_viewed_at": "2020-04-19T15:04:32.614Z",
+                "unstructured": "{\"selected_id\":\"a1500921341270\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You flip a fair coin 3 times. What's the probability that all three flips are heads?",
+                "answers": [
+                  {
+                    "id": "a1500921313772",
+                    "text": "1.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921325862",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921329048",
+                    "text": "0.333",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921334276",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921341270",
+                    "text": "0.125",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921346158",
+                    "text": "0.0625",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349945,
+              "key": "70db40b0-8a95-4245-9f6d-2819210446f5",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "70db40b0-8a95-4245-9f6d-2819210446f5",
+                "completed_at": "2020-04-19T15:04:57.623Z",
+                "last_viewed_at": "2020-04-19T15:05:04.300Z",
+                "unstructured": "{\"selected_id\":\"a1500921604656\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You flip a fair coin two times. What's the probability that **at least one flip** is heads?",
+                "answers": [
+                  {
+                    "id": "a1500921490116",
+                    "text": "0.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921589127",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921591658",
+                    "text": "0.333",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921594302",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921604656",
+                    "text": "0.75",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921609935",
+                    "text": "1.0",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 349947,
+              "key": "437ce92e-cf23-4bc4-bb5d-a9f1cc31e4bb",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "437ce92e-cf23-4bc4-bb5d-a9f1cc31e4bb",
+                "completed_at": "2020-04-19T15:06:23.909Z",
+                "last_viewed_at": "2020-04-19T15:06:39.493Z",
+                "unstructured": "{\"selected_id\":\"a1500921909656\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "You roll two six sided dice and then add the numbers together. What's the probability that the sum is equal to 7?",
+                "answers": [
+                  {
+                    "id": "a1500921816620",
+                    "text": "1/2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921900219",
+                    "text": "1/3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921903304",
+                    "text": "1/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921905705",
+                    "text": "1/5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921909656",
+                    "text": "1/6",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500921913663",
+                    "text": "1/7",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921916537",
+                    "text": "1/12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921931751",
+                    "text": "1/36",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500921943700",
+                    "text": "7/36",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 87719,
+          "key": "486888220923",
+          "title": "Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486888220923",
+            "completed_at": "2020-04-19T15:07:16.693Z",
+            "last_viewed_at": "2020-04-19T15:07:19.654Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 69621,
+              "key": "48688822",
+              "title": "Probability",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "arJxFjaMsBM",
+                "china_cdn_id": "arJxFjaMsBM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 85650,
+          "key": "487362390923",
+          "title": "Flipping Coins",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487362390923",
+            "completed_at": "2020-04-19T15:08:02.978Z",
+            "last_viewed_at": "2020-04-19T15:08:05.923Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 81864,
+              "key": "48736239",
+              "title": "Flipping Coins",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48736239",
+                "completed_at": "2020-04-19T15:11:05.705Z",
+                "last_viewed_at": "2020-04-19T15:11:05.705Z",
+                "unstructured": "{\"1341182176405\":false,\"1341182179857\":true}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "OpNufHYgJCg",
+                  "china_cdn_id": "OpNufHYgJCg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Flipping Coins",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/Tuh2rMd7axCj-O3s1jVoeBu18aQcRxf5hgfH-qqRjXTIIGyQA-bwzzyXGqKIPFD376gNhnoXSFBjIclDjQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48736239",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48695597",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "1341182176405",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3363701140065147,
+                      "y": 0.5234978281853282
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1341182179857",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3363701140065147,
+                      "y": 0.6735943532818532
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "lgUDXtUyLLg",
+                  "china_cdn_id": "lgUDXtUyLLg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 89000,
+          "key": "487382330923",
+          "title": "Fair Coin",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487382330923",
+            "completed_at": "2020-04-19T15:11:44.798Z",
+            "last_viewed_at": "2020-04-19T15:11:47.754Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 81655,
+              "key": "48738233",
+              "title": "Fair Coin",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48738233",
+                "completed_at": "2020-04-19T15:13:00.570Z",
+                "last_viewed_at": "2020-04-19T15:13:00.570Z",
+                "unstructured": "{\"1341182198230\":\"0.5\"}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "9LrlrexpW_o",
+                  "china_cdn_id": "9LrlrexpW_o.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Fair Coin",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/59U1yS6AA8YMgzuu6Md9-Z_4M5PuusnOEdCKN-qrIOuVzT1pms7tKGrNrpc5uVWiRkeuqugYlug9gZzw8m_i=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48738233",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48698595",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182198230",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09312638580931264,
+                      "width": 0.12468827930174564,
+                      "x": 0.5332010043431054,
+                      "y": 0.3753619691119691
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "fSKL742j-zk",
+                  "china_cdn_id": "fSKL742j-zk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88649,
+          "key": "487540890923",
+          "title": "Loaded Coin 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487540890923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 74923,
+              "key": "48754089",
+              "title": "Loaded Coin 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "As explained in the video, give the probability for a coin that always comes up heads",
+              "user_state": {
+                "node_key": "48754089",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "T0EjWSjLGjQ",
+                  "china_cdn_id": "T0EjWSjLGjQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Loaded Coin 1",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/ce4PJrgYxuXqxEVQovB0yFByFcFQLvZFlC6OEjJ4cPXFxc10CBkm7ePA7WMWfrJukP25yrxJpHfZPfxoi40=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48754089",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48699581",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182278984",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.11845386533665836,
+                      "x": 0.532594295511222,
+                      "y": 0.21680986696230597
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "sNvQeSikRFY",
+                  "china_cdn_id": "sNvQeSikRFY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87439,
+          "key": "486997150923",
+          "title": "Loaded Coin 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486997150923",
+            "completed_at": "2020-04-19T15:13:12.489Z",
+            "last_viewed_at": "2020-04-19T15:13:15.433Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 90112,
+              "key": "48699715",
+              "title": "Loaded Coin 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48699715",
+                "completed_at": "2020-04-19T15:13:26.637Z",
+                "last_viewed_at": "2020-04-19T15:13:26.637Z",
+                "unstructured": "{\"1341182316749\":\"0\"}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Y7tnbth-gag",
+                  "china_cdn_id": "Y7tnbth-gag.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Loaded Coin 2",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/KFECU-Gjn_4D-kWwSrf3JcP9HlV5kFPw8deXqKbg6mc6Q-PMrqLnbexBz8eLqUv0-AQLlrqiULQQ5E_dglux=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48699715",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48741099",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182316749",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.1172069825436409,
+                      "x": 0.5332010043431054,
+                      "y": 0.3718930984555985
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "dGffszQYzqc",
+                  "china_cdn_id": "dGffszQYzqc.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88655,
+          "key": "487501470923",
+          "title": "Loaded Coin 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487501470923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 136066,
+              "key": "48750147",
+              "title": "Loaded Coin 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48750147",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "P4uljJ_OP6I",
+                  "china_cdn_id": "P4uljJ_OP6I.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Loaded Coin 3",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/GKaJJF8BuSKnzN6RO8FxUvJrFw-bBBALBrmGUgapqWgMHdJ7P6n7tr6xmi-PHAZrCJyMF1rNI0HSfO_MZvo=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48750147",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48698583",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182344110",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.13216957605985039,
+                      "x": 0.526906894679696,
+                      "y": 0.37922297297297297
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "HohMRlmHoMQ",
+                  "china_cdn_id": "HohMRlmHoMQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 80781,
+          "key": "487420670923",
+          "title": "Complementary Outcomes",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487420670923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 26880,
+              "key": "48742067",
+              "title": "Complementary Outcomes",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YseJqD-1oUg",
+                "china_cdn_id": "YseJqD-1oUg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 356998,
+          "key": "9f281ee4-8353-4f2d-bd28-7d3e6ab3f7b0",
+          "title": "Probability in Robotics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9f281ee4-8353-4f2d-bd28-7d3e6ab3f7b0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410349,
+              "key": "b0adff05-4688-4d73-ad94-50ba05b3b4a2",
+              "title": "Probability In Robotics",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "BKLwvL1D0yE",
+                "china_cdn_id": "BKLwvL1D0yE.mp4"
+              }
+            },
+            {
+              "id": 357011,
+              "key": "3ae701c5-e748-41ce-ad39-4e3a6be33dd8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Probabilistic \"Events\" in Robotics\nYou might be wondering what coins have to do with robotics. \n\nA coin flip is a perfect example of a **probabilistic event**: a set of **outcomes** to some experiment where each outcome has a **probability**. \n\nWith a coin, the outcomes are clear: heads or tails, and the probabilities are simple: 0.5 and 0.5.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357969,
+              "key": "fb0d8e7c-0642-43ec-bf70-25620d6835bf",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598b48df_heads-or-tails/heads-or-tails.jpeg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/fb0d8e7c-0642-43ec-bf70-25620d6835bf",
+              "caption": "",
+              "alt": null,
+              "width": 314,
+              "height": 161,
+              "instructor_notes": null
+            },
+            {
+              "id": 357970,
+              "key": "5bdde3bd-05cb-42ae-a34e-a1632665834c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "A self-driving car makes *hundreds* of calculations about probabilistic events every second, but the events are not as clean as a coin flip. For example:\n\n* What is the probability that this sensor measurement is accurate to within 5 centimeters? What about 1 centimeter?\n\n* What is the probability that some other vehicle will turn left at this intersection? Go straight? Turn right? What if they just sit there forever?\n\n* The radar and lidar measurements seem to disagree! What's the probability that the range finder somehow became detached from the roof?\n\nThese examples are all much more interesting than \"heads or tails?\" but they are also less straightforward, which makes it much harder to learn probability theory from them. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 88700,
+          "key": "487540900923",
+          "title": "Two Flips 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487540900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 79911,
+              "key": "48754090",
+              "title": "Two Flips 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48754090",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "yUIz7SgUwJg",
+                  "china_cdn_id": "yUIz7SgUwJg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Flips 1",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/Cx_INicXMOXJlc21JXB9EIq_meiSh_zHgqblBKQEtTtWDwlEfddQaMtv_l2oe9pBEup3xcqcw-qS3Y9QI6M=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48754090",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48738115",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182377828",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.13092269326683292,
+                      "x": 0.46092901737242126,
+                      "y": 0.24957770270270271
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "1txkcmxk3vU",
+                  "china_cdn_id": "1txkcmxk3vU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88984,
+          "key": "487382340923",
+          "title": "Two Flips 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487382340923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 81671,
+              "key": "48738234",
+              "title": "Two Flips 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48738234",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "uhrL5fatt3E",
+                  "china_cdn_id": "uhrL5fatt3E.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Flips 2",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/v7C4rgc0gkmgImuZUUx4noV5r943K5S_bxAOLl63gGlHrijo5ZgdmoG4EervH4-9oEH8y5gBdZfcTzOVCg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48738234",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48750031",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182432682",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.09975062344139651,
+                      "x": 0.8289902280130294,
+                      "y": 0.19751447876447875
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "pT0FXiH_5nI",
+                  "china_cdn_id": "pT0FXiH_5nI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88682,
+          "key": "487501480923",
+          "title": "Two Flips 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487501480923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 80107,
+              "key": "48750148",
+              "title": "Two Flips 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48750148",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "uimwo-puQWY",
+                  "china_cdn_id": "uimwo-puQWY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Flips 3",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/i1V1L9dBEz4XSzUW3FWUmqUFWXY5GAQbm0MHrGsEu32gDHcQBmS48PrQzctZ7Ktz_JoRjtXxRLndEr0yDA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48750148",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48752009",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182519432",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.057649667405764965,
+                      "width": 0.09725685785536159,
+                      "x": 0.684242671009772,
+                      "y": 0.5848515926640927
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341182537014",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.09476309226932668,
+                      "x": 0.68207111834962,
+                      "y": 0.6824625965250966
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer3",
+                    "marker": "1341182557602",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.10224438902743142,
+                      "x": 0.68207111834962,
+                      "y": 0.777358832046332
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer4",
+                    "marker": "1341182579169",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.10099750623441396,
+                      "x": 0.685328447339848,
+                      "y": 0.8549107142857143
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "3NSPqjp6pFY",
+                  "china_cdn_id": "3NSPqjp6pFY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88678,
+          "key": "487511120923",
+          "title": "Two Flips 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487511120923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 108345,
+              "key": "48751112",
+              "title": "Two Flips 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48751112",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "rRPwknIDuI0",
+                  "china_cdn_id": "rRPwknIDuI0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Flips 4",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/f8UixKD_163RhfUHyf6EdaFmUqLHpWRaOylUcbmcEouH4ie5y_Tz-sDvjtdYS2L7Do7VDDH2mX3KjO5XT9M=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48751112",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48667978",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182645622",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.08104738154613467,
+                      "x": 0.9010416666666666,
+                      "y": 0.7033059845559846
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "bNoS6LQEFrI",
+                  "china_cdn_id": "bNoS6LQEFrI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88652,
+          "key": "487521220923",
+          "title": "Two Flips 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487521220923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 80010,
+              "key": "48752122",
+              "title": "Two Flips 5",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48752122",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "G28YyiGFGWA",
+                  "china_cdn_id": "G28YyiGFGWA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Two Flips 5",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/T1ptQMqqxKztRh1fEWOOHFHTD2XO0C6Yw5JBseS3AapPrb1mPfY_PRFrSfb43beEqiCadspINmTdDbsN2yk=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48752122",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48667979",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182687766",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.09226932668329177,
+                      "x": 0.4479166666666667,
+                      "y": 0.24957770270270271
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "HB8b7sZQFGs",
+                  "china_cdn_id": "HB8b7sZQFGs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 357013,
+          "key": "52118d1a-794e-49da-9a0b-5eac3258660d",
+          "title": "Two Cars 1-5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "52118d1a-794e-49da-9a0b-5eac3258660d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 357016,
+              "key": "d62bb61e-8292-42bd-8067-bdf9a8557992",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Two Cars\nThe following questions deal with two cars that have pulled up to an intersection. It is equally likely than any individual car will turn left (L), go straight (S), or turn right (R).\n\nIn the notation we are using, P(S, L) means \"probability that car one goes straight (S) and car two turns left (L).\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357015,
+              "key": "8d374ed9-da32-46c5-a118-b8c991cbab66",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598a1c50_intersections/intersections.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8d374ed9-da32-46c5-a118-b8c991cbab66",
+              "caption": "",
+              "alt": null,
+              "width": 960,
+              "height": 540,
+              "instructor_notes": null
+            },
+            {
+              "id": 357020,
+              "key": "a464806e-f1ef-4a73-a5a5-0d9b7f529651",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Question 1\n\nFor this question, assume the probabilities of left, straight, and right are all equal. That is:\n\n<span class=\"mathquill\">\nP(L) = \\frac{1}{3}  \n</span>\n\n<span class=\"mathquill\">\nP(S) = \\frac{1}{3}  \n</span>\n\n<span class=\"mathquill\">\nP(R) = \\frac{1}{3}  \n</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357019,
+              "key": "cde690de-6729-4fe4-8b03-84d86bf0cf12",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cde690de-6729-4fe4-8b03-84d86bf0cf12",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is P(L,L)?",
+                "answers": [
+                  {
+                    "id": "a1502223503395",
+                    "text": "1/8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502223605148",
+                    "text": "1/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502223608331",
+                    "text": "1/3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502223610697",
+                    "text": "1/9",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1502223614585",
+                    "text": "1/27",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502223635915",
+                    "text": "2/3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 357021,
+              "key": "c7a5b797-ac7d-4647-b205-6311f678a71b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Question 2\nFor this question assume that P(L) is known to be 1/2. The other two quantities are unknown\n\n<span class=\"mathquill\">\nP(L) = \\frac{1}{2}  \n</span>\n\n<span class=\"mathquill\">\nP(S) =  ?\n</span>\n\n<span class=\"mathquill\">\nP(R) = ?\n</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357022,
+              "key": "2a726da7-f0f4-400f-9345-8116dafcf224",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2a726da7-f0f4-400f-9345-8116dafcf224",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is P(S)?",
+                "answers": [
+                  {
+                    "id": "a1502224396949",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224408197",
+                    "text": "1/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224410694",
+                    "text": "1/3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224414047",
+                    "text": "1/2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224417403",
+                    "text": "Not enough information to be determined.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 357023,
+              "key": "a46acc6c-4db9-49df-82a1-f05261207251",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Question 3\nNow assume we know the following:\n\n<span class=\"mathquill\">\nP(L) = 0.5\n</span>\n\n<span class=\"mathquill\">\nP(S) =  0.3\n</span>\n\n<span class=\"mathquill\">\nP(R) = ?\n</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357024,
+              "key": "d8b37737-b605-4066-8d70-94c0cd17a4c7",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d8b37737-b605-4066-8d70-94c0cd17a4c7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is P(R)?",
+                "answers": [
+                  {
+                    "id": "a1502224666484",
+                    "text": "0.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224678141",
+                    "text": "0.2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1502224680674",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224685560",
+                    "text": "0.333",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502224691678",
+                    "text": "Not enough information to be determined.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 357025,
+              "key": "27fad2fb-1d80-4d33-9414-e236d52f511b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Question 4\nMatch the mathematical calculation to the vehicle behavior. \n\nAssume the following probabilities:\n\n<span class=\"mathquill\">\nP(L) = 0.5\n</span>\n\n<span class=\"mathquill\">\nP(S) =  0.3\n</span>\n\n<span class=\"mathquill\">\nP(R) = 0.2\n</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357026,
+              "key": "653c018d-1497-4d88-aa5b-b977f0268649",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "653c018d-1497-4d88-aa5b-b977f0268649",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the mathematical calculation to the description of the two vehicles behavior."
+                },
+                "concepts_label": "Mathematical Description",
+                "answers_label": "Description of Vehicles' Behavior",
+                "concepts": [
+                  {
+                    "text": "0.5 * 0.2",
+                    "correct_answer": {
+                      "id": "a1502224934953",
+                      "text": "First car goes **left**, second goes **right**"
+                    }
+                  },
+                  {
+                    "text": "0.3 * 0.3",
+                    "correct_answer": {
+                      "id": "a1502225018256",
+                      "text": "Both cars go **straight**"
+                    }
+                  },
+                  {
+                    "text": "(1 - 0.2) * (1 - 0.2)",
+                    "correct_answer": {
+                      "id": "a1502225046952",
+                      "text": "Both cars **DON'T go right**."
+                    }
+                  },
+                  {
+                    "text": "0.2 * 0.3",
+                    "correct_answer": {
+                      "id": "a1502225085258",
+                      "text": "First car goes **right**, second goes **straight**."
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1502224934953",
+                    "text": "First car goes **left**, second goes **right**"
+                  },
+                  {
+                    "id": "a1502225085258",
+                    "text": "First car goes **right**, second goes **straight**."
+                  },
+                  {
+                    "id": "a1502225046952",
+                    "text": "Both cars **DON'T go right**."
+                  },
+                  {
+                    "id": "a1502225018256",
+                    "text": "Both cars go **straight**"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 357027,
+              "key": "b8f10bf6-ec88-4293-b2c5-b42089f92d3d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Question 5\nIn the questions with two coin flips, each of which had two possible outcomes, you filled out a truth table with four rows (one each for \"H,H\", \"H,T\", \"T,H\" and \"T,T\").\n\nTwo flips. Two outcomes per flip. Four rows in the truth table.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 357028,
+              "key": "3c438d6a-e974-45a0-a243-cb5d421ec0d7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598a263d_screen-shot-2017-08-08-at-1.48.37-pm/screen-shot-2017-08-08-at-1.48.37-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3c438d6a-e974-45a0-a243-cb5d421ec0d7",
+              "caption": "",
+              "alt": null,
+              "width": 505,
+              "height": 265,
+              "instructor_notes": null
+            },
+            {
+              "id": 357030,
+              "key": "7e5c82c0-4f39-4a86-a0c3-cb6db403626b",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7e5c82c0-4f39-4a86-a0c3-cb6db403626b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How many rows would be in a truth table describing two cars turning at an intersection, where each car has 3 possible outcomes (L, S, R)?\n\nHINT: try writing them all out on a sheet of paper starting with \"L, L\"",
+                "answers": [
+                  {
+                    "id": "a1502226028541",
+                    "text": "4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502226123939",
+                    "text": "5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502226125878",
+                    "text": "6",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502226129301",
+                    "text": "8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1502226131663",
+                    "text": "9",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 357039,
+              "key": "637fd9fb-d3fe-4eb8-8f61-08fb83d17bf1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## (Optional) Managing Complexity\n\n*Note: this section is optional and only here for those who are interested. You will not be expected to remember anything presented in any section labeled **optional***.\n\nRoboticists will often use the term  **state space** to describe the set of all possible outcomes for a probabilistic **event**.\n\nFor a coin the state space for a \"flip\" event can be written mathematically as:\n\n<span class=\"mathquill\">\n\\{  \\text{H}, \\text{T} \\}\n</span>\n\nAnd for a car at an intersection the state space for a \"turn\" event can be written mathematically as:\n\n<span class=\"mathquill\">\n\\{  \\text{L}, \\text{S}, \\text{R}  \\}\n</span>\n\nCoins and cars may seem differently, but we can treat them in similar ways when we think in terms of events and state spaces. \n\nIn the last question you saw that calculating a truth table for 2 coin flips requires 4 calculations while calculating the truth table for 2 car turns at an intersection requires 9 calculations. \n\nWe can make these statements more broadly applicable:\n\n1. When calculating the truth table for **2 events** which each have a **state space size of 2**, we need to make **4 calculations**.\n\n2. When calculating the truth table for **2 events** which each have a **state space size of 3**, we need to make **9 calculations**.\n\nAnd in fact, there's a mathematical pattern here that can be expressed algebraically:\n\n3. When calculating the truth table for **<span class=\"mathquill\">N</span> events** which each have a **state space size of <span class=\"mathquill\">x</span>**, we need to make **<span class=\"mathquill\">x^N</span> calculations**\n\n<span class=\"mathquill\">x^N</span> gets very big very fast as x or N get bigger.\n\nYou will see later this Nanodegree how this **exponential complexity growth** can really slow down the performance of the code running inside of a self driving car. \n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 87437,
+          "key": "487005960923",
+          "title": "One Head 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487005960923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 89901,
+              "key": "48700596",
+              "title": "One Head 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48700596",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "lHuZpDkfwq8",
+                  "china_cdn_id": "lHuZpDkfwq8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "One Head 1",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/U_iHg4pNitarTTGQSxdqkzQEQ4CPGpRmX5coYPa_kRUvReilUQyrzOp0uJmHrNO6Fx58WqqOwpOd5Q8BHA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48700596",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48742066",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182770587",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.12344139650872818,
+                      "x": 0.5429560260586319,
+                      "y": 0.05900096525096525
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "T4A5uyqesjo",
+                  "china_cdn_id": "T4A5uyqesjo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87819,
+          "key": "486838810923",
+          "title": "One Head 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486838810923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 95059,
+              "key": "48683881",
+              "title": "One Head 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48683881",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "JHx3ucNS9f4",
+                  "china_cdn_id": "JHx3ucNS9f4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "One Head 2",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/_v24T6W1hMRyfHKlj83d5lJiaZNTMh22T9hf4PHPBeCHX3fFMFSirpQ-q-M4SvbL8lL2J0uTK5l6Odmyz_kB=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48683881",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48687795",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "1341182900325",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.38519611834962,
+                      "y": 0.42166385135135137
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1341182903036",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.38519611834962,
+                      "y": 0.4995777027027027
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "1341182905477",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3893186753528773,
+                      "y": 0.591789333976834
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option5",
+                    "marker": "1341182907840",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3904044516829533,
+                      "y": 0.6662644787644788
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "64EjAbqrtmo",
+                  "china_cdn_id": "64EjAbqrtmo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87772,
+          "key": "486848560923",
+          "title": "One Of Three 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486848560923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 94970,
+              "key": "48684856",
+              "title": "One Of Three 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48684856",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "rxfHfjy9Mm4",
+                  "china_cdn_id": "rxfHfjy9Mm4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "One Of Three 1",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/gJkw1yFO8HtIChMTrXhPuqtryEXszaDGuim-u_dx7V3MQL5aCais6vQknEntOmTpdxrXAH3g53_U1F_qBQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48684856",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48693692",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182959308",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.12468827930174564,
+                      "x": 0.5384093376764386,
+                      "y": 0.05320945945945946
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "bDCXSxkochE",
+                  "china_cdn_id": "bDCXSxkochE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88675,
+          "key": "487521230923",
+          "title": "One Of Three 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487521230923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 79976,
+              "key": "48752123",
+              "title": "One Of Three 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48752123",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "gGgqTGZ9TKg",
+                  "china_cdn_id": "gGgqTGZ9TKg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "One Of Three 2",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/VFCnb27PMB1SPxs7jW_oxXvFAZUtE6PdnUOtRlknGsdYAo2RG7a1AWQXb4tqBFkky62ds5jH77Djs2zvujw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48752123",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48688828",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341182994072",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.13341645885286782,
+                      "x": 0.537103013029316,
+                      "y": 0.05513996138996139
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "27Ed1GI4j84",
+                  "china_cdn_id": "27Ed1GI4j84.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88636,
+          "key": "487511130923",
+          "title": "Even Roll",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487511130923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 76241,
+              "key": "48751113",
+              "title": "Even Roll",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "The last entry should be 1/6 not 1/2",
+              "user_state": {
+                "node_key": "48751113",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "DrnAR4SqlEE",
+                  "china_cdn_id": "DrnAR4SqlEE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Even Roll",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/_bqJ8B-_D8ZllMuEfleFNQDn6CjkS4vW-08TnLRJGaRMEvUwe_AMWAqHhs9wriu0YuX2iGp7kjVRmwfdVA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48751113",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48667981",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183081576",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.10972568578553615,
+                      "x": 0.8083774429967426,
+                      "y": 0.1994449806949807
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "M3L0a5V4Nf0",
+                  "china_cdn_id": "M3L0a5V4Nf0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 80739,
+          "key": "487540910923",
+          "title": "Doubles",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487540910923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 79962,
+              "key": "48754091",
+              "title": "Doubles",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48754091",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "On_Guw8wac8",
+                  "china_cdn_id": "On_Guw8wac8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Doubles",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/eOYafwEtkr8R7UX0VczIZ2kHtCUDPAVGQ9HpvFt4DPa_9iTGRWFsSIvsKP7Jps8COq0GMMaOtQRMM9QqQm8=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48754091",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48684742",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183105897",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07317073170731707,
+                      "width": 0.11346633416458853,
+                      "x": 0.4103725570032573,
+                      "y": 0.17359435328185327
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "fkUyTJNbdzU",
+                  "china_cdn_id": "fkUyTJNbdzU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87334,
+          "key": "487014340923",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487014340923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 83759,
+              "key": "48701434",
+              "title": "Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "hIEDvyCETEw",
+                "china_cdn_id": "hIEDvyCETEw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 785514,
+          "key": "d98b32c6-7fec-473c-b546-62ad25e1f42e",
+          "title": "[Optional] Cars and Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d98b32c6-7fec-473c-b546-62ad25e1f42e",
+            "completed_at": "2020-04-19T15:13:40.294Z",
+            "last_viewed_at": "2020-04-19T15:13:43.158Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 785515,
+              "key": "456411f4-9cdd-4926-a031-fecc8b454cb0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Cars and Probability\n\nBefore you start programming your own self-driving car, having a solid foundation in probability will be very important. Probability is used to analyze sensor data, predict future events, and make decisions. Below we will explore the foundation of probability to aid you on your journey to be a self-driving car engineer!\n\n** *If you are already comfortable with basic probability, please feel free to skip these exercises.* **",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785516,
+              "key": "5a2a198b-0c3f-4892-829e-c48c79b55094",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Combinatorics (i.e. counting)\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785518,
+              "key": "8dea4f0b-d81f-4757-9a36-476e6c5ae83f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/November/5bfc6cf0_74c/74c.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8dea4f0b-d81f-4757-9a36-476e6c5ae83f",
+              "caption": "",
+              "alt": "",
+              "width": 250,
+              "height": 169,
+              "instructor_notes": null
+            },
+            {
+              "id": 785517,
+              "key": "c03415aa-f48c-49c3-a750-a7f40a5bf22a",
+              "title": "Combinatorics 1",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c03415aa-f48c-49c3-a750-a7f40a5bf22a",
+                "completed_at": "2020-04-19T15:14:00.331Z",
+                "last_viewed_at": "2020-04-19T15:14:00.331Z",
+                "unstructured": "{\"selected_ids\":[\"a1543269239950\",\"a1543269271076\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Suppose you are driving your car (B) and you reach a T-intersection depicted above.\n\nWhat are the possible directions you can legally turn?",
+                "answers": [
+                  {
+                    "id": "a1543269239950",
+                    "text": "Left",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1543269271076",
+                    "text": "Right",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1543269274591",
+                    "text": "Straight",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785519,
+              "key": "d94149f8-c084-40f6-90f1-699cdb7233e6",
+              "title": "Combinatorics 2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d94149f8-c084-40f6-90f1-699cdb7233e6",
+                "completed_at": "2020-04-19T15:14:07.495Z",
+                "last_viewed_at": "2020-04-19T15:14:07.495Z",
+                "unstructured": "{\"selected_id\":\"a1543269721749\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Referencing the previous questions, how many directions can you legally turn?",
+                "answers": [
+                  {
+                    "id": "a1543269707069",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1543269716071",
+                    "text": "1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1543269721749",
+                    "text": "2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1543269723800",
+                    "text": "3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785520,
+              "key": "a27bdfe3-3c98-43f0-b848-54662de5385a",
+              "title": "Combinatoricss 3",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a27bdfe3-3c98-43f0-b848-54662de5385a",
+                "completed_at": "2020-04-19T15:14:26.639Z",
+                "last_viewed_at": "2020-04-19T15:14:26.639Z",
+                "unstructured": "{\"selected_id\":\"a1543270030665\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Now, let us suppose you are in a self-driving car. Turning in either direction is fine, but you can’t turn in both directions at once. How many ways can you turn left?",
+                "answers": [
+                  {
+                    "id": "a1543269898122",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1543270030665",
+                    "text": "1",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1543270032595",
+                    "text": "2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1543270034800",
+                    "text": "3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785521,
+              "key": "5564d7cd-8676-4fc9-bff5-de9ea833ee62",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Probability\n\nNow that you have built your sample space and understand the mechanics, it is time to move into some probability.\n\nProbability can typically be thought of as:\n\n<span class='mathquill'>\\Large \\frac {\\textrm {Number of ways an event can occur}}{\\textrm{Total number of events that could occur}}</span>\n\nAn \"event\" is defined as some type of state that can happen. For example, turning \"left\" or \"right\" are both events. Similarly, pressing the \"gas\" or \"brake\" are also events. All probabilities will be between 0 and 1 inclusive.\n\n If a probability is ever negative or larger than one, there is something wrong with the calculation, so please double-check the answer. \n\nOften, the notation P(X) is used. This typically means the probability of \"X\" occuring. \"X\" is just a placeholder, but a more specific example will be provided below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785525,
+              "key": "053d3da3-dc37-4db6-9782-021eb41232b0",
+              "title": "Probability 1",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "053d3da3-dc37-4db6-9782-021eb41232b0",
+                "completed_at": "2020-04-19T15:14:56.981Z",
+                "last_viewed_at": "2020-04-19T15:15:08.090Z",
+                "unstructured": "{\"answer\":\"0.5\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Using the definition above, how many ways can the car turn left out of all the scenarios? In other words, what is P(Left turn)?\n",
+                "matchers": [
+                  {
+                    "expression": "1/2"
+                  },
+                  {
+                    "expression": "0.5"
+                  },
+                  {
+                    "expression": ".5"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785529,
+              "key": "6a17f85b-9897-4c62-82a6-77afe787d3b8",
+              "title": "Probability 2",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6a17f85b-9897-4c62-82a6-77afe787d3b8",
+                "completed_at": "2020-04-19T15:15:19.690Z",
+                "last_viewed_at": "2020-04-19T15:15:19.690Z",
+                "unstructured": "{\"answer\":\"0.5\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "What is P(Right Turn)?",
+                "matchers": [
+                  {
+                    "expression": "1/2"
+                  },
+                  {
+                    "expression": "0.5"
+                  },
+                  {
+                    "expression": ".5"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785533,
+              "key": "05676852-afef-4cd7-a933-ab7a438ff830",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Adding Probabilities (i.e. using \"or\" )\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785534,
+              "key": "ed488996-6cc3-41b8-9e15-b887bc94efb3",
+              "title": "Probability \"or\"",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ed488996-6cc3-41b8-9e15-b887bc94efb3",
+                "completed_at": "2020-04-19T15:15:29.074Z",
+                "last_viewed_at": "2020-04-19T15:15:29.074Z",
+                "unstructured": "{\"answer\":\"1\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "When we discuss probability, the use of the word “or” means we sum probabilities. What is the probability we go left or right?",
+                "matchers": [
+                  {
+                    "expression": "1"
+                  },
+                  {
+                    "expression": "1.0"
+                  },
+                  {
+                    "expression": "2/2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785535,
+              "key": "0427576b-416c-44a8-8efe-1ea274ded929",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Compliments \nOften in probability, there will be a time when you want to know the result of a specific event. Unfortunately, sometimes, this event can be really tricky to calculate. However, it may be really easy to calculate all other events *except* this event. By doing this, we can exploit the following property:\n\n<span class='mathquill'>\\textrm\n{Specific outcome = 1 - (The sum of probability of all other events)}\n</span>\n\nThis will yield the probability for the event in question. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785536,
+              "key": "af04bbfa-ad9c-474c-9e8c-5bfb4eecc402",
+              "title": "Probability Compliment",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "af04bbfa-ad9c-474c-9e8c-5bfb4eecc402",
+                "completed_at": "2020-04-19T15:15:46.831Z",
+                "last_viewed_at": "2020-04-19T15:15:46.831Z",
+                "unstructured": "{\"answer\":\"0.2\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Assume that taking a right will get the self-driving car to the destination faster (and safer) than taking a left. As a result, the car prefers taking right with a P(Right Turn) =  0.8. \n\nWhat is P(Left Turn)?",
+                "matchers": [
+                  {
+                    "expression": "2/10"
+                  },
+                  {
+                    "expression": "1/5"
+                  },
+                  {
+                    "expression": ".2"
+                  },
+                  {
+                    "expression": "0.2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785537,
+              "key": "d371e70c-d361-4416-b5f3-dd535a37539f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Multiplying Probabilities (i.e. using \"and\")\n\nWhen dealing with probabilities, sometimes outcomes can be independent of each other - meaning, a previous outcome does not change the probability for the current outcome. Usually, when dealing two more events occurring, the word “and” is used. If “and” is used, this implies that the probabilities are multiplied instead of added.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785539,
+              "key": "9210a286-70c9-499f-8313-d77163d26e26",
+              "title": "Multiplying Probabilities",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9210a286-70c9-499f-8313-d77163d26e26",
+                "completed_at": "2020-04-19T15:16:16.062Z",
+                "last_viewed_at": "2020-04-19T15:16:34.059Z",
+                "unstructured": "{\"answer\":\"0.04\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Let’s assume a car can make a left with a probability of 0.2 and a right with a probability of 0.8. What is the probability the car makes a left and a left again (again as we declared earlier the second turn is an independent action from the first one, i.e. no additional information needed)?\n",
+                "matchers": [
+                  {
+                    "expression": "0.04"
+                  },
+                  {
+                    "expression": ".04"
+                  },
+                  {
+                    "expression": "4/100"
+                  },
+                  {
+                    "expression": "1/25"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 785540,
+              "key": "bdae8084-ea50-4a74-857a-8661cb5535a0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## All Outcomes\n\nIt has been shown that independent events can be multiplied together. We will build on this concept below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 785545,
+              "key": "fcd14a69-269c-4cf3-8de7-979be0207ffc",
+              "title": "All Outcomes",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fcd14a69-269c-4cf3-8de7-979be0207ffc",
+                "completed_at": "2020-04-19T15:17:30.345Z",
+                "last_viewed_at": "2020-04-19T15:17:30.345Z",
+                "unstructured": "{\"answer\":\"1\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "Staying with the theme of independent events and using the same numbers as above, what is the **sum** of the following probabilities? Leave your answer in decimal.\n\nP(Left) * P(Left)\n\nP(Left) * P(Right)\n\nP(Right) * P(Left)\n\nP(Right) * P(Right)",
+                "matchers": [
+                  {
+                    "expression": "1.0"
+                  },
+                  {
+                    "expression": "1"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python vs. C++</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Python vs. C++</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="how-the-lesson-is-organized">How the Lesson is Organized</h1>
+<p>This lesson has two parts. In the first part, we show you a complete Python class and its equivalent in C++. You'll get an overview of what C++ classes look like and how to use them.</p>
+<p>Then, in the second part, you'll code your own C++ class building up the code piece by piece. By the end of the lesson, you should feel comfortable reading C++ object oriented code and writing a basic class; however, remember that learning a new programming language takes practice. And C++ is  often considered a language that takes <a href="https://www.quora.com/How-long-does-it-take-to-learn-C++-coding-on-an-average-level" rel="noopener noreferrer" target="_blank">years to master</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="example-python-class">Example: Python Class</h1>
+<p>Let's go directly to an example. Below is the code for a Python class called 'Gaussian'.</p>
+<p>You learned about Gaussian distributions and saw the Gaussian equation earlier in the nanodegree. This class stores the values for the standard deviation and mean. The class also has methods for calculating the probability density function, the sum of two gaussians, and the product of two gaussians.</p>
+<p>The class contains two class variables called <code>mu</code>, which is the average and <code>sigma2</code>, which is the variance. </p>
+<p>Here is a summary of the three methods contained in the class:</p>
+<ol>
+<li><code>evaluate</code>, which represents the probability density function: <span class="mathquill ud-math">\LARGE\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}\frac{(x - \mu)^2}{\sigma^2}}</span></li>
+</ol>
+<p>In this formula <span class="mathquill ud-math">\sigma^2</span> is the variance.</p>
+<ol start="2">
+<li><code>multiply</code>, which multiplies two independent Gaussian distributions together</li>
+<li><code>add</code>, which adds two independent Gaussian distributions together</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Read through the code so that you understand how the class works.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="python-code-for-a-gaussian-class">Python Code for a Gaussian Class</h3>
+<pre><code class="python language-python">class Gaussian():
+
+    def __init__(self, mean, variance):
+        self.mu = mean
+        self.sigma2 = variance
+
+    def evaluate(self, x):
+        coefficient = 1.0 / sqrt(2.0 * pi * self.sigma2)
+        exponential = exp(-0.5 * (x-self.mu) ** 2 / self.sigma2)
+        return coefficient * exponential
+
+    def multiply(self, other):
+        # calculate new mean
+        denominator = self.sigma2 + other.sigma2
+        numerator = self.mu * other.sigma2 + other.mu * self.sigma2
+        new_mu = numerator / denominator
+
+        # calculate new variance
+        new_var = 1.0 / ( (1.0 / self.sigma2) + (1.0 / other.sigma2) )
+
+        # generate new gaussian
+        return Gaussian(new_mu, new_var)
+
+    def add(self, other):
+        new_mu = self.mu + other.mu
+        new_sigma2 = self.sigma2 + other.sigma2
+
+        return Gaussian(new_mu, new_sigma2)</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="example-c-class">Example: C++ Class</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Now, you will take a look at an equivalent class in C++. Like in other cases you have already seen, the C++ code is longer and has aspects that the Python version did not have. It takes more time and practice to learn object oriented programming in C++ compared to Python.</p>
+<p>For example, you will notice that in the C++ class, all of its variables and all of its functions need to be declared first before writing the implementation. The class also has a part labeled <code>private</code> and another part labeled <code>public</code>. Furthermore, the C++ class includes extra functions like <code>setMu</code>, <code>setSigma2</code>,  <code>getMu</code>, and <code>getSigma2</code>.</p>
+<p>You are going to learn about all of these differences in this lesson. For now, read through the code and see if you can figure out what the <em>set</em> functions and <em>get</em> functions do. Then answer the quiz at the bottom of the page.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code>#include &lt;math.h&gt;
+
+class Gaussian
+{
+    // private variable declaration
+    private:
+        float mu, sigma2;
+
+    // public variable and function declarations
+    public:
+
+        // constructor functions
+        Gaussian ();
+        Gaussian (float, float);
+
+        // change value of average and standard deviation 
+        void setMu(float);
+        void setSigma2(float);
+
+        // output value of average and standard deviation
+        float getMu();
+        float getSigma2();
+
+        // functions to evaluate 
+        float evaluate (float);
+        Gaussian multiply (Gaussian);
+        Gaussian add (Gaussian);
+};
+
+// constructor function definitions
+Gaussian::Gaussian() {
+    mu = 0;
+    sigma2 = 1; 
+}
+
+Gaussian::Gaussian (float average, float sigma) {
+    mu = average;
+    sigma2 = sigma;
+}
+
+// set function definitions
+void Gaussian::setMu (float average) {
+    mu = average;
+}
+
+void Gaussian::setSigma2 (float sigma) {
+    sigma2 = sigma;
+}
+
+// get function definitions
+float Gaussian::getMu () {
+    return mu;
+}
+
+float Gaussian::getSigma2() {
+    return sigma2;
+}
+
+// evaluate function definition
+float Gaussian::evaluate(float x) {
+    float coefficient;
+    float exponential;
+
+    coefficient = 1.0 / sqrt (2.0 * M_PI * sigma2);
+    exponential = exp ( pow (-0.5 * (x - mu), 2) / sigma2 );
+    return coefficient * exponential;
+}
+
+// multiply function definition
+Gaussian Gaussian::multiply(Gaussian other) {
+    float denominator;
+    float numerator;
+    float new_mu;
+    float new_var;
+
+    denominator = sigma2 + other.getSigma2();
+    numerator = mu * other.getSigma2() + other.getMu() * sigma2;
+    new_mu = numerator / denominator;
+
+    new_var = 1.0 / ( (1.0 / sigma2) + (1.0 / other.sigma2) );
+
+    return Gaussian(new_mu, new_var);
+}
+
+// add function definition
+Gaussian Gaussian::add(Gaussian other) {
+
+    float new_mu;
+    float new_sigma2;
+
+    new_mu = mu + other.getMu();
+    new_sigma2 = sigma2 + other.getSigma2();
+
+    return Gaussian(new_mu, new_sigma2);
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Set Functions</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What do the set functions do in the C++ Gaussian code?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1505925997443" name="403939" id="a1505925997443">
+        <label for="a1505925997443"><p>Sets the probability density function values</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1505926014999" name="403939" id="a1505926014999">
+        <label for="a1505926014999"><p>Allow for changing the values of the mu and sigma2 variables</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1505926015582" name="403939" id="a1505926015582">
+        <label for="a1505926015582"><p>Output the values of the mu and sigma2 variables</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1505926016294" name="403939" id="a1505926016294">
+        <label for="a1505926016294"><p>There's no way to tell</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Allow for changing the values of the mu and sigma2 variables
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Why use Object Oriented Programming.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Python vs. C++')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

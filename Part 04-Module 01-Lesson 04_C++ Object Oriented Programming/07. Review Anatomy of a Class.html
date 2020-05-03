@@ -1,0 +1,370 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Review: Anatomy of a Class</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Review: Anatomy of a Class</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="anatomy-of-a-class">Anatomy of a Class</h1>
+<p>If you look back at the gaussian.cpp class file, you'll notice that there were four distinct sections. The file contained:</p>
+<ul>
+<li>a header</li>
+<li>class declarations</li>
+<li>constructor functions</li>
+<li>and method definitions</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>It might help to think about these four sections as you write your own code. As a review, here is the code from each section of the gaussian.cpp file.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="header">Header</h1>
+<p>The <strong>header</strong> has all of the include statements. </p>
+<pre><code class="c++ language-c++">#include &lt;math.h&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="class-declaration">Class Declaration</h1>
+<p>The <strong>class declaration</strong> is a lot like a variable or function declaration. In the class declaration, you let the compiler know what all of the class variables and methods look like in terms of data types, inputs and outputs.</p>
+<pre><code class="c++ language-c++">class Gaussian
+{
+    private:
+        float mu, sigma2;
+
+    public:
+
+        // constructor functions
+        Gaussian ();
+        Gaussian (float, float);
+
+        // change value of average and standard deviation 
+        void setMu(float);
+        void setSigma2(float);
+
+        // output value of average and standard deviation
+        float getMu();
+        float getSigma2();
+
+        // functions to evaluate 
+        float evaluate (float);
+        Gaussian multiply (Gaussian);
+        Gaussian add (Gaussian);
+};</code></pre>
+<p>We'll talk about the difference between public and private later in the lesson. In essence, a private function or variable is only reachable within the class code whereas a public function or definition is accessible to objects as well.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="constructor-functions">Constructor Functions</h1>
+<p><strong>Constructor</strong> functions determine how a new object will be initiated. When you declare a new object, should the object have default values? Or will you provide values every time you instantiate an object?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Python had an equivalent syntax with the <code>__init__</code>. </p>
+<pre><code class="python language-python">def __init__(self, variable1, variable2, ..., variablen):</code></pre>
+<p>The first constructor function is for when you instantiate an object without specifying the average and variance.:</p>
+<pre><code class="c++ language-c++">Gaussian::Gaussian() {
+    mu = 0;
+    sigma2 = 1;    
+}</code></pre>
+<p>The other constructor function specifies what to do when you do specify the average and variance:</p>
+<pre><code class="c++ language-c++">Gaussian::Gaussian (float average, float sigma) {
+    mu = average;
+    sigma2 = sigma;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="class-methods">Class Methods</h1>
+<p>And finally, the class methods define all of the functions that your class needs to have.</p>
+<p>The rest of the code contains the definitions for all of the functions, also called methods, that your class has. </p>
+<p>The get and set functions are specifically for getting variable values or changing the value of private variables. Again, we'll go into more detail about private and public later in the lesson.</p>
+<pre><code class="c++ language-c++">void Gaussian::setMu (float average) {
+    mu = average;
+}
+
+void Gaussian::setSigma2 (float sigma) {
+    sigma2 = sigma;
+}
+
+float Gaussian::getMu () {
+    return mu;
+}
+
+float Gaussian::getSigma2() {
+    return sigma2;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The rest of the functions (evaluate, multiply, add) are the same functions that were in the Python version of the class.</p>
+<pre><code class="c++ language-c++">float Gaussian::evaluate(float x) {
+    float coefficient;
+    float exponential;
+
+    coefficient = 1.0 / sqrt (2.0 * M_PI * sigma2);
+    exponential = exp ( pow (-0.5 * (x - mu), 2) / sigma2 );
+    return coefficient * exponential;
+}
+
+Gaussian Gaussian::multiply(Gaussian other) {
+    float denominator;
+    float numerator;
+    float new_mu;
+    float new_var;
+
+    denominator = sigma2 + other.getSigma2();
+    numerator = mu * other.getSigma2() + other.getMu() * sigma2;
+    new_mu = numerator / denominator;
+
+    new_var = 1.0 / ( (1.0 / sigma2) + (1.0 / other.sigma2) );
+
+    return Gaussian(new_mu, new_var);
+}
+
+Gaussian Gaussian::add(Gaussian other) {
+
+    float new_mu;
+    float new_sigma2;
+
+    new_mu = mu + other.getMu();
+    new_sigma2 = sigma2 + other.getSigma2();
+
+    return Gaussian(new_mu, new_sigma2);
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Other Facets of C++ Classes.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Review: Anatomy of a Class')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

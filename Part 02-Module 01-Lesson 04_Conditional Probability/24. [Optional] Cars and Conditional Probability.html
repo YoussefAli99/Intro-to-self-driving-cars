@@ -1,0 +1,396 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[Optional] Cars and Conditional Probability</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Conditional Probability</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Conditional Probability.html">01. Conditional Probability</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Conditional Probability.html">02. Intro to Conditional Probability</a>
+    </li>
+    <li class="">
+      <a href="03. Estimating Based on Conditions.html">03. Estimating Based on Conditions</a>
+    </li>
+    <li class="">
+      <a href="04. Dependent Events and Conditional Probability.html">04. Dependent Events and Conditional Probability</a>
+    </li>
+    <li class="">
+      <a href="05. Learning Objective Recap Explained.html">05. Learning Objective Recap Explained</a>
+    </li>
+    <li class="">
+      <a href="06. Learning Objectives - Probability.html">06. Learning Objectives - Probability</a>
+    </li>
+    <li class="">
+      <a href="07. Learning Objectives - Conditional Probability.html">07. Learning Objectives - Conditional Probability</a>
+    </li>
+    <li class="">
+      <a href="08. Dependent Things.html">08. Dependent Things</a>
+    </li>
+    <li class="">
+      <a href="09. Notation Note.html">09. Notation Note</a>
+    </li>
+    <li class="">
+      <a href="10. Medical Example 1.html">10. Medical Example 1</a>
+    </li>
+    <li class="">
+      <a href="11. Medical Example 2.html">11. Medical Example 2</a>
+    </li>
+    <li class="">
+      <a href="12. Medical Example 3.html">12. Medical Example 3</a>
+    </li>
+    <li class="">
+      <a href="13. Medical Example 4.html">13. Medical Example 4</a>
+    </li>
+    <li class="">
+      <a href="14. Medical Example 5.html">14. Medical Example 5</a>
+    </li>
+    <li class="">
+      <a href="15. Medical Example 6.html">15. Medical Example 6</a>
+    </li>
+    <li class="">
+      <a href="16. Medical Example 7.html">16. Medical Example 7</a>
+    </li>
+    <li class="">
+      <a href="17. Medical Example 8.html">17. Medical Example 8</a>
+    </li>
+    <li class="">
+      <a href="18. Total Probability.html">18. Total Probability</a>
+    </li>
+    <li class="">
+      <a href="19. Two Coins 1.html">19. Two Coins 1</a>
+    </li>
+    <li class="">
+      <a href="20. Two Coins 2.html">20. Two Coins 2</a>
+    </li>
+    <li class="">
+      <a href="21. Two Coins 3.html">21. Two Coins 3</a>
+    </li>
+    <li class="">
+      <a href="22. Two Coins 4.html">22. Two Coins 4</a>
+    </li>
+    <li class="">
+      <a href="23. Summary.html">23. Summary</a>
+    </li>
+    <li class="">
+      <a href="24. [Optional] Cars and Conditional Probability.html">24. [Optional] Cars and Conditional Probability</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">24. [Optional] Cars and Conditional Probability</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="cars-and-conditional-probability">Cars and Conditional Probability</h1>
+<p>So far you have gotten a glimpse of how probability is used in self-driving cars when events are independent from each other. However, in many cases, the previous event helps shape the probability of the current event. In this case, these events are said to be conditional, meaning they are affected by another (usually previous) event. This is a bit of a tricky nuance so let us spend some time trying to build some intuition.</p>
+<p>** <em>If you are already comfortable with conditional probability, please feel free to skip these exercises.</em> **</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/rightoway-2.jpg" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Here is a real-problem that plagues many self-driving cars. Suppose your self-driving car and another car arrive at a four-way stop. The rules of the road state that the car that arrives at the stop sign first has the right of way to continue through the intersection before the other car. Unfortunately, sometimes this is hard to determine because two cars appear to get to the stop sign at the same time. Additionally, sometimes, the car that arrives second will actually go before the car that arrives first (thus breaking the law). </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Conditional Probability</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Suppose your car and another car arrive at the intersection at roughly the same time. The probability you arrived first is 0.6. What is the probability that the other car arrived first?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>At this point you know have several scenarios. You could arrive first, or you could arrive second. If you arrive first, you could go first or second, and similar for arriving second. However, the action of going is dependent on whether you arrived first or second.</p>
+<p>This is called conditional probability, and can be denoted as <span class="mathquill ud-math">P(X|Y)</span> (read as "the probability of X given Y"). </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Conditional Probability 2</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Assume <span class="mathquill ud-math">P(\textrm{Go First} | \textrm{Arrived First}) = 0.8</span>. What is the <span class="mathquill ud-math">P(\textrm{Go Second} | \textrm{Arrived First})</span>?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Conditional Probability 3</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Assume <span class="mathquill ud-math">P(\textrm{Go First} | \textrm{Arrived Second}) = 0.9</span>. What is the <span class="mathquill ud-math">P(\textrm{Go Second} | \textrm{Arrived Second})</span>?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Now, let’s calculate the conditional probability of some events. In order to do this we need the following formula:</p>
+<p><span class="mathquill ud-math">P(A|B) = P(A \cap B) / P(B)</span></p>
+<p>What this means in English is given an event B, find all the events shared with A, and divide by the probability of event B happening by itself. The <span class="mathquill ud-math">\cap</span> symbol for intersection represents these events shared between A &amp; B.</p>
+<p>When dealing with these probabilities, the basic rules of algebra apply so we manipulate the equation by multiplying both sides by <span class="mathquill ud-math">\small P(B)</span> to also look like this:</p>
+<p><span class="mathquill ud-math">P(A \cap B) = P(A|B) * P(B)</span></p>
+<p>Other formulations are also valid provided you adhere to the algebraic rules, but these two equations should be sufficient for many of your needs. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Conditional Probability 3</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Assume:</p>
+<p>P(Arrive First) = 0.9</p>
+<p>P(Arrive Second) = 0.1</p>
+<p>P(Go First | Arrive Second) = 0.1</p>
+<p>P(Go Second | Arrive Second) = 0.9</p>
+<p>P(Go First | Arrive First) = 0.8</p>
+<p>P(Go Second | Arrive First) = 0.2</p>
+<p>Using the formula <span class="mathquill ud-math">P(A \cap B) = P(A|B) * P(B)</span></p>
+<p>What is <span class="mathquill ud-math">P(\textrm{You Go First} \cap \textrm{You Arrived First})</span>?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="law-of-total-probability">Law of Total Probability</h2>
+<p>A useful law when dealing with conditional probability is the Law of Total Probability. </p>
+<p>If <span class="mathquill ud-math">B_1, B_2, B_3, …</span> is a partition of a sample space <span class="mathquill ud-math">S</span>, then for any event <span class="mathquill ud-math">A</span>:</p>
+<p><span class="mathquill ud-math">P(A)=\sum_i P(A \cap B_i) = \sum_i P(A | B_i) * P(B_i)</span></p>
+<p>The formal definition is a bit "mathy", but think of it as calculating the sum of all probabilities necessary to ensure all scenarios for specified event are included. This is actually quite similar to the equation from before, but now we calculate it for each <span class="mathquill ud-math">i</span> of <span class="mathquill ud-math">B</span>, and then sum all of these together.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Total Probability</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Recalling the previous values from above:</p>
+<p>P(Arrive First) = 0.6</p>
+<p>P(Arrive Second) = 0.4</p>
+<p>P(Go First | Arrive First) = 0.8</p>
+<p>P(Go Second | Arrive First) = 0.2</p>
+<p>P(Go First | Arrive Second) = 0.1</p>
+<p>P(Go Second | Arrive Second) = 0.9</p>
+<p>What is <span class="mathquill ud-math">P(\textrm{Go First})</span>? (Decimal only)</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>NOTE: The solutions are expressed in RegEx pattern. Udacity uses these patterns to check the given answer</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('24. [Optional] Cars and Conditional Probability')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

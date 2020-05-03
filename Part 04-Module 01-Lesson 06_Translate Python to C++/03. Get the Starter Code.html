@@ -1,0 +1,1061 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Get the Starter Code</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Translate Python to C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Python Code Reminder.html">02. Python Code Reminder</a>
+    </li>
+    <li class="">
+      <a href="03. Get the Starter Code.html">03. Get the Starter Code</a>
+    </li>
+    <li class="">
+      <a href="04. Project Tips.html">04. Project Tips</a>
+    </li>
+    <li class="">
+      <a href="05. Workspace Tips.html">05. Workspace Tips</a>
+    </li>
+    <li class="">
+      <a href="06. Project Workspace Translate Python to C++.html">06. Project Workspace: Translate Python to C++</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Translate Python to C++.html">Project Description - Translate Python to C++</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Translate Python to C++.html">Project Rubric - Translate Python to C++</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Get the Starter Code</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="python-to-c">Python to C++</h1>
+<p><strong>Note:</strong> We have recently added a project workspace to the classroom that you can use for coding this project, which you can find in a few pages from now. The workspace already has the code downloaded in it if you choose to use that option, but you should still read the below instructions.</p>
+<ol>
+<li><p>First, <a href="https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/iSDC/iSDC-P2-Translate-Python-Cpp.zip" rel="noopener noreferrer" target="_blank">click here to download the C++ starter code</a>. [<em>Note:</em> This was recently refactored to include header files, as well as updated to remove an out-of-bounds issue with the <code>test_sense()</code> function].</p></li>
+<li><p>Open the code in your favorite editor. You'll probably want to have the corresponding Python code around to consult as well.</p></li>
+<li><p>Fill out the functions in <code>localizer.cpp</code> and <code>helpers.cpp</code></p></li>
+</ol>
+<p><strong>NOTE</strong> - when compiling your code, make sure you use C++11. You can do this from the command line with the following:</p>
+<pre><code class="bash language-bash">g++ -std=c++11 tests.cpp</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="are-you-having-trouble-getting-the-code">Are you having trouble getting the code?</h3>
+<p>Students in China have not been able to download the project starter code. If you were able to download the starter code you can ignore everything below.</p>
+<p>As a temporary solution, we are including the code as text below. You will need to copy and paste the text into files with the correct names. If you have any problems please let us know in the Student Hub channel and we will help you ASAP. </p>
+<p><strong>Directory Structure</strong></p>
+<p>You should create a new <code>project</code> folder/directory to put the project code into. Inside that you should also create a <code>maps</code> directory.</p>
+<p>Then you should create empty files within those directories to match the following image:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-11-02-at-12.20.51-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="file-text-for-cpp-and-txt-files">File text (for <code>.cpp</code> and <code>.txt</code> files)</h3>
+<h4 id="debugging_helperscpp"><code>debugging_helpers.cpp</code></h4>
+<pre><code class="c++ language-c++">/**
+    debugging_helpers.cpp
+
+    Purpose: helper functions for debugging when working
+    with grids of floats and chars.
+*/
+
+#include &lt;vector&gt;
+using namespace std;
+
+/**
+    Displays a grid of beliefs. Does not return.
+
+    @param grid - a two dimensional grid (vector of 
+           vectors of floats) which will usually 
+           represent a robot's beliefs.
+*/
+void show_grid(vector &lt; vector &lt;float&gt; &gt; grid) {
+    int i, j;
+    float p;
+    vector&lt;float&gt; row;
+    for (i = 0; i &lt; grid.size(); i++)
+    {
+        row = grid[i];
+        for (j=0; j&lt; row.size(); j++)
+        {
+            p = row[j]; 
+            cout &lt;&lt; p &lt;&lt; ' ';
+        }
+        cout &lt;&lt; endl;
+    }
+}
+
+/**
+    Displays a grid map of the world
+*/
+void show_grid(vector &lt; vector &lt;char&gt; &gt; map) {
+    int i, j;
+    char p;
+    vector&lt;char&gt; row;
+    for (i = 0; i &lt; map.size(); i++)
+    {
+        row = map[i];
+        for (j=0; j&lt; row.size(); j++)
+        {
+            p = row[j]; 
+            cout &lt;&lt; p &lt;&lt; ' ';
+        }
+        cout &lt;&lt; endl;
+    }
+}</code></pre>
+<h4 id="helperscpp"><code>helpers.cpp</code></h4>
+<pre><code class="c++ language-c++">/**
+    helpers.cpp
+
+    Purpose: helper functions which are useful when
+    implementing a 2-dimensional histogram filter.
+
+    This file is incomplete! Your job is to make the
+    normalize and blur functions work. Feel free to 
+    look at helper.py for working implementations 
+    which are written in python.
+*/
+
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt; 
+// #include "debugging_helpers.cpp"
+
+using namespace std;
+
+/**
+    TODO - implement this function
+
+    Normalizes a grid of numbers. 
+
+    @param grid - a two dimensional grid (vector of vectors of floats)
+           where each entry represents the unnormalized probability 
+           associated with that grid cell.
+
+    @return - a new normalized two dimensional grid where the sum of 
+           all probabilities is equal to one.
+*/
+vector&lt; vector&lt;float&gt; &gt; normalize(vector&lt; vector &lt;float&gt; &gt; grid) {
+
+    vector&lt; vector&lt;float&gt; &gt; newGrid;
+
+    // todo - your code here
+
+    return newGrid;
+}
+
+/**
+    TODO - implement this function.
+
+    Blurs (and normalizes) a grid of probabilities by spreading 
+    probability from each cell over a 3x3 "window" of cells. This 
+    function assumes a cyclic world where probability "spills 
+    over" from the right edge to the left and bottom to top. 
+
+    EXAMPLE - After blurring (with blurring=0.12) a localized 
+    distribution like this:
+
+    0.00  0.00  0.00 
+    0.00  1.00  0.00
+    0.00  0.00  0.00 
+
+    would look like this:
+
+    0.01  0.02  0.01
+    0.02  0.88  0.02
+    0.01  0.02  0.01
+
+    @param grid - a two dimensional grid (vector of vectors of floats)
+           where each entry represents the unnormalized probability 
+           associated with that grid cell.
+
+    @param blurring - a floating point number between 0.0 and 1.0 
+           which represents how much probability from one cell 
+           "spills over" to it's neighbors. If it's 0.0, then no
+           blurring occurs. 
+
+    @return - a new normalized two dimensional grid where probability 
+           has been blurred.
+*/
+vector &lt; vector &lt;float&gt; &gt; blur(vector &lt; vector &lt; float&gt; &gt; grid, float blurring) {
+
+    vector &lt; vector &lt;float&gt; &gt; newGrid;
+
+    // your code here
+
+    return normalize(newGrid);
+}
+
+/** -----------------------------------------------
+#
+#
+#    You do not need to modify any code below here.
+#
+#
+# ------------------------------------------------- */
+
+
+/**
+    Determines when two grids of floating point numbers 
+    are "close enough" that they should be considered 
+    equal. Useful for battling "floating point errors".
+
+    @param g1 - a grid of floats
+
+    @param g2 - a grid of floats
+
+    @return - A boolean (True or False) indicating whether
+    these grids are (True) or are not (False) equal.
+*/
+bool close_enough(vector &lt; vector &lt;float&gt; &gt; g1, vector &lt; vector &lt;float&gt; &gt; g2) {
+    int i, j;
+    float v1, v2;
+    if (g1.size() != g2.size()) {
+        return false;
+    }
+
+    if (g1[0].size() != g2[0].size()) {
+        return false;
+    }
+    for (i=0; i&lt;g1.size(); i++) {
+        for (j=0; j&lt;g1[0].size(); j++) {
+            v1 = g1[i][j];
+            v2 = g2[i][j];
+            if (abs(v2-v1) &gt; 0.0001 ) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool close_enough(float v1, float v2) { 
+    if (abs(v2-v1) &gt; 0.0001 ) {
+        return false;
+    } 
+    return true;
+}
+
+/**
+    Helper function for reading in map data
+
+    @param s - a string representing one line of map data.
+
+    @return - A row of chars, each of which represents the
+    color of a cell in a grid world.
+*/
+vector &lt;char&gt; read_line(string s) {
+    vector &lt;char&gt; row;
+
+    size_t pos = 0;
+    string token;
+    string delimiter = " ";
+    char cell;
+
+    while ((pos = s.find(delimiter)) != std::string::npos) {
+        token = s.substr(0, pos);
+        s.erase(0, pos + delimiter.length());
+
+        cell = token.at(0);
+        row.push_back(cell);
+    }
+
+    return row;
+}
+
+/**
+    Helper function for reading in map data
+
+    @param file_name - The filename where the map is stored.
+
+    @return - A grid of chars representing a map.
+*/
+vector &lt; vector &lt;char&gt; &gt; read_map(string file_name) {
+    ifstream infile(file_name);
+    vector &lt; vector &lt;char&gt; &gt; map;
+    if (infile.is_open()) {
+
+        char color;
+        vector &lt;char&gt; row;
+
+        string line;
+
+        while (std::getline(infile, line)) {
+            row = read_line(line);
+            map.push_back(row);
+        }
+    }
+    return map;
+}
+
+/**
+    Creates a grid of zeros
+
+    For example:
+
+    zeros(2, 3) would return
+
+    0.0  0.0  0.0
+    0.0  0.0  0.0
+
+    @param height - the height of the desired grid
+
+    @param width - the width of the desired grid.
+
+    @return a grid of zeros (floats)
+*/
+vector &lt; vector &lt;float&gt; &gt; zeros(int height, int width) {
+    int i, j;
+    vector &lt; vector &lt;float&gt; &gt; newGrid;
+    vector &lt;float&gt; newRow;
+
+    for (i=0; i&lt;height; i++) {
+        newRow.clear();
+        for (j=0; j&lt;width; j++) {
+            newRow.push_back(0.0);
+        }
+        newGrid.push_back(newRow);
+    }
+    return newGrid;
+}
+
+// int main() {
+//     vector &lt; vector &lt; char &gt; &gt; map = read_map("maps/m1.txt");
+//     show_grid(map);
+//     return 0;
+// }</code></pre>
+<h4 id="localizercpp"><code>localizer.cpp</code></h4>
+<pre><code class="c++ language-c++">/**
+    localizer.cpp
+
+    Purpose: implements a 2-dimensional histogram filter
+    for a robot living on a colored cyclical grid by 
+    correctly implementing the "initialize_beliefs", 
+    "sense", and "move" functions.
+
+    This file is incomplete! Your job is to make these
+    functions work. Feel free to look at localizer.py 
+    for working implementations which are written in python.
+*/
+
+#include "helpers.cpp"
+#include &lt;stdlib.h&gt;
+#include "debugging_helpers.cpp"
+
+using namespace std;
+
+/**
+    TODO - implement this function 
+
+    Initializes a grid of beliefs to a uniform distribution. 
+
+    @param grid - a two dimensional grid map (vector of vectors 
+           of chars) representing the robot's world. For example:
+
+           g g g
+           g r g
+           g g g
+
+           would be a 3x3 world where every cell is green except 
+           for the center, which is red.
+
+    @return - a normalized two dimensional grid of floats. For 
+           a 2x2 grid, for example, this would be:
+
+           0.25 0.25
+           0.25 0.25
+*/
+vector&lt; vector &lt;float&gt; &gt; initialize_beliefs(vector&lt; vector &lt;char&gt; &gt; grid) {
+    vector&lt; vector &lt;float&gt; &gt; newGrid;
+
+    // your code here
+
+    return newGrid;
+}
+
+/**
+    TODO - implement this function 
+
+    Implements robot sensing by updating beliefs based on the 
+    color of a sensor measurement 
+
+    @param color - the color the robot has sensed at its location
+
+    @param grid - the current map of the world, stored as a grid
+           (vector of vectors of chars) where each char represents a 
+           color. For example:
+
+           g g g
+           g r g
+           g g g
+
+       @param beliefs - a two dimensional grid of floats representing
+              the robot's beliefs for each cell before sensing. For 
+              example, a robot which has almost certainly localized 
+              itself in a 2D world might have the following beliefs:
+
+              0.01 0.98
+              0.00 0.01
+
+    @param p_hit - the RELATIVE probability that any "sense" is 
+           correct. The ratio of p_hit / p_miss indicates how many
+           times MORE likely it is to have a correct "sense" than
+           an incorrect one.
+
+       @param p_miss - the RELATIVE probability that any "sense" is 
+           incorrect. The ratio of p_hit / p_miss indicates how many
+           times MORE likely it is to have a correct "sense" than
+           an incorrect one.
+
+    @return - a normalized two dimensional grid of floats 
+           representing the updated beliefs for the robot. 
+*/
+vector&lt; vector &lt;float&gt; &gt; sense(char color, 
+    vector&lt; vector &lt;char&gt; &gt; grid, 
+    vector&lt; vector &lt;float&gt; &gt; beliefs, 
+    float p_hit,
+    float p_miss) 
+{
+    vector&lt; vector &lt;float&gt; &gt; newGrid;
+
+    // your code here
+
+    return normalize(newGrid);
+}
+
+
+/**
+    TODO - implement this function 
+
+    Implements robot motion by updating beliefs based on the 
+    intended dx and dy of the robot. 
+
+    For example, if a localized robot with the following beliefs
+
+    0.00  0.00  0.00
+    0.00  1.00  0.00
+    0.00  0.00  0.00 
+
+    and dx and dy are both 1 and blurring is 0 (noiseless motion),
+    than after calling this function the returned beliefs would be
+
+    0.00  0.00  0.00
+    0.00  0.00  0.00
+    0.00  0.00  1.00 
+
+    @param dy - the intended change in y position of the robot
+
+    @param dx - the intended change in x position of the robot
+
+       @param beliefs - a two dimensional grid of floats representing
+              the robot's beliefs for each cell before sensing. For 
+              example, a robot which has almost certainly localized 
+              itself in a 2D world might have the following beliefs:
+
+              0.01 0.98
+              0.00 0.01
+
+    @param blurring - A number representing how noisy robot motion
+           is. If blurring = 0.0 then motion is noiseless.
+
+    @return - a normalized two dimensional grid of floats 
+           representing the updated beliefs for the robot. 
+*/
+vector&lt; vector &lt;float&gt; &gt; move(int dy, int dx, 
+    vector &lt; vector &lt;float&gt; &gt; beliefs,
+    float blurring) 
+{
+
+    vector &lt; vector &lt;float&gt; &gt; newGrid;
+
+    // your code here
+
+    return blur(newGrid, blurring);
+}</code></pre>
+<h4 id="simulatecpp"><code>simulate.cpp</code></h4>
+<pre><code class="c++ language-c++">/**
+    simulate.cpp
+
+    Purpose: implements a Simulation class which
+    simulates a robot living in a 2D world. Relies 
+    on localization code from localizer.py 
+
+*/
+
+#include "localizer.cpp"
+#include &lt;algorithm&gt;
+// #include "helpers.cpp"
+
+class Simulation {
+
+private:
+    vector &lt;char&gt; get_colors() {
+        vector &lt;char&gt; all_colors;
+        char color;
+        int i,j;
+        for (i=0; i&lt;height; i++) {
+            for (j=0; j&lt;width; j++) {
+                color = grid[i][j];
+                if(std::find(all_colors.begin(), all_colors.end(), color) != all_colors.end()) {
+                    /* v contains x */
+                } else {
+                    all_colors.push_back(color);
+                    cout &lt;&lt; "adding color " &lt;&lt; color &lt;&lt; endl;
+                    /* v does not contain x */
+                }
+            }
+        }
+        colors = all_colors;
+        num_colors = colors.size();
+        return colors;
+    }
+
+public: 
+    vector &lt; vector &lt;char&gt; &gt; grid;
+    vector &lt; vector &lt;float&gt; &gt; beliefs;
+
+    float blur, p_hit, p_miss, incorrect_sense_prob;
+
+    int height, width, num_colors;
+
+    std::vector&lt;int&gt; true_pose;
+    std::vector&lt;int&gt; prev_pose;
+
+    vector &lt;char&gt; colors;
+    Simulation(vector &lt; vector&lt;char&gt; &gt;, float, float, vector &lt;int&gt;);
+
+};
+
+/**
+Constructor for the Simulation class.
+*/
+Simulation::Simulation(vector &lt; vector &lt;char&gt; &gt; map, 
+    float blurring,
+    float hit_prob, 
+    std::vector&lt;int&gt; start_pos
+    ) 
+{
+    grid = map;
+    blur = blurring;
+    p_hit = hit_prob;
+    p_miss = 1.0;
+    beliefs = initialize_beliefs(map);
+    incorrect_sense_prob = p_miss / (p_hit + p_miss);
+    true_pose = start_pos;
+    prev_pose = true_pose;
+}
+
+/**
+You can test your code by running this function. 
+
+Do that by first compiling this file and then 
+running the output.
+*/
+// int main() {
+
+//     vector &lt; vector &lt;char&gt; &gt; map;
+//     vector &lt;char&gt; mapRow;
+//     int i, j, randInt;
+//     char color;
+//     std::vector&lt;int&gt; pose(2);
+
+//     for (i = 0; i &lt; 4; i++)
+//     {
+//         mapRow.clear();
+//         for (j=0; j&lt; 4; j++)
+//         {
+//             randInt = rand() % 2;
+//             if (randInt == 0 ) {
+//                 color = 'r';
+//             } 
+//             else {
+//                 color = 'g';
+//             }
+//             mapRow.push_back(color);
+//         }
+//         map.push_back(mapRow);
+//     }
+//     cout &lt;&lt; "map is\n";
+//     Simulation simulation (map, 0.1, 0.9, pose);
+//     // simulation = Simulation(map, 0.1, 0.9, pose);
+//     cout &lt;&lt; "initialization success!\n";
+//     show_grid(map);
+
+//     cout &lt;&lt; "x, y = (" &lt;&lt; simulation.true_pose[0] &lt;&lt; ", " &lt;&lt; simulation.true_pose[1] &lt;&lt; ")" &lt;&lt; endl;
+//     return 0;
+// }</code></pre>
+<h4 id="testscpp"><code>tests.cpp</code></h4>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+#include "simulate.cpp"
+
+bool test_normalize() {
+    vector &lt; vector &lt;float&gt; &gt; unnormalized, normalized, result;
+    unnormalized = zeros(2, 2);
+    normalized = zeros(2,2);
+
+    int i,j;
+
+    for (i=0; i&lt;2; i++) {
+        for(j=0; j&lt;2; j++) {
+            unnormalized[i][j] = 1.0;
+            normalized[i][j] = 0.25;
+        }
+    }
+
+    result = normalize(unnormalized);
+
+    bool correct;
+    correct = close_enough(normalized, result);
+
+    if (correct) {
+        cout &lt;&lt; "! - normalize function worked correctly!\n";
+    }
+    else {
+        cout &lt;&lt; "X - normalize function did not work correctly.\n";
+        cout &lt;&lt; "For the following input:\n\n";
+        show_grid(unnormalized);
+        cout &lt;&lt; "\nYour code returned the following:\n\n";
+        show_grid(result);
+        cout &lt;&lt; "\nWhen it should have returned the following:\n";
+        show_grid(normalized);
+    }
+    return correct;
+}
+
+bool test_blur() {
+    vector &lt; vector &lt;float&gt; &gt; in, correct, out;
+    in = zeros(3, 3);
+    correct = zeros(3,3);
+
+    in[1][1] = 1.0;
+
+    float corner = 0.01;
+    float side = 0.02;
+    float center = 0.88;
+
+    correct[0][0] = corner;
+    correct[0][1] = side;
+    correct[0][2] = corner;
+
+    correct[1][0] = side;
+    correct[1][1] = center;
+    correct[1][2] = side;
+
+    correct[2][0] = corner;
+    correct[2][1] = side;
+    correct[2][2] = corner;
+
+    out = blur(in, 0.12);
+
+    bool right;
+    right = close_enough(correct, out);
+
+    if (right) {
+        cout &lt;&lt; "! - blur function worked correctly!\n";
+    }
+    else {
+        cout &lt;&lt; "X - blur function did not work correctly.\n";
+        cout &lt;&lt; "For the following input:\n\n";
+        show_grid(in);
+        cout &lt;&lt; "\nYour code returned the following:\n\n";
+        show_grid(out);
+        cout &lt;&lt; "\nWhen it should have returned the following:\n";
+        show_grid(correct);
+    }
+
+    return right;
+}
+
+bool test_helpers() {
+    bool correct = true;
+    bool question_correct;
+
+    question_correct = test_normalize();
+    if (!question_correct) {
+        correct = false;
+    }
+
+    cout &lt;&lt; endl;
+
+    question_correct = test_blur();
+    if (!question_correct) {
+        correct = false;
+    }
+    return correct;
+
+}
+
+
+bool test_initialize() {
+    vector &lt; vector &lt;char&gt; &gt; map;
+    map = read_map("maps/m1.txt");
+    int h = map.size();
+
+    if (h &lt; 1) {
+        cout &lt;&lt; "failed to load map. Make sure there is a maps/ directory in the same directory as this file!\n";
+        return false;
+    }
+
+    vector &lt; vector &lt;float&gt; &gt; beliefs, correct;
+    beliefs = initialize_beliefs(map);
+
+    int w, A; 
+    float belief;
+
+    w = map[0].size();
+    A = h * w;
+    belief = 1.0 / A;
+
+    int i, j;
+    vector &lt;float&gt; row;
+    for (i=0; i&lt;map.size(); i++) {
+        row.clear();
+        for (j=0; j&lt;map[0].size(); j++) {
+            row.push_back(belief);
+        }
+        correct.push_back(row);
+    }
+
+    bool right = close_enough(correct, beliefs);
+
+    if (right) {
+        cout &lt;&lt; "! - initialize_beliefs function worked correctly!\n";
+    }
+    else {
+        cout &lt;&lt; "X - initialize_beliefs function did not work correctly.\n";
+        cout &lt;&lt; "For the following input:\n\n";
+        show_grid(map);
+        cout &lt;&lt; "\nYour code returned the following:\n\n";
+        show_grid(beliefs);
+        cout &lt;&lt; "\nWhen it should have returned the following:\n";
+        show_grid(correct);
+    }
+
+    return right;
+
+}
+
+bool test_move() {
+    vector &lt; vector &lt;float&gt; &gt; in, out, correct;
+    in = zeros(3,3);
+    in[2][2] = 1.0;
+
+    int dx, dy;
+    dx = 1;
+    dy = 1;
+    float blurring = 0.0;
+
+    correct = zeros(3,3);
+    correct[0][0] = 1.0;
+
+    out = move(dy, dx, in, blurring);
+
+    bool right = close_enough(correct, out);
+
+    if (right) {
+        cout &lt;&lt; "! - move function worked correctly with zero blurring\n";
+    }
+    else {
+        cout &lt;&lt; "X - move function did not work correctly.\n";
+        cout &lt;&lt; "When dx=1, dy=1, blurring=0.0 and with\nthe following beliefs:\n\n";
+        show_grid(in);
+        cout &lt;&lt; "\nYour code returned the following:\n\n";
+        show_grid(out);
+        cout &lt;&lt; "\nWhen it should have returned the following:\n";
+        show_grid(correct);
+    }
+    return right;
+}
+
+bool test_sense() {
+    vector &lt; vector &lt;float&gt; &gt; in, out, correct;
+    in = zeros(4,2);
+        in[2][1] = 1.0;
+
+    int i,j;
+    for (i=0; i&lt;in.size(); i++)
+    {
+        for (j=0; j&lt;in[0].size(); j++) {
+            in[i][j] = 1.0/8.0;
+        }
+    }
+
+    char color = 'r';
+    vector &lt; vector &lt;char&gt; &gt; map;
+    map = read_map("maps/half_red.txt");
+    float p_hit, p_miss;
+    p_hit = 2.0;
+    p_miss = 1.0;
+
+    out = sense(color, map, in, p_hit, p_miss);
+    float total = 0.0;
+
+    for (i=0; i&lt;out.size(); i++)
+    {
+        for (j=0; j&lt;out[0].size(); j++) {
+            total += out[i][j];
+        }
+    }
+
+    bool right = true;
+    if ( (total &lt; 0.99) || (total &gt; 1.01) ) {
+        right = false;
+    }
+
+    if ( (out.size() != in.size()) || out[0].size() != in[0].size()) {
+        right = false;
+        cout &lt;&lt; "X - sense function not working correctly.\n";
+        cout &lt;&lt; "Your function returned a grid with incorrect dimensions.\n";
+        return right;
+    }
+
+    float r_prob, g_prob, r_exp, g_exp;
+    r_prob = out[0][0];
+    g_prob = out[0][1];
+
+    r_exp = 1.0 / 6.0;
+    g_exp = 1.0 / 12.0;
+
+    if (close_enough(r_prob, r_exp) &amp;&amp; close_enough(g_prob, g_exp)) {
+        cout &lt;&lt; "! - sense function worked correctly\n";
+        return false;
+    }
+    else {
+        cout &lt;&lt; "X - sense function did not work correctly.\n";
+        cout &lt;&lt; "When p_hit=2.0, p_miss=1.0 and with\nthe following beliefs:\n\n";
+        show_grid(in);
+        cout &lt;&lt; "\nYour code returned the following:\n\n";
+        show_grid(out);
+        cout &lt;&lt; "\nbut this is incorrect.\n";
+    }
+    return right;
+}
+
+bool test_localizer() {
+    bool correct = true;
+    bool question_correct;
+
+    question_correct = test_initialize();
+    if (!question_correct) {
+        correct = false;
+    }
+    if (!correct) {
+        // map could not be loaded
+        return false;
+    }
+
+    cout &lt;&lt; endl;
+
+    question_correct = test_move();
+    if (!question_correct) {
+        correct = false;
+    }
+
+    cout &lt;&lt; endl;
+
+    question_correct = test_sense();
+    if (!question_correct) {
+        correct = false;
+    }
+    return correct;
+}
+
+// bool test_simulation() {
+//     // todo 
+// }
+
+int main() {
+    cout &lt;&lt; endl;
+    test_helpers();
+    test_localizer();
+    cout &lt;&lt; endl;
+    return 0;
+}</code></pre>
+<h4 id="mapshalf_redtxt"><code>maps/half_red.txt</code></h4>
+<pre><code>r g 
+g r 
+r r 
+g g </code></pre>
+<h4 id="mapsm1txt"><code>maps/m1.txt</code></h4>
+<pre><code>r r r 
+r g r 
+r r r </code></pre>
+<h4 id="mapsm2txt"><code>maps/m2.txt</code></h4>
+<pre><code>r g 
+r r 
+g g </code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Project Tips.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Get the Starter Code')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

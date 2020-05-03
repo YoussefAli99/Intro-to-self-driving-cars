@@ -1,0 +1,462 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Set and Get Functions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">16. Set and Get Functions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="set-and-get-function-declarations">Set and Get Function Declarations</h1>
+<p>Set and Get functions allow your objects to gain access to private variables since objects cannot access private variables directly. You can see how this is done in the Gaussian object from earlier in the lesson. </p>
+<p>Here were the declarations for the set and get functions:</p>
+<pre><code class="c++ language-c++">class Gaussian
+{
+    private:
+        ...
+
+    public:
+        ...
+
+        void setMu(float);
+        void setSigma2(float);
+
+        float getMu();
+        float getSigma2();
+
+     ....
+};</code></pre>
+<p>And here were the function definitions:</p>
+<pre><code class="c++ language-c++">void Gaussian::setMu (float average) {
+    mu = average;
+}
+
+void Gaussian::setSigma2 (float sigma) {
+    sigma2 = sigma;
+}
+
+
+float Gaussian::getMu () {
+    return mu;
+}
+
+float Gaussian::getSigma2() {
+    return sigma2;
+}</code></pre>
+<p>The syntax for defining set or get functions is the same as any other class function (besides constructors):</p>
+<pre><code class="c++ language-c++">return datatype Classname::functionname() {
+        code to define the function;
+}</code></pre>
+<p>In fact, get and set functions are a convention rather than a special function with a special syntax. It's traditional to name these functions getVariablename() and setVariablename() although there is no requirement to do so.</p>
+<p>You would declare set and get functions as public so that objects could have access to these functions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="matrix-class-set-and-get-functions">Matrix Class Set and Get Functions</h1>
+<p>Continue developing your Matrix class code. </p>
+<ul>
+<li>Use a set function to be able to modify the grid variable. </li>
+<li>All three private variables (grid, rows, cols) should have get functions.</li>
+</ul>
+<p>Make sure to fill out the TODOs in both matrix.cpp and matrix.h</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#412396-main-cpp" class="nav-item nav-link  active show" id="tab-412396-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="412396-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#412396-matrix-cpp" class="nav-item nav-link " id="tab-412396-matrix-cpp" data-toggle="tab" role="tab"
+      aria-controls="412396-matrix-cpp" aria-selected="false">matrix.cpp</a>
+    <a href="#412396-matrix-h" class="nav-item nav-link " id="tab-412396-matrix-h" data-toggle="tab" role="tab"
+      aria-controls="412396-matrix-h" aria-selected="false">matrix.h</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="412396-main-cpp" aria-labelledby="tab-412396-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &quot;matrix.h&quot;
+
+int main () {
+    
+    // TODO: Nothing to do here
+    
+    return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="412396-matrix-cpp" aria-labelledby="tab-412396-matrix-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;matrix.h&quot;
+
+Matrix::Matrix() {
+    std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid (10, std::vector &lt;float&gt;(5, 0.5));
+    grid &#x3D; initial_grid;
+    rows &#x3D; initial_grid.size();
+    cols &#x3D; initial_grid[0].size();
+
+}
+
+Matrix::Matrix(std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid) {
+    grid &#x3D; initial_grid;
+    rows &#x3D; initial_grid.size();
+    cols &#x3D; initial_grid[0].size();
+}
+
+/*
+** TODO: Define a function setGrid()
+**   INPUTS: a 2-D vector
+**   OUPUTS: void
+**
+**   This function receives a 2-D vector reprenting a matrix, and then
+**    updates the grid, rows, and cols variables
+**
+*/
+
+/*
+** TODO: Define getGrid(), getRows(), and getCols() functions.
+**    INPUTS: None of these functions have inputs
+**    OUPUTS: Each function should return its respective variable
+**            For example, getRows returns the rows variable
+*/</code></pre>
+    </div>
+    <div class="tab-pane " id="412396-matrix-h" aria-labelledby="tab-412396-matrix-h" role="tabpanel">
+      <pre><code></code>#include &lt;vector&gt;
+
+class Matrix 
+{
+
+        private:
+
+            std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+            std::vector&lt;float&gt;::size_type rows;
+            std::vector&lt;float&gt;::size_type cols;
+
+        public:
+
+            // constructor function declarations
+            Matrix ();
+            Matrix (std::vector&lt; std::vector&lt;float&gt; &gt;);
+            
+            
+            
+            /* TODO: Declare the setGrid(), getGrid(), getRows(), 
+            **       and getCols() functions. 
+            **
+            **  Here are the inputs and outputs of each function:
+            **  setGrid()
+            **  INPUTS: 2D vector
+            **  OUPUTS: void
+            **
+            **  getGrid()
+            **  INPUTS: void
+            **  OUPUTS: 2D vector
+            **
+            **  getRows()
+            **  INPUTS: void
+            **  OUTPUTS: std::vector&lt;float&gt;::size_type
+            **
+            **  getCols()
+            **  INPUTS: void
+            **  OUPUTS: std::vector&lt;float&gt;::size_type
+            */
+};
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-matrixh">Solution matrix.h</h1>
+<pre><code class="c++ language-c++">#include &lt;vector&gt;
+
+class Matrix
+{
+    private:
+
+        std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+        std::vector&lt;float&gt;::size_type rows;
+        std::vector&lt;float&gt;::size_type cols;
+
+    public:
+
+        // constructor functions
+        Matrix ();
+        Matrix (std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // set functions
+        void setGrid(std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // get functions
+        std::vector&lt; std::vector&lt;float&gt; &gt; getGrid();
+        std::vector&lt;float&gt;::size_type getRows();
+        std::vector&lt;float&gt;::size_type getCols();
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-matrixcpp">Solution matrix.cpp</h1>
+<pre><code class="c++ language-c++">#include "matrix.h"
+
+Matrix::Matrix() {
+    std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid (10, std::vector &lt;float&gt;(5, 0.5));
+    grid = initial_grid;
+    rows = initial_grid.size();
+    cols = initial_grid[0].size();
+
+}
+
+Matrix::Matrix(std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid) {
+    grid = initial_grid;
+    rows = initial_grid.size();
+    cols = initial_grid[0].size();
+}
+
+
+void Matrix::setGrid(std::vector&lt; std::vector&lt;float&gt; &gt; new_grid) {
+    grid = new_grid;
+    rows = new_grid.size();
+    cols = new_grid[0].size();
+}
+
+std::vector&lt; std::vector&lt;float&gt; &gt; Matrix::getGrid() {
+    return grid;
+}
+
+std::vector&lt;float&gt;::size_type Matrix::getRows() {
+    return rows;
+}
+
+std::vector&lt;float&gt;::size_type Matrix::getCols() {
+    return cols;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="17. Matrix Functions.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. Set and Get Functions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

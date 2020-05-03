@@ -1,0 +1,336 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Continuous Probability Distributions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Probability Distributions</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Probability Distributions.html">01. Probability Distributions</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Probability Distributions Part One.html">02. Intro to Probability Distributions Part One</a>
+    </li>
+    <li class="">
+      <a href="03. Intro to Probability Distributions Part Two.html">03. Intro to Probability Distributions Part Two</a>
+    </li>
+    <li class="">
+      <a href="04. Learning Objectives - Bayes&#x27; Rule.html">04. Learning Objectives - Bayes&#x27; Rule</a>
+    </li>
+    <li class="">
+      <a href="05. Discrete vs. Continuous Variables.html">05. Discrete vs. Continuous Variables</a>
+    </li>
+    <li class="">
+      <a href="06. Discrete Probability Distributions.html">06. Discrete Probability Distributions</a>
+    </li>
+    <li class="">
+      <a href="07. Discrete Probability [Exercise].html">07. Discrete Probability [Exercise]</a>
+    </li>
+    <li class="">
+      <a href="08. Discrete Probability [Exercise] Solution.html">08. Discrete Probability [Exercise] Solution</a>
+    </li>
+    <li class="">
+      <a href="09. Continuous Variables.html">09. Continuous Variables</a>
+    </li>
+    <li class="">
+      <a href="10. Landing Probability.html">10. Landing Probability</a>
+    </li>
+    <li class="">
+      <a href="11. Spinning Probability.html">11. Spinning Probability</a>
+    </li>
+    <li class="">
+      <a href="12. Stops Nowhere.html">12. Stops Nowhere</a>
+    </li>
+    <li class="">
+      <a href="13. Range Probability.html">13. Range Probability</a>
+    </li>
+    <li class="">
+      <a href="14. Range Probability 2.html">14. Range Probability 2</a>
+    </li>
+    <li class="">
+      <a href="15. Range Probability 3.html">15. Range Probability 3</a>
+    </li>
+    <li class="">
+      <a href="16. Continuous Probability Distributions.html">16. Continuous Probability Distributions</a>
+    </li>
+    <li class="">
+      <a href="17. Density.html">17. Density</a>
+    </li>
+    <li class="">
+      <a href="18. Birth Time Density.html">18. Birth Time Density</a>
+    </li>
+    <li class="">
+      <a href="19. Changing Density.html">19. Changing Density</a>
+    </li>
+    <li class="">
+      <a href="20. Changing Density 2.html">20. Changing Density 2</a>
+    </li>
+    <li class="">
+      <a href="21. Check Density.html">21. Check Density</a>
+    </li>
+    <li class="">
+      <a href="22. Calculate Density.html">22. Calculate Density</a>
+    </li>
+    <li class="">
+      <a href="23. Density Properties.html">23. Density Properties</a>
+    </li>
+    <li class="">
+      <a href="24. Summary.html">24. Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">16. Continuous Probability Distributions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="continuous-probability-distributions">Continuous Probability Distributions</h1>
+<p>In the next part of the lesson, Sebastian shows you how to visualize and make calculations with a continuous probability distribution. Before you move on, let's compare a discrete and continuous distribution again.</p>
+<p>At the very beginning of the lesson, we showed you a discrete probability distribution next to a continuous probability distribution. Here they are again:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/probability-distributions.jpg" alt="Discrete vs Continuous Probability Distribution" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Discrete vs Continuous Probability Distribution</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The discrete distribution is broken up into slices. Each slice represents an outcome like zero heads, one heads, two heads, or three heads.</p>
+<p>The continuous distribution has an un-broken line across the entire x-axis range. You could have a velocity of 20 or 20.5 or -10.451.</p>
+<p>Notice the y-axis label on the continuous distribution: "probability density function". For the discrete probability distribution, the y-axis represented the probability of an event occurring. In the continuous case, the probability density function does not represent probability directly; instead, the area underneath the density function curve represents probability.</p>
+<p>You'll learn more about this in the next part of the lesson.</p>
+<p>But without knowing what "probability density function" even means, you can tell that it's more likely that the velocity is around 20 and less likely that the velocity is around 0 or 40.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="characteristics-of-a-continuous-distribution">Characteristics of a Continuous Distribution</h1>
+<p>Here are a few characteristics of a continuous distribution and the probability density function. Keep these in mind as you go through the next part of the lesson.</p>
+<ul>
+<li>The y values must be greater than or equal to 0.</li>
+<li>The probability of a specific x value occurring is equal to 0</li>
+<li>The probability of an event occurring between two values of x is equal to the area under the curve between those two x values.</li>
+<li>The total area under the probability density function curve is equal to 1.</li>
+</ul>
+<p>In practice, these rules mean that the probability that velocity equals exactly 20 is zero. For a continuous distribution, you can only calculate a probability between a range of values like 19.99 and 20.01.</p>
+<p>Because the total area under the curve is 1, there is a 100% chance that the velocity has some value between negative infinity and positive infinity.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="uniform-continuous-distribution">Uniform Continuous Distribution</h1>
+<p>There are many different types of continuous distributions: <a href="https://en.wikipedia.org/wiki/List_of_probability_distributions#Continuous_distributions" rel="noopener noreferrer" target="_blank">link to list of continuous probability distributions</a>.</p>
+<p>But they all have the same characteristics described above. To calculate probabilities with a continuous distribution, you have to calculate the area underneath a curve. Calculating the area under a curve like in the above visualization requires calculus or a software program. </p>
+<p>So Sebastian has chosen to use a specific continuous distribution called the <strong>uniform continuous distribution</strong>. The uniform continuous distribution forms a rectangle. So you can calculate the area underneath the curve simply by multiplying the base by the height.</p>
+<p>Below is an example of a uniform continuous probability distribution. Sebastian will explain more about where this distribution comes from and how to use it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/uniform-continuous.png" alt="Uniform Continuous Distribution" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Uniform Continuous Distribution</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Discrete vs Continuous</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following are characteristics of both a discrete probability distribution and a continuous probability distribution?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1513131744462" name="477899" id="a1513131744462">
+      <label for="a1513131744462"><p>The y-axis values must be greater than or equal to 0.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513131759025" name="477899" id="a1513131759025">
+      <label for="a1513131759025"><p>The total probability is equal to 1.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513131759553" name="477899" id="a1513131759553">
+      <label for="a1513131759553"><p>The area under the curve is equal to 1.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1513131759985" name="477899" id="a1513131759985">
+      <label for="a1513131759985"><p>The y-axis represents probability</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The y-axis values must be greater than or equal to 0.</li>
+      <li>The total probability is equal to 1.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="17. Density.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. Continuous Probability Distributions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

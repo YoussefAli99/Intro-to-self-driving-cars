@@ -1,0 +1,410 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pattern Matching [exercise]</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Programming Bayes&#x27; Rule and World Representations</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Bayes&#x27; Rule Steps.html">01. Bayes&#x27; Rule Steps</a>
+    </li>
+    <li class="">
+      <a href="02. Programming Probabilities [exercise].html">02. Programming Probabilities [exercise]</a>
+    </li>
+    <li class="">
+      <a href="03. Total Probability [exercise].html">03. Total Probability [exercise]</a>
+    </li>
+    <li class="">
+      <a href="04. Testing the Total.html">04. Testing the Total</a>
+    </li>
+    <li class="">
+      <a href="05. Programming Bayes&#x27; Rule [exercise].html">05. Programming Bayes&#x27; Rule [exercise]</a>
+    </li>
+    <li class="">
+      <a href="06. Testing Bayes&#x27; Rule.html">06. Testing Bayes&#x27; Rule</a>
+    </li>
+    <li class="">
+      <a href="07. Arrays [demonstration].html">07. Arrays [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="08. Array Iteration and Stopping [exercise].html">08. Array Iteration and Stopping [exercise]</a>
+    </li>
+    <li class="">
+      <a href="09. 2D Arrays and the Robot World [demonstration].html">09. 2D Arrays and the Robot World [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="10. 2D Iteration [demonstration].html">10. 2D Iteration [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="11. Pattern Matching [exercise].html">11. Pattern Matching [exercise]</a>
+    </li>
+    <li class="">
+      <a href="12. Why use Numpy Arrays [demonstration].html">12. Why use Numpy Arrays [demonstration]</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Pattern Matching [exercise]</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="pattern-matching">Pattern Matching</h3>
+<p>Now that you know how to iterate through a 2D array, your next task will be to use what you've learned to help locate a robot in a 2D world based on some sensor measurements. </p>
+<p>In this example, a robot is navigating a 4x5 orange and blue world, shown below. This robot also has a sensor that tells it the color of the square it's on top of <em>and</em> the color of the square directly to its right. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-02-at-4.01.24-pm.png" alt="2D orange and blue world grid" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>2D orange and blue world grid</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-02-at-4.14.11-pm.png" alt="Robot sensing two color squares (one it&#x27;s on top of, and one to its right)" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Robot sensing two color squares (one it's on top of, and one to its right)</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In Python code, the world and the sensor measurement can be represented by the following code (where 'o' stands for orange and 'b' for blue):</p>
+<pre><code class="python language-python">import numpy as np
+
+world = np.array ([ ['o', 'b', 'o', 'o', 'b'],
+                    ['o', 'o', 'b', 'o', 'o'],
+                    ['b', 'o', 'o', 'b', 'o'],
+                    ['b', 'o', 'o', 'o', 'o'] ])
+
+measurement = ['b', 'o']</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>It's now easy for <em>us</em> to see that there are only a few places in the world that this robot can be, based on where the measurement lines up with color patterns on the world grid! In this exercise, it'll be up to you to find these locations programmatically.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>Hint</strong>: You'll be adding values to a list. To add indices, please use the append function and the format <code>list_name.append([row,column])</code>. Further instructions can be found in the TODOs below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#354469-pattern_matching-py" class="nav-item nav-link  active show" id="tab-354469-pattern_matching-py" data-toggle="tab" role="tab"
+      aria-controls="354469-pattern_matching-py" aria-selected="true">pattern_matching.py</a>
+    <a href="#354469-solution-py" class="nav-item nav-link " id="tab-354469-solution-py" data-toggle="tab" role="tab"
+      aria-controls="354469-solution-py" aria-selected="false">solution.py</a>
+    <a href="#354469-solution_2-py" class="nav-item nav-link " id="tab-354469-solution_2-py" data-toggle="tab" role="tab"
+      aria-controls="354469-solution_2-py" aria-selected="false">solution_2.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="354469-pattern_matching-py" aria-labelledby="tab-354469-pattern_matching-py" role="tabpanel">
+      <pre><code></code>import numpy as np
+
+# A 4x5 robot world of characters &#x27;o&#x27; and &#x27;b&#x27;
+world &#x3D; np.array([ [&#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;],
+                   [&#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;],
+                   [&#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;],
+                   [&#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;o&#x27;] ])
+
+# Sensor measurement
+measurement &#x3D; [&#x27;b&#x27;, &#x27;o&#x27;]
+
+# This function takes in the world and the sensor measurement.
+# Complete this function so that it returns the indices of the 
+# likely robot locations, based on matching the measurement 
+# with the color patterns in the world
+
+def find_match(world, measurement):
+    # Empty possible_locations list
+    possible_locations &#x3D; []
+    
+    ## TODO: Iterate through the world 
+    ## Look at two adjacent indices at a time - the square the robot is 
+    ## on top of and the square to its right
+    ## (Making sure not to go past the bounds of the world)
+    
+    ## TODO: If two adjacent colors in the world match 
+    ## the two colors in the sensor measurement
+    ## Add those indices to the possible_locations list
+    ## Append them in the format [row_index, column_index], i.e. [0, 0]
+    
+    return possible_locations
+   
+
+# This line runs the function and stores the output - do not delete 
+locations &#x3D; find_match(world, measurement)
+</code></pre>
+    </div>
+    <div class="tab-pane " id="354469-solution-py" aria-labelledby="tab-354469-solution-py" role="tabpanel">
+      <pre><code></code>import numpy as np
+
+# A 4x5 robot world of characters &#x27;o&#x27; and &#x27;b&#x27;
+world &#x3D; np.array([ [&#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;],
+                   [&#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;],
+                   [&#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;],
+                   [&#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;o&#x27;] ])
+
+# Sensor measurement
+measurement &#x3D; [&#x27;b&#x27;, &#x27;o&#x27;]
+
+# This function takes in the world and the sensor measurement.
+# Complete this function so that it returns the indices of the 
+# likely robot locations, based on matching the measurement 
+# with the color patterns in the world
+
+def find_match(world, measurement):
+    
+    # Empty possible_locations list
+    possible_locations &#x3D; []
+    
+    # Store the number of columns and rows in the 2D array
+    col &#x3D; world.shape[1]
+    row &#x3D; world.shape[0]
+    
+    # Iterate through the entire array
+    for i in range(0, row):
+        for j in range (0, col):
+            # Check that we are within the bounds of the world,
+            # since we have to check two values, this means we&#x27;re at
+            # a row index &lt; the number of columns (5) - 1
+            # In other words j &lt; 4
+            if j &lt; col - 1:
+                # Check if a match is found by comparing array contents
+                # and checking for equality at world[i][j] and 
+                # one row to the right at world[i][j+1]
+                
+                # Values under and in front of the robot 
+                under &#x3D; world[i][j]
+                in_front &#x3D; world[i][j+1]
+                
+                if((measurement[0] &#x3D;&#x3D; under) and (measurement[1] &#x3D;&#x3D; in_front)):
+                    # A match is found!
+                    # Append the index that the robot is on
+                    possible_locations.append([i,j])
+    
+    # Return the completed list
+    return possible_locations
+   
+
+# This line runs the function and stores the output - do not delete 
+locations &#x3D; find_match(world, measurement)
+</code></pre>
+    </div>
+    <div class="tab-pane " id="354469-solution_2-py" aria-labelledby="tab-354469-solution_2-py" role="tabpanel">
+      <pre><code></code>import numpy as np
+
+# A 4x5 robot world of characters &#x27;o&#x27; and &#x27;b&#x27;
+world &#x3D; np.array([ [&#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;],
+                   [&#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;],
+                   [&#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;b&#x27;, &#x27;o&#x27;],
+                   [&#x27;b&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;o&#x27;, &#x27;o&#x27;] ])
+
+# Sensor measurement
+measurement &#x3D; [&#x27;b&#x27;, &#x27;o&#x27;]
+
+def find_match(world, measurement):
+    
+    # Empty possible_locations list
+    possible_locations &#x3D; []
+    for y in range(world.shape[0]):
+        for x in range(world.shape[1]):
+            # if we are at the edge then we can&#x27;t
+            # look ahead. Use the &quot;continue&quot; statement
+            # to proceed to the next step in the loop.
+            if x &#x3D;&#x3D; (world.shape[1]-1):
+                continue
+            
+            m_under &#x3D; world[y,x]   # get measurement UNDER robot
+            m_front &#x3D; world[y,x+1] # measurement in front of robot
+            if [m_under, m_front] &#x3D;&#x3D; measurement:
+                possible_locations.append([y,x])
+    
+    return possible_locations
+   
+
+# This line runs the function and stores the output - do not delete 
+locations &#x3D; find_match(world, measurement)
+
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Why use Numpy Arrays [demonstration].html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Pattern Matching [exercise]')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

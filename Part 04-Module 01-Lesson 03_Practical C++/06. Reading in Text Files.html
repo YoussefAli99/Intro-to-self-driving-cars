@@ -1,0 +1,405 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reading in Text Files</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practical C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Compilation.html">01. Introduction to Compilation</a>
+    </li>
+    <li class="">
+      <a href="02. Running Code Locally.html">02. Running Code Locally</a>
+    </li>
+    <li class="">
+      <a href="03. C++ Versions.html">03. C++ Versions</a>
+    </li>
+    <li class="">
+      <a href="04. Structuring Functions and File Organization.html">04. Structuring Functions and File Organization</a>
+    </li>
+    <li class="">
+      <a href="05. Input and Output.html">05. Input and Output</a>
+    </li>
+    <li class="">
+      <a href="06. Reading in Text Files.html">06. Reading in Text Files</a>
+    </li>
+    <li class="">
+      <a href="07. Outputting to Text Files.html">07. Outputting to Text Files</a>
+    </li>
+    <li class="">
+      <a href="08. Exercises.html">08. Exercises</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Reading in Text Files</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="reading-in-text-files">Reading in Text Files</h1>
+<p>The Standard Library includes functionality for reading text files line by line. You can then parse each line of the text file one line at a time.</p>
+<p>Say, for example, you have a text file with numbers and commas representing a 3 by 4 matrix:</p>
+<pre><code>1, 6, 2, 10.5
+11, 15.2, 2, 21
+3, 9, 1, 7.5</code></pre>
+<p>You want to read in this file and create a 2D vector to represent the matrix. Here is code to do this, and then below you can run the code to see that it works.</p>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+    // initialize string variables for reading in text file lines 
+    string line;
+    stringstream ss;
+
+    // initialize variables to hold the matrix
+    vector &lt; vector &lt;float&gt; &gt; matrix;
+    vector&lt;float&gt; row;
+
+    // counter for characters in a text file line
+    float i;
+
+    // read in the file
+    ifstream matrixfile ("matrix.txt");
+
+    // read in the matrix file line by line
+    // parse the file
+
+    if (matrixfile.is_open()) {
+        while (getline (matrixfile, line)) {
+
+            // parse the text line with a stringstream
+            // clear the string stream to hold the next line
+            ss.clear();
+            ss.str("");
+            ss.str(line);
+            row.clear();
+
+            // parse each line and push to the end of the row vector
+            // the ss variable holds a line of text
+            // ss &gt;&gt; i puts the next character into the i variable. 
+            // the &gt;&gt; syntax is like cin &gt;&gt; some_value or cout &lt;&lt; some_value
+            // ss &gt;&gt; i is false when the end of the line is reached
+
+            while(ss &gt;&gt; i) {
+                row.push_back(i);
+
+                if (ss.peek() == ',' || ss.peek() == ' ') {
+                    ss.ignore();
+                }
+            }
+
+            // push the row to the end of the matrix
+            matrix.push_back(row);
+        }
+
+        matrixfile.close();
+
+        // print out the matrix
+        for (int row = 0; row &lt; matrix.size(); row++) {
+            for (int column = 0; column &lt; matrix[row].size(); column++) {
+                cout &lt;&lt; matrix[row][column] &lt;&lt; " " ;
+            }
+            cout &lt;&lt; endl; 
+        }
+    }
+
+    else cout &lt;&lt; "Unable to open file";
+
+    return 0;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Here is a demonstration of how to read in data from a text file. The code reads in a tile file that contains data for a matrix. Then the code outputs the matrix to the terminal display. Read through the code to try to figure out what it does. Then run the code by pressing the "Test Run" button. </p>
+<p>Below the demo, there is an explanation of what the code is doing.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468499-main-cpp" class="nav-item nav-link  active show" id="tab-468499-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="468499-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#468499-matrix-txt" class="nav-item nav-link " id="tab-468499-matrix-txt" data-toggle="tab" role="tab"
+      aria-controls="468499-matrix-txt" aria-selected="false">matrix.txt</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468499-main-cpp" aria-labelledby="tab-468499-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+    // initialize string variables for reading in text file lines 
+    string line;
+    stringstream ss;
+
+    // initialize variables to hold the matrix
+    vector &lt; vector &lt;float&gt; &gt; matrix;
+    vector&lt;float&gt; row;
+
+    // counter for characters in a text file line
+    float i;
+
+    // read in the file
+    ifstream matrixfile (&quot;matrix.txt&quot;);
+
+    // read in the matrix file line by line
+    // parse the file
+
+    if (matrixfile.is_open()) {
+        while (getline (matrixfile, line)) {
+
+            // parse the text line with a stringstream
+            // clear the string stream to hold the next line
+            ss.clear();
+            ss.str(&quot;&quot;);
+            ss.str(line);
+            row.clear();
+
+            // parse each line and push to the end of the row vector
+            while(ss &gt;&gt; i) {
+                row.push_back(i);
+
+                if (ss.peek() &#x3D;&#x3D; &#x27;,&#x27; || ss.peek() &#x3D;&#x3D; &#x27; &#x27;) {
+                    ss.ignore();
+                }
+            }
+
+            // push the row to the end of the matrix
+            matrix.push_back(row);
+        }
+
+        matrixfile.close();
+
+        // print out the matrix
+        for (int row &#x3D; 0; row &lt; matrix.size(); row++) {
+            for (int column &#x3D; 0; column &lt; matrix[row].size(); column++) {
+                cout &lt;&lt; matrix[row][column] &lt;&lt; &quot; &quot; ;
+            }
+            cout &lt;&lt; endl; 
+        }
+    }
+
+    else cout &lt;&lt; &quot;Unable to open file&quot;;
+
+    return 0;
+}
+</code></pre>
+    </div>
+    <div class="tab-pane " id="468499-matrix-txt" aria-labelledby="tab-468499-matrix-txt" role="tabpanel">
+      <pre><code></code>1, 6, 2, 10.5
+11, 15.2, 2, 21
+3, 9, 1, 7.5</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There are two parts of the code that you haven't seen yet: fstream and sstream. Both of these files are part of the C++ Standard Library.</p>
+<p>fstream provides functions and classes for reading in and outputting files. </p>
+<p>This line of code reads in the file "matrix.txt" and then creates an object called "matrixfile" that you can use for reading in the text file:</p>
+<pre><code>    ifstream matrixfile ("matrix.txt");</code></pre>
+<p>The if statement that follows checks that the file opened correctly:</p>
+<pre><code>    if (matrixfile.is_open()) {</code></pre>
+<p>and then a while loop reads the file one line at a time. Each line is placed into a variable called "line":</p>
+<pre><code>    if (matrixfile.is_open()) {
+        while (getline (matrixfile, line)) {</code></pre>
+<p>If you look at the text file, each line in this case is a string consisting of floats, commas and spaces. For example, "1, 6, 2, 10.5".</p>
+<p>The sstream file in the Standard Library provides functionality for manipulating and parsing the string. In the code, you'll see that first a sstream object was declared and then later the ss object was used to cycle through and parse each line of the text file:</p>
+<pre><code>stringstream ss;
+
+....
+
+ss.clear();
+ss.str("");
+ss.str(line);
+
+while(ss &gt;&gt; i) {
+    row.push_back(i);
+
+    if (ss.peek() == ',' || ss.peek() == ' ') {
+        ss.ignore();
+    }
+}```
+
+In other words, the code finds a float number and appends the number to the vector called row. The line `ss.peek()` looks at the next character to see if it is a comma or a space and ignores commas or spaces.
+
+Note as well that when you are done with reading in the file, it's a good habit to close the file.</code></pre>
+<p>matrixfile.close();<br />
+```</p>
+<p>If you ever write a programming that opens many files simultaneously and never closes them, your program could crash.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Outputting to Text Files.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Reading in Text Files')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

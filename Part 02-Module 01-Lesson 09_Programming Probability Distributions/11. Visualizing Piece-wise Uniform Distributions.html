@@ -1,0 +1,277 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Visualizing Piece-wise Uniform Distributions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Programming Probability Distributions</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Prepare for a Challenge.html">01. Prepare for a Challenge</a>
+    </li>
+    <li class="">
+      <a href="02. Programming Probability Distributions.html">02. Programming Probability Distributions</a>
+    </li>
+    <li class="">
+      <a href="03. Math in Python [demonstration].html">03. Math in Python [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="04. Uniform Distribution [exercise].html">04. Uniform Distribution [exercise]</a>
+    </li>
+    <li class="">
+      <a href="05. Uniform Distribution Solution.html">05. Uniform Distribution Solution</a>
+    </li>
+    <li class="">
+      <a href="06. Function Improvements [exercise].html">06. Function Improvements [exercise]</a>
+    </li>
+    <li class="">
+      <a href="07. Function Improvements Solution.html">07. Function Improvements Solution</a>
+    </li>
+    <li class="">
+      <a href="08. Plotting in Python [demonstration].html">08. Plotting in Python [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="09. Visualizing Uniform Distributions [exercise].html">09. Visualizing Uniform Distributions [exercise]</a>
+    </li>
+    <li class="">
+      <a href="10. Visualizing Uniform Distributions Solution.html">10. Visualizing Uniform Distributions Solution</a>
+    </li>
+    <li class="">
+      <a href="11. Visualizing Piece-wise Uniform Distributions.html">11. Visualizing Piece-wise Uniform Distributions</a>
+    </li>
+    <li class="">
+      <a href="12. Visualizing Piece-Wise Distributions [exercise].html">12. Visualizing Piece-Wise Distributions [exercise]</a>
+    </li>
+    <li class="">
+      <a href="13. Visualizing Piece-Wise Distributions Solution.html">13. Visualizing Piece-Wise Distributions Solution</a>
+    </li>
+    <li class="">
+      <a href="14. 1-D Car World [exercise].html">14. 1-D Car World [exercise]</a>
+    </li>
+    <li class="">
+      <a href="15. 1-D Car World Solution.html">15. 1-D Car World Solution</a>
+    </li>
+    <li class="">
+      <a href="16. 2-D Car World [demonstration].html">16. 2-D Car World [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="17. 2-D Car World [exercise].html">17. 2-D Car World [exercise]</a>
+    </li>
+    <li class="">
+      <a href="18. 2-D Car World Solution.html">18. 2-D Car World Solution</a>
+    </li>
+    <li class="">
+      <a href="19. Conclusion.html">19. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Visualizing Piece-wise Uniform Distributions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="visualizing-a-piece-wise-continuous-probability-distribution">Visualizing a Piece-Wise Continuous Probability Distribution</h1>
+<p>Now it's time for a challenge!</p>
+<p>After Sebastian introduced a uniform continuous probability distribution, he then showed you a piece-wise continuous function representing the probability of when someone was born. You are going to code a generic piece-wise continuous probability density function in Python.</p>
+<p>Your result is going to look something like this:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/temp.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="instructions">Instructions</h1>
+<p>Write a function that, given a list of x-axis intervals, relative probabilities and a total probability, calculates the height of each bar. Remember that the sum of the area for all bars should be the total probability.</p>
+<p>Here is an example input and output based on the above visualization:</p>
+<ul>
+<li>a vehicle accident is 5 times more likely from 5am t<br />
+o 10am versus midnight to 5am. </li>
+<li>a vehicle accident is 3 times more likely from 10am to 4pm versus midnight to 5am.</li>
+<li>a vehicle accident is 6 times more likely from 4pm to 9pm versus midnight to 5am.</li>
+<li>a vehicle accident is 1/2 as likely from 9pm to midnight versus midnight to 5am.</li>
+<li>The probability of getting in an accident on any given day is .05</li>
+</ul>
+<p>The inputs would look like this. </p>
+<p>For the hours, you can use 24 hour time<br />
+hour_intervals = [0, 5, 10, 16, 21, 24]</p>
+<p>relative_probabilities = [1, 5, 3, 6, 0.5]</p>
+<p>total_probability = 0.05</p>
+<p>The output would be the height of each bar:</p>
+<pre><code>[0.0006451612903225806,
+ 0.0032258064516129032,
+ 0.0016129032258064516,
+ 0.003870967741935484,
+ 0.0005376344086021505]</code></pre>
+<h1 id="hints">Hints</h1>
+<ul>
+<li>Summing the area of all the bars equals the total probability, which in this case is 0.05.</li>
+<li>The relative probabilities and total probability can be used to find the exact area of each bar. If the area of the first bar is A, then the area of the second bar is 5A, the third bar is 3A, etc.</li>
+<li>Once you know the area of each bar, you can divide each area by its width to calculate the bar height.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>But the function should be generic. It should be able to receive an arbitrary list of numbers with the relative probabilities of each interval and any value for total probability. Before trying to write the program, it might be helpful to calculate the results you expect with a pen and paper. That will help you work through the logic of the programming.</p>
+<p>You'll find the exercise in the next part of the lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Visualizing Piece-Wise Distributions [exercise].html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Visualizing Piece-wise Uniform Distributions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

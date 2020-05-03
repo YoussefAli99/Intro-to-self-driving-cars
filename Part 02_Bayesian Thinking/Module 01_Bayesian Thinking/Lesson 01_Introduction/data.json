@@ -1,0 +1,102 @@
+{
+  "data": {
+    "lesson": {
+      "id": 346539,
+      "key": "a8153363-eb71-4c9b-b224-dc6af1b6c1cd",
+      "title": "Introduction",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "A brief introduction to Bayesian Thinking from Sebastian.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/a8153363-eb71-4c9b-b224-dc6af1b6c1cd/346539/1544452760735/Introduction+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/a8153363-eb71-4c9b-b224-dc6af1b6c1cd/346539/1544452758130/Introduction+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 348098,
+          "key": "0ab50ed2-1988-4a8c-a479-4830229f4d70",
+          "title": "The Wonderland of Bayes' Law",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0ab50ed2-1988-4a8c-a479-4830229f4d70",
+            "completed_at": "2020-04-19T13:02:45.356Z",
+            "last_viewed_at": "2020-04-19T13:02:47.546Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410340,
+              "key": "72405b20-e9e4-4348-a3db-8fa8b0f0182a",
+              "title": "The Wonderland of Probability and Bayes' Rule",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gfFWpMehzpk",
+                "china_cdn_id": "gfFWpMehzpk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 179356,
+          "key": "5b8dcedc-49cf-4d8f-8139-9b2023f1ce8d",
+          "title": "Course Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5b8dcedc-49cf-4d8f-8139-9b2023f1ce8d",
+            "completed_at": "2020-04-19T13:03:57.545Z",
+            "last_viewed_at": "2020-04-19T13:03:59.748Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 425371,
+              "key": "f3b05ea2-82f8-4f79-8431-d6b0721c7bdf",
+              "title": "Course Overview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QTFIJNBXx9w",
+                "china_cdn_id": "QTFIJNBXx9w.mp4"
+              }
+            },
+            {
+              "id": 430284,
+              "key": "be1be6e7-0b32-467b-a13f-f6f368570fc8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Course Overview \n1. **Joy Ride**\n2. **Probability**\n2. **Conditional Probability**\n2. **Programming Probability in Python**\n2. **Bayes' Rule**\n2. **Programming Bayes' Rule and World Representations**\n2. **Robot Localization**\n3. **Histogram Filter in Python** (project)",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

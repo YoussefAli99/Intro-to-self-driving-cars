@@ -1,0 +1,566 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matrix Functions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">17. Matrix Functions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="matrix-functions">Matrix Functions</h1>
+<p>The last part of the Matrix class involves implementing the matrix functionality. You are welcome to program as many matrix operations as you'd like: addition, multiplication, transpose, inverse, etc. </p>
+<p>We recommend at least implementing matrix addition and a function called matrix_print that outputs the matrix to the terminal using cout. In the solution given at the end of this page, we've also provided code for a matrix_transpose function.</p>
+<p>Implementing these class functions is the same as implementing the get and set functions from the previous part of the lesson; you will need to declare your functions in matrix.h and define your functions in matrix.cpp. The general syntax is the same:</p>
+<h4 id="class-function-declaration-syntax">class function declaration syntax</h4>
+<pre><code class="c++ language-c++">output_datatype functionname(datatype variable1, 
+datatype variable2, ..., datatype variablen)</code></pre>
+<h4 id="class-function-definition-syntax">class function definition syntax</h4>
+<pre><code class="c++ language-c++">output_datatype Classname::functionname(datatype variable1, 
+datatype variable2, ..., datatype variablen) {
+
+    code defining the function;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="writing-the-matrix-functions">Writing the Matrix Functions</h1>
+<p>In this exercise, you will declare and define a Matrix class function that adds two matrices together. Here are the inputs and outputs of the matrix addition function:</p>
+<p>INPUTS:</p>
+<ul>
+<li>a matrix, which will be added to the grid variable</li>
+</ul>
+<p>OUTPUTS</p>
+<ul>
+<li>a matrix containing the sum of the grid variable matrix and input matrix</li>
+</ul>
+<p>Because the input to the matrix_addition function is a Matrix, you will need to declare and define your function using the Matrix class as the data type. This might seem a bit confusing, but the Gaussian class presented earlier in the lesson did the same thing with the mul and add functions. You can use those as a guide for writing your matrix_addition functions.</p>
+<p>As a reminder, here are the function declarations for the mul and add functions in gaussian.h:</p>
+<pre><code class="c++ language-c++">        Gaussian mul (Gaussian);
+        Gaussian add (Gaussian);</code></pre>
+<p>Both of these functions receive a Gaussian and output a Gaussian. Here are the function definitions from gaussian.cpp:</p>
+<pre><code class="c++ language-c++">Gaussian Gaussian::mul(Gaussian other) {
+    float denominator;
+    float numerator;
+    float new_mu;
+    float new_var;
+
+    denominator = sigma2 + other.getSigma2();
+    numerator = mu * other.getSigma2() + other.getMu() * sigma2;
+    new_mu = numerator / denominator;
+
+    new_var = 1.0 / ( (1.0 / sigma2) + (1.0 / other.sigma2) );
+
+    return Gaussian(new_mu, new_var);
+}
+
+Gaussian Gaussian::add(Gaussian other) {
+
+    float new_mu;
+    float new_sigma2;
+
+    new_mu = mu + other.getMu();
+    new_sigma2 = sigma2 + other.getSigma2();
+
+    return Gaussian(new_mu, new_sigma2);
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Although the implementation of the matrix_addition function will be different, the general structure will be the same as the mul and add functions from the Gaussian example.</p>
+<p>You will also write a matrix_print function that outputs a matrix to the terminal using cout. The matrix_print function has no inputs and no outputs.</p>
+<p>Fill out the TODOS in the matrix.cpp and matrix.h code.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#413037-main-cpp" class="nav-item nav-link  active show" id="tab-413037-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="413037-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#413037-matrix-cpp" class="nav-item nav-link " id="tab-413037-matrix-cpp" data-toggle="tab" role="tab"
+      aria-controls="413037-matrix-cpp" aria-selected="false">matrix.cpp</a>
+    <a href="#413037-matrix-h" class="nav-item nav-link " id="tab-413037-matrix-h" data-toggle="tab" role="tab"
+      aria-controls="413037-matrix-h" aria-selected="false">matrix.h</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="413037-main-cpp" aria-labelledby="tab-413037-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &quot;matrix.h&quot;
+
+int main () {
+    
+    // TODO: Nothing to do here
+    
+    return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="413037-matrix-cpp" aria-labelledby="tab-413037-matrix-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;matrix.h&quot;
+
+Matrix::Matrix() {
+    std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid (10, std::vector &lt;float&gt;(5, 0.5));
+    grid &#x3D; initial_grid;
+    rows &#x3D; initial_grid.size();
+    cols &#x3D; initial_grid[0].size();
+
+}
+
+Matrix::Matrix(std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid) {
+    grid &#x3D; initial_grid;
+    rows &#x3D; initial_grid.size();
+    cols &#x3D; initial_grid[0].size();
+}
+
+
+void Matrix::setGrid(std::vector&lt; std::vector&lt;float&gt; &gt; new_grid) {
+    grid &#x3D; new_grid;
+    rows &#x3D; new_grid.size();
+    cols &#x3D; new_grid[0].size();
+}
+
+std::vector&lt; std::vector&lt;float&gt; &gt; Matrix::getGrid() {
+    return grid;
+}
+
+std::vector&lt;int&gt;::size_type Matrix::getRows() {
+    return rows;
+}
+
+std::vector&lt;int&gt;::size_type Matrix::getCols() {
+    return cols;
+}
+
+/* TODO: Define a matrix_addition function
+**   INPUT: a matrix
+**   OUPUT: the sum of the grid variable and the input matrix
+**
+** STEPS:
+**  1. check that the matrix in the grid variable
+**     and the input matrix have the same size
+**
+**     if not, throw an error like
+**         throw std::invalid_argument(&quot;matrices are not the same size&quot;);
+**
+** 2. add the matrices together and return
+**       the result as a Matrix. You can do this part
+**       with nested for loops. If you use an intermediate
+**       vector to store a row, the vector.clear() 
+**       method might be useful.
+**
+*/
+
+/* TODO: Define a matrix_print function
+** This function has no inputs and no outputs
+** The purpose of the function is to display the matrix in
+** the terminal using std::cout. 
+**
+**
+** The output should look something like:
+** 4    9   1   10
+** 5    11  6   17
+** 8    4   15  2
+*/</code></pre>
+    </div>
+    <div class="tab-pane " id="413037-matrix-h" aria-labelledby="tab-413037-matrix-h" role="tabpanel">
+      <pre><code></code>#include &lt;vector&gt;
+#include &lt;stdexcept&gt; //library for the invalid_argument method
+#include &lt;iostream&gt;
+
+class Matrix
+{
+    private:
+
+        std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+        std::vector&lt;float&gt;::size_type rows;
+        std::vector&lt;float&gt;::size_type cols;
+
+    public:
+
+        // constructor functions
+        Matrix ();
+        Matrix (std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // set functions
+        void setGrid(std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // get functions
+        std::vector&lt; std::vector&lt;float&gt; &gt; getGrid();
+        std::vector&lt;float&gt;::size_type getRows();
+        std::vector&lt;float&gt;::size_type getCols();
+
+        /* TODO: Declare the matrix_addition function
+        ** INPUTS: a Matrix
+        ** OUTPUTS: a Matrix
+        **
+        ** TODO: Declare the matrix_print function
+        ** INPUTS: none
+        ** OUTPUTS: none
+        */
+};</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-matrixh">Solution matrix.h</h1>
+<pre><code class="c++ language-c++">#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+class Matrix
+{
+    private:
+
+        std::vector&lt; std::vector&lt;float&gt; &gt; grid;
+        std::vector&lt;float&gt;::size_type rows;
+        std::vector&lt;float&gt;::size_type cols;
+
+    public:
+
+        // constructor functions
+        Matrix ();
+        Matrix (std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // set functions
+        void setGrid(std::vector&lt; std::vector&lt;float&gt; &gt;);
+
+        // get functions
+        std::vector&lt; std::vector&lt;float&gt; &gt; getGrid();
+        std::vector&lt;float&gt;::size_type getRows();
+        std::vector&lt;float&gt;::size_type getCols();
+
+        // matrix functions
+        Matrix matrix_transpose();
+        Matrix matrix_addition(Matrix);
+
+        // matrix printing
+        void matrix_print();
+
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-matrixcpp">Solution matrix.cpp</h1>
+<pre><code class="c++ language-c++">#include "matrix.h"
+
+Matrix::Matrix() {
+    std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid (10, std::vector &lt;float&gt;(5, 0.5));
+    grid = initial_grid;
+    rows = initial_grid.size();
+    cols = initial_grid[0].size();
+
+}
+
+Matrix::Matrix(std::vector &lt;std:: vector &lt;float&gt; &gt; initial_grid) {
+    grid = initial_grid;
+    rows = initial_grid.size();
+    cols = initial_grid[0].size();
+}
+
+void Matrix::setGrid(std::vector&lt; std::vector&lt;float&gt; &gt; new_grid) {
+    grid = new_grid;
+    rows = new_grid.size();
+    cols = new_grid[0].size();
+
+}
+
+std::vector&lt; std::vector&lt;float&gt; &gt; Matrix::getGrid() {
+    return grid;
+}
+
+std::vector&lt;float&gt;::size_type Matrix::getRows() {
+    return rows;
+}
+
+std::vector&lt;float&gt;::size_type Matrix::getCols() {
+    return cols;
+}
+
+Matrix Matrix::matrix_transpose() {
+    std::vector&lt; std::vector&lt;float&gt; &gt; new_grid;
+    std::vector&lt;float&gt; row;
+
+    for (int i = 0; i &lt; cols; i++) {
+        row.clear();
+
+        for (int j = 0; j &lt; rows; j++) {
+            row.push_back(grid[j][i]); 
+        }
+        new_grid.push_back(row);
+    }
+
+    return Matrix(new_grid);
+}
+
+Matrix Matrix::matrix_addition(Matrix other) {
+
+    if ((rows != other.getRows()) || (cols != other.getCols())) {
+        throw std::invalid_argument( "matrices are not the same size" );
+    }
+
+    std::vector&lt; std::vector&lt;float&gt; &gt; othergrid = other.getGrid();
+
+    std::vector&lt; std::vector&lt;float&gt; &gt; result;
+
+    std::vector&lt;float&gt; new_row;
+
+    for (int i = 0; i &lt; rows; i++) {
+        new_row.clear();
+        for (int j = 0; j &lt; cols; j++) {
+            new_row.push_back(grid[i][j] + othergrid[i][j]);
+        }
+        result.push_back(new_row);
+    }
+
+    return Matrix(result);
+}
+
+void Matrix::matrix_print() {
+
+    std::cout &lt;&lt; std::endl;
+
+    for (int i = 0; i &lt; rows; i++)
+    {
+        for (int j = 0; j &lt; cols; j++)
+        {
+            std::cout &lt;&lt; grid[i][j] &lt;&lt; " ";
+        }
+        std::cout &lt;&lt; std::endl;
+    }
+    std::cout &lt;&lt; std::endl;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="18. Use an Inclusion Guard.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('17. Matrix Functions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

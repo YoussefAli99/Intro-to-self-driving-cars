@@ -1,0 +1,386 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Anatomy of a Function</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Getting Started</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Lesson Overview.html">02. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Elecia White.html">03. Elecia White</a>
+    </li>
+    <li class="">
+      <a href="04. Why C++.html">04. Why C++</a>
+    </li>
+    <li class="">
+      <a href="05. Python and C++ Comparison.html">05. Python and C++ Comparison</a>
+    </li>
+    <li class="">
+      <a href="06. Static vs Dynamic Typing.html">06. Static vs Dynamic Typing</a>
+    </li>
+    <li class="">
+      <a href="07. C++ - A Statically Typed Language.html">07. C++ - A Statically Typed Language</a>
+    </li>
+    <li class="">
+      <a href="08. Basic Data Types.html">08. Basic Data Types</a>
+    </li>
+    <li class="">
+      <a href="09. Floating versus Double [demonstration].html">09. Floating versus Double [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="10. Doubles are Bigger.html">10. Doubles are Bigger</a>
+    </li>
+    <li class="">
+      <a href="11. Common Errors and Error Messages.html">11. Common Errors and Error Messages</a>
+    </li>
+    <li class="">
+      <a href="12. C++ Functions.html">12. C++ Functions</a>
+    </li>
+    <li class="">
+      <a href="13. Anatomy of a Function.html">13. Anatomy of a Function</a>
+    </li>
+    <li class="">
+      <a href="14. Multiple Outputs.html">14. Multiple Outputs</a>
+    </li>
+    <li class="">
+      <a href="15. Two Functions Same Name.html">15. Two Functions Same Name</a>
+    </li>
+    <li class="">
+      <a href="16. Function Signatures 1.html">16. Function Signatures 1</a>
+    </li>
+    <li class="">
+      <a href="17. Function Signatures 2.html">17. Function Signatures 2</a>
+    </li>
+    <li class="">
+      <a href="18. If and Boolean Logic.html">18. If and Boolean Logic</a>
+    </li>
+    <li class="">
+      <a href="19. While and For Loops.html">19. While and For Loops</a>
+    </li>
+    <li class="">
+      <a href="20. Switch Statement.html">20. Switch Statement</a>
+    </li>
+    <li class="">
+      <a href="21. Libraries.html">21. Libraries</a>
+    </li>
+    <li class="">
+      <a href="22. Forge on!.html">22. Forge on!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. Anatomy of a Function</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="anatomy-of-a-function">Anatomy of a Function</h1>
+<p>You have seen how to write a function in C++. More generically, a C++ functions consists of a function declaration and a function definition. </p>
+<p>Because C++ is statically typed, you need to specify the data types for the function input variables and the data type of whatever the function returns.  </p>
+<pre><code class="c++ language-c++">// function declaration
+returndatatype functionname(datatype variable_a, datatype variable_b, etc.);</code></pre>
+<pre><code class="c++ language-c++">// function definition
+returndatatype functionname(datatype variable_a, datatype variable_b, etc.) {
+     statement_1;
+     statement_2;
+     etc...
+
+   return returndatatype;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Function Definition</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Take a look at this function definition:</p>
+<pre><code class="c++ language-c++">bool isAutonomous(int x, float y, char z); </code></pre>
+<p>Why is there a bool written before the function name?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512164608671" name="467239" id="a1512164608671">
+        <label for="a1512164608671"><p>Because the function accepts a boolean value as an input</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512164642174" name="467239" id="a1512164642174">
+        <label for="a1512164642174"><p>Because all functions in C++ return a boolean value letting the main function know that the function has finished running</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512164657181" name="467239" id="a1512164657181">
+        <label for="a1512164657181"><p>Because the function returns a boolean value</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512164668653" name="467239" id="a1512164668653">
+        <label for="a1512164668653"><p>Because the function accepts a float variable</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Because the function returns a boolean value
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Function Declarations</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What would be the input and output of this function?</p>
+<pre><code class="c++ language-c++">char myfunction(int x);</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512164719320" name="467244" id="a1512164719320">
+        <label for="a1512164719320"><p>The function would have an integer input and return a character.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512164743006" name="467244" id="a1512164743006">
+        <label for="a1512164743006"><p>The function would have a character input and return an integer</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512164743804" name="467244" id="a1512164743804">
+        <label for="a1512164743804"><p>The function would have an integer input and return a string.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512164744378" name="467244" id="a1512164744378">
+        <label for="a1512164744378"><p>The function would have a string input and return an integer.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The function would have an integer input and return a character.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="quiz-write-a-function">Quiz: Write a Function</h3>
+<p>Write a function, called distance, with three inputs and one output. The inputs are velocity, acceleration and time. The output is the distance traveled over the elapsed time. The equation for calculating distance is:<br />
+<span class="mathquill ud-math">distance = velocity \times elapsedtime + 0.5 \times acceleration \times elapsedtime \times elapsedtime</span></p>
+<p>This quiz is not graded. You will see some test cases in the main() function to test out your code. To run your code, click on the "Test Run" button.</p>
+<p>A solution has been provided in the solution.cpp so that you can compare your results.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#467252-main-cpp" class="nav-item nav-link  active show" id="tab-467252-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="467252-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#467252-solution-cpp" class="nav-item nav-link " id="tab-467252-solution-cpp" data-toggle="tab" role="tab"
+      aria-controls="467252-solution-cpp" aria-selected="false">solution.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="467252-main-cpp" aria-labelledby="tab-467252-main-cpp" role="tabpanel">
+      <pre><code></code>//TODO: include the iostream part of the standard library
+
+//TODO: declare your function called distance
+
+// Leave the main function as is
+int main() {
+    
+    // TODO: The following are examples you can use to test your code.
+    // You will need to uncomment them to get them working.
+    
+    // std::cout &lt;&lt; distance(3, 4, 5) &lt;&lt; std::endl;  
+    // std::cout &lt;&lt; distance(7.0, 2.1, 5.4) &lt;&lt; std::endl;
+    
+    return 0;   
+}
+
+//TODO: define your function</code></pre>
+    </div>
+    <div class="tab-pane " id="467252-solution-cpp" aria-labelledby="tab-467252-solution-cpp" role="tabpanel">
+      <pre><code></code>//TODO: include the iostream part of the standard library
+#include &lt;iostream&gt;
+
+//TODO: declare your function called distance
+float distance(float velocity, float acceleration, float time_elapsed);
+
+// Leave the main function as is
+int main() {
+    
+    // TODO: The following are examples you can use to test your code.
+    // You will need to uncomment them to get them working.
+    
+    std::cout &lt;&lt; distance(3, 4, 5) &lt;&lt; std::endl;  
+    std::cout &lt;&lt; distance(7.0, 2.1, 5.4) &lt;&lt; std::endl;
+    
+    return 0;   
+}
+
+//TODO: define your function
+float distance(float velocity, float acceleration, float time_elapsed) {
+    return velocity*time_elapsed + 0.5*acceleration*time_elapsed*time_elapsed;
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. Multiple Outputs.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. Anatomy of a Function')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

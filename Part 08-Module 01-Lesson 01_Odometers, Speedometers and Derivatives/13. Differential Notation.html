@@ -1,0 +1,251 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Differential Notation</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Odometers, Speedometers and Derivatives</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Teleoperation at Phantom Auto.html">01. Teleoperation at Phantom Auto</a>
+    </li>
+    <li class="">
+      <a href="02. Inertial Navigation.html">02. Inertial Navigation</a>
+    </li>
+    <li class="">
+      <a href="03. Course Overview.html">03. Course Overview</a>
+    </li>
+    <li class="">
+      <a href="04. Inertial Navigation Sensors.html">04. Inertial Navigation Sensors</a>
+    </li>
+    <li class="">
+      <a href="05. Afternoon Drive.html">05. Afternoon Drive</a>
+    </li>
+    <li class="">
+      <a href="06. Delta x over Delta t.html">06. Delta x over Delta t</a>
+    </li>
+    <li class="">
+      <a href="07. Reducing Delta t.html">07. Reducing Delta t</a>
+    </li>
+    <li class="">
+      <a href="08. Plotting Position vs. Time.html">08. Plotting Position vs. Time</a>
+    </li>
+    <li class="">
+      <a href="09. Interpreting Position vs. Time Graphs.html">09. Interpreting Position vs. Time Graphs</a>
+    </li>
+    <li class="">
+      <a href="10. Average vs. Instantaneous Speed.html">10. Average vs. Instantaneous Speed</a>
+    </li>
+    <li class="">
+      <a href="11. Defining the Derivative.html">11. Defining the Derivative</a>
+    </li>
+    <li class="">
+      <a href="12. Understanding the Derivative.html">12. Understanding the Derivative</a>
+    </li>
+    <li class="">
+      <a href="13. Differential Notation.html">13. Differential Notation</a>
+    </li>
+    <li class="">
+      <a href="14. A Typical Calculus Problem.html">14. A &quot;Typical&quot; Calculus Problem</a>
+    </li>
+    <li class="">
+      <a href="15. How Odometers Work.html">15. How Odometers Work</a>
+    </li>
+    <li class="">
+      <a href="16. Speed from Position Data.html">16. Speed from Position Data</a>
+    </li>
+    <li class="">
+      <a href="17. Position, Velocity, and Acceleration.html">17. Position, Velocity, and Acceleration</a>
+    </li>
+    <li class="">
+      <a href="18. Implement an Accelerometer.html">18. Implement an Accelerometer</a>
+    </li>
+    <li class="">
+      <a href="19. Summary.html">19. Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. Differential Notation</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="differential-notation">Differential Notation</h1>
+<p><span class="mathquill ud-math">\dot{f}(t) = \lim_{\Delta t \to 0} \frac{f(t+\Delta t) - f(t)}{\Delta t}</span></p>
+<p>This "dot" notation is one of two common ways of representing the derivative.</p>
+<p>Calculus was simultaneously invented by two people: Gottfried Wilhelm Liebniz and Isaac Newton.</p>
+<p>And each came up with his own notation for representing derivatives. The <a href="https://en.wikipedia.org/wiki/Notation_for_differentiation" rel="noopener noreferrer" target="_blank">Wikipedia article on Notation for Differentiation</a> does a good job of explaining them thoroughly but I will summarize here.</p>
+<h3 id="0-what-newton-and-liebniz-share-ddt">0. What Newton and Liebniz share (d/dt)</h3>
+<p>In both notations, <span class="mathquill ud-math">\frac{d}{dt}</span> is an instruction to take the derivative. It means "Take the derivative <strong>with respect to <span class="mathquill ud-math">t</span></strong> of whatever function shows up to the right."</p>
+<p>When you see something like this:</p>
+<div class="mathquill">\frac{df}{dt}</div>
+<p><br></p>
+<p>You should think "the derivative of some function <span class="mathquill ud-math">f</span> with respect to <span class="mathquill ud-math">t</span>"</p>
+<h3 id="1-liebniz-notation-prime">1. Liebniz Notation (prime)</h3>
+<p>If some variable <span class="mathquill ud-math">y</span> is a function of <span class="mathquill ud-math">x</span> we can write: </p>
+<p><span class="mathquill ud-math">y=f(x)</span></p>
+<p>The derivative of <span class="mathquill ud-math">y</span> with respect to <span class="mathquill ud-math">x</span> is given by:</p>
+<p><span class="mathquill ud-math">\frac{dy}{dx} = f '(x)</span></p>
+<p>and this could be spoken as "dee y dee x equals f <strong>prime</strong> of x"</p>
+<p>We will not be using this notation in this Nanodegree.</p>
+<h3 id="2-newtons-notation-dot">2. Newton's Notation (dot)</h3>
+<p>Newton invented Calculus as a tool to help him understand motion. As a result, he was usually thinking of derivatives <em>with respect to <strong>time</strong></em> (not some abstract <span class="mathquill ud-math">x</span> variable).</p>
+<p>Likewise, his functions weren't abstract <span class="mathquill ud-math">f(x)</span>'s and <span class="mathquill ud-math">g(f(x))</span>'s. The functions he was interested in actually meant something about the physical world! He wanted to describe:</p>
+<p>position <span class="mathquill ud-math">x(t)</span></p>
+<p>velocity <span class="mathquill ud-math">v(t)</span></p>
+<p>and acceleration <span class="mathquill ud-math">a(t)</span></p>
+<p>And he wanted to capture the relationships between these quantities compactly. So for Newton: <strong>differentiation with respect to time is indicated by placing a dot over the variable</strong>.</p>
+<p>So, for example:</p>
+<div class="mathquill">v(t) = \frac{d}{dt}x(t) = \dot{x}(t)</div>
+<p><br><br />
+or for <em>second derivatives</em>:</p>
+<div class="mathquill">a(t) = \frac{d}{dt} v(t) = \frac{d}{dt} \dot{x}(t) = \ddot{x}(t)</div>
+<p><br></p>
+<p>A second derivative can also be represented as follows:</p>
+<div class="mathquill">a(t) = \frac{d^2}{dt^2} x(t) =  \frac{d^2x}{dt^2}</div>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. A Typical Calculus Problem.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. Differential Notation')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+{
+  "data": {
+    "lesson": {
+      "id": 377527,
+      "key": "269ac8b0-5f8d-43a8-bb05-426c277496c0",
+      "title": "Translate Python to C++",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Apply your knowledge of C++ syntax by translating the Histogram Filter code from the first course into C++.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/269ac8b0-5f8d-43a8-bb05-426c277496c0/377527/1587647966013/Translate+Python+to+C%2B%2B+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/269ac8b0-5f8d-43a8-bb05-426c277496c0/377527/1587647963417/Translate+Python+to+C%2B%2B+Subtitles.zip"
+          },
+          {
+            "name": "Python Solution",
+            "uri": "https://video.udacity-data.com/topher/2017/August/599f1ef6_python-solution/python-solution.zip"
+          },
+          {
+            "name": "CPP Histogram Filter Project",
+            "uri": "https://video.udacity-data.com/topher/2017/November/5a05f13f_udacity-cpp-histogram-filter-project/udacity-cpp-histogram-filter-project.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "faa76781-0fc5-499e-8673-caed673869c8",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 10080,
+        "semantic_type": "Project",
+        "title": "Translate Python to C++",
+        "description": "When your code passes all tests you are ready to compress! Create a zip file of your project by right clicking on the folder that contains all your code and clicking \"compress\" (or something similar). You will upload the resulting zip file for review!\n\nOnce you've submitted you should continue with the Nanodegree. When your code has been reviewed you will be notified and you can review the feedback on your code that the project reviewer left you.",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1146",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 377529,
+          "key": "424ea612-841e-4015-8508-8c102bc0936f",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "424ea612-841e-4015-8508-8c102bc0936f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 379272,
+              "key": "512edf27-ffad-4023-8ca6-83ae7399e2e0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Overview\n\nThe goal of this project is to take the **python** code you wrote when you implemented the two dimensional histogram filter and translate it into **C++**. \n\nAfter you review the Python code you will download some starter C++ code. Your job is to complete the functions marked with TODO comments until the histogram filter works as expected!\n\nYou can evaluate the correctness of your code by compiling `tests.cpp` and then running the output. Do this by running the following from the command line.\n\n```bash\ng++ tests.cpp\n./a.out\n```\n\n## Evaluation\nOnce you have completed your project, use the [Project Rubric](https://review.udacity.com/#!/rubrics/1146/view) to review the project. If you have covered all of the points in the rubric, then you are ready to submit! If you see room for improvement in any category in which you do not meet specifications, keep working!\n\nYour project will be evaluated by a Udacity reviewer according to the same Project Rubric. Your project must \"meet specifications\" in each category in order for your submission to pass.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 419891,
+          "key": "59d0e418-65c6-439a-83bc-71d1ccea08a0",
+          "title": "Python Code Reminder",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "59d0e418-65c6-439a-83bc-71d1ccea08a0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419893,
+              "key": "c84b8a87-8bed-4895-8f24-ef77b3abf2b0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Python Code Reminder\n\nYou'll probably want to refer to the 2d Histogram Filter code as you write the C++ version. You can [find your Python code here](https://classroom.udacity.com/nanodegrees/nd113/parts/67914806-9163-4bef-85d4-5fa4a7409fbd/modules/bb316d89-3a59-4093-b62d-f36d7822e530/lessons/919d89ca-c492-4d34-9792-8a23d410517f/concepts/fdb1a3fc-8b15-4336-a8a4-b5090c32c7ea). Make sure you have that link open in another tab before you continue.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 378388,
+          "key": "5db92d72-4d35-40c0-995f-e14759515808",
+          "title": "Get the Starter Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5db92d72-4d35-40c0-995f-e14759515808",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 379299,
+              "key": "9a5e2c7a-8032-4942-ac17-f1b3f9e4892d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Python to C++\n\n**Note:** We have recently added a project workspace to the classroom that you can use for coding this project, which you can find in a few pages from now. The workspace already has the code downloaded in it if you choose to use that option, but you should still read the below instructions.\n\n1. First, [click here to download the C++ starter code](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/iSDC/iSDC-P2-Translate-Python-Cpp.zip). [*Note:* This was recently refactored to include header files, as well as updated to remove an out-of-bounds issue with the `test_sense()` function].\n\n2. Open the code in your favorite editor. You'll probably want to have the corresponding Python code around to consult as well.\n\n3. Fill out the functions in `localizer.cpp` and `helpers.cpp`\n\n**NOTE** - when compiling your code, make sure you use C++11. You can do this from the command line with the following:\n\n```bash\ng++ -std=c++11 tests.cpp\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 442394,
+              "key": "40703e0a-8a55-49fd-995c-63e4c6e0696b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Are you having trouble getting the code?\n\nStudents in China have not been able to download the project starter code. If you were able to download the starter code you can ignore everything below.\n\nAs a temporary solution, we are including the code as text below. You will need to copy and paste the text into files with the correct names. If you have any problems please let us know in the Student Hub channel and we will help you ASAP. \n\n**Directory Structure**\n\nYou should create a new `project` folder/directory to put the project code into. Inside that you should also create a `maps` directory.\n\nThen you should create empty files within those directories to match the following image:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 442395,
+              "key": "c077ce90-9255-4211-90f7-459c3b49a5a5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/59fb7059_screen-shot-2017-11-02-at-12.20.51-pm/screen-shot-2017-11-02-at-12.20.51-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c077ce90-9255-4211-90f7-459c3b49a5a5",
+              "caption": "",
+              "alt": "",
+              "width": 340,
+              "height": 412,
+              "instructor_notes": null
+            },
+            {
+              "id": 442396,
+              "key": "a138f3e9-084e-4be2-842f-065b446eccfc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### File text (for `.cpp` and `.txt` files)\n\n#### `debugging_helpers.cpp`\n\n``` c++\n/**\n\tdebugging_helpers.cpp\n\t\n\tPurpose: helper functions for debugging when working\n\twith grids of floats and chars.\n*/\n\n#include <vector>\nusing namespace std;\n\n/**\n    Displays a grid of beliefs. Does not return.\n\n    @param grid - a two dimensional grid (vector of \n    \t   vectors of floats) which will usually \n    \t   represent a robot's beliefs.\n*/\nvoid show_grid(vector < vector <float> > grid) {\n\tint i, j;\n\tfloat p;\n\tvector<float> row;\n\tfor (i = 0; i < grid.size(); i++)\n\t{\n\t\trow = grid[i];\n\t\tfor (j=0; j< row.size(); j++)\n\t\t{\n\t\t\tp = row[j];\t\n\t\t\tcout << p << ' ';\n\t\t}\n\t\tcout << endl;\n\t}\n}\n\n/**\n    Displays a grid map of the world\n*/\nvoid show_grid(vector < vector <char> > map) {\n\tint i, j;\n\tchar p;\n\tvector<char> row;\n\tfor (i = 0; i < map.size(); i++)\n\t{\n\t\trow = map[i];\n\t\tfor (j=0; j< row.size(); j++)\n\t\t{\n\t\t\tp = row[j];\t\n\t\t\tcout << p << ' ';\n\t\t}\n\t\tcout << endl;\n\t}\n}\n\n\n```\n\n#### `helpers.cpp`\n\n``` c++\n/**\n\thelpers.cpp\n\n\tPurpose: helper functions which are useful when\n\timplementing a 2-dimensional histogram filter.\n\n\tThis file is incomplete! Your job is to make the\n\tnormalize and blur functions work. Feel free to \n\tlook at helper.py for working implementations \n\twhich are written in python.\n*/\n\n#include <vector>\n#include <iostream>\n#include <cmath>\n#include <string>\n#include <fstream> \n// #include \"debugging_helpers.cpp\"\n\nusing namespace std;\n\n/**\n\tTODO - implement this function\n\n    Normalizes a grid of numbers. \n\n    @param grid - a two dimensional grid (vector of vectors of floats)\n\t\t   where each entry represents the unnormalized probability \n\t\t   associated with that grid cell.\n\n    @return - a new normalized two dimensional grid where the sum of \n    \t   all probabilities is equal to one.\n*/\nvector< vector<float> > normalize(vector< vector <float> > grid) {\n\t\n\tvector< vector<float> > newGrid;\n\n\t// todo - your code here\n\n\treturn newGrid;\n}\n\n/**\n\tTODO - implement this function.\n\n    Blurs (and normalizes) a grid of probabilities by spreading \n    probability from each cell over a 3x3 \"window\" of cells. This \n    function assumes a cyclic world where probability \"spills \n    over\" from the right edge to the left and bottom to top. \n\n    EXAMPLE - After blurring (with blurring=0.12) a localized \n    distribution like this:\n\n    0.00  0.00  0.00 \n    0.00  1.00  0.00\n    0.00  0.00  0.00 \n\n    would look like this:\n\t\n\t0.01  0.02\t0.01\n\t0.02  0.88\t0.02\n\t0.01  0.02  0.01\n\n    @param grid - a two dimensional grid (vector of vectors of floats)\n\t\t   where each entry represents the unnormalized probability \n\t\t   associated with that grid cell.\n\n\t@param blurring - a floating point number between 0.0 and 1.0 \n\t\t   which represents how much probability from one cell \n\t\t   \"spills over\" to it's neighbors. If it's 0.0, then no\n\t\t   blurring occurs. \n\n    @return - a new normalized two dimensional grid where probability \n    \t   has been blurred.\n*/\nvector < vector <float> > blur(vector < vector < float> > grid, float blurring) {\n\n\tvector < vector <float> > newGrid;\n\t\n\t// your code here\n\n\treturn normalize(newGrid);\n}\n\n/** -----------------------------------------------\n#\n#\n#\tYou do not need to modify any code below here.\n#\n#\n# ------------------------------------------------- */\n\n\n/**\n    Determines when two grids of floating point numbers \n    are \"close enough\" that they should be considered \n    equal. Useful for battling \"floating point errors\".\n\n    @param g1 - a grid of floats\n    \n    @param g2 - a grid of floats\n\n    @return - A boolean (True or False) indicating whether\n    these grids are (True) or are not (False) equal.\n*/\nbool close_enough(vector < vector <float> > g1, vector < vector <float> > g2) {\n\tint i, j;\n\tfloat v1, v2;\n\tif (g1.size() != g2.size()) {\n\t\treturn false;\n\t}\n\n\tif (g1[0].size() != g2[0].size()) {\n\t\treturn false;\n\t}\n\tfor (i=0; i<g1.size(); i++) {\n\t\tfor (j=0; j<g1[0].size(); j++) {\n\t\t\tv1 = g1[i][j];\n\t\t\tv2 = g2[i][j];\n\t\t\tif (abs(v2-v1) > 0.0001 ) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n\treturn true;\n}\n\nbool close_enough(float v1, float v2) { \n\tif (abs(v2-v1) > 0.0001 ) {\n\t\treturn false;\n\t} \n\treturn true;\n}\n\n/**\n    Helper function for reading in map data\n\n    @param s - a string representing one line of map data.\n\n    @return - A row of chars, each of which represents the\n    color of a cell in a grid world.\n*/\nvector <char> read_line(string s) {\n\tvector <char> row;\n\n\tsize_t pos = 0;\n\tstring token;\n\tstring delimiter = \" \";\n\tchar cell;\n\n\twhile ((pos = s.find(delimiter)) != std::string::npos) {\n\t\ttoken = s.substr(0, pos);\n\t\ts.erase(0, pos + delimiter.length());\n\n\t\tcell = token.at(0);\n\t\trow.push_back(cell);\n\t}\n\n\treturn row;\n}\n\n/**\n    Helper function for reading in map data\n\n    @param file_name - The filename where the map is stored.\n\n    @return - A grid of chars representing a map.\n*/\nvector < vector <char> > read_map(string file_name) {\n\tifstream infile(file_name);\n\tvector < vector <char> > map;\n\tif (infile.is_open()) {\n\n\t\tchar color;\n\t\tvector <char> row;\n\t\t\n\t\tstring line;\n\n\t\twhile (std::getline(infile, line)) {\n\t\t\trow = read_line(line);\n\t\t\tmap.push_back(row);\n\t\t}\n\t}\n\treturn map;\n}\n\n/**\n    Creates a grid of zeros\n\n    For example:\n\n    zeros(2, 3) would return\n\n    0.0  0.0  0.0\n    0.0  0.0  0.0\n\n    @param height - the height of the desired grid\n\n    @param width - the width of the desired grid.\n\n    @return a grid of zeros (floats)\n*/\nvector < vector <float> > zeros(int height, int width) {\n\tint i, j;\n\tvector < vector <float> > newGrid;\n\tvector <float> newRow;\n\n\tfor (i=0; i<height; i++) {\n\t\tnewRow.clear();\n\t\tfor (j=0; j<width; j++) {\n\t\t\tnewRow.push_back(0.0);\n\t\t}\n\t\tnewGrid.push_back(newRow);\n\t}\n\treturn newGrid;\n}\n\n// int main() {\n// \tvector < vector < char > > map = read_map(\"maps/m1.txt\");\n// \tshow_grid(map);\n// \treturn 0;\n// }\n\n```\n\n#### `localizer.cpp`\n\n``` c++\n/**\n\tlocalizer.cpp\n\n\tPurpose: implements a 2-dimensional histogram filter\n\tfor a robot living on a colored cyclical grid by \n\tcorrectly implementing the \"initialize_beliefs\", \n\t\"sense\", and \"move\" functions.\n\n\tThis file is incomplete! Your job is to make these\n\tfunctions work. Feel free to look at localizer.py \n\tfor working implementations which are written in python.\n*/\n\n#include \"helpers.cpp\"\n#include <stdlib.h>\n#include \"debugging_helpers.cpp\"\n\nusing namespace std;\n\n/**\n\tTODO - implement this function \n    \n    Initializes a grid of beliefs to a uniform distribution. \n\n    @param grid - a two dimensional grid map (vector of vectors \n    \t   of chars) representing the robot's world. For example:\n    \t   \n    \t   g g g\n    \t   g r g\n    \t   g g g\n\t\t   \n\t\t   would be a 3x3 world where every cell is green except \n\t\t   for the center, which is red.\n\n    @return - a normalized two dimensional grid of floats. For \n           a 2x2 grid, for example, this would be:\n\n           0.25 0.25\n           0.25 0.25\n*/\nvector< vector <float> > initialize_beliefs(vector< vector <char> > grid) {\n\tvector< vector <float> > newGrid;\n\n\t// your code here\n\t\n\treturn newGrid;\n}\n\n/**\n\tTODO - implement this function \n    \n    Implements robot sensing by updating beliefs based on the \n    color of a sensor measurement \n\n\t@param color - the color the robot has sensed at its location\n\n\t@param grid - the current map of the world, stored as a grid\n\t\t   (vector of vectors of chars) where each char represents a \n\t\t   color. For example:\n\n\t\t   g g g\n    \t   g r g\n    \t   g g g\n\n   \t@param beliefs - a two dimensional grid of floats representing\n   \t\t   the robot's beliefs for each cell before sensing. For \n   \t\t   example, a robot which has almost certainly localized \n   \t\t   itself in a 2D world might have the following beliefs:\n\n   \t\t   0.01 0.98\n   \t\t   0.00 0.01\n\n    @param p_hit - the RELATIVE probability that any \"sense\" is \n    \t   correct. The ratio of p_hit / p_miss indicates how many\n    \t   times MORE likely it is to have a correct \"sense\" than\n    \t   an incorrect one.\n\n   \t@param p_miss - the RELATIVE probability that any \"sense\" is \n    \t   incorrect. The ratio of p_hit / p_miss indicates how many\n    \t   times MORE likely it is to have a correct \"sense\" than\n    \t   an incorrect one.\n\n    @return - a normalized two dimensional grid of floats \n    \t   representing the updated beliefs for the robot. \n*/\nvector< vector <float> > sense(char color, \n\tvector< vector <char> > grid, \n\tvector< vector <float> > beliefs, \n\tfloat p_hit,\n\tfloat p_miss) \n{\n\tvector< vector <float> > newGrid;\n\n\t// your code here\n\n\treturn normalize(newGrid);\n}\n\n\n/**\n\tTODO - implement this function \n    \n    Implements robot motion by updating beliefs based on the \n    intended dx and dy of the robot. \n\n    For example, if a localized robot with the following beliefs\n\n    0.00  0.00  0.00\n    0.00  1.00  0.00\n    0.00  0.00  0.00 \n\n    and dx and dy are both 1 and blurring is 0 (noiseless motion),\n    than after calling this function the returned beliefs would be\n\n    0.00  0.00  0.00\n    0.00  0.00  0.00\n    0.00  0.00  1.00 \n\n\t@param dy - the intended change in y position of the robot\n\n\t@param dx - the intended change in x position of the robot\n\n   \t@param beliefs - a two dimensional grid of floats representing\n   \t\t   the robot's beliefs for each cell before sensing. For \n   \t\t   example, a robot which has almost certainly localized \n   \t\t   itself in a 2D world might have the following beliefs:\n\n   \t\t   0.01 0.98\n   \t\t   0.00 0.01\n\n    @param blurring - A number representing how noisy robot motion\n           is. If blurring = 0.0 then motion is noiseless.\n\n    @return - a normalized two dimensional grid of floats \n    \t   representing the updated beliefs for the robot. \n*/\nvector< vector <float> > move(int dy, int dx, \n\tvector < vector <float> > beliefs,\n\tfloat blurring) \n{\n\n\tvector < vector <float> > newGrid;\n\n\t// your code here\n\n\treturn blur(newGrid, blurring);\n}\n```\n\n#### `simulate.cpp`\n\n``` c++\n/**\n\tsimulate.cpp\n\n\tPurpose: implements a Simulation class which\n\tsimulates a robot living in a 2D world. Relies \n\ton localization code from localizer.py \n\n*/\n\n#include \"localizer.cpp\"\n#include <algorithm>\n// #include \"helpers.cpp\"\n\nclass Simulation {\n\t\nprivate:\n\tvector <char> get_colors() {\n\t\tvector <char> all_colors;\n\t\tchar color;\n\t\tint i,j;\n\t\tfor (i=0; i<height; i++) {\n\t\t\tfor (j=0; j<width; j++) {\n\t\t\t\tcolor = grid[i][j];\n\t\t\t\tif(std::find(all_colors.begin(), all_colors.end(), color) != all_colors.end()) {\n\t\t\t\t    /* v contains x */\n\t\t\t\t} else {\n\t\t\t\t\tall_colors.push_back(color);\n\t\t\t\t\tcout << \"adding color \" << color << endl;\n\t\t\t\t    /* v does not contain x */\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tcolors = all_colors;\n\t\tnum_colors = colors.size();\n\t\treturn colors;\n\t}\n\npublic: \n\tvector < vector <char> > grid;\n\tvector < vector <float> > beliefs;\n\n\tfloat blur, p_hit, p_miss, incorrect_sense_prob;\n\n\tint height, width, num_colors;\n\t\n\tstd::vector<int> true_pose;\n\tstd::vector<int> prev_pose;\n\n\tvector <char> colors;\n\tSimulation(vector < vector<char> >, float, float, vector <int>);\n\n};\n\n/**\nConstructor for the Simulation class.\n*/\nSimulation::Simulation(vector < vector <char> > map, \n\tfloat blurring,\n\tfloat hit_prob, \n\tstd::vector<int> start_pos\n\t) \n{\n\tgrid = map;\n\tblur = blurring;\n\tp_hit = hit_prob;\n\tp_miss = 1.0;\n\tbeliefs = initialize_beliefs(map);\n\tincorrect_sense_prob = p_miss / (p_hit + p_miss);\n\ttrue_pose = start_pos;\n\tprev_pose = true_pose;\n}\n\n/**\nYou can test your code by running this function. \n\nDo that by first compiling this file and then \nrunning the output.\n*/\n// int main() {\n\t\n// \tvector < vector <char> > map;\n// \tvector <char> mapRow;\n// \tint i, j, randInt;\n// \tchar color;\n// \tstd::vector<int> pose(2);\n\n// \tfor (i = 0; i < 4; i++)\n// \t{\n// \t\tmapRow.clear();\n// \t\tfor (j=0; j< 4; j++)\n// \t\t{\n// \t\t\trandInt = rand() % 2;\n// \t\t\tif (randInt == 0 ) {\n// \t\t\t\tcolor = 'r';\n// \t\t\t} \n// \t\t\telse {\n// \t\t\t\tcolor = 'g';\n// \t\t\t}\n// \t\t\tmapRow.push_back(color);\n// \t\t}\n// \t\tmap.push_back(mapRow);\n// \t}\n// \tcout << \"map is\\n\";\n// \tSimulation simulation (map, 0.1, 0.9, pose);\n// \t// simulation = Simulation(map, 0.1, 0.9, pose);\n// \tcout << \"initialization success!\\n\";\n// \tshow_grid(map);\n\n// \tcout << \"x, y = (\" << simulation.true_pose[0] << \", \" << simulation.true_pose[1] << \")\" << endl;\n// \treturn 0;\n// }\n\n```\n\n#### `tests.cpp`\n\n``` c++\n#include <iostream>\n#include \"simulate.cpp\"\n\nbool test_normalize() {\n\tvector < vector <float> > unnormalized, normalized, result;\n\tunnormalized = zeros(2, 2);\n\tnormalized = zeros(2,2);\n\n\tint i,j;\n\n\tfor (i=0; i<2; i++) {\n\t\tfor(j=0; j<2; j++) {\n\t\t\tunnormalized[i][j] = 1.0;\n\t\t\tnormalized[i][j] = 0.25;\n\t\t}\n\t}\n\n\tresult = normalize(unnormalized);\n\n\tbool correct;\n\tcorrect = close_enough(normalized, result);\n\n\tif (correct) {\n\t\tcout << \"! - normalize function worked correctly!\\n\";\n\t}\n\telse {\n\t\tcout << \"X - normalize function did not work correctly.\\n\";\n\t\tcout << \"For the following input:\\n\\n\";\n\t\tshow_grid(unnormalized);\n\t\tcout << \"\\nYour code returned the following:\\n\\n\";\n\t\tshow_grid(result);\n\t\tcout << \"\\nWhen it should have returned the following:\\n\";\n\t\tshow_grid(normalized);\n\t}\n\treturn correct;\n}\n\nbool test_blur() {\n\tvector < vector <float> > in, correct, out;\n\tin = zeros(3, 3);\n\tcorrect = zeros(3,3);\n\n\tin[1][1] = 1.0;\n\n\tfloat corner = 0.01;\n\tfloat side = 0.02;\n\tfloat center = 0.88;\n\n\tcorrect[0][0] = corner;\n\tcorrect[0][1] = side;\n\tcorrect[0][2] = corner;\n\n\tcorrect[1][0] = side;\n\tcorrect[1][1] = center;\n\tcorrect[1][2] = side;\n\n\tcorrect[2][0] = corner;\n\tcorrect[2][1] = side;\n\tcorrect[2][2] = corner;\n\n\tout = blur(in, 0.12);\n\n\tbool right;\n\tright = close_enough(correct, out);\n\n\tif (right) {\n\t\tcout << \"! - blur function worked correctly!\\n\";\n\t}\n\telse {\n\t\tcout << \"X - blur function did not work correctly.\\n\";\n\t\tcout << \"For the following input:\\n\\n\";\n\t\tshow_grid(in);\n\t\tcout << \"\\nYour code returned the following:\\n\\n\";\n\t\tshow_grid(out);\n\t\tcout << \"\\nWhen it should have returned the following:\\n\";\n\t\tshow_grid(correct);\n\t}\n\n\treturn right;\n}\n\nbool test_helpers() {\n\tbool correct = true;\n\tbool question_correct;\n\n\tquestion_correct = test_normalize();\n\tif (!question_correct) {\n\t\tcorrect = false;\n\t}\n\n\tcout << endl;\n\n\tquestion_correct = test_blur();\n\tif (!question_correct) {\n\t\tcorrect = false;\n\t}\n\treturn correct;\n\t\n}\n\n\nbool test_initialize() {\n\tvector < vector <char> > map;\n\tmap = read_map(\"maps/m1.txt\");\n\tint h = map.size();\n\n\tif (h < 1) {\n\t\tcout << \"failed to load map. Make sure there is a maps/ directory in the same directory as this file!\\n\";\n\t\treturn false;\n\t}\n\n\tvector < vector <float> > beliefs, correct;\n\tbeliefs = initialize_beliefs(map);\n\n\tint w, A; \n\tfloat belief;\n\n\tw = map[0].size();\n\tA = h * w;\n\tbelief = 1.0 / A;\n\n\tint i, j;\n\tvector <float> row;\n\tfor (i=0; i<map.size(); i++) {\n\t\trow.clear();\n\t\tfor (j=0; j<map[0].size(); j++) {\n\t\t\trow.push_back(belief);\n\t\t}\n\t\tcorrect.push_back(row);\n\t}\n\n\tbool right = close_enough(correct, beliefs);\n\n\tif (right) {\n\t\tcout << \"! - initialize_beliefs function worked correctly!\\n\";\n\t}\n\telse {\n\t\tcout << \"X - initialize_beliefs function did not work correctly.\\n\";\n\t\tcout << \"For the following input:\\n\\n\";\n\t\tshow_grid(map);\n\t\tcout << \"\\nYour code returned the following:\\n\\n\";\n\t\tshow_grid(beliefs);\n\t\tcout << \"\\nWhen it should have returned the following:\\n\";\n\t\tshow_grid(correct);\n\t}\n\n\treturn right;\n\n}\n\nbool test_move() {\n\tvector < vector <float> > in, out, correct;\n\tin = zeros(3,3);\n\tin[2][2] = 1.0;\n\n\tint dx, dy;\n\tdx = 1;\n\tdy = 1;\n\tfloat blurring = 0.0;\n\n\tcorrect = zeros(3,3);\n\tcorrect[0][0] = 1.0;\n\n\tout = move(dy, dx, in, blurring);\n\n\tbool right = close_enough(correct, out);\n\n\tif (right) {\n\t\tcout << \"! - move function worked correctly with zero blurring\\n\";\n\t}\n\telse {\n\t\tcout << \"X - move function did not work correctly.\\n\";\n\t\tcout << \"When dx=1, dy=1, blurring=0.0 and with\\nthe following beliefs:\\n\\n\";\n\t\tshow_grid(in);\n\t\tcout << \"\\nYour code returned the following:\\n\\n\";\n\t\tshow_grid(out);\n\t\tcout << \"\\nWhen it should have returned the following:\\n\";\n\t\tshow_grid(correct);\n\t}\n\treturn right;\n}\n\nbool test_sense() {\n\tvector < vector <float> > in, out, correct;\n\tin = zeros(4,2);\n        in[2][1] = 1.0;\n\n\tint i,j;\n\tfor (i=0; i<in.size(); i++)\n\t{\n\t\tfor (j=0; j<in[0].size(); j++) {\n\t\t\tin[i][j] = 1.0/8.0;\n\t\t}\n\t}\n\n\tchar color = 'r';\n\tvector < vector <char> > map;\n\tmap = read_map(\"maps/half_red.txt\");\n\tfloat p_hit, p_miss;\n\tp_hit = 2.0;\n\tp_miss = 1.0;\n\n\tout = sense(color, map, in, p_hit, p_miss);\n\tfloat total = 0.0;\n\n\tfor (i=0; i<out.size(); i++)\n\t{\n\t\tfor (j=0; j<out[0].size(); j++) {\n\t\t\ttotal += out[i][j];\n\t\t}\n\t}\n\n\tbool right = true;\n\tif ( (total < 0.99) || (total > 1.01) ) {\n\t\tright = false;\n\t}\n\n\tif ( (out.size() != in.size()) || out[0].size() != in[0].size()) {\n\t\tright = false;\n\t\tcout << \"X - sense function not working correctly.\\n\";\n\t\tcout << \"Your function returned a grid with incorrect dimensions.\\n\";\n\t\treturn right;\n\t}\n\n\tfloat r_prob, g_prob, r_exp, g_exp;\n\tr_prob = out[0][0];\n\tg_prob = out[0][1];\n\n\tr_exp = 1.0 / 6.0;\n\tg_exp = 1.0 / 12.0;\n\n\tif (close_enough(r_prob, r_exp) && close_enough(g_prob, g_exp)) {\n\t\tcout << \"! - sense function worked correctly\\n\";\n\t\treturn false;\n\t}\n\telse {\n\t\tcout << \"X - sense function did not work correctly.\\n\";\n\t\tcout << \"When p_hit=2.0, p_miss=1.0 and with\\nthe following beliefs:\\n\\n\";\n\t\tshow_grid(in);\n\t\tcout << \"\\nYour code returned the following:\\n\\n\";\n\t\tshow_grid(out);\n\t\tcout << \"\\nbut this is incorrect.\\n\";\n\t}\n\treturn right;\n}\n\nbool test_localizer() {\n\tbool correct = true;\n\tbool question_correct;\n\n\tquestion_correct = test_initialize();\n\tif (!question_correct) {\n\t\tcorrect = false;\n\t}\n\tif (!correct) {\n\t\t// map could not be loaded\n\t\treturn false;\n\t}\n\n\tcout << endl;\n\n\tquestion_correct = test_move();\n\tif (!question_correct) {\n\t\tcorrect = false;\n\t}\n\n\tcout << endl;\n\n\tquestion_correct = test_sense();\n\tif (!question_correct) {\n\t\tcorrect = false;\n\t}\n\treturn correct;\n}\n\n// bool test_simulation() {\n// \t// todo \n// }\n\nint main() {\n\tcout << endl;\n\ttest_helpers();\n\ttest_localizer();\n\tcout << endl;\n\treturn 0;\n}\n```\n\n#### `maps/half_red.txt`\n```\nr g \ng r \nr r \ng g \n```\n\n#### `maps/m1.txt`\n```\nr r r \nr g r \nr r r \n```\n\n#### `maps/m2.txt`\n```\nr g \nr r \ng g \n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 769745,
+          "key": "28357a16-f211-4dba-893a-b021dfc24775",
+          "title": "Project Tips",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28357a16-f211-4dba-893a-b021dfc24775",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 769746,
+              "key": "4a600ffb-dde3-46e6-ba3e-3b15b10a1569",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Tips\n\n### Project Files\n\nThere are only two files you need to worry about for this project: `helpers.cpp` and `localizer.cpp`. Here's what each file included in the starter code is for:\n\n- You can mostly ignore any `.h` (header) files, although if you add additional functions to `.cpp` files you should also define them within the related header file!\n- The `maps` folder just has data of the map data used in the project\n- `tests.cpp` is just for testing - no need to touch it\n- `debugging_helpers.cpp` is to help you debug; don't need to implement anything\n- `helpers.cpp` - Implement `normalize()` and `blur()`\n- `localizer.cpp` - Implement `initialize_beliefs()`, `sense()` and `move()`\n- `simulate.cpp` - You can uncomment portions of this to further help you develop the project, but this is not needed just to pass. See more tips below if you want to delve deeper here.\n\n### How to approach the TO-DO's\n\nWhile there is no need to touch `tests.cpp`, it can help order your implementations, as you can unit test each function to see if it works before moving on further.\n\nTherefore, the best method to approach the project is to write the code for one of these, compile your code (make sure to flag c++11!), then run `tests.cpp`. If that individual function passes the test without any errors, you can move onto the next one. If not, make sure to debug and fix it first!\n\n\n### Initializing vectors & matrices in C++11\n\nIn older versions of C++, you could initialize the size of the vector or matrix to start, but you had to either replace each index or use `.push_back()` to place values within the vector. In C++11, this is made easier as you can place the values to begin with, as shown below (assuming the various `some_vals` shown below are already initialized or are a `const`):\n\n```cpp\t\nvector < vector <float> > our_matrix {{some_val1, some_val4, some_val7},\n\t\t\t\t\t\t\t\t      {some_val2, some_val5, some_val8}, \n\t\t\t\t\t\t\t\t      {some_val3, some_val6, some_val9}};\n```\nNote that the values in the above should be floats given how the inner vector is defined; if they are doubles, you will likely get a compilation error due to loss of precision.\n\n### Modulo (%) in C++ and Negative Numbers\nIf you type `-1 % 5` into either Python script or Google, you should get `4` as the answer. However, if you do the same in C++, you'll get `1`. \n\nWhy? Well, it isn't actually *modulo* in C++, but the remainder! Check out [this Stack Overflow post](https://stackoverflow.com/questions/11630321/why-does-c-output-negative-numbers-when-using-modulo) if you want to read about why this is.\n\nAs you may remember, Sebastian used the *modulo* operator when writing his code in Python for localization. If you don't account for the difference between these implementations in Python vs. C++, you may end up with a **segmentation fault** when you try to call an index outside of the size of your vector!\n\nIf you're stuck on how to deal with this difference between Python and C++, take a look at the top answers [here](https://stackoverflow.com/questions/12276675/modulus-with-negative-numbers-in-c) for some useful tips.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778236,
+              "key": "9865e08b-dc56-4da0-87bf-a3ec63bf2771",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Segmentation Faults\n\nOne potential cause of these is concerning modulo as described above, but there is also another potential cause.\n\nDepending on your implementation, after you've coded `blur()`, running the out file from `tests.cpp` may produce a segmentation fault when the tests reach `move()` (i.e. `normalize()`, `blur()` and `initialize_beliefs()` will show their test results, and then the fault occurs). Typically this should resolve itself once `newGrid` within the `move()` function takes shape.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778269,
+              "key": "b64618b4-8bed-43e4-8916-76cd9802903a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Additional Simulation (*optional*)\n\nWhile all you need to pass the project is to pass all tests in `tests.cpp`, you can also visualize a simulation of your localizer with `simulate.cpp`. In order to do so, the first step is to uncomment all the lines at the bottom of the file around the `main()` function.\n\nFrom here, it is up to you how to proceed - the map is initialized for you, and you can then call your functions from `localizer.cpp` to see what happens.\n\nTo see the results of the simulation, you'd run:\n```python\ng++ -std=c++11 simulate.cpp\n```\nNote that this is because you actually have a separate `main()` function here, so it is a completely separate program from `tests.cpp`.\n\nThere's one last item to note here - if you try to run `tests.cpp`, it actually uses the `Simulation` class from this file, and so trying to run `tests.cpp` while the `main()` function within `simulate.cpp` is uncommented will result in an error - make sure to comment it back out when submitting!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 778283,
+          "key": "71158534-c07d-4dda-9fe8-3b21bdf9e7e7",
+          "title": "Workspace Tips",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "71158534-c07d-4dda-9fe8-3b21bdf9e7e7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778284,
+              "key": "556f4246-d827-4aaf-96dd-c0efb87049a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Embedded Terminal\n\nWe've added a project workspace to help make coding this project easier! You'll be using a feature of that classroom that you haven't seen yet.\n\n**Note:** These same instructions are repeated again in the next lesson as well (C++ Intro to Optimization). If you read them here and utilize the workspace for the project, there's no need to go through them a second time.\n\nWhen you go to the next part of the lesson, an embedded command line tool will load. The command line allows you to execute commands directly to a computer instead of using a mouse and user interface. On Macs and Linux machines, there is a program called Terminal that allows you to type and execute these commands. The equivalent in Windows is the Console Window. \n\nHere is a screenshot of what the embedded command line tool interface looks like:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778381,
+              "key": "daa249df-09a4-4da7-b621-53292ec8e958",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a078e9d_cli/cli.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/daa249df-09a4-4da7-b621-53292ec8e958",
+              "caption": "Command Line Interface",
+              "alt": "Command Line Interface",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778382,
+              "key": "874ed58f-7d0d-48a1-ab69-bed400a7463f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The following video walks you through how to use the embedded terminal.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778383,
+              "key": "2c2244a3-4af2-49b1-aaa5-643835c223ea",
+              "title": "Nd113 Embedded Terminal V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Bhl5JQ_N9V8",
+                "china_cdn_id": "Bhl5JQ_N9V8.mp4"
+              }
+            },
+            {
+              "id": 778384,
+              "key": "7cc34197-4d41-4132-8bc3-5e16a79afb01",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Linux Commands\n\nTo learn more about using the command line in the terminal, check out these links:\n* [Top 10 linux commands](https://www.lifewire.com/linux-commands-for-navigating-file-system-4027320)\n* [Basic Linux Commands](https://diyhacking.com/linux-commands-for-beginners/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778385,
+              "key": "4bbd9c7e-07f1-4ade-ae43-d5486707fa27",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### File Navigation\n\nIn the C++ lesson, each demonstration or exercise uses this interface. In the top left corner, you'll find the file browser. Each project, demo or exercise is contained in its own folder. The name of the folder corresponds with the title of the current lesson section or project. For example, this project is called \"Translate Python to C++\", and the folder is called \"iSDC-P2-Translate-Python-Cpp\".\n\nHere is a screenshot of where the file browser is located:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778386,
+              "key": "fda372d4-4be2-4a15-8b8c-0e5657308967",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a078f3e_files/files.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/fda372d4-4be2-4a15-8b8c-0e5657308967",
+              "caption": "File Browser",
+              "alt": "File Browser",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778387,
+              "key": "78aed8d7-9b13-49f1-a9b1-1ec580a1917a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If you double click on a folder, the folder will open. Likewise, double clicking on a file will open the file in a text editor.  You can also right-click on a file or folder to download or delete it among other options. The plus sign is used to add new files or folders as well as to upload files or folders.\n\nThis next image shows where the text editor is located:\n\n### Text Editor",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778388,
+              "key": "85c19978-92bc-4454-875d-4ba00f2a9c7c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a078fc6_texteditor/texteditor.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/85c19978-92bc-4454-875d-4ba00f2a9c7c",
+              "caption": "Text Editor",
+              "alt": "Text Editor",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778389,
+              "key": "c5ce7eeb-fcb0-4d28-bf60-3152936a08f8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You can edit text files in the text editor. In the C++ exercises, this is where you will be modifying or writing C++ code. The classroom saves your work automatically as you modify files.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778390,
+              "key": "fb57678b-9cc4-4edb-a4fb-0a1cb9c2fdef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Terminal Window\n\nTo actually run commands that will compile and execute your C++ programs, you will need to open a terminal window. You click where it says \"New Terminal\" in the middle bottom of the screen:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778391,
+              "key": "12bbba1e-df8d-4cc5-a86b-fa7095e416d0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a0792cf_emptyterminal/emptyterminal.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/12bbba1e-df8d-4cc5-a86b-fa7095e416d0",
+              "caption": "New Terminal Button",
+              "alt": "New Terminal Button",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778392,
+              "key": "50d16a7c-75ed-4fc6-81f8-9ce4bf47b51b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "And this opens a new terminal window:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778393,
+              "key": "1b0a93bb-af12-4cc7-91b8-724c520f80ac",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a079548_untitled-drawing/untitled-drawing.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1b0a93bb-af12-4cc7-91b8-724c520f80ac",
+              "caption": "Terminal Window",
+              "alt": "Terminal Window",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778394,
+              "key": "9fe1edcc-a76a-408c-8d82-b5a04721009f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The terminal window is where you'll type commands to execute your C++ code. The exercises and demos include instruction files that tell you what commands to type and in what order. So you do not need to learn command line syntax for these lessons.\n\nHowever, here is an explanation of what those commands do:\n```\ncd foldername\n```\n\ncd stands for \"change directory\". You can use the cd command to change what directory your terminal window is looking at\n\n```\ng++ main.cpp other_files.cpp\n```\n\nThis command compiles your C++ program. Sometimes you'll also see a command like:\n```\ng++ -std=c++11 main.cpp other_files.cpp\n```\n\nThis command tells the compiler to use the C++11 standard. By default the compiler uses C++98. C++11 contains a handful of features that C++98 does not contain. So whenever a program uses a feature of C++11, you need to tell the compiler.\n\nThe last command you'll see in these lessons is\n```\n./a.out\n```\n\nWhen you compile your programs, the compiler outputs a file called a.out. \n\nExecuting ```./a.out``` on the command line will run your program.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778395,
+              "key": "64f83711-d1ac-4fba-9d52-a3a714bed2e9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If you'd like to learn more about the basics of terminal commands, here is a link to an introductory article: [terminal commands](https://www.techrepublic.com/article/16-terminal-commands-every-user-should-know/).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778396,
+              "key": "08a49f75-7134-4490-9237-bbee27bf216d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Menu\n\nThe embedded command line interface also has a menu in the bottom left corner.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778399,
+              "key": "00ca00f3-a9ac-460a-8f6e-806346f528ab",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a0797a8_menu/menu.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/00ca00f3-a9ac-460a-8f6e-806346f528ab",
+              "caption": "Menu Button",
+              "alt": "Menu Button",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778398,
+              "key": "0592873b-b389-4ca5-9f56-9c0534bcf3f9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If you click on the menu, you'll see two options:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 778397,
+              "key": "4ba2f0e3-2419-4d38-b3e3-785d49b8bb86",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a0797f2_menuopen/menuopen.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4ba2f0e3-2419-4d38-b3e3-785d49b8bb86",
+              "caption": "Menu",
+              "alt": "Menu",
+              "width": 960,
+              "height": 720,
+              "instructor_notes": null
+            },
+            {
+              "id": 778400,
+              "key": "08f9357b-8ebe-437f-a9c3-e3197eb8bc97",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "REFRESH WORKSPACE will restart the workspace. It will not erase your work. \n\nHowever, RESET DATA will restart the workspace AND replace all of your files with the original workspace files. You will lose all of your work including any extra files you created in the workspace.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 778285,
+          "key": "f44abf35-4d0f-44d5-9ca2-2c66faa61a11",
+          "title": "Project Workspace: Translate Python to C++",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f44abf35-4d0f-44d5-9ca2-2c66faa61a11",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 778291,
+              "key": "11844602-abfc-454c-a580-ef0c330364f7",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r345626c778285xGENERICa54fxbzj",
+              "pool_id": "webterminal",
+              "view_id": "generic-62127",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [
+                      "/home/workspace/iSDC-P2-Translate-Python-Cpp/helpers.cpp",
+                      "/home/workspace/iSDC-P2-Translate-Python-Cpp/localizer.cpp"
+                    ],
+                    "showFiles": true,
+                    "allowClose": true,
+                    "showEditor": true,
+                    "allowSubmit": true,
+                    "terminalTitle": "",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

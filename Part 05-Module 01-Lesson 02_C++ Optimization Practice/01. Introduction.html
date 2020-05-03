@@ -1,0 +1,295 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Optimization Practice</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Software Development and Optimization.html">02. Software Development and Optimization</a>
+    </li>
+    <li class="">
+      <a href="03. Optimization Techniques.html">03. Optimization Techniques</a>
+    </li>
+    <li class="">
+      <a href="04. Dead Code.html">04. Dead Code</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Remove Dead Code.html">05. Exercise: Remove Dead Code</a>
+    </li>
+    <li class="">
+      <a href="06. If Statements.html">06. If Statements</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise If Statements.html">07. Exercise: If Statements</a>
+    </li>
+    <li class="">
+      <a href="08. For Loops.html">08. For Loops</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise For Loops.html">09. Exercise: For Loops</a>
+    </li>
+    <li class="">
+      <a href="10. Intermediate Variables.html">10. Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Intermediate Variables.html">11. Exercise: Intermediate Variables</a>
+    </li>
+    <li class="">
+      <a href="12. Vector Storage.html">12. Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Vector Storage.html">13. Exercise: Vector Storage</a>
+    </li>
+    <li class="">
+      <a href="14. References.html">14. References</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise References.html">15. Exercise: References</a>
+    </li>
+    <li class="">
+      <a href="16. Sebastian&#x27;s Synchronization Story.html">16. Sebastian&#x27;s Synchronization Story</a>
+    </li>
+    <li class="">
+      <a href="17. Static Keyword.html">17. Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="18. Exercise Static Keyword.html">18. Exercise: Static Keyword</a>
+    </li>
+    <li class="">
+      <a href="19. Speed Challenge.html">19. Speed Challenge</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="c-optimization-techniques">C++ Optimization Techniques</h1>
+<p>Now comes the practical part of C++ optimization.  You are going to learn a handful of code optimization strategies and then apply those strategies to increase the speed of a C++ program.</p>
+<p>However, remember that optimizing a program involves other facets besides the programming language itself. Your program's speed will also depend on your hardware, your compiler and what computer algorithms you choose. The more familiar you become with all of these different facets, the more tools you will have for optimization. Here is a brief summary of why each of these aspects is so important.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="hardware">Hardware</h2>
+<p>Some hardware might have limitations that slow down your code. For instance, when calculating trigonometric functions, a processor might use a slow software approximation. If instead, you could use <a href="https://en.wikipedia.org/wiki/Small-angle_approximation" rel="noopener noreferrer" target="_blank">small-angle approximation</a>, you might get your code to run faster. </p>
+<p>Embedded hardware might not have much memory or have a 16-bit or 32-bit architecture instead of a 64-bit architecture. Using 64-bit integers on a 16-bit architecture might be possible with your compiler, but it would also probably be inefficient.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="compilers">Compilers</h2>
+<p>Many compilers will optimize at least parts of your code for you. For instance, it might be more efficient for the CPU to unroll a for loop to avoid checking the conditional statements:</p>
+<pre><code class="c++ language-c++">// for loop
+for (int i = 0; i &lt; 5; i++) {
+     std::cout &lt;&lt; i &lt;&lt; "\n";
+}
+
+// for loop unrolled
+std::cout &lt;&lt; 0 &lt;&lt; "\n";
+std::cout &lt;&lt; 1 &lt;&lt; "\n";
+std::cout &lt;&lt; 2 &lt;&lt; "\n";
+std::cout &lt;&lt; 3 &lt;&lt; "\n";
+std::cout &lt;&lt; 4 &lt;&lt; "\n";</code></pre>
+<p>The unrolled version could run faster because unrolling avoids checking if <code>i &lt; 5</code> is true. For a more complete list of what your compiler might try to do, read this article <a href="https://en.wikipedia.org/wiki/Optimizing_compiler" rel="noopener noreferrer" target="_blank">here</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="algorithms">Algorithms</h2>
+<p>Some algorithms are known to be faster than other algorithms. A common case would be sorting algorithms; <a href="https://en.wikipedia.org/wiki/Quicksort" rel="noopener noreferrer" target="_blank">quicksort</a>, for example, is known to be faster than <a href="https://en.wikipedia.org/wiki/Bubble_sort" rel="noopener noreferrer" target="_blank">bubble sort</a>.</p>
+<p>Here is another important point to keep in mind; C++ libraries are very convenient, but that doesn't mean they use the fastest algorithms especially for your individual case. Being aware of what is happening under the hood provides more opportunities for improving efficiency. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="c">C++</h2>
+<p>And now, let's move on to optimizing C++. You are going to learn a handful of techniques and practice implementing them. Then at the end of the lesson, you'll have the opportunity to optimize a C++ histogram filter.</p>
+<p>Here is a preview of the type of things you will be learning: Did you know that every time you call a function, C++ copies the input variables into memory? Take this example:</p>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+
+int addition(int a, int b);
+
+int main() {
+
+    int x, y;
+    x = 5;
+    y = 7;
+
+    std::cout &lt;&lt; addition(x, y) &lt;&lt; "\n";
+
+}
+
+int addition(int a, int b) {
+    return a + b;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>C++ puts the x variable into memory and the y variable into memory as expected. </p>
+<p>When you call the addition function, C++ actually then puts the a variable and the b variable into memory as well; essentially C++ is copying x and y into memory twice even though the x and y values could have been used directly. </p>
+<p>For a 32-bit integer, this might not be an issue; however, once you start working with larger variables such as 2-D vectors, the extra read and writes can slow your programs down.</p>
+<p>In this lesson, you'll learn how to speed up your code in situations like these.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Software Development and Optimization.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Introduction')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

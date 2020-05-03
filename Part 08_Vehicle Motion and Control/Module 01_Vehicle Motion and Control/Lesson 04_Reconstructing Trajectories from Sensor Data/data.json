@@ -1,0 +1,124 @@
+{
+  "data": {
+    "lesson": {
+      "id": 466901,
+      "key": "05f7af88-3c20-4241-a9a0-d0dcb3c92c23",
+      "title": "Reconstructing Trajectories from Sensor Data",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Use raw acceleration, displacement, and angular rotation data from a vehicle's accelerometer, odometer, and rate gyros to reconstruct a vehicle's X, Y trajectory.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 477758,
+          "key": "074cc37f-1026-4aea-b1dc-028dc5ba3801",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "074cc37f-1026-4aea-b1dc-028dc5ba3801",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477787,
+              "key": "c50094fd-6dfd-4209-a939-6c83868392cd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lab Overview\n\nIn this project you will take raw sensor data like this:\n\n| timestamp | displacement  | yaw_rate | acceleration |\n| :-------: | :----------: | :------: | :----------: |\n| 0.0 | 0 | 0.0 | 0.0 |\n| 0.25 | 0.0 | 0.0 | 19.6 |\n| 0.5 | 1.225 | 0.0 | 19.6 |\n| 0.75 | 3.675 | 0.0 | 19.6 |\n| 1.0 | 7.35 | 0.0 | 19.6 |\n| 1.25 | 12.25 | 0.0 | 0.0 |\n| 1.5 | 17.15 | -2.829| 0.0 |\n| 1.75 | 22.05 | -2.829| 0.0 |\n| 2.0 | 26.95 | -2.829| 0.0 |\n| 2.25 | 31.85 | -2.829| 0.0 |\n| 2.5 | 36.75 | -2.829 | 0.0 |\n| 2.75 | 41.65 | -2.829 | 0.0 |\n| 3.0 | 46.55 | -2.829 | 0.0 |\n| 3.25 | 51.45 | -2.829 | 0.0 |\n| 3.5 | 56.35 | -2.829 | 0.0 |\n\nand turn it into plots of vehicle trajectories like this:\n\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477788,
+              "key": "c54a3930-7b5c-48a9-9321-7dae5029639d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a305b36_example-trajectory/example-trajectory.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c54a3930-7b5c-48a9-9321-7dae5029639d",
+              "caption": "",
+              "alt": "",
+              "width": 380,
+              "height": 252,
+              "instructor_notes": null
+            },
+            {
+              "id": 787594,
+              "key": "9ba80ffe-fc4f-425a-ba7d-c0cdf71125e2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Data Note\n\nThe above is just example data, and not from real sensors - as you might notice, acceleration of 19.6 m/s^2 from 0.25 to 0.5 seconds would result in a velocity changing from 0 to 4.9 m/s. If this was a consistent velocity, the displacement would be the velocity (4.9) multiplied by the change in time (delta t, or 0.25), resulting in displacement of 1.225, as shown above. However, in reality it would likely be closer to constant acceleration (instead of constant velocity) during this period from 0 to 4.9 m/s velocity, so displacement would actually be 0.6125. We've simplified the calculations for our examples in this lab.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477789,
+              "key": "c6b84873-7b75-453c-b726-582eaa02e11a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Instructions\n\nInstructions for this project are included in the project notebook in the next section.\n\nNote that this project is **not** submitted and will not be reviewed by a Udacity reviewer. This means that you **can** complete this Nanodegree without completing this project (but we recommend you complete it anyway). \n\nIf you want to ask questions about this project or share advice and code, post in the Study Groups or Knowledge.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466954,
+          "key": "b6d693d7-34cf-404f-a7ef-02e4357b05e0",
+          "title": "Lab - Reconstructing Trajectories",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b6d693d7-34cf-404f-a7ef-02e4357b05e0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477648,
+              "key": "4d997704-01ab-4b64-8c37-b5d2d412526e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewfef21c10",
+              "pool_id": "jupyter",
+              "view_id": "fef21c10-f95f-4922-8032-4b675a860abe",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Reconstructing%20Trajectories.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

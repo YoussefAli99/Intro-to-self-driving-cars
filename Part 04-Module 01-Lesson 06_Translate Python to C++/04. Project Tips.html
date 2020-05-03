@@ -1,0 +1,235 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Tips</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Translate Python to C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Python Code Reminder.html">02. Python Code Reminder</a>
+    </li>
+    <li class="">
+      <a href="03. Get the Starter Code.html">03. Get the Starter Code</a>
+    </li>
+    <li class="">
+      <a href="04. Project Tips.html">04. Project Tips</a>
+    </li>
+    <li class="">
+      <a href="05. Workspace Tips.html">05. Workspace Tips</a>
+    </li>
+    <li class="">
+      <a href="06. Project Workspace Translate Python to C++.html">06. Project Workspace: Translate Python to C++</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Translate Python to C++.html">Project Description - Translate Python to C++</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Translate Python to C++.html">Project Rubric - Translate Python to C++</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Project Tips</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-tips">Project Tips</h1>
+<h3 id="project-files">Project Files</h3>
+<p>There are only two files you need to worry about for this project: <code>helpers.cpp</code> and <code>localizer.cpp</code>. Here's what each file included in the starter code is for:</p>
+<ul>
+<li>You can mostly ignore any <code>.h</code> (header) files, although if you add additional functions to <code>.cpp</code> files you should also define them within the related header file!</li>
+<li>The <code>maps</code> folder just has data of the map data used in the project</li>
+<li><code>tests.cpp</code> is just for testing - no need to touch it</li>
+<li><code>debugging_helpers.cpp</code> is to help you debug; don't need to implement anything</li>
+<li><code>helpers.cpp</code> - Implement <code>normalize()</code> and <code>blur()</code></li>
+<li><code>localizer.cpp</code> - Implement <code>initialize_beliefs()</code>, <code>sense()</code> and <code>move()</code></li>
+<li><code>simulate.cpp</code> - You can uncomment portions of this to further help you develop the project, but this is not needed just to pass. See more tips below if you want to delve deeper here.</li>
+</ul>
+<h3 id="how-to-approach-the-to-dos">How to approach the TO-DO's</h3>
+<p>While there is no need to touch <code>tests.cpp</code>, it can help order your implementations, as you can unit test each function to see if it works before moving on further.</p>
+<p>Therefore, the best method to approach the project is to write the code for one of these, compile your code (make sure to flag c++11!), then run <code>tests.cpp</code>. If that individual function passes the test without any errors, you can move onto the next one. If not, make sure to debug and fix it first!</p>
+<h3 id="initializing-vectors--matrices-in-c11">Initializing vectors &amp; matrices in C++11</h3>
+<p>In older versions of C++, you could initialize the size of the vector or matrix to start, but you had to either replace each index or use <code>.push_back()</code> to place values within the vector. In C++11, this is made easier as you can place the values to begin with, as shown below (assuming the various <code>some_vals</code> shown below are already initialized or are a <code>const</code>):</p>
+<p><code>cpp    
+vector &lt; vector &lt;float&gt; &gt; our_matrix {{some_val1, some_val4, some_val7},
+                                      {some_val2, some_val5, some_val8}, 
+                                      {some_val3, some_val6, some_val9}};
+</code><br />
+Note that the values in the above should be floats given how the inner vector is defined; if they are doubles, you will likely get a compilation error due to loss of precision.</p>
+<h3 id="modulo--in-c-and-negative-numbers">Modulo (%) in C++ and Negative Numbers</h3>
+<p>If you type <code>-1 % 5</code> into either Python script or Google, you should get <code>4</code> as the answer. However, if you do the same in C++, you'll get <code>1</code>. </p>
+<p>Why? Well, it isn't actually <em>modulo</em> in C++, but the remainder! Check out <a href="https://stackoverflow.com/questions/11630321/why-does-c-output-negative-numbers-when-using-modulo" rel="noopener noreferrer" target="_blank">this Stack Overflow post</a> if you want to read about why this is.</p>
+<p>As you may remember, Sebastian used the <em>modulo</em> operator when writing his code in Python for localization. If you don't account for the difference between these implementations in Python vs. C++, you may end up with a <strong>segmentation fault</strong> when you try to call an index outside of the size of your vector!</p>
+<p>If you're stuck on how to deal with this difference between Python and C++, take a look at the top answers <a href="https://stackoverflow.com/questions/12276675/modulus-with-negative-numbers-in-c" rel="noopener noreferrer" target="_blank">here</a> for some useful tips.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="segmentation-faults">Segmentation Faults</h3>
+<p>One potential cause of these is concerning modulo as described above, but there is also another potential cause.</p>
+<p>Depending on your implementation, after you've coded <code>blur()</code>, running the out file from <code>tests.cpp</code> may produce a segmentation fault when the tests reach <code>move()</code> (i.e. <code>normalize()</code>, <code>blur()</code> and <code>initialize_beliefs()</code> will show their test results, and then the fault occurs). Typically this should resolve itself once <code>newGrid</code> within the <code>move()</code> function takes shape.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="additional-simulation-optional">Additional Simulation (<em>optional</em>)</h3>
+<p>While all you need to pass the project is to pass all tests in <code>tests.cpp</code>, you can also visualize a simulation of your localizer with <code>simulate.cpp</code>. In order to do so, the first step is to uncomment all the lines at the bottom of the file around the <code>main()</code> function.</p>
+<p>From here, it is up to you how to proceed - the map is initialized for you, and you can then call your functions from <code>localizer.cpp</code> to see what happens.</p>
+<p>To see the results of the simulation, you'd run:</p>
+<pre><code class="python language-python">g++ -std=c++11 simulate.cpp</code></pre>
+<p>Note that this is because you actually have a separate <code>main()</code> function here, so it is a completely separate program from <code>tests.cpp</code>.</p>
+<p>There's one last item to note here - if you try to run <code>tests.cpp</code>, it actually uses the <code>Simulation</code> class from this file, and so trying to run <code>tests.cpp</code> while the <code>main()</code> function within <code>simulate.cpp</code> is uncommented will result in an error - make sure to comment it back out when submitting!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Workspace Tips.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Project Tips')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

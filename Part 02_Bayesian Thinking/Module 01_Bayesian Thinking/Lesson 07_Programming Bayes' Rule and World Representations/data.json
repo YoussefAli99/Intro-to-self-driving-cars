@@ -1,0 +1,662 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349911,
+      "key": "9986b101-885e-4ece-b522-b70a8b2cceed",
+      "title": "Programming Bayes' Rule and World Representations",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you can expect a lot of hands-on practice programming Bayesian probability in Python, and representing a 2D world that you'll need to localize a car.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 352620,
+          "key": "f87af53a-ec6a-4393-9415-1644d9a68da9",
+          "title": "Bayes' Rule Steps",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f87af53a-ec6a-4393-9415-1644d9a68da9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 352699,
+              "key": "400cbf8a-009f-4234-801d-fbc77b0cf303",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Review\n\nBefore we dive into code that utilizes Bayes' rule, let's review what we've learned in the previous lesson.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352622,
+              "key": "48c6ceb6-6db2-420d-96ec-8c421d63b00c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We've seen that Bayes' rule allows us to improve a **prior** probability by incorporating **new evidence** (from observed data or tests) and forming a new **posterior** probability.  It does this through a series of mathematical steps.\n\nTo describe the steps, I'll be using the notation <span class=\"mathquill\">H</span> for hypothesis (ex. the likelihood that a car is in a certain location or that a person has cancer, etc.), and <span class=\"mathquill\">T</span> for observed test/sensor data (ex. a car sees the color green or a positive medical test result is returned). For example, <span class=\"mathquill\">P(T|\\neg H)</span> is the probability of sensor reading occurring given that the hypothesis has *not* occurred.\n\n**A note on notation**\n\nAs you work through these problems, you may see other notation, <span class=\"mathquill\">P(H| T)</span>,\nor <span class=\"mathquill\">P(X| U)</span>, or <span class=\"mathquill\">P(A| B)</span> (and so on) where one letter indicates a hypothesis and the other indicates observed data. Different notation; same concept, and as long as you are familiar with the concept, you should be well equipped to deal with changing notation!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352637,
+              "key": "e9efaa58-4b41-48fb-8b83-2bc45312f59f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 1. Prior probabilities\n\nThe first step in Bayes' rule is to determine any prior probabilities. Ask yourself, based on previous data, how likely is a hypothesis, or specific event, H to happen?\n\n* Determine <span class=\"mathquill\">P(H)</span>\n* Once you have <span class=\"mathquill\">P(H)</span>, you can derive <span class=\"mathquill\">P(\\neg H)</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352643,
+              "key": "13c82bb3-4a2b-4775-ae06-aa4486151dc9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 2. Conditional/test probabilities\n\nYou should also know, through sensor or test data collection, how likely a certain test or sensor reading is to occur given that the hypothesis H has or has not occurred.\n\n* Determine <span class=\"mathquill\">P(T|H)</span> and <span class=\"mathquill\">P(T|\\neg H)</span>\n* Once you have <span class=\"mathquill\">P(T|H)</span>, you can derive <span class=\"mathquill\">P(\\neg T|H)</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352647,
+              "key": "9a01fbcb-70eb-46bf-91b9-d17162f3a0f5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Steps 1 and 2 give you all the information you need to perform Bayes' rule, and form a prediction about how likely a hypothesis is to be true given certain observed, related data.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352666,
+              "key": "e27848d8-9b20-41af-b871-809fcd3fd0cb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 3. Joint Probabilities\n\nThe next step is to calculate the four joint probabilities of the prior and the test probabilities. Two examples are given below.\n\n* <span class=\"mathquill\">P(T, H) = P(T|H)\\cdot P(H)</span>\n* Likewise, <span class=\"mathquill\">P(T, \\neg H) = P(T|\\neg H)\\cdot P(\\neg H)</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352674,
+              "key": "7c93732d-a405-4fa6-9f9a-85ea72b987ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 4. Total probabilities\n\nYou'll then need to determine the total probability of a test result or sensor reading, so that you can use this value to normalize the posterior probability (which is the last step of Bayes' rule. The total probability of a test result is the *sum of the joint probabilities* in which that test result occurs. An example is given below.\n\n* <span class=\"mathquill\">P(T) = P(T, H) + P(T, \\neg H)</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352682,
+              "key": "76bc007c-a714-471d-a22e-fb4e7ed382bf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 5. Posterior probability (last step)\n\nThe last step is to determine the probability of an event given a sensor reading or certain test data. And this is given by Bayes' rule. An example is shown below.\n\n* <span class=\"mathquill\">P(H|T) = \\frac{P(T|H)\\cdot P(H)} {P(T)}</span>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 353983,
+          "key": "f4f7c18c-0509-45d3-88ca-55b58c3b2ea8",
+          "title": "Programming Probabilities [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f4f7c18c-0509-45d3-88ca-55b58c3b2ea8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 418877,
+              "key": "3442549f-b846-44e6-a557-c05c930658c0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd725095b",
+              "pool_id": "jupyter",
+              "view_id": "d725095b-141a-44ce-be9f-5febcedb9bec",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Programming Probabilities, exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 419621,
+          "key": "5e13b8ec-eecd-431f-83c5-fcb87c270821",
+          "title": "Total Probability [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e13b8ec-eecd-431f-83c5-fcb87c270821",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419622,
+              "key": "1ede8816-eaff-4fec-b4f3-b2388ebfd903",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd725095b",
+              "pool_id": "jupyter",
+              "view_id": "5b6f25b7-ad92-4439-934a-b363daa2b1b2",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Total Probability, exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 352807,
+          "key": "258c0965-595f-4f4b-b779-8c80e607710a",
+          "title": "Testing the Total",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "258c0965-595f-4f4b-b779-8c80e607710a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419623,
+              "key": "ebdb496a-29d6-424a-8150-f20d9e03b6df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Total Probability\n\nUsing your code from the previous section, or just a pen and paper, answer the following question.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354046,
+              "key": "4e77b1ff-b129-48fe-af08-313743557810",
+              "title": "Positive test quiz",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4e77b1ff-b129-48fe-af08-313743557810",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the probability of a positive test result given the following values:\n`p_disease = 0.2`, `p_pos_given_disease= 0.6`, and `p_pos_given_no_disease= 0.6`?",
+                "matchers": [
+                  {
+                    "expression": "^0?.6$"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 419631,
+          "key": "f726786a-cb69-4087-a803-616250980dd6",
+          "title": "Programming Bayes' Rule [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f726786a-cb69-4087-a803-616250980dd6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419632,
+              "key": "15d50dd2-ad6c-4a0e-82dd-68c17d6e165e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd725095b",
+              "pool_id": "jupyter",
+              "view_id": "339fd957-b9f8-4b81-88e4-21dd96ef5139",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Programming Bayes' Rule, exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 354397,
+          "key": "7f7ce47f-73cf-49fd-9ef2-392fc1101e6c",
+          "title": "Testing Bayes' Rule",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7f7ce47f-73cf-49fd-9ef2-392fc1101e6c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419634,
+              "key": "8f130dfe-3536-446b-a204-dc80fbdb0cb3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Bayes' Rule \n\nUsing your code from the last exercise, answer the following question.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354407,
+              "key": "e72b8f26-b022-43f5-bff4-8da3aadbf695",
+              "title": "Bayes test",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e72b8f26-b022-43f5-bff4-8da3aadbf695",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "For the values, `p_A = 0.3`, `p_B_given_A = 0.7`, and `p_notB_given_notA = 0.9`, what is the posterior probability?",
+                "answers": [
+                  {
+                    "id": "a1501705459860",
+                    "text": "0.333",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501705516297",
+                    "text": "0.533",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501705519391",
+                    "text": "0.724",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501705524675",
+                    "text": "0.750",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501705527850",
+                    "text": "0.833",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 355367,
+          "key": "67b5acde-929d-44e6-b102-310b064efeb4",
+          "title": "Arrays [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "67b5acde-929d-44e6-b102-310b064efeb4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419663,
+              "key": "e8ea98d1-1310-40d3-ae14-d3b91e92202a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7e514bc1",
+              "pool_id": "jupyter",
+              "view_id": "7e514bc1-50e2-448d-9a9c-01af7dad6078",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Arrays, demonstration.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 355435,
+          "key": "7430689b-de00-45c1-9407-9fbf2a38cc34",
+          "title": "Array Iteration and Stopping [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7430689b-de00-45c1-9407-9fbf2a38cc34",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419671,
+              "key": "94e3ef33-7ca1-445a-9548-7b4cd82bad41",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view282d5f86",
+              "pool_id": "jupyter",
+              "view_id": "282d5f86-e73a-48b9-bb71-fe02dcad4836",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Array Iteration and Stopping, exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 352815,
+          "key": "b3e53592-0be4-4aa9-b930-40d2770f129c",
+          "title": "2D Arrays and the Robot World [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b3e53592-0be4-4aa9-b930-40d2770f129c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419672,
+              "key": "1e857a35-60c1-4a0f-b835-d70a808bbc9c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7e514bc1",
+              "pool_id": "jupyter",
+              "view_id": "51c9fb9e-b276-4b84-b706-6b29c98ca13b",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2D Arrays and the Robot World, demonstration.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 354047,
+          "key": "4047425c-dcf4-4566-b35d-948025928eb2",
+          "title": "2D Iteration [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4047425c-dcf4-4566-b35d-948025928eb2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419673,
+              "key": "80e55190-d62d-4677-b8e3-58cd8d1068d4",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7e514bc1",
+              "pool_id": "jupyter",
+              "view_id": "d899bafc-2ab9-4911-9c51-8763d1fb9e08",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2D Iteration, demonstration.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 354440,
+          "key": "4e8d09d7-6c6c-4ef3-baac-af3bdb5aac80",
+          "title": "Pattern Matching [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4e8d09d7-6c6c-4ef3-baac-af3bdb5aac80",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 354442,
+              "key": "c9528a22-ff0d-4431-9b1c-4628b450a2b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Pattern Matching\n\nNow that you know how to iterate through a 2D array, your next task will be to use what you've learned to help locate a robot in a 2D world based on some sensor measurements. \n\nIn this example, a robot is navigating a 4x5 orange and blue world, shown below. This robot also has a sensor that tells it the color of the square it's on top of *and* the color of the square directly to its right. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354459,
+              "key": "b0365e06-00c0-490a-8a36-658ffe07e155",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/59825a60_screen-shot-2017-08-02-at-4.01.24-pm/screen-shot-2017-08-02-at-4.01.24-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b0365e06-00c0-490a-8a36-658ffe07e155",
+              "caption": "2D orange and blue world grid",
+              "alt": null,
+              "width": 270,
+              "height": 220,
+              "instructor_notes": null
+            },
+            {
+              "id": 354464,
+              "key": "d0d2b36d-d618-4062-b712-73a54e7512f1",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/59825cd4_screen-shot-2017-08-02-at-4.14.11-pm/screen-shot-2017-08-02-at-4.14.11-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d0d2b36d-d618-4062-b712-73a54e7512f1",
+              "caption": "Robot sensing two color squares (one it's on top of, and one to its right)",
+              "alt": null,
+              "width": 250,
+              "height": 145,
+              "instructor_notes": null
+            },
+            {
+              "id": 354458,
+              "key": "d85ce68b-4c63-4a17-a1a1-9d85d63db6f8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In Python code, the world and the sensor measurement can be represented by the following code (where 'o' stands for orange and 'b' for blue):\n```python\nimport numpy as np\n\nworld = np.array ([ ['o', 'b', 'o', 'o', 'b'],\n                    ['o', 'o', 'b', 'o', 'o'],\n                    ['b', 'o', 'o', 'b', 'o'],\n                    ['b', 'o', 'o', 'o', 'o'] ])\n\nmeasurement = ['b', 'o']\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354465,
+              "key": "933214ef-7dcb-4320-ac0c-ee41d1ff2129",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "It's now easy for *us* to see that there are only a few places in the world that this robot can be, based on where the measurement lines up with color patterns on the world grid! In this exercise, it'll be up to you to find these locations programmatically.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354481,
+              "key": "3144d641-d2c0-4118-bb79-a9922bb355d7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**Hint**: You'll be adding values to a list. To add indices, please use the append function and the format `list_name.append([row,column])`. Further instructions can be found in the TODOs below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354469,
+              "key": "c0f4355f-e7b9-4aee-ad1d-5121ef17ce78",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "c0f4355f-e7b9-4aee-ad1d-5121ef17ce78",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Location quiz ",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6196312251957248",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\n\n# A 4x5 robot world of characters 'o' and 'b'\nworld = np.array([ ['o', 'b', 'o', 'o', 'b'],\n                   ['o', 'o', 'b', 'o', 'o'],\n                   ['b', 'o', 'o', 'b', 'o'],\n                   ['b', 'o', 'o', 'o', 'o'] ])\n\n# Sensor measurement\nmeasurement = ['b', 'o']\n\n# This function takes in the world and the sensor measurement.\n# Complete this function so that it returns the indices of the \n# likely robot locations, based on matching the measurement \n# with the color patterns in the world\n\ndef find_match(world, measurement):\n    # Empty possible_locations list\n    possible_locations = []\n    \n    ## TODO: Iterate through the world \n    ## Look at two adjacent indices at a time - the square the robot is \n    ## on top of and the square to its right\n    ## (Making sure not to go past the bounds of the world)\n    \n    ## TODO: If two adjacent colors in the world match \n    ## the two colors in the sensor measurement\n    ## Add those indices to the possible_locations list\n    ## Append them in the format [row_index, column_index], i.e. [0, 0]\n    \n    return possible_locations\n   \n\n# This line runs the function and stores the output - do not delete \nlocations = find_match(world, measurement)\n",
+                    "name": "pattern_matching.py"
+                  },
+                  {
+                    "text": "import numpy as np\n\n# A 4x5 robot world of characters 'o' and 'b'\nworld = np.array([ ['o', 'b', 'o', 'o', 'b'],\n                   ['o', 'o', 'b', 'o', 'o'],\n                   ['b', 'o', 'o', 'b', 'o'],\n                   ['b', 'o', 'o', 'o', 'o'] ])\n\n# Sensor measurement\nmeasurement = ['b', 'o']\n\n# This function takes in the world and the sensor measurement.\n# Complete this function so that it returns the indices of the \n# likely robot locations, based on matching the measurement \n# with the color patterns in the world\n\ndef find_match(world, measurement):\n    \n    # Empty possible_locations list\n    possible_locations = []\n    \n    # Store the number of columns and rows in the 2D array\n    col = world.shape[1]\n    row = world.shape[0]\n    \n    # Iterate through the entire array\n    for i in range(0, row):\n        for j in range (0, col):\n            # Check that we are within the bounds of the world,\n            # since we have to check two values, this means we're at\n            # a row index < the number of columns (5) - 1\n            # In other words j < 4\n            if j < col - 1:\n                # Check if a match is found by comparing array contents\n                # and checking for equality at world[i][j] and \n                # one row to the right at world[i][j+1]\n                \n                # Values under and in front of the robot \n                under = world[i][j]\n                in_front = world[i][j+1]\n                \n                if((measurement[0] == under) and (measurement[1] == in_front)):\n                    # A match is found!\n                    # Append the index that the robot is on\n                    possible_locations.append([i,j])\n    \n    # Return the completed list\n    return possible_locations\n   \n\n# This line runs the function and stores the output - do not delete \nlocations = find_match(world, measurement)\n",
+                    "name": "solution.py"
+                  },
+                  {
+                    "text": "import numpy as np\n\n# A 4x5 robot world of characters 'o' and 'b'\nworld = np.array([ ['o', 'b', 'o', 'o', 'b'],\n                   ['o', 'o', 'b', 'o', 'o'],\n                   ['b', 'o', 'o', 'b', 'o'],\n                   ['b', 'o', 'o', 'o', 'o'] ])\n\n# Sensor measurement\nmeasurement = ['b', 'o']\n\ndef find_match(world, measurement):\n    \n    # Empty possible_locations list\n    possible_locations = []\n    for y in range(world.shape[0]):\n        for x in range(world.shape[1]):\n            # if we are at the edge then we can't\n            # look ahead. Use the \"continue\" statement\n            # to proceed to the next step in the loop.\n            if x == (world.shape[1]-1):\n                continue\n            \n            m_under = world[y,x]   # get measurement UNDER robot\n            m_front = world[y,x+1] # measurement in front of robot\n            if [m_under, m_front] == measurement:\n                possible_locations.append([y,x])\n    \n    return possible_locations\n   \n\n# This line runs the function and stores the output - do not delete \nlocations = find_match(world, measurement)\n\n",
+                    "name": "solution_2.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 354487,
+          "key": "27f4a1b1-df28-4af1-a7fc-5a695cbd4ac0",
+          "title": "Why use Numpy Arrays [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "27f4a1b1-df28-4af1-a7fc-5a695cbd4ac0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410250,
+              "key": "25d7c8c4-3be2-4b96-95df-e1018c760dca",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewdeaf20c2",
+              "pool_id": "jupyter",
+              "view_id": "deaf20c2-c3b4-4330-9003-91bd14be177f",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/why%20use%20numpy%20arrays.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

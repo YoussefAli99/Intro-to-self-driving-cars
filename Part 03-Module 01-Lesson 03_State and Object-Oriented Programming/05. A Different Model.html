@@ -1,0 +1,405 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A Different Model</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State and Object-Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Localization Steps.html">01. Localization Steps</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to State.html">02. Intro to State</a>
+    </li>
+    <li class="">
+      <a href="03. Motion Models.html">03. Motion Models</a>
+    </li>
+    <li class="">
+      <a href="04. Quiz Predicting State.html">04. Quiz: Predicting State</a>
+    </li>
+    <li class="">
+      <a href="05. A Different Model.html">05. A Different Model</a>
+    </li>
+    <li class="">
+      <a href="06. Kinematics.html">06. Kinematics</a>
+    </li>
+    <li class="">
+      <a href="07. Quantifying State.html">07. Quantifying State</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Outline.html">08. Lesson Outline</a>
+    </li>
+    <li class="">
+      <a href="09. Always Moving.html">09. Always Moving</a>
+    </li>
+    <li class="">
+      <a href="10. Objects.html">10. Objects</a>
+    </li>
+    <li class="">
+      <a href="11. Car Object.html">11. Car Object</a>
+    </li>
+    <li class="">
+      <a href="12. Interacting with a Car Object.html">12. Interacting with a Car Object</a>
+    </li>
+    <li class="">
+      <a href="13. Car Class.html">13. Car Class</a>
+    </li>
+    <li class="">
+      <a href="14. Car Class File.html">14. Car Class File</a>
+    </li>
+    <li class="">
+      <a href="15. Look at the Class Code.html">15. Look at the Class Code</a>
+    </li>
+    <li class="">
+      <a href="16. Turn Right.html">16. Turn Right</a>
+    </li>
+    <li class="">
+      <a href="17. Adding Color.html">17. Adding Color</a>
+    </li>
+    <li class="">
+      <a href="18. Instantiate Multiple Cars.html">18. Instantiate Multiple Cars</a>
+    </li>
+    <li class="">
+      <a href="19. Color Class.html">19. Color Class</a>
+    </li>
+    <li class="">
+      <a href="20. Overloading Functions.html">20. Overloading Functions</a>
+    </li>
+    <li class="">
+      <a href="21. Overloading Color Addition.html">21. Overloading Color Addition</a>
+    </li>
+    <li class="">
+      <a href="22. State Vector.html">22. State Vector</a>
+    </li>
+    <li class="">
+      <a href="23. State Transformation Matrix.html">23. State Transformation Matrix</a>
+    </li>
+    <li class="">
+      <a href="24. Matrix Multiplication.html">24. Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="25. 1D State Vector and More Multiplication.html">25. 1D State Vector and More Multiplication</a>
+    </li>
+    <li class="">
+      <a href="26. Modify Predict State.html">26. Modify Predict State</a>
+    </li>
+    <li class="">
+      <a href="27. Working with Matrices.html">27. Working with Matrices</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. A Different Model</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>A Different Model</p></h3>
+  
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="more-complex-motion">More Complex Motion</h3>
+<p>Now, what if I gave you a more complex motion example?</p>
+<p>And I told you that our car starts at the same point, at the 0m mark, and it’s moving 50m/s forward, but it’s <em>also</em> slowing down at a rate of 20m/s^2. This means it’s acceleration = -20m/s^2.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-01-at-6.35.20-pm.png" alt="Car moving at 50m/s and slowing down over time." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Car moving at 50m/s and slowing down over time.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="acceleration">Acceleration</h3>
+<p>So, if the car has a -20 m/s^2 acceleration, this means that:</p>
+<ul>
+<li>If the car starts at a speed of 50m/s</li>
+<li>At the next second, it will be going 50-20 or 30m/s and,</li>
+<li>At the <em>next</em> second  it will be going 30-20 or 10m/s.</li>
+</ul>
+<p>This slowing down is also <em>continuous</em>, which means it happens gradually over time.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="new-model-new-state">New Model, New State</h3>
+<p>For the next two quizzes, I want you to keep in mind this question: <strong>Where will the car be after 3 seconds?</strong></p>
+<p>I also want to ask you: </p>
+<ul>
+<li>What variables do you need to solve this problem? In other words, what values should be included in the state? And…</li>
+<li>What motion model should we use to solve this problem?</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>State variables</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What variables do you need to solve the localization question above? In other words, what values should be included in the <strong>state</strong>?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1504316645692" name="386018" id="a1504316645692">
+      <label for="a1504316645692"><p>current position</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1504316693940" name="386018" id="a1504316693940">
+      <label for="a1504316693940"><p>car color</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1504316698482" name="386018" id="a1504316698482">
+      <label for="a1504316698482"><p>velocity</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1504316704923" name="386018" id="a1504316704923">
+      <label for="a1504316704923"><p>locations of other cars around our car</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1504316716821" name="386018" id="a1504316716821">
+      <label for="a1504316716821"><p>acceleration</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>current position</li>
+      <li>velocity</li>
+      <li>acceleration</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Motion Model 1</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What piece of a motion model fits this scenario?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1504316843033" name="386021" id="a1504316843033">
+        <label for="a1504316843033"><p><code>distance = velocity*time</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504316873054" name="386021" id="a1504316873054">
+        <label for="a1504316873054"><p><code>change in velocity = acceleration*time</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504316935470" name="386021" id="a1504316935470">
+        <label for="a1504316935470"><p><code>change in velocity = velocity + acceleration</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504316965361" name="386021" id="a1504316965361">
+        <label for="a1504316965361"><p><code>distance = (velocity + acceleration* time) * time</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504320443480" name="386021" id="a1504320443480">
+        <label for="a1504320443480"><p><code>velocity = velocity - acceleration</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `change in velocity = acceleration*time`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Predicting state 2</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Where do you think the car will be after three seconds have elapsed? And what will it's velocity be?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1504317379593" name="386027" id="a1504317379593">
+        <label for="a1504317379593"><p>x = 50m, vel = 10m/s</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504317533842" name="386027" id="a1504317533842">
+        <label for="a1504317533842"><p>x = 60m, vel = -10m/s</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504317543359" name="386027" id="a1504317543359">
+        <label for="a1504317543359"><p>x = 90m, vel = -10m/s</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504317601866" name="386027" id="a1504317601866">
+        <label for="a1504317601866"><p>x = 100m, vel = 10m/s</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504317604897" name="386027" id="a1504317604897">
+        <label for="a1504317604897"><p>x = 120m, vel = 30m/s</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    x = 60m, vel = -10m/s
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Kinematics.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. A Different Model')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

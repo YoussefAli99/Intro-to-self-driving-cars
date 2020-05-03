@@ -1,0 +1,1085 @@
+{
+  "data": {
+    "lesson": {
+      "id": 466900,
+      "key": "4c4f9180-7ab8-42ba-a1bd-24b17fcf2178",
+      "title": "Two Dimensional Robot Motion and Trigonometry",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn the basics of trigonometry and how to decompose a self driving car's motion into X and Y components.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/4c4f9180-7ab8-42ba-a1bd-24b17fcf2178/466900/1544452686465/Two+Dimensional+Robot+Motion+and+Trigonometry+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/4c4f9180-7ab8-42ba-a1bd-24b17fcf2178/466900/1544452683035/Two+Dimensional+Robot+Motion+and+Trigonometry+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 466941,
+          "key": "3d7a14af-6afa-446e-9399-622360eddd6c",
+          "title": "Lesson Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3d7a14af-6afa-446e-9399-622360eddd6c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485998,
+              "key": "7e45d3f4-e7a5-4ebf-bd29-f5ec26ef3b4b",
+              "title": "L3 01 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "a_eHxfy5tnI",
+                "china_cdn_id": "a_eHxfy5tnI.mp4"
+              }
+            },
+            {
+              "id": 485885,
+              "key": "96d68758-bc9f-42d1-b711-86a9a9703953",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a341f25_screen-shot-2017-12-15-at-11.14.19-am/screen-shot-2017-12-15-at-11.14.19-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/96d68758-bc9f-42d1-b711-86a9a9703953",
+              "caption": "This picture captures the goal of this lesson: if you know a car's heading (theta) and distance traveled (D), how can we figure out how far it's moved in the x direction (delta x) and y direction (delta y)?",
+              "alt": "",
+              "width": 758,
+              "height": 501,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 476194,
+          "key": "d1869d66-ae6a-4d00-9619-2539e33cf673",
+          "title": "Plotting Robot Motion (right angles only)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d1869d66-ae6a-4d00-9619-2539e33cf673",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 476195,
+              "key": "639b36f6-6162-4aca-acce-c8df5a506db0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7009286a",
+              "pool_id": "jupyter",
+              "view_id": "38d78fd0-92a7-498e-8d0c-164b2557eb71",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/right%20angle%20robot.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466943,
+          "key": "e41b4961-f7f6-476c-9147-eb05f71a587c",
+          "title": "Plotting Robot Motion Solution ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e41b4961-f7f6-476c-9147-eb05f71a587c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 476142,
+              "key": "fd94024f-685a-41ec-9fe7-02f4518782ab",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7009286a",
+              "pool_id": "jupyter",
+              "view_id": "c632487e-3f09-435d-b68e-91c21a3ea9f6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/right%20angle%20robot%20solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466944,
+          "key": "b37ccb64-2710-4ba7-8898-60bc2ad36274",
+          "title": "Moving at an Angle",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b37ccb64-2710-4ba7-8898-60bc2ad36274",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478295,
+              "key": "b389e549-1935-4733-9348-c691605e4c0f",
+              "title": "Nd113 C6 L3 04 L Moving At An Angle V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2KDq_ZzN3Mk",
+                "china_cdn_id": "2KDq_ZzN3Mk.mp4"
+              }
+            },
+            {
+              "id": 476196,
+              "key": "c5c6f5fb-da40-40d0-a94e-e4d97a5eddd2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a2f33f3_screen-shot-2017-12-11-at-5.41.28-pm/screen-shot-2017-12-11-at-5.41.28-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c5c6f5fb-da40-40d0-a94e-e4d97a5eddd2",
+              "caption": "",
+              "alt": "",
+              "width": 487,
+              "height": 531,
+              "instructor_notes": null
+            },
+            {
+              "id": 476197,
+              "key": "2c8d01b8-21e9-48ca-8579-ab4809c30322",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2c8d01b8-21e9-48ca-8579-ab4809c30322",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Looking at the diagram above, what can you say about how far the car has advanced **in the X direction**? What is \"delta x\" in the picture above?",
+                "answers": [
+                  {
+                    "id": "a1513043059850",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043108057",
+                    "text": "More than 0 but less than D",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513043118672",
+                    "text": "Exactly D",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043123529",
+                    "text": "More than D",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 476198,
+              "key": "605203bf-5484-46f3-8c3a-efdba2a62b10",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "605203bf-5484-46f3-8c3a-efdba2a62b10",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Looking at the diagram above, what can you say about how far the car has advanced **in the Y (vertical) direction**? What is \"delta y\" in the picture above?",
+                "answers": [
+                  {
+                    "id": "a1513043248313",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043273024",
+                    "text": "More than 0 but less than D",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513043283463",
+                    "text": "Exactly D",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043287496",
+                    "text": "More than D",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 478296,
+              "key": "2d9ba0a8-5fc5-4a8c-bebe-2e7f2ace7291",
+              "title": "Nd113 C6 L3 045 L Moving At An Angle Part2 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iI6zCp0RegM",
+                "china_cdn_id": "iI6zCp0RegM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466945,
+          "key": "9f6cc80a-30e3-4694-adbd-e7ade8b28455",
+          "title": "Moving at 53.13 Degrees",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9f6cc80a-30e3-4694-adbd-e7ade8b28455",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478298,
+              "key": "cd636b0a-5147-4b78-9533-428fce68f787",
+              "title": "Nd113 C6 L3 05 L Moving At 53 Degrees V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VmoknN6xLKs",
+                "china_cdn_id": "VmoknN6xLKs.mp4"
+              }
+            },
+            {
+              "id": 476199,
+              "key": "a34cd5b6-0307-4c73-b344-aa713107ddf7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a2f3699_screen-shot-2017-12-11-at-5.53.05-pm/screen-shot-2017-12-11-at-5.53.05-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a34cd5b6-0307-4c73-b344-aa713107ddf7",
+              "caption": "",
+              "alt": "",
+              "width": 546,
+              "height": 492,
+              "instructor_notes": null
+            },
+            {
+              "id": 476200,
+              "key": "77be90e8-a77a-45d0-af3f-49c6a57b661c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The following questions are about a right triangle where <span class=\"mathquill\">\\Theta = 53.13 ^{\\circ}</span>\n\nYou saw earlier that if <span class=\"mathquill\">D=5</span>, then \n\n<span class=\"mathquill\">\\Delta x = 3</span> \n\nand\n\n<span class=\"mathquill\">\\Delta y = 4</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 476201,
+              "key": "cce6b4f7-50b5-4094-9770-e9a5ebfe0fb0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cce6b4f7-50b5-4094-9770-e9a5ebfe0fb0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "If `D = 10 meters` then what would \"Delta **x**\" be?",
+                "answers": [
+                  {
+                    "id": "a1513043784285",
+                    "text": "3 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043814387",
+                    "text": "4 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043816204",
+                    "text": "5 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043818075",
+                    "text": "6 meters",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513043926824",
+                    "text": "8 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513043929320",
+                    "text": "10 meters",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 476202,
+              "key": "1fb7bcea-18a7-4ac6-b61b-d101a4a8d1a1",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1fb7bcea-18a7-4ac6-b61b-d101a4a8d1a1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "If `D = 10 meters` then what would \"Delta **y**\" be?",
+                "answers": [
+                  {
+                    "id": "a1513044000592",
+                    "text": "3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044036116",
+                    "text": "4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044037004",
+                    "text": "5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044038724",
+                    "text": "6",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044040804",
+                    "text": "8",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513044043156",
+                    "text": "10",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 476203,
+              "key": "6a068893-dafd-4005-b3d2-b9c0b4a6f8de",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6a068893-dafd-4005-b3d2-b9c0b4a6f8de",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Please select the proper completion to the following sentence:\n\n> When driving at a heading of 53.13 degrees, the ratio of a car's **vertical displacement** to its **total displacement** will always equal ______",
+                "answers": [
+                  {
+                    "id": "a1513044078032",
+                    "text": "3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044185065",
+                    "text": "4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044186305",
+                    "text": "5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044188721",
+                    "text": "3/5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513044200809",
+                    "text": "4/5",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513044203962",
+                    "text": "3/4",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 478301,
+              "key": "9167aeaa-5ae8-4d30-85e6-0c81a16e8b16",
+              "title": "Nd113 C6 L3 055 L Moving At 53 Degrees Solution V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Y_3M6eeYbd8",
+                "china_cdn_id": "Y_3M6eeYbd8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466946,
+          "key": "ac613740-5370-4692-99a3-93e47f527d5f",
+          "title": "Who Cares About 53.13 Degrees?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ac613740-5370-4692-99a3-93e47f527d5f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 476204,
+              "key": "0a08520e-6e1a-43e0-91b7-cf316ef695fb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Who Cares about 53.13 Degrees?\n\nYou just calculated the following values for a vehicle with a heading of 53.13 degrees\n\n|  <span class=\"mathquill\">D</span> |<span class=\"mathquill\">\\Delta y</span> | <span class=\"mathquill\">\\Delta x</span> |\n|:--:|:-------:|:-------:|\n|  5 |    4    |    3    |\n| 10 |    8    |    6    |\n|  1 |   4/5   |   3/5   |\n\nBut really, for this particular angle we can say something much more *general*. We can say:\n\n<span class=\"mathquill\">\\Delta y = \\frac{4}{5}\\times D</span>\n\n<span class=\"mathquill\">\\Delta x = \\frac{3}{5}\\times D</span>\n\nAnd these are **very** useful equations! They tell us that the **vertical** displacement is equal to **total** displacement times some multiplier (in this case ⅘). Likewise, horizontal displacement is total displacement times some other multiplier (in this case ⅗).\n\nAnd this is useful.... for all those times when you're driving at 53.13 degrees?\n\nWhat about **every other possible angle**? Wouldn't it be nice to calculate these multipliers for any angle?",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466947,
+          "key": "8187652d-9fdb-4a07-8dd9-f854a6ad7612",
+          "title": "The Power of Trigonometry",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8187652d-9fdb-4a07-8dd9-f854a6ad7612",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485999,
+              "key": "5deafe23-9157-49fb-ab92-77fd694e99a1",
+              "title": "Power of Trigonometry",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yLMTfBq_I3k",
+                "china_cdn_id": "yLMTfBq_I3k.mp4"
+              }
+            },
+            {
+              "id": 485892,
+              "key": "e2548c46-1299-4598-9d29-8c0750b06f4d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "I make a mistake here when I talk about the multipliers. If your heading is 53.13 degrees then <span class=\"mathquill\">\\Delta x = \\frac{3}{5} \\times D</span> and <span class=\"mathquill\">\\Delta y = \\frac{4}{5} \\times D</span>.\n\nI accidentally swapped these multipliers in the video.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466948,
+          "key": "245de398-f8eb-459d-8b8f-b2de890941e8",
+          "title": "Opposite, Adjacent, Hypotenuse",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "245de398-f8eb-459d-8b8f-b2de890941e8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478302,
+              "key": "fab0c572-c1e0-4de7-b8a1-d07b325d1c13",
+              "title": "Nd113 C6 L3 08 L Opposite Adjacent Hypotenuse V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hJ-7qj9iHWo",
+                "china_cdn_id": "hJ-7qj9iHWo.mp4"
+              }
+            },
+            {
+              "id": 478320,
+              "key": "1b584608-c733-465f-bffa-467e33609ccf",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a317ff0_screen-shot-2017-12-13-at-11.30.25-am/screen-shot-2017-12-13-at-11.30.25-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1b584608-c733-465f-bffa-467e33609ccf",
+              "caption": "",
+              "alt": "",
+              "width": 373,
+              "height": 488,
+              "instructor_notes": null
+            },
+            {
+              "id": 478321,
+              "key": "8782510b-5698-4fc7-9c55-4e349b2261ef",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8782510b-5698-4fc7-9c55-4e349b2261ef",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the side to it's name *when **x** is taken as the reference angle*."
+                },
+                "concepts_label": "Name",
+                "answers_label": "Label",
+                "concepts": [
+                  {
+                    "text": "Hypotenuse",
+                    "correct_answer": {
+                      "id": "a1513193481759",
+                      "text": "A"
+                    }
+                  },
+                  {
+                    "text": "Opposite",
+                    "correct_answer": {
+                      "id": "a1513193549278",
+                      "text": "B"
+                    }
+                  },
+                  {
+                    "text": "Adjacent",
+                    "correct_answer": {
+                      "id": "a1513193554630",
+                      "text": "C"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1513193549278",
+                    "text": "B"
+                  },
+                  {
+                    "id": "a1513193554630",
+                    "text": "C"
+                  },
+                  {
+                    "id": "a1513193481759",
+                    "text": "A"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 478323,
+              "key": "d1caf9dd-3df1-4a09-b32d-f8ec571414be",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d1caf9dd-3df1-4a09-b32d-f8ec571414be",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the side to it's name *when **y** is taken as the reference angle*."
+                },
+                "concepts_label": "Name",
+                "answers_label": "Label",
+                "concepts": [
+                  {
+                    "text": "Hypotenuse",
+                    "correct_answer": {
+                      "id": "a1513193695583",
+                      "text": "A"
+                    }
+                  },
+                  {
+                    "text": "Opposite",
+                    "correct_answer": {
+                      "id": "a1513193749911",
+                      "text": "C"
+                    }
+                  },
+                  {
+                    "text": "Adjacent",
+                    "correct_answer": {
+                      "id": "a1513193754086",
+                      "text": "B"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1513193749911",
+                    "text": "C"
+                  },
+                  {
+                    "id": "a1513193754086",
+                    "text": "B"
+                  },
+                  {
+                    "id": "a1513193695583",
+                    "text": "A"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 466949,
+          "key": "976bfee2-9055-4f46-b383-5b0155453525",
+          "title": "Trigonometric Ratios",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "976bfee2-9055-4f46-b383-5b0155453525",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478305,
+              "key": "88515b8a-37b9-4a9d-aedb-ef8449279814",
+              "title": "Nd113 C6 L3 09 L Trigonometric Ratios V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wquwvrT9g_U",
+                "china_cdn_id": "wquwvrT9g_U.mp4"
+              }
+            },
+            {
+              "id": 478317,
+              "key": "35bf465f-dc96-4bb2-98e9-8695901c9897",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### SOH - CAH - TOA\nThe **sine**, **cosine**, and **tangent** are all trigonometric ratios. A helpful mnemonic for remembering which sides each of these ratios compare is **SOH - CAH - TOA**\n\n**SOH** - **s**ine is **o**pposite over **h**ypotenuse\n\n<div class=\"mathquill\">\\sin(\\theta) = \\frac{\\text{opposite}}{\\text{hypotenuse}}</div>\n\n<br>\n**CAH** - **c**osine is **a**djacent over **h**ypotenuse\n\n<div class=\"mathquill\">\\cos(\\theta) = \\frac{\\text{adjacent}}{\\text{hypotenuse}}</div>\n\n<br>\n**TOA** - **t**angent is **o**pposite over **a**djacent\n\n<div class=\"mathquill\">\\tan(\\theta) = \\frac{\\text{opposite}}{\\text{adjacent}}</div>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478318,
+              "key": "fb157440-887a-4708-a790-ddcfe269a452",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fb157440-887a-4708-a790-ddcfe269a452",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the **cosine** of 53.13 degrees?",
+                "answers": [
+                  {
+                    "id": "a1513192484111",
+                    "text": "3/5",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513192514693",
+                    "text": "3/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192517124",
+                    "text": "4/5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192522205",
+                    "text": "5/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192527077",
+                    "text": "5/3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192532885",
+                    "text": "4/3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 478319,
+              "key": "22168e24-957f-45d6-9c0b-ac0cdaea837e",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "22168e24-957f-45d6-9c0b-ac0cdaea837e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the **tangent** of 53.13 degrees?",
+                "answers": [
+                  {
+                    "id": "a1513192604884",
+                    "text": "3/5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192626105",
+                    "text": "3/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192630002",
+                    "text": "4/5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192632681",
+                    "text": "5/4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192636858",
+                    "text": "5/3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513192640130",
+                    "text": "4/3",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 486271,
+              "key": "b3e0f097-df06-4731-9780-68ff4b1bb17e",
+              "title": "Nd113 C6 L3 095 L Trigonometric Ratios Solution V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "c5iuVhWCOzc",
+                "china_cdn_id": "c5iuVhWCOzc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 476009,
+          "key": "5db87615-499d-481e-9f9e-40f158d36754",
+          "title": "Looking up Sin, Cos, and Tan",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5db87615-499d-481e-9f9e-40f158d36754",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 476098,
+              "key": "f6720908-12f3-4fce-be7f-d1b2db20a741",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7009286a",
+              "pool_id": "jupyter",
+              "view_id": "4b69d201-8670-47ce-b1a9-010540206959",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Looking%20up%20Trig%20Ratios.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 476012,
+          "key": "08a937a3-eeb4-41ff-a5ec-9093542fcafb",
+          "title": "Trigonometry and Vehicle Motion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "08a937a3-eeb4-41ff-a5ec-9093542fcafb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478306,
+              "key": "05bc2cae-690b-482f-bee7-89c27c3aaa38",
+              "title": "Trigonometry And Vehicle Motion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WY3T-9GHI_0",
+                "china_cdn_id": "WY3T-9GHI_0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466950,
+          "key": "b07c7db1-5ff7-4d7b-984e-dbb1addca14b",
+          "title": "Solving Trig Problems",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b07c7db1-5ff7-4d7b-984e-dbb1addca14b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478307,
+              "key": "2beba7c0-0d67-4401-be27-bcbde45d33f9",
+              "title": "Solving Trig Problems Part1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qI4i845d7Qg",
+                "china_cdn_id": "qI4i845d7Qg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466952,
+          "key": "fe846a83-d8f9-4cb5-a2e7-634af022c092",
+          "title": "Keeping Track of x and y",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fe846a83-d8f9-4cb5-a2e7-634af022c092",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 476054,
+              "key": "552aafd5-d714-4a9d-a459-c91cacb3c1a2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7009286a",
+              "pool_id": "jupyter",
+              "view_id": "7009286a-dc78-4bca-9b90-a2a886366e0c",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Keeping%20Track%20of%20x%20and%20y.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 478332,
+          "key": "9e5fb790-68c3-414e-b302-bdfe6b3591ce",
+          "title": "Keeping Track of x and y (solution)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e5fb790-68c3-414e-b302-bdfe6b3591ce",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478340,
+              "key": "66ef3472-cf01-43f3-9231-446258b34e4f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view7009286a",
+              "pool_id": "jupyter",
+              "view_id": "6bd8fb62-d3a3-402a-a764-30f66312da24",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Keeping%20Track%20of%20x%20and%20y%20(solution).ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466953,
+          "key": "952c75cc-d675-414a-8cb8-de9b7bbd894f",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "952c75cc-d675-414a-8cb8-de9b7bbd894f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 486000,
+              "key": "69d6b11d-ba64-4ba7-9de7-93636be501ce",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Andy mentions the Nanodegree Slack near the end of this video - you can leave your questions in the Student Hub now!",
+              "video": {
+                "youtube_id": "gMbDqd4ItiU",
+                "china_cdn_id": "gMbDqd4ItiU.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

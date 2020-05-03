@@ -1,0 +1,291 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Moving in Python</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Python and C++ Speed</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Executing the Move Function.html">02. Executing the Move Function</a>
+    </li>
+    <li class="">
+      <a href="03. Moving in Python.html">03. Moving in Python</a>
+    </li>
+    <li class="">
+      <a href="04. Moving in C++.html">04. Moving in C++</a>
+    </li>
+    <li class="">
+      <a href="05. Comparing Speeds.html">05. Comparing Speeds</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Moving in Python</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="python-speed">Python Speed</h1>
+<p>Read through the code below to remind yourself of what the move function does. Then press the <code>TEST RUN</code> button a few times and get a sense for how long it takes to run this code 1000 times.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#385902-move-py" class="nav-item nav-link  active show" id="tab-385902-move-py" data-toggle="tab" role="tab"
+      aria-controls="385902-move-py" aria-selected="true">move.py</a>
+    <a href="#385902-helpers-py" class="nav-item nav-link " id="tab-385902-helpers-py" data-toggle="tab" role="tab"
+      aria-controls="385902-helpers-py" aria-selected="false">helpers.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="385902-move-py" aria-labelledby="tab-385902-move-py" role="tabpanel">
+      <pre><code></code>import time
+from helpers import blur
+
+# The 2D move function
+def move(dy, dx, beliefs, blurring):
+    height &#x3D; len(beliefs)
+    width &#x3D; len(beliefs[0])
+    new_G &#x3D; [[0.0 for i in range(width)] for j in range(height)]
+    for i, row in enumerate(beliefs):
+        for j, cell in enumerate(row):
+            new_i &#x3D; (i + dy ) % width
+            new_j &#x3D; (j + dx ) % height
+            new_G[int(new_i)][int(new_j)] &#x3D; cell
+    return blur(new_G, blurring)
+
+# Initialize a world grid of beliefs
+grid &#x3D; [ [0.05, 0.2, 0.2, 0.05, 0.05],
+         [0.05, 0.1, 0.2, 0.05, 0.05] ]
+
+# Record the time it takes to execute the move function
+# Start the timer and record the start time
+start_time &#x3D; time.time()
+
+# Time the move function for 1000 iterations
+# move 2 to the right each iteration
+
+### TODO: Change the number of iterations and see how this performs - try 10000x !
+### TODO: Run multiple times and notice the slight change in recorded time
+iterations &#x3D; 1000
+
+for i in range(0, iterations):
+    move(0, 2, grid, 1.0)
+
+# Record the end time and print the result!
+stop_time &#x3D; time.time()
+
+millisec_time &#x3D; 1000*(stop_time - start_time)
+print(&quot;Time to move &quot; +str(iterations) + &quot; iterations in milliseconds: &quot; + str(millisec_time))
+</code></pre>
+    </div>
+    <div class="tab-pane " id="385902-helpers-py" aria-labelledby="tab-385902-helpers-py" role="tabpanel">
+      <pre><code></code># Helper functions
+
+def normalize(grid):
+    &quot;&quot;&quot;
+    Given a grid of unnormalized probabilities, computes the
+    correspond normalized version of that grid. 
+    &quot;&quot;&quot;
+    total &#x3D; 0.0
+    for row in grid:
+        for cell in row:
+            total +&#x3D; cell
+    for i,row in enumerate(grid):
+        for j,cell in enumerate(row):
+            grid[i][j] &#x3D; float(cell) / total
+    return grid
+
+
+def blur(grid, blurring):
+    &quot;&quot;&quot;
+    Spreads probability out on a grid using a 3x3 blurring window.
+    The blurring parameter controls how much of a belief spills out
+    into adjacent cells. If blurring is 0 this function will have 
+    no effect. 
+    &quot;&quot;&quot;
+    height &#x3D; len(grid)
+    width  &#x3D; len(grid[0])
+
+    center_prob &#x3D; 1.0-blurring
+    corner_prob &#x3D; blurring / 12.0
+    adjacent_prob &#x3D; blurring / 6.0
+
+    window &#x3D; [
+            [corner_prob,  adjacent_prob,  corner_prob],
+            [adjacent_prob, center_prob,  adjacent_prob],
+            [corner_prob,  adjacent_prob,  corner_prob]
+        ]
+    new &#x3D; [[0.0 for i in range(width)] for j in range(height)]
+    for i in range(height):
+        for j in range(width):
+            grid_val &#x3D; grid[i][j]
+            for dx in range(-1,2):
+                for dy in range(-1,2):
+                    mult &#x3D; window[dx+1][dy+1]
+                    new_i &#x3D; (i + dy) % height
+                    new_j &#x3D; (j + dx) % width
+                    new[new_i][new_j] +&#x3D; mult * grid_val
+    return normalize(new)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Moving in C++.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Moving in Python')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

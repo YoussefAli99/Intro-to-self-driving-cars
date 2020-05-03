@@ -1,0 +1,1962 @@
+{
+  "data": {
+    "lesson": {
+      "id": 410313,
+      "key": "2ba3192d-c2b6-4445-98a8-c63b13a1f518",
+      "title": "Introduction to Kalman Filters",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn the intuition behind the Kalman Filter, a vehicle tracking algorithm and implement a one-dimensional tracker of your own.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/2ba3192d-c2b6-4445-98a8-c63b13a1f518/410313/1544452654007/Introduction+to+Kalman+Filters+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/2ba3192d-c2b6-4445-98a8-c63b13a1f518/410313/1544452644189/Introduction+to+Kalman+Filters+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 21402,
+          "key": "486709880923",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486709880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 10408,
+              "key": "48670988",
+              "title": "Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "XZL934YQ-FQ",
+                "china_cdn_id": "XZL934YQ-FQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 19874,
+          "key": "484529590923",
+          "title": "Tracking Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529590923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 34720,
+              "key": "48452959",
+              "title": "Tracking Intro",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452959",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "8O9GV4SUToA",
+                  "china_cdn_id": "8O9GV4SUToA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Tracking Intro",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/HWl8Qf2JPFHRxAXQavfqgD0dFYCPxUB3N2kqQDxdXci4VMVKOUZEqzBxPvsOlmWy7AkUZVKysZHIeqJwXcId=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452959",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48664946",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.21875,
+                      "y": 0.0840839800443459
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3125,
+                      "y": 0.07483370288248337
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.2814643079800499,
+                      "y": 0.23929462305986696
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "lDykH1UHq38",
+                  "china_cdn_id": "lDykH1UHq38.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 46391,
+          "key": "483118600923",
+          "title": "Gaussian Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 20280,
+              "key": "48311860",
+              "title": "Gaussian Intro",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311860",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GHKKUR6tZE0",
+                  "china_cdn_id": "GHKKUR6tZE0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Gaussian Intro",
+                "alt_text": "Gaussian Intro   f of x equals 1 over parentheses squareroot of 2 pi sigma squared parentheses closed. All of this is multiplied by exponent -½ multiplied by parenthesis x-mu parentheses closed squared over sigma squared.  There are six graphs.",
+                "background_image": "//lh6.ggpht.com/n0pKWf4U-AsxilxR14gc8rqLX3npSHzqVRNApJ-gk6PIFpBDXPoSludOOQCKwanHLiR_5dQJOlSKePr8IDI=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311860",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48736093",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This graph starts at approximately (1, 0) and ends at (5,0). In the middle, it hits its highest point at (3,7). Check this box if you think it is the appropriate response.",
+                    "marker": "2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.39288497506234416,
+                      "y": 0.26001247228381374
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This graph starts at approximately (0,1)  and ends at (8,0). In the middle, it hits its highest point at (4,3). Check this box if you think it is the appropriate response.",
+                    "marker": "3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3981062967581047,
+                      "y": 0.43334257206208426
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This graph starts at approximately (0,0) and ends at (8,0). In the middle, it has two rises and one trough, that occurs approximately at (4,0).",
+                    "marker": "4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.40330813591022446,
+                      "y": 0.6233370288248337
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This graph starts at approximately (1,0) and ends at (6,0). In the middle, it hits its highest point at (10,4).",
+                    "marker": "5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7912250623441397,
+                      "y": 0.2018431263858093
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This graph starts at approximately (0,0) and ends at (6,0). It goes up in a curved path until (2,3) and then slopes in a parabolic motion until (4,3) at which point it slopes downwards until (6,0).",
+                    "marker": "6",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 6,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7874844139650873,
+                      "y": 0.3985241130820399
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This graph starts at (0,0) and ends at (6,0). The graph slopes upwards until (2,2) and then slopes up and down four times at a length of 0.5 until it hits (5,2) and then slopes down until it hits (6,0).",
+                    "marker": "7",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 7,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.777061253117207,
+                      "y": 0.5929531596452328
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "oFpvcWEllBs",
+                  "china_cdn_id": "oFpvcWEllBs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 86397,
+          "key": "484805880923",
+          "title": "Variance Comparison",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484805880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 69635,
+              "key": "48480588",
+              "title": "Variance Comparison",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "This question asks about the <b>variance</b> of each Gaussian (not its covariance).\n\nCorrection: In the video under quiz page, it should be \"x and u\" at 00:15.  ",
+              "user_state": {
+                "node_key": "48480588",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "TGdMG81hXc8",
+                  "china_cdn_id": "TGdMG81hXc8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Variance Comparison",
+                "alt_text": "Variance Comparison  f of x equals 1 over parentheses squareroot of 2 pi sigma squared parentheses closed. All of this is multiplied by exponent -½ multiplied by parenthesis x-mu parentheses closed squared over sigma squared.  There are three graphs, each that can be large, medium or small.   The first graph starts at (1,0) and ends at (7,0). It slopes upwards, hits a maximum point at about (4,5) and then slopes down again. The second graph starts at (0,0), has a sharp upward curve, hits a maximum point at about (3, 7) and quickly slopes down and ends at (5,0).  The third graph starts at (0,0), curves upwards at (3, 2) and curves downward until (8, 0).",
+                "background_image": "//lh6.ggpht.com/vsH8DZgWdwupW0CVIsFvrK4L5EVC2UAn3boiblrx1U56__7Oma3-yIjlV6DTFap7O-FCD3byBuEEN9JC55A=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480588",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48684624",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the first graph is large for the first graph.",
+                    "marker": "2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.538497506234414,
+                      "y": 0.3407358647450111
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the first graph is medium for the first graph.",
+                    "marker": "3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6649781795511222,
+                      "y": 0.31558342572062087
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the first graph is small for the first graph.",
+                    "marker": "4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.792686253117207,
+                      "y": 0.29704822616407983
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the second graph is large for the second graph.",
+                    "marker": "5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5310162094763092,
+                      "y": 0.489294623059867
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the second graph is medium for the second graph.",
+                    "marker": "6",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 6,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6626987219451371,
+                      "y": 0.4589107538802661
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the second graph is small for the second graph.",
+                    "marker": "7",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 7,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7924719451371571,
+                      "y": 0.4240922949002217
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the third graph is large for the third graph.",
+                    "marker": "8",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 8,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5374844139650873,
+                      "y": 0.708910753880266
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the third graph is medium for the third graph.",
+                    "marker": "9",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 9,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6558019014962594,
+                      "y": 0.6859409645232816
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This option for the third graph is small for the third graph.",
+                    "marker": "10",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 10,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7820487842892768,
+                      "y": 0.6603727827050998
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "rczAG7meAY4",
+                  "china_cdn_id": "rczAG7meAY4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 24235,
+          "key": "484529600923",
+          "title": "Preferred Gaussian",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 91096,
+              "key": "48452960",
+              "title": "Preferred Gaussian",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452960",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "sBsju-6nQWI",
+                  "china_cdn_id": "sBsju-6nQWI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Preferred Gaussian",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/vOqY-LJytDmEgSTev14_5gmM-yqcO4d4BLkWXAqnYyVTTgLLxfA-arpaliZCww0VwHv5Nm0C2wNERHBsRCk=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452960",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48667899",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.8162406483790524,
+                      "y": 0.6114883592017738
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.8214424875311721,
+                      "y": 0.4125900776053215
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.8356062967581047,
+                      "y": 0.2415119179600887
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-9AVZ-N_gbM",
+                  "china_cdn_id": "-9AVZ-N_gbM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 30486,
+          "key": "483118610923",
+          "title": "Evaluate Gaussian",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118610923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 13400,
+              "key": "48311861",
+              "title": "Evaluate Gaussian",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311861",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "4-0nBfsD4jo",
+                  "china_cdn_id": "4-0nBfsD4jo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Evaluate Gaussian",
+                "alt_text": "Evaluate Gaussian   f of x equals 1 over parentheses squareroot of 2 pi sigma squared parentheses closed. All of this is multiplied by exponent -½ multiplied by parenthesis x-mu parentheses closed squared over sigma squared.  mu equals 10. sigma squared equals 4. x equals 8.  what is f of x?",
+                "background_image": "//lh3.ggpht.com/rv3C7n1oVgwyBi60y5dzxiyfpft1NAAo3dvio8bAayYOVFmx6Ytx1FD4QpXKw9Q5mTYCGX2P51ko0tNSHA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311861",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48738007",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "Insert your numeric response in this box.",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.11529933481152993,
+                      "width": 0.18703241895261846,
+                      "x": 0.4685941396508728,
+                      "y": 0.38598253880266076
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "mQtjczyAxQs",
+                  "china_cdn_id": "mQtjczyAxQs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 19601,
+          "key": "484805890923",
+          "title": "Maximize Gaussian",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484805890923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 31687,
+              "key": "48480589",
+              "title": "Maximize Gaussian",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480589",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "fRYtUP0P4Lg",
+                  "china_cdn_id": "fRYtUP0P4Lg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Maximize Gaussian",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48725221",
+                "initial_code_files": [
+                  {
+                    "text": "#For this problem, you aren't writing any code.\n#Instead, please just change the last argument \n#in f() to maximize the output.\n\nfrom math import *\n\ndef f(mu, sigma2, x):\n    return 1/sqrt(2.*pi*sigma2) * exp(-.5*(x-mu)**2 / sigma2)\n\nprint f(10.,4.,8.) #Change the 8. to something else!\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "2cD8T65E-jM",
+                  "china_cdn_id": "2cD8T65E-jM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 3777,
+          "key": "484529610923",
+          "title": "Measurement and Motion 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529610923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 51484,
+              "key": "48452961",
+              "title": "Measurement and Motion 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452961",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Y7Mr_5Hfe24",
+                  "china_cdn_id": "Y7Mr_5Hfe24.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Measurement and Motion 1",
+                "alt_text": "Measurement and Motion 1  Quiz  Both measurement and motion could be either convolution or product. Select the most appropriate answer choice.",
+                "background_image": "//lh5.ggpht.com/BVxGdk6a7cnc2wozhXsoBvUol3gnB5ztoz07MRG-4qykv3JGecL3nw_EiUMD4CkncP-tEfWFMobHk_XsbQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452961",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48699502",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that measurement was implemented using convolution.",
+                    "marker": "2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.46286627182044887,
+                      "y": 0.28519955654101997
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that measurement was implemented using product.",
+                    "marker": "3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6337281795511222,
+                      "y": 0.2644470620842572
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that motion was implemented using convolution.",
+                    "marker": "4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.45289120947630923,
+                      "y": 0.44259284922394676
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that motion was implemented using product.",
+                    "marker": "5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6414237842892768,
+                      "y": 0.4289079822616408
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "EyE5vOSxPdI",
+                  "china_cdn_id": "EyE5vOSxPdI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 30504,
+          "key": "483118620923",
+          "title": "Measurement and Motion 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118620923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 14019,
+              "key": "48311862",
+              "title": "Measurement and Motion 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311862",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "dwVwSZuJDBQ",
+                  "china_cdn_id": "dwVwSZuJDBQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Measurement and Motion 2",
+                "alt_text": "Measurement and Motion 2  Both measurement and motion follow either bayes Rule or Total Probability. Select the most appropriate answer choice.",
+                "background_image": "//lh3.ggpht.com/O6M3hSVZtVwlsCsIQktr8dgQ5NrKEdQyvueiUi3J17myae-sml-yHVEF6PyoHOuE7P2vMCujAjsdWMNFfQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311862",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48740026",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that measurement follows Bayes rule.",
+                    "marker": "2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.46411315461346636,
+                      "y": 0.2870357538802661
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that measurement follows Total Probability.",
+                    "marker": "3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6372350374064838,
+                      "y": 0.27816657427937913
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "his is the option that motion follows Bayes rule.",
+                    "marker": "4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.4449812967581047,
+                      "y": 0.4510809312638581
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "This is the option that motion follows Total Probability.",
+                    "marker": "5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6391443266832918,
+                      "y": 0.4307441796008869
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "1X8Tu6TmKhY",
+                  "china_cdn_id": "1X8Tu6TmKhY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29847,
+          "key": "486867600923",
+          "title": "Shifting the Mean",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486867600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 32555,
+              "key": "48686760",
+              "title": "Shifting the Mean",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48686760",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "8c479K2UCZo",
+                  "china_cdn_id": "8c479K2UCZo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Shifting the Mean",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/UI4ce0moRrHopBFoXRpf-D99KrFpJYf9znejA1sAbSDFzF8-xqKLOtlzZXtMjFhX_6MtM5tTUonWOCkwpm8=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48686760",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48684703",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3377883416458853,
+                      "y": 0.5276122505543237
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3735193266832918,
+                      "y": 0.5170800997782705
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.4179005610972569,
+                      "y": 0.5237319844789357
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "HmcurWkA0fQ",
+                  "china_cdn_id": "HmcurWkA0fQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 4036,
+          "key": "483118630923",
+          "title": "Predicting the Peak",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118630923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 17987,
+              "key": "48311863",
+              "title": "Predicting the Peak",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311863",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "zc_GQiISQ3E",
+                  "china_cdn_id": "zc_GQiISQ3E.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Predicting the Peak",
+                "alt_text": "The three options are in a straight, upwards line.",
+                "background_image": "//lh4.ggpht.com/5K9gdALDylopXfGWH3rM6NNcyj0kNodG75jVy7dChVK53TYtgLjPZovQdi0lKsG3Pbi-RIGp2oeRNWpFXuo=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311863",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48728188",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "This option correlates with the mu (the mean of the prior) of the graph.",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5337437655860349,
+                      "y": 0.0629850332594235
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "This option correlates with the mean of the graph.",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5319708541147132,
+                      "y": 0.143535199556541
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "This option correlates with the upper deviation of the graph.",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5439331359102244,
+                      "y": 0.2379781042128603
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "PsyqM704q2Y",
+                  "china_cdn_id": "PsyqM704q2Y.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29952,
+          "key": "486867610923",
+          "title": "Parameter Update",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486867610923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 82360,
+              "key": "48686761",
+              "title": "Parameter Update",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48686761",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "d8UrbKKlGxI",
+                  "china_cdn_id": "d8UrbKKlGxI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Parameter Update",
+                "alt_text": "Parameter Update  mu prime equals 1 over sigma squared plus r squared all multiplied by prantheses r squared mu plus sigma squared v prantheses closed.  The second equation is sima squared prime equals 1 over prantheses 1 over sigma squared parentheses closed added to 1 over t squared.  mu here equals 10.  v equals 12.  sigma squared equals 4.   t squared equals 4.",
+                "background_image": "//lh3.ggpht.com/w5O1pH5Ifm75EUixtxp3L6iBulDJBDHaDL8fB67i9XSYf9Ho6u3ztNnhgrgmaVZnrhc6khl4Y915UjAy6qY=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48686761",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48660994",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is mu prime equal to? Insert your numeric answer in this text box.",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.11086474501108648,
+                      "width": 0.16957605985037408,
+                      "x": 0.606511066084788,
+                      "y": 0.5115715077605322
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is sigma squared prime equal to? Insert your numeric answer in this text box.",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.11529933481152993,
+                      "width": 0.1745635910224439,
+                      "x": 0.6061798628428927,
+                      "y": 0.6664356984478935
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Lwn6FJgyyYI",
+                  "china_cdn_id": "Lwn6FJgyyYI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 11476,
+          "key": "487244930923",
+          "title": "Parameter Update 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487244930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 84992,
+              "key": "48724493",
+              "title": "Parameter Update 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48724493",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "2BfisMbu86o",
+                  "china_cdn_id": "2BfisMbu86o.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Parameter Update 2",
+                "alt_text": "Parameter Update 2  mu prime equals 1 over sigma squared plus r squared all multiplied by prantheses r squared mu plus sigma squared v prantheses closed.  The second equation is sima squared prime equals 1 over prantheses 1 over sigma squared parentheses closed added to 1 over t squared.  mu here equals 10.  v equals 13.  sigma squared equals 8.   t squared equals 2.",
+                "background_image": "//lh6.ggpht.com/OMB1wH-33Ji8yXhqGDhOK-IPLwbUp-pwsb-P1IVWkMPsJowJ-JK3M-XvrBd8XaMZLpHMx90IVOA11s8h92c=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48724493",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48658988",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is mu prime equal to? Insert your numeric answer in this text box.",
+                    "marker": "1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.11086474501108648,
+                      "width": 0.16708229426433915,
+                      "x": 0.609004831670823,
+                      "y": 0.5174611973392461
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "What is sigma squared prime equal to? Insert your numeric answer in this text box.",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.11529933481152993,
+                      "width": 0.16832917705735662,
+                      "x": 0.6091996571072319,
+                      "y": 0.6563539356984479
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "_AAkw_fynwc",
+                  "china_cdn_id": "_AAkw_fynwc.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 35238,
+          "key": "486058520923",
+          "title": "Separated Gaussians",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486058520923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 61601,
+              "key": "48605852",
+              "title": "Separated Gaussians",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48605852",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "QAqsIWVVX0Y",
+                  "china_cdn_id": "QAqsIWVVX0Y.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Separated Gaussians",
+                "alt_text": "Separated Gaussian   There are two graphs sitting at an unspecified distance from one another. Both have the same covariance. Where would the new mean be?",
+                "background_image": "//lh5.ggpht.com/V4nHtdV4aiwb-VxKRxu0ZO-EOeWyMQstcfGO77epmMcQDxWDDvcC5aZW4981SHuYeGHJguu9gvw842Sm6yw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48605852",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48667873",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The first point is to the right of the first graph and is the closest to the first graph. Select this if you think this is the closest to the mean.",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.3670706047381546,
+                      "y": 0.4544761640798226
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The second point is more to the right of the first point and in the middle of the two graphs. Select this if you think this is the closest to the mean.",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.43874688279301743,
+                      "y": 0.4465077605321508
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The third point is more to the right of the second point and is the last point before the second graph. Select this if you think this is the closest to the mean.",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5104036783042394,
+                      "y": 0.43815825942350334
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The fourth point is at the end of the second graph. Select this if you think this is the closest to the mean.",
+                    "marker": "5",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6623090710723192,
+                      "y": 0.43403547671840353
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "fGcozDEwnwY",
+                  "china_cdn_id": "fGcozDEwnwY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2465,
+          "key": "487033390923",
+          "title": "Separated Gaussians 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487033390923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 43486,
+              "key": "48703339",
+              "title": "Separated Gaussians 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Correction: Sebastian says \"because both means are the same\" at 0:24, it should be \"because both **variances** are the same\"",
+              "user_state": {
+                "node_key": "48703339",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "0FmTokjoRgo",
+                  "china_cdn_id": "0FmTokjoRgo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Separated Gaussians 2",
+                "alt_text": "Separated Gaussians 2  There are two graphs sitting at an unspecified distance from one another. Both have the same covariance. Where would the new mean be?",
+                "background_image": "//lh5.ggpht.com/05RcDBt4HLqwd0p9jOVnKey5lqiwwicSJu31Wd2obg7ZZ0bZd4qxzziA3ORhjVhLlXMFG37gQVC-07OM-A=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48703339",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48738043",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The first point is to the right of the first graph and is the closest to the first graph. It is connected with a new graph that has a very sharp top point.",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.40081437032418954,
+                      "y": 0.39447062084257206
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The second point is more to the right of the first point and in the middle of the two graphs. It is connected to a graph that has a smoother curve.",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.4791536783042394,
+                      "y": 0.3966879157427938
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "The third point is more to the right of the second point and is the last point before the second graph. It is connected to a graph with a very smooth, distributed graph.",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5260286783042394,
+                      "y": 0.3966879157427938
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "edcfMK_bKXw",
+                  "china_cdn_id": "edcfMK_bKXw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 995,
+          "key": "487244940923",
+          "title": "New Mean and Variance",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487244940923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 36461,
+              "key": "48724494",
+              "title": "New Mean and Variance",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48724494",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "yo8jf0U4hlc",
+                  "china_cdn_id": "yo8jf0U4hlc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "New Mean and Variance",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48713553",
+                "initial_code_files": [
+                  {
+                    "text": "# Write a program to update your mean and variance\n# when given the mean and variance of your belief\n# and the mean and variance of your measurement.\n# This program will update the parameters of your\n# belief function.\n\ndef update(mean1, var1, mean2, var2):\n    new_mean =\n    new_var =\n    return [new_mean, new_var]\n\nprint update(10.,8.,13., 2.)",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "SwxRWZaC1FM",
+                  "china_cdn_id": "SwxRWZaC1FM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 117801,
+          "key": "487344420923",
+          "title": "Gaussian Motion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487344420923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 69949,
+              "key": "48734442",
+              "title": "Gaussian Motion",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<h1>Gaussian Motion</h1>",
+              "user_state": {
+                "node_key": "48734442",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "X7YggdDnLaw",
+                  "china_cdn_id": "X7YggdDnLaw.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Gaussian Motion",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/rqB20QvMrItxob7b8LOv-lxmVKm7Jj6R7sPoKvmDq6yHdZjgXAncuhljuDwhdTelBcapzIZz29K6WvzCA1Fg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48734442",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48714247",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.12,
+                      "x": 0.6556040128072103,
+                      "y": 0.5088894102308485
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.12,
+                      "x": 0.6556040128072103,
+                      "y": 0.6386024828310366
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "xNPEjY4dsds",
+                  "china_cdn_id": "xNPEjY4dsds.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2284,
+          "key": "484529620923",
+          "title": "Predict Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529620923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 33350,
+              "key": "48452962",
+              "title": "Predict Function",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452962",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "DV2cX9W0tT8",
+                  "china_cdn_id": "DV2cX9W0tT8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Predict Function",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48725197",
+                "initial_code_files": [
+                  {
+                    "text": "# Write a program that will predict your new mean\n# and variance given the mean and variance of your \n# prior belief and the mean and variance of your \n# motion. \n\ndef update(mean1, var1, mean2, var2):\n    new_mean = (var2 * mean1 + var1 * mean2) / (var1 + var2)\n    new_var = 1/(1/var1 + 1/var2)\n    return [new_mean, new_var]\n\ndef predict(mean1, var1, mean2, var2):\n    new_mean =\n    new_var =\n    return [new_mean, new_var]\n\nprint predict(10., 4., 12., 4.)",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "AMFig-sYGfM",
+                  "china_cdn_id": "AMFig-sYGfM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 24437,
+          "key": "487236030923",
+          "title": "Kalman Filter Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236030923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 115585,
+              "key": "48723603",
+              "title": "Kalman Filter Code",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Make sure to print out ONLY the final values of the mean and the variance in a list [mu, sig]. Do not print intermediate values as shown in the video.",
+              "user_state": {
+                "node_key": "48723603",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "3xBycKfnCOQ",
+                  "china_cdn_id": "3xBycKfnCOQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Kalman Filter Code",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "48658919",
+                "initial_code_files": [
+                  {
+                    "text": "# Write a program that will iteratively update and\n# predict based on the location measurements \n# and inferred motions shown below. \n\ndef update(mean1, var1, mean2, var2):\n    new_mean = float(var2 * mean1 + var1 * mean2) / (var1 + var2)\n    new_var = 1./(1./var1 + 1./var2)\n    return [new_mean, new_var]\n\ndef predict(mean1, var1, mean2, var2):\n    new_mean = mean1 + mean2\n    new_var = var1 + var2\n    return [new_mean, new_var]\n\nmeasurements = [5., 6., 7., 9., 10.]\nmotion = [1., 1., 2., 1., 1.]\nmeasurement_sig = 4.\nmotion_sig = 2.\nmu = 0.\nsig = 10000.\n\n#Please print out ONLY the final values of the mean\n#and the variance in a list [mu, sig]. \n\n# Insert code here\n\nprint [mu, sig]\n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "X7cixvcogl8",
+                  "china_cdn_id": "X7cixvcogl8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 20569,
+          "key": "487550350923",
+          "title": "Kalman Prediction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487550350923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 14332,
+              "key": "48755035",
+              "title": "Kalman Prediction",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48755035",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "doyrdLJ6rJ4",
+                  "china_cdn_id": "doyrdLJ6rJ4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Kalman Prediction",
+                "alt_text": "Kalman Filters  There are four points in a nearly perfect diagonal line, sloping upwards from t=0 to t= 1 to t=2 to t=3. Your job is to find where t =4 would be from three points.  This is the first point. It continues the diagonal line.  This is the second point. It is not on the diagonal line but has a vertical component that is higher than t=3 and a horizontal component that is further left from the line.  This is the third point. It is not on the diagonal line but shares the vertical component almost equal to that of t = 2 and a horizontal component that is further left from the line.",
+                "background_image": "//lh6.ggpht.com/gZSqYueCdRXUukrD76pCXaHrYwE7FjN8CkiIDJ1iAsyjOrwjE8cQEgVZ01NCdA6oFAwSkW1p0VV5oH7IJw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48755035",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48741027",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "Pick this if you think it is at t=2.",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.4798745324189526,
+                      "y": 0.2683619733924612
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "t=3 is the next point in the diagonal line. Pick this if you think it is t=3.",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5469139650872819,
+                      "y": 0.18604490022172948
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "This is the next point in the diagonal line after t=3. Pick if you think this is the solution.",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6088489713216958,
+                      "y": 0.09347283813747229
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "tSfmiuB9s2c",
+                  "china_cdn_id": "tSfmiuB9s2c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 415786,
+          "key": "99e7b64e-c47f-475e-a8c8-aea95f0af46e",
+          "title": "A Break from Kalman Filters",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "99e7b64e-c47f-475e-a8c8-aea95f0af46e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 415787,
+              "key": "64d9479d-187b-49ed-bded-51f75510686d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# A Break from Kalman Filters\nAt this point, you've implemented a one dimensional Kalman Filter and you probably have some intuitive idea of how a multi-dimensional Kalman Filter might work. \n\nBut in order to actually make (or even use) a Kalman Filter in a 2d or 3d world (or \"state space\" in the language of robotics) we will first need to learn more about what exactly we mean when we use this word \"state\".\n\nDon't worry though, we will come back to the multidimensional Kalman Filter soon!",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

@@ -1,0 +1,638 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349908,
+      "key": "5da5d074-9b6b-4a3b-9a09-427bdaa89848",
+      "title": "Programming Probability  in Python",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Your chance to learn basic Python syntax while applying what you learned about probability and conditional probability in the last two lessons.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/5da5d074-9b6b-4a3b-9a09-427bdaa89848/349908/1544452679467/Programming+Probability++in+Python+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/5da5d074-9b6b-4a3b-9a09-427bdaa89848/349908/1544452677401/Programming+Probability++in+Python+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 410358,
+          "key": "48d783d2-da8e-4b2f-95da-6d57ca3f1fc1",
+          "title": "Learn by Doing",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "48d783d2-da8e-4b2f-95da-6d57ca3f1fc1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410359,
+              "key": "48042202-9589-4ab2-8c92-589a61e0baab",
+              "title": "Learn by Doing",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ypPeggeRdTE",
+                "china_cdn_id": "ypPeggeRdTE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 349909,
+          "key": "d42f59a6-bf39-4b3f-936c-d5bb58670ba8",
+          "title": "Your First Programming Practice!",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d42f59a6-bf39-4b3f-936c-d5bb58670ba8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 350927,
+              "key": "6a35f25d-be1f-4972-836d-0743dd198d11",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Programming Probability 1\nWelcome to your first programming practice lesson!\n\nThese will be sprinkled throughout the Nanodegree. There are several purposes for these sections.\n\n1. To practice programming and gain some understanding of Python (and later, C++), since these languages are the most prevalent in the field of self driving cars.\n2. To apply the mathematics and robotics concepts you are learning. It's easy to *think* you understand a concept, but it's only when you can actually *use* that concept that you can really be sure.\n\nSince students in this Nanodegree are coming from a variety of programming backgrounds, you may find these sections very challenging or very easy. It's up to you to allocate your learning time effectively!\n\nThese activities will all be labeled as **demonstrations**, **playgrounds**, or **exercises** and each has a different purpose.\n\n### Demonstrations\n\nYou shouldn't spend more than a few minutes on a demonstration. For a demonstration the goal is to quickly show you something with code.  That \"something\" might be a concept in programming, robotics, math, etc...  Generally the goal is to *expose* you to a concept (which you may already know). Don't try to memorize anything shown in a demo! That level of learning will happen naturally as you work with a concept in playgrounds, exercises, and projects.\n\nWhen you get to a demonstration you should:\n\n1. read through the code and comments.\n2. come up with a hypothesis for what will happen when you press \"Test Run\"\n3. press Test Run and observe the result. Compare what you see to what you expected. If there is a difference,  it means there's an opportunity to learn something! take time to reflect on what was different and why.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 407361,
+          "key": "6acf6c8a-3b3f-420e-8dfa-7ad5af22fc33",
+          "title": "Python Variables [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6acf6c8a-3b3f-420e-8dfa-7ad5af22fc33",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410217,
+              "key": "e751bb88-8301-4c52-9613-b3d36710acb8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "43678bef-d9ad-4114-9f91-f0c2c7ca6a8f",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/01.%20Python%20Variables%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350012,
+          "key": "29965c78-8246-4c66-bab2-d93d0a3018ac",
+          "title": "Data Types [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "29965c78-8246-4c66-bab2-d93d0a3018ac",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410219,
+              "key": "0703155e-a980-40b7-81e4-7c409eade81b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "a4d32fff-b6ea-49b9-8977-66d84885ba13",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/02.%20Data%20Types%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350001,
+          "key": "28b4a7a3-9dfd-447d-a905-e656eed8d608",
+          "title": "Python Control Flow [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28b4a7a3-9dfd-447d-a905-e656eed8d608",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410233,
+              "key": "806a7290-c3c4-49d3-8d7f-4693d3377493",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "f9c741d2-5b4b-4d62-8341-820a58ec284d",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/10.%20Python%20Control%20Flow%20%5Bdemonstation%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350049,
+          "key": "1c5953e4-b631-404b-9e90-61febd56096c",
+          "title": "For Loops [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1c5953e4-b631-404b-9e90-61febd56096c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410222,
+              "key": "585d2d3f-7758-4133-bf48-3cb93b8dd87d",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "879d6c0f-91e3-4bf5-86c4-cc3b533f5eb2",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/03.%20For%20Loops%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350938,
+          "key": "82a91b79-adc0-4479-8e1e-0728a8c73dee",
+          "title": "Lists and Loops [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "82a91b79-adc0-4479-8e1e-0728a8c73dee",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410223,
+              "key": "51dc29ba-01ef-47b8-ad9c-0d3d093f610f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "af0cd3d5-16df-49a4-9952-2bffbc4f7dee",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/04.%20Lists%20and%20Loops%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 355769,
+          "key": "15eae7bf-43c7-42e4-84d8-b954d0fe0db4",
+          "title": "List Comprehensions [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "15eae7bf-43c7-42e4-84d8-b954d0fe0db4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410225,
+              "key": "78c5216b-2868-42b5-b20d-073a6c014eba",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "4199204a-bfe7-4546-a671-4678e7c85796",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/05.%20List%20Comprehensions%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350002,
+          "key": "e8db2602-64ac-4b65-afce-723324444b82",
+          "title": "Python's random Library [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e8db2602-64ac-4b65-afce-723324444b82",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410226,
+              "key": "b6d503f1-5017-4b73-95fe-f5e0aebeacd9",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "ee354027-d81e-4281-9154-e60a7fa6908f",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/06.%20Python's%20random%20Library%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 355745,
+          "key": "01248e0f-429a-456e-9b88-50b5890ea6c4",
+          "title": "Learning with Playgrounds",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "01248e0f-429a-456e-9b88-50b5890ea6c4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355760,
+              "key": "0fd1f89d-c324-4791-a243-08f149069357",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning with Playgrounds\nThe next activity is your first **programming playground**.\n\nThe purpose of these activities is practice. Depending on your programming background you will find some of these playgrounds incredibly useful and some totally useless for you. It is up to you to make sure that the time you spend learning is productive. \n\nWhen you encounter a playground, read through the instructions and, if it seems useful to you, complete the activity, change the code, try to break things... whatever is helpful for you. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 350908,
+          "key": "389298e2-0342-4c42-8b8c-b06106bbb8da",
+          "title": "Simulating Coin Flips [playground]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "389298e2-0342-4c42-8b8c-b06106bbb8da",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410229,
+              "key": "9cd3d5bd-8a89-4e84-a5c6-62f09b0e4b01",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "6799dd79-9b2b-468c-8e93-946b68d1bb0d",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/07.%20Simulating%20Coin%20Flips%20%5Bplayground%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350929,
+          "key": "8d3332e9-07bf-41d4-97d4-b77f1d7b186f",
+          "title": "Functions [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8d3332e9-07bf-41d4-97d4-b77f1d7b186f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410231,
+              "key": "9b7a5418-3f08-428c-a7a4-953922490873",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "3f324910-2f73-4764-9c38-532cc3435ee8",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/08.%20Functions%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 350029,
+          "key": "9caa92ab-449a-434c-97f8-1872d020baca",
+          "title": "Simulating Probabilities [demonstration]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9caa92ab-449a-434c-97f8-1872d020baca",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410232,
+              "key": "55939264-aeca-4eb0-b228-e757b7783d94",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6c1c1e5b",
+              "pool_id": "jupyter",
+              "view_id": "eaff0fd0-f62a-4ffc-9e96-330709b4bb73",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/09.%20Simulating%20Probabilities%20%5Bdemonstration%5D.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 355749,
+          "key": "56527104-c2f4-4f82-a09e-35751b274876",
+          "title": "Exercises",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "56527104-c2f4-4f82-a09e-35751b274876",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355752,
+              "key": "2640f01c-1a7f-4566-bef1-4a9cbb69402d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Exercises\nThe next activity is a programming **exercise**.\n\nThe goal of an exercise is for you to check your understanding. You should think of them as our way of saying \"Hey, after this point we are going to assume you are able to do these things...\"\n\nIt may take a few attempts to answer an exercise correctly, and that's okay. If, after multiple attempts, you are still struggling to correctly solve an exercise, we will try to include solution code. Feel free to read through the solution to understand how it works. Then (without copy/pasting) try to go back to the problem and implement that solution yourself before moving on!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 350945,
+          "key": "23e1f86a-cb63-4812-b1eb-cce96ccb7501",
+          "title": "Probability of Collision [exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "23e1f86a-cb63-4812-b1eb-cce96ccb7501",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 350947,
+              "key": "9db6c2fc-8739-47d3-aa3d-c6247779176c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Probability of Collision [exercise]\n\n```\n\\  Car 1|\n  \\     |\n    \\   |\nCar 2 \\ |  LEFT  | STRAIGHT | RIGHT\n___________________________________\n  LEFT  |  0.5   |  0.25    | 0.1\nSTRAIGHT|  0.25  |  0.02    | 0.1\n RIGHT  |  0.1   |  0.1     | 0.01\n```\nThe truth table shown above represents the probability of two cars colliding at an intersection if they both attempt a maneuver at the same time. If Car 1 goes straight and car two goes left, for example, there is a probability of collision of 0.25.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 350946,
+              "key": "bffd54a3-70fa-48a1-a43a-ee1213fed5e5",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "bffd54a3-70fa-48a1-a43a-ee1213fed5e5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5399816002732032",
+                "initial_code_files": [
+                  {
+                    "text": "def probability_of_collision(car_1, car_2):\n    \"\"\"\n    Calculate the probablity of a collision based on the car turns\n    Args:\n        car_1 (string): The turning direction of car_1\n        car_2 (string): The turning direction of car_2\n        \n    Returns:\n        float: the probability of a collision\n    \"\"\"\n    # car_1 and car_2 will each be strings whose value will either be \n    # \"L\" for left, \"S\" for straight, or \"R\" for right.\n    probability = 0.0 # you should change this value based on the directions.\n    \n    if car_1 == \"L\":\n        # TODO your code here for when car 1 turns left\n    elif car_1 == \"S\":\n        # TODO your code here for when car 1 goes straight\n    else:\n        # TODO your code here for when car 1 turns right\n    \n    return probability\n\n\n# This function is used to test the correctness of your code. You shouldn't\n# touch any of the code below here (but feel free to look through it to\n# understand what \"correct\" looks like).\ndef test():\n    num_correct = 0\n    \n    p1 = probability_of_collision(\"L\", \"L\")\n    if p1 == 0.5:\n        num_correct += 1\n    \n    p2 = probability_of_collision(\"L\", \"R\")\n    if p2 == 0.1:\n        num_correct += 1\n    \n    p3 = probability_of_collision(\"L\", \"S\")\n    if p3 == 0.25:\n        num_correct += 1\n    \n    p4 = probability_of_collision(\"S\", \"R\")\n    if p4 == 0.1:\n        num_correct += 1\n    \n    print(\"You got\", num_correct, \"out of 4 correct\")\n    \ntest()",
+                    "name": "example.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 350950,
+          "key": "59ba822d-07d2-422d-a873-f977881bd7f5",
+          "title": "Probability of Collision [solution]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "59ba822d-07d2-422d-a873-f977881bd7f5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 350952,
+              "key": "36b4996c-e617-448b-b7ab-d96c9f3f1cdb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Probability of Collision [solution]\n```\n\\  Car 1|\n  \\     |\n    \\   |\nCar 2 \\ |  LEFT  | STRAIGHT | RIGHT\n___________________________________\n  LEFT  |  0.5   |  0.25    | 0.1\nSTRAIGHT|  0.25  |  0.02    | 0.1\n RIGHT  |  0.1   |  0.1     | 0.01\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 350951,
+              "key": "ca287eac-f796-4e25-9606-c69cda6256cb",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ca287eac-f796-4e25-9606-c69cda6256cb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4888253319741440",
+                "initial_code_files": [
+                  {
+                    "text": "def probability_of_collision(car_1, car_2):\n    \"\"\"\n    Calculate the probablity of a collision based on the car turns\n    Args:\n        car_1 (string): The turning direction of car_1\n        car_2 (string): The turning direction of car_2\n        \n    Returns:\n        float: the probability of a collision\n    \"\"\"\n    \n    probability = 0.0 # you should change this value based on the directions.\n    \n    \n    if car_1 == \"L\":\n        # Case Car1 L and Car2 L\n        if car_2 == \"L\":\n            probability = 0.5\n        # Case Car1 L and Car2 S    \n        elif car_2 == \"S\":\n            probability = 0.25\n        # Case Car1 L and Car2 R (this is all other possible cases)\n        else:\n            probability = 0.1\n        \n    elif car_1 == \"S\":\n        # Case Car1 S and Car2 L\n        if car_2 == \"L\":\n            probability = 0.25\n        # Case Car1 S and Car2 S\n        elif car_2 == \"S\":\n            probability = 0.02\n        # Case Car1 S and Car2 R (this is all other possible cases)\n        else:\n            probability = 0.1\n        \n    else: # Car1 R\n        # Case Car1 R and Car2 L\n        if car_2 == \"L\":\n            probability = 0.1\n        # Case Car1 R and Car2 S\n        elif car_2 == \"S\":\n            probability = 0.1\n        # Case Car1 R and Car2 R (this is all other possible cases)\n        else:\n            probability = 0.01\n        \n    \n    return probability\n    \ndef test():\n    num_correct = 0\n    \n    p1 = probability_of_collision(\"L\", \"L\")\n    if p1 == 0.5:\n        num_correct += 1\n    \n    p2 = probability_of_collision(\"L\", \"R\")\n    if p2 == 0.1:\n        num_correct += 1\n    \n    p3 = probability_of_collision(\"L\", \"S\")\n    if p3 == 0.25:\n        num_correct += 1\n    \n    p4 = probability_of_collision(\"S\", \"R\")\n    if p4 == 0.1:\n        num_correct += 1\n    \n    print(\"You got\", num_correct, \"out of 4 correct\")\n    \ntest()",
+                    "name": "example.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

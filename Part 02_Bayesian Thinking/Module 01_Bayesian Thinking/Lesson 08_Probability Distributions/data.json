@@ -1,0 +1,2117 @@
+{
+  "data": {
+    "lesson": {
+      "id": 349904,
+      "key": "6616009b-43bf-4f0b-922c-e000b0006e02",
+      "title": "Probability Distributions",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn how a robot represents it's belief about uncertain quantities using something known as a **probability distribution**.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/6616009b-43bf-4f0b-922c-e000b0006e02/349904/1544452560999/Probability+Distributions+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/6616009b-43bf-4f0b-922c-e000b0006e02/349904/1544452554982/Probability+Distributions+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 410361,
+          "key": "af183483-0d35-4eff-9757-d7f4a5c610b7",
+          "title": "Probability Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "af183483-0d35-4eff-9757-d7f4a5c610b7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 410362,
+              "key": "b85e7e2f-2426-4a30-8609-b907fd2b437f",
+              "title": "Probability Distribution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Srt0yZSCrbY",
+                "china_cdn_id": "Srt0yZSCrbY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 349919,
+          "key": "9e50323c-2211-4b05-b179-d141cdadc568",
+          "title": "Intro to Probability Distributions Part One",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e50323c-2211-4b05-b179-d141cdadc568",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355858,
+              "key": "09725708-c43d-4e1e-a278-f530e0cbba7e",
+              "title": "Intro To Probability Distribution 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gqPjMDVFvNg",
+                "china_cdn_id": "gqPjMDVFvNg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 477668,
+          "key": "0cf1f06d-fa8c-4bbe-95af-0e8dfe1b44cc",
+          "title": "Intro to Probability Distributions Part Two",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0cf1f06d-fa8c-4bbe-95af-0e8dfe1b44cc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477669,
+              "key": "7f712b64-7abc-40e6-86c0-d0686bdb8eab",
+              "title": "Intro To Probability Distribution 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PglBg4eb_5M",
+                "china_cdn_id": "PglBg4eb_5M.mp4"
+              }
+            },
+            {
+              "id": 477670,
+              "key": "a0708900-5c43-424b-b1ae-12c545232432",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What is a Probability Distribution?\n\nProbability distributions allow you to represent the probability of an event using a mathematical equation. Like any mathematical equation:\n* probability distributions **can be visualized** using a graph especially in 2-dimensional cases.\n* probability distributions **can be worked with using algebra, linear algebra and calculus**.\n\nThese distributions make it *much* easier to understand and summarize the probability of a system whether that system be a coin flip experiment or the location of a self-driving car.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477674,
+              "key": "5dc8d8db-df6b-4d1a-a1f4-26510e6e16da",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Types of Probability Distributions\n\nProbability distributions are really helpful for understanding the probability of a system.\nLooking at the big pictures, there are two types of probability distributions: \n* discrete probability distributions\n* continuous probability distributions\n\nBefore we get into the details about what discrete and continuous mean, take a look at these two visualizations below. The first image shows a discrete probability distribution and the second a continuous probability distribution. What is similar and what is different about each visualization?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477677,
+              "key": "ece81ed5-d86f-4823-b5b6-e17ea486ed9c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3038e0_probability-distributions/probability-distributions.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ece81ed5-d86f-4823-b5b6-e17ea486ed9c",
+              "caption": "Discrete Distribution (left) and Continuous Distribution (Right)",
+              "alt": "Probability Distributions",
+              "width": 903,
+              "height": 364,
+              "instructor_notes": null
+            },
+            {
+              "id": 477693,
+              "key": "4d0575e4-9a0b-484c-9973-91da606b54a9",
+              "title": "Discrete and continuous distributions",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4d0575e4-9a0b-484c-9973-91da606b54a9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Based on the visualizations, which of the following are true about the discrete probability distribution versus the continuous probability distribution?",
+                "answers": [
+                  {
+                    "id": "a1513110489505",
+                    "text": "For both visualizations, the y-axis represents the probability of an event occurring (hint: look at the y-axis labels).",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513110652323",
+                    "text": "The x-axis represents the main variable of interest for both visualizations.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513110652915",
+                    "text": "In the discrete visualization, the x-axis variable can only take on certain values such as 1, 2 or 3.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513110653531",
+                    "text": "In the discrete visualization, the x-axis variable can take on any value such as 3.4 or 0.5.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513110655833",
+                    "text": "In the continuous visualization, the x-axis variable can take on any real number value from -infinity to +infinity.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513110659323",
+                    "text": "For the discrete visualization, the y-axis represents the probability of an event occurring (hint: what does the y-axis label say?).",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 349906,
+          "key": "d0e067b6-9913-4ac2-9e33-4e927fb99034",
+          "title": "Learning Objectives - Bayes' Rule",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0e067b6-9913-4ac2-9e33-4e927fb99034",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 352474,
+              "key": "b2b8642c-fb3b-407a-aa23-37d47efd0b34",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Learning Objectives - Bayes' Rule",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469822,
+              "key": "c25cc5c0-7ad3-40f1-abc3-637159545d06",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The following questions will help you review what you learned in the Bayes' Rule lesson.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352475,
+              "key": "0de00a9d-7f88-49b2-ba03-3dfa5114845c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Prior knowledge\n\n**For questions 1-3, assume you already have the following knowledge**:\n\nYou’re interested in finding out the probability of a car stopping if it sees a *yellow* traffic light. \n\n* Past data tells you that the probability of a car stopping at a traffic light intersection is <span class=\"mathquill\">P(S) = 0.40</span>.\n\n* You also know that the past probability of a traffic light being yellow (as opposed to red or green) is <span class=\"mathquill\">P(Y) = 0.10</span>.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 354468,
+              "key": "6f6fc284-8496-4a84-b954-211d57eb3c84",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598266e3_screen-shot-2017-08-02-at-4.57.01-pm/screen-shot-2017-08-02-at-4.57.01-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6f6fc284-8496-4a84-b954-211d57eb3c84",
+              "caption": "Car stopping at a yellow light",
+              "alt": null,
+              "width": 500,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 352476,
+              "key": "255a8666-459d-4f17-b52d-0852dd2d297e",
+              "title": "Traffic Light q1",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "255a8666-459d-4f17-b52d-0852dd2d297e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "When a car is stopped at an intersection, data shows that 12% of the time the light is yellow. So if we know a car is stopped, there's a 12% chance the light is yellow. This is called a *conditional probability*.\n\nGiven P(S) and P(Y) above, how would you represent this conditional probability in notation?",
+                "answers": [
+                  {
+                    "id": "a1501205087553",
+                    "text": "P(S|Y) = 0.12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205208596",
+                    "text": "P(S) = 0.12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205220196",
+                    "text": "P(Y|S) = 0.12",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501205348531",
+                    "text": "P(Y,S) = 0.12",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 352477,
+              "key": "7efc0f6f-69a2-49fd-aa92-dcf170e752b1",
+              "title": "Traffic Light q2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7efc0f6f-69a2-49fd-aa92-dcf170e752b1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Using what you know from question 1, answer the following: if the traffic light is yellow, what is the chance that the car will stop?\n",
+                "answers": [
+                  {
+                    "id": "a1501205676465",
+                    "text": "0.04",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205679478",
+                    "text": "0.33",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205687122",
+                    "text": "0.40",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205694825",
+                    "text": "0.48",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501205722004",
+                    "text": "0.50",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205725639",
+                    "text": "0.52",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 352478,
+              "key": "01865a23-444d-4bae-ad4d-43662c7b96c8",
+              "title": "Traffic Light q3",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "01865a23-444d-4bae-ad4d-43662c7b96c8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Knowing that a car stopping at an intersection and the presence of a yellow traffic light are related events, what are P(S) and P(Y) known as?",
+                "answers": [
+                  {
+                    "id": "a1501206083765",
+                    "text": "Posterior probabilities",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501206294159",
+                    "text": "Past probabilities",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501206298641",
+                    "text": "Prior probabilities",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501206305385",
+                    "text": "Total probabilities",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 352481,
+              "key": "017f0993-0cb3-4370-936c-ea956cbe7e9d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Questions 4 and 5 are different scenarios.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352479,
+              "key": "f9cd9ad8-9147-44db-aa65-74563c96bb3c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**Prior knowledge for question 4:**\n\nOn a four-lane highway, cars are either going fast or not fast. Faster cars should go in the leftmost lanes.\n\n* At any given time, 20% of cars are in the left-most lane.\n\n* Overall, 40% of cars on the highway are classified as going fast.\n\n* Out of all the cars in the leftmost lane, 90% are going fast.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352480,
+              "key": "9ca50be1-5f68-42a1-a4a2-8bd6f6208a56",
+              "title": "Bayes q2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9ca50be1-5f68-42a1-a4a2-8bd6f6208a56",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Given the above information, if a car is going fast, what is the probability that it will be in the leftmost lane?",
+                "answers": [
+                  {
+                    "id": "a1501207155576",
+                    "text": "0.125",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501207184220",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501207191438",
+                    "text": "0.45",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501207193943",
+                    "text": "0.55",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 352484,
+              "key": "b1660ffc-937e-410b-af33-12d4a91579a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Bayes' rule is not only used to incorporate sensor data into an estimate; it’s also often used to incorporate test data into a medical diagnosis. \n\n**Prior knowledge for question 5:**\n\n* 1% of all people have cancer.\n* 90% of people who have cancer test positive when given a cancer-detecting blood test, meaning the test detects cancer 90% of the time.\n* 5% of people will have false positives, meaning that 5% of the time, this test will produce a positive result when people *do not* have cancer.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352485,
+              "key": "1ac5de50-9605-4f99-ac78-8e3ba55af0f2",
+              "title": "Bayes q3",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1ac5de50-9605-4f99-ac78-8e3ba55af0f2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Given the above data, what is the probability that a person has cancer if they have a positive cancer-test result? (Note: answers are rounded to the nearest 4th decimal place).",
+                "answers": [
+                  {
+                    "id": "a1501208084691",
+                    "text": "0.1125",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501208101776",
+                    "text": "0.1538",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501208108511",
+                    "text": "0.2687",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501208112575",
+                    "text": "0.8924",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 477866,
+          "key": "ce91af44-af94-433e-aa7e-00f93c298517",
+          "title": "Discrete vs. Continuous Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ce91af44-af94-433e-aa7e-00f93c298517",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477867,
+              "key": "dc365493-2d8b-477d-9d3f-ef9e010e6331",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Discrete Variables\n\nAs mentioned before, there are two main categories of probability distributions: discrete probability distributions and continuous probability distributions. To see the difference, let's talk about discrete variables and continuous variables.\n\nThe word **discrete** implies that a variable can only take on certain values. Usually this ends up meaning that the variable is countable like:\n* Number of times a coin landed on heads\n* How many times a dice landed on 1, 2, 3, 4 5 or 6",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477868,
+              "key": "48fa7efb-d289-4d1f-81c6-ff78e8a322a6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a304321_discrete-variables/discrete-variables.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48fa7efb-d289-4d1f-81c6-ff78e8a322a6",
+              "caption": "Examples of Discrete Variables",
+              "alt": "Discrete Variables",
+              "width": 484,
+              "height": 248,
+              "instructor_notes": null
+            },
+            {
+              "id": 477870,
+              "key": "9f755ad7-a7bf-48f1-abb7-b2530be7cd36",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You wouldn't say that a dice landed midway between 3 and 4 like 3.4. Or that the coin landed on heads and a half. And oftentimes these discrete variables lend themselves to counting like:\n* How many times did the coin land on heads?\n* How many times did the dice land on five?\n\nOf course, in a real-world experiment, the coin has some tiny tiny chance of landing on its side or the dice on an edge. But the case would still be discrete; you'd create an category like \"side\" or \"edge\" to account for those cases.\n\n# Continuous Variables\nIn contrast, a variable like temperature is continuous. Temperature can take on any decimal value like -5.6 or 100.41 degrees. \n\nWeight, height, temperature, longitude, and latitude are continuous variables. All of these variables could be decimal values. These variables have something else in common; you'd use some sort of instrument to measure them like a thermometer, a ruler, a scale or in the case of longitude, a [chronometer](https://en.wikipedia.org/wiki/Longitude_by_chronometer).\n\nNotice as well that you can't really associate counts with these variables. With a discrete variable like coins, you could count the number of times the coin landed on heads.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477871,
+              "key": "35f04890-8752-4c8a-bd88-0a0fa5973480",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a30515c_continuous-variables/continuous-variables.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/35f04890-8752-4c8a-bd88-0a0fa5973480",
+              "caption": "Examples of Continuous Variables",
+              "alt": "Thermometer, Tape Measure and Scale",
+              "width": 273,
+              "height": 112,
+              "instructor_notes": null
+            },
+            {
+              "id": 477901,
+              "key": "8e8db9a3-c288-4894-9b0f-c2d32c09e778",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The probability distributions for discrete variables and continuous variables are different. In this lesson, you are going to learn the differences and similarities between the two.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477874,
+              "key": "62db5532-8fda-41a9-9e5e-57d3edaa80b3",
+              "title": "Discrete or Continuous",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "62db5532-8fda-41a9-9e5e-57d3edaa80b3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Determine which situations would be discrete or continuous."
+                },
+                "concepts_label": "Variable",
+                "answers_label": "Discrete or Continuous",
+                "concepts": [
+                  {
+                    "text": "Hair color of students (brown, red, blond, etc)",
+                    "correct_answer": {
+                      "id": "a1513129088262",
+                      "text": "Discrete"
+                    }
+                  },
+                  {
+                    "text": "Height rounded to the nearest integer",
+                    "correct_answer": {
+                      "id": "a1513129107113",
+                      "text": "Discrete"
+                    }
+                  },
+                  {
+                    "text": "Altitude",
+                    "correct_answer": {
+                      "id": "a1513129107872",
+                      "text": "Continuous"
+                    }
+                  },
+                  {
+                    "text": "Acceleration",
+                    "correct_answer": {
+                      "id": "a1513129108424",
+                      "text": "Continuous"
+                    }
+                  },
+                  {
+                    "text": "Heads vs Tails for a Coin",
+                    "correct_answer": {
+                      "id": "a1513129108952",
+                      "text": "Discrete"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1513129139457",
+                    "text": "Continuous"
+                  },
+                  {
+                    "id": "a1513129107872",
+                    "text": "Continuous"
+                  },
+                  {
+                    "id": "a1513129107113",
+                    "text": "Discrete"
+                  },
+                  {
+                    "id": "a1513129088262",
+                    "text": "Discrete"
+                  },
+                  {
+                    "id": "a1513129108952",
+                    "text": "Discrete"
+                  },
+                  {
+                    "id": "a1513129108424",
+                    "text": "Continuous"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 477663,
+          "key": "1f42d356-1e4b-4276-95d6-fa185faf9ef8",
+          "title": "Discrete Probability Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1f42d356-1e4b-4276-95d6-fa185faf9ef8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477701,
+              "key": "3d2aa828-17f3-464c-905b-2a835750d050",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Discrete Probability Distribution",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477721,
+              "key": "178b4a45-ff0b-4a65-b4ca-5c41506bc57c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# An Example Discrete Distribution\n\nWe previously showed you a discrete probability distribution about flipping a fair coin three times. Let's look at this distribution again in more detail:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477723,
+              "key": "396959aa-ed45-4c31-9031-992059af6fb3",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a304744_discrete-distribution/discrete-distribution.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/396959aa-ed45-4c31-9031-992059af6fb3",
+              "caption": "Example of a Discrete Probability Distribution Flipping a Coin 3 Times",
+              "alt": "Discrete Probability Distributon",
+              "width": 640,
+              "height": 480,
+              "instructor_notes": null
+            },
+            {
+              "id": 477730,
+              "key": "07cc0bad-1999-4f88-93e6-87912305771e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The chart shows the probability that none of the three flips was heads, one of the three flips was heads, two of the three flips were heads, or all three flips were heads. Notice the x-axis represents the number of times that heads showed up and the y-axis represents the probability of the result.\n\nDiscrete probability distributions can also be represented in tables:\n\n| Heads Count | Probability |\n|-------------|-------------|\n| 0           | 0.125       |\n| 1           | 0.375       |\n| 2           | 0.375       |\n| 3           | 0.125       |\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477732,
+              "key": "4e32354c-6acc-478b-b3f3-5f9fefa569ad",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Based on the above visualization, you can see a few interesting characteristics about discrete probability distributions:\n* For all values on the x-axis, the y value is greater than or equal to 0.\n* For each x, the probability p(x) is equal to the y value \n* The sum of all y values is 1; there's a 100% chance that something will occur.\n\nHere is what we mean by **the sum of all y values is 1**. When flipping a coin three times, there is a 100% chance that you will either get zero heads, 1 heads, 2 heads or 3 heads (ignoring the very very small chance that the coin lands on its side).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477875,
+              "key": "43d2d9c3-69d6-4c75-bbc8-f51389120755",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the next part of the lesson, you will get practice working with a discrete probability distribution.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466025,
+          "key": "f43c7949-9246-4876-b196-46f2981ceb31",
+          "title": "Discrete Probability [Exercise]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f43c7949-9246-4876-b196-46f2981ceb31",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477781,
+              "key": "2fbcf817-208d-451b-b4c3-2ece1c4e6b33",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewfa37ca66",
+              "pool_id": "jupyter",
+              "view_id": "fa37ca66-220f-437f-9370-24d2ef9d37ff",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/discrete_probability_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 477838,
+          "key": "ed0fef44-329a-4d1e-b662-ce079441b9f5",
+          "title": "Discrete Probability [Exercise] Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ed0fef44-329a-4d1e-b662-ce079441b9f5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477840,
+              "key": "c65714db-d2dd-4a6c-95d3-1d7d36f801e6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here are code solutions to the previous exercises.\n\n# Exercise: Create a List\n```python\ncount_data = [54, 111, 163, 222, 277, 336, 276, 220, 171, 111, 59]\n```\r\n\n# Exercise: Sum the Counts\n\n```python\ntotal_count = sum(count_data)\n```\n\n# Exercise: Calculate a Discrete Probability Distribution\n\n```python\nfor i in range(len(count_data)):\n        normalized_counts.append(count_data[i] / total_count)\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 477863,
+          "key": "ee58175c-7525-4b41-adc5-597a27e213b3",
+          "title": "Continuous Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ee58175c-7525-4b41-adc5-597a27e213b3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477877,
+              "key": "898a0495-427e-46da-8083-2545db28f4d4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Continuous Variables\n\nIn the next part of the lesson, Sebastian Thrun will introduce you to continuous variables, continuous probability distributions and the concepts behind them.\n\nAs mentioned, continuous variables can take on any any real number such as an integer or a decimal. Even a variable like the angle around a circle is continuous. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478564,
+              "key": "8e04e2a7-bea9-46fd-9160-08e782479a44",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a31c41d_wheeloffortune/wheeloffortune.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8e04e2a7-bea9-46fd-9160-08e782479a44",
+              "caption": "Arrow Spinning around a Wheel",
+              "alt": "wheel of fortune",
+              "width": 200,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 478563,
+              "key": "54d47de2-7211-46c7-91c6-5fd4818591ac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The angle can take on any decimal value like 60.7423 degrees. Even though the range of legitimate values might be restricted from 0 to 360 degrees, the angle can take on any decimal between that range. Move on to the next part of the lesson to learn more.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 80802,
+          "key": "484529870923",
+          "title": "Landing Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529870923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 103101,
+              "key": "48452987",
+              "title": "Landing Probability",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452987",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "PNiaE1fy-7k",
+                  "china_cdn_id": "PNiaE1fy-7k.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Landing Probability",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/ynCUf3BVIQLirJXF0g7ZWSLyz8iCfO7rLtj7zT1m_Ak0LvgPlsmae1n37v9zg2vlUD8jjXlvaFT5w_UQFg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452987",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48480517",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349423990209",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.1259351620947631,
+                      "x": 0.7760416666666665,
+                      "y": 0.38888888888888895
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "W9TOvnLH4fg",
+                  "china_cdn_id": "W9TOvnLH4fg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88561,
+          "key": "483118880923",
+          "title": "Spinning Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 107769,
+              "key": "48311888",
+              "title": "Spinning Probability",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311888",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "aS0c5RrnPxU",
+                  "china_cdn_id": "aS0c5RrnPxU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Spinning Probability",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/Yf7ZbKCbMped3hC30WoZF687qsAedzTmDVqVovYMsBlZEYwPHuVcVBbz4p5-o4ibZ7hNhsJHgSmf1l2rqog=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311888",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48240966",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349424016331",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.128428927680798,
+                      "x": 0.7291666666666665,
+                      "y": 0.49074074074074076
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "VDQK8gnETqw",
+                  "china_cdn_id": "VDQK8gnETqw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88347,
+          "key": "484806130923",
+          "title": "Stops Nowhere",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806130923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 102462,
+              "key": "48480613",
+              "title": "Stops Nowhere",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480613",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Ua8DCPx8lhk",
+                  "china_cdn_id": "Ua8DCPx8lhk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Stops Nowhere",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/fIRyNyGgKlr2JOX2frH2mzVidsj9P0tXT-KVgPxLWyf0_piUX7UJ8sZfAPqQDGDUSF9TW_xJOQGERXX8Ik2k=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480613",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48452912",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "1349424039112",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.6924708197611292,
+                      "y": 0.8992820945945946
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1349424044095",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.8467867806731814,
+                      "y": 0.8691783301158301
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "BlC2BwoDxL8",
+                  "china_cdn_id": "BlC2BwoDxL8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88429,
+          "key": "484529880923",
+          "title": "Range Probability",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 103078,
+              "key": "48452988",
+              "title": "Range Probability",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452988",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Vohy3kpnBsk",
+                  "china_cdn_id": "Vohy3kpnBsk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Range Probability",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/4qaU5kXfuGH5qEOjq2M_cfOdON4vbSkJ_T7zezDzyB8PuUD6mfANF6j-SZbQPNOeaSuO3VLMkAsG9cMpfXr4=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452988",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48723440",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349424174350",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.11346633416458853,
+                      "x": 0.762367671009772,
+                      "y": 0.2808277027027027
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "zHAl87ITDik",
+                  "china_cdn_id": "zHAl87ITDik.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88568,
+          "key": "483118890923",
+          "title": "Range Probability 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118890923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 80321,
+              "key": "48311889",
+              "title": "Range Probability 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Please note that this question asks about the probability of the bottle landing between 260 degrees and 290 degrees.",
+              "user_state": {
+                "node_key": "48311889",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GMC_T-hbTlc",
+                  "china_cdn_id": "GMC_T-hbTlc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Range Probability 2",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/GZFhtBo3KXsjoolxS5MqILobovz8mEah1S3xoq1J4wD4Lusr1mnmCysrJfUftQxff-p3zIm1FcUu63mMKVk=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311889",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48703281",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349424194575",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09534368070953436,
+                      "width": 0.1172069825436409,
+                      "x": 0.755853013029316,
+                      "y": 0.4046814671814672
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "xFFxdNj6pTA",
+                  "china_cdn_id": "xFFxdNj6pTA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88395,
+          "key": "484806140923",
+          "title": "Range Probability 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806140923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 102411,
+              "key": "48480614",
+              "title": "Range Probability 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480614",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "q9698qIrPT0",
+                  "china_cdn_id": "q9698qIrPT0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Range Probability 3",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/JOVzTQyoWyBv4MdjItBS8GRTvrx-v9sebnDhYncJfD40yFH-E4mb_XMIIOxccYvX9TxanEbnkvu00FPSlVpV=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480614",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48723422",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349424218899",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09090909090909091,
+                      "width": 0.11970074812967581,
+                      "x": 0.7404485613463626,
+                      "y": 0.525036196911197
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ub9oMx2x-5c",
+                  "china_cdn_id": "ub9oMx2x-5c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 477880,
+          "key": "5f6ab47a-ae7d-40ef-9b19-30462b9f5859",
+          "title": "Continuous Probability Distributions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5f6ab47a-ae7d-40ef-9b19-30462b9f5859",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477885,
+              "key": "0d37fc3f-cba6-4ee3-a70c-9c106750634a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Continuous Probability Distributions\n\nIn the next part of the lesson, Sebastian shows you how to visualize and make calculations with a continuous probability distribution. Before you move on, let's compare a discrete and continuous distribution again.\n\nAt the very beginning of the lesson, we showed you a discrete probability distribution next to a continuous probability distribution. Here they are again:\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477886,
+              "key": "718e49bf-9e3f-4e7e-b298-a93d8c7eac50",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3038e0_probability-distributions/probability-distributions.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/718e49bf-9e3f-4e7e-b298-a93d8c7eac50",
+              "caption": "Discrete vs Continuous Probability Distribution",
+              "alt": "Discrete vs Continuous Probability Distribution",
+              "width": 903,
+              "height": 364,
+              "instructor_notes": null
+            },
+            {
+              "id": 477887,
+              "key": "729e8e4b-122d-48f4-9c00-9554c9e7ffac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The discrete distribution is broken up into slices. Each slice represents an outcome like zero heads, one heads, two heads, or three heads.\n\nThe continuous distribution has an un-broken line across the entire x-axis range. You could have a velocity of 20 or 20.5 or -10.451.\n\nNotice the y-axis label on the continuous distribution: \"probability density function\". For the discrete probability distribution, the y-axis represented the probability of an event occurring. In the continuous case, the probability density function does not represent probability directly; instead, the area underneath the density function curve represents probability.\n\nYou'll learn more about this in the next part of the lesson.\n\nBut without knowing what \"probability density function\" even means, you can tell that it's more likely that the velocity is around 20 and less likely that the velocity is around 0 or 40.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477888,
+              "key": "6a978946-025b-4e0e-884b-0ae9a8716456",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Characteristics of a Continuous Distribution\n\nHere are a few characteristics of a continuous distribution and the probability density function. Keep these in mind as you go through the next part of the lesson.\n\n* The y values must be greater than or equal to 0.\n* The probability of a specific x value occurring is equal to 0\n* The probability of an event occurring between two values of x is equal to the area under the curve between those two x values.\n* The total area under the probability density function curve is equal to 1.\n\nIn practice, these rules mean that the probability that velocity equals exactly 20 is zero. For a continuous distribution, you can only calculate a probability between a range of values like 19.99 and 20.01.\n\nBecause the total area under the curve is 1, there is a 100% chance that the velocity has some value between negative infinity and positive infinity.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477898,
+              "key": "c9f846ed-cfed-4da6-bb86-0ea2dc84460c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Uniform Continuous Distribution\n\nThere are many different types of continuous distributions: [link to list of continuous probability distributions](https://en.wikipedia.org/wiki/List_of_probability_distributions#Continuous_distributions).\n\nBut they all have the same characteristics described above. To calculate probabilities with a continuous distribution, you have to calculate the area underneath a curve. Calculating the area under a curve like in the above visualization requires calculus or a software program. \n\nSo Sebastian has chosen to use a specific continuous distribution called the **uniform continuous distribution**. The uniform continuous distribution forms a rectangle. So you can calculate the area underneath the curve simply by multiplying the base by the height.\n\nBelow is an example of a uniform continuous probability distribution. Sebastian will explain more about where this distribution comes from and how to use it.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477902,
+              "key": "e8977238-327c-48e6-990a-a25f48ad8703",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a309695_uniform-continuous/uniform-continuous.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e8977238-327c-48e6-990a-a25f48ad8703",
+              "caption": "Uniform Continuous Distribution",
+              "alt": "Uniform Continuous Distribution",
+              "width": 640,
+              "height": 480,
+              "instructor_notes": null
+            },
+            {
+              "id": 477899,
+              "key": "f203fb62-544e-4975-80cc-23b9a11607d7",
+              "title": "Discrete vs Continuous",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f203fb62-544e-4975-80cc-23b9a11607d7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following are characteristics of both a discrete probability distribution and a continuous probability distribution?",
+                "answers": [
+                  {
+                    "id": "a1513131744462",
+                    "text": "The y-axis values must be greater than or equal to 0.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513131759025",
+                    "text": "The total probability is equal to 1.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513131759553",
+                    "text": "The area under the curve is equal to 1.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513131759985",
+                    "text": "The y-axis represents probability",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 88420,
+          "key": "484529890923",
+          "title": "Density",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529890923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 103247,
+              "key": "48452989",
+              "title": "Density",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452989",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "4Ri4nhHKtU0",
+                  "china_cdn_id": "4Ri4nhHKtU0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Density",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/zL0lCio_CKHH1E1R_v_HXs2YJSr9wWrnEllxqbhd5W7S8IIsOw54227VQKvH-VATKQpK4u3l04dPYWep82U=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452989",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48204978",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.055984555984555984,
+                      "width": 0.1248642779587405,
+                      "x": 0.4245385450597177,
+                      "y": 0.7548262548262549
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "4FbhjgHIu10",
+                  "china_cdn_id": "4FbhjgHIu10.mp4"
+                }
+              }
+            },
+            {
+              "id": 480762,
+              "key": "d226522b-678a-4413-8056-3c27c7851d32",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What is a Density Function?\n\nFor a continuous probability distribution, the y-axis represents a probability density function. \n\nA density function is just an equation to mathematically represent a continuous distribution. If you're familiar with calculus, the integral of the probability density function is the probability. If you're not familiar with calculus, not to worry! You do not need calculus for this section. Taking the integral is the same as calculating the area under the curve.\n\nIt's relatively easy to calculate the area underneath a uniform continuous probability distribution. These distributions look like rectangles, so the area is the base of the rectangle times the height of the rectangle.\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 79465,
+          "key": "482999970923",
+          "title": "Birth Time Density",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "482999970923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 109012,
+              "key": "48299997",
+              "title": "Birth Time Density",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48299997",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "EhLR8l5XAiQ",
+                  "china_cdn_id": "EhLR8l5XAiQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Birth Time Density",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/tlFN46cFmktmLv1gvs5w72Potb7-74PCQZSgh43z9q3A-HF0uUVUDTartanrf_RdEl1brt21RYXpTAl3U2g=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48299997",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48723430",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349428157687",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.14713216957605985,
+                      "x": 0.5733916938110749,
+                      "y": 0.44875120656370654
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1349428174828",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.057649667405764965,
+                      "width": 0.15211970074812967,
+                      "x": 0.5660796688382194,
+                      "y": 0.6313947876447876
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "U2tkinJKn28",
+                  "china_cdn_id": "U2tkinJKn28.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88385,
+          "key": "484806150923",
+          "title": "Changing Density",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806150923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 102399,
+              "key": "48480615",
+              "title": "Changing Density",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480615",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "tpsUlBbz5Jo",
+                  "china_cdn_id": "tpsUlBbz5Jo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Changing Density",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/1jqHaBGSb6zRrCqKyAjEKg21LzMT_zAEBPDqB44nYuGF5K-CKDyhjovfmgB9TGQv169YZZn1XvvTQ_fSgg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480615",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48624654",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "1349428863458",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.19696661237785015,
+                      "y": 0.857112693050193
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1349428866730",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.4957926167209555,
+                      "y": 0.8517133204633205
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "1349428871028",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7104200597176982,
+                      "y": 0.8398889961389961
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "dSyPBL0jozI",
+                  "china_cdn_id": "dSyPBL0jozI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 80863,
+          "key": "484529900923",
+          "title": "Changing Density 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 106292,
+              "key": "48452990",
+              "title": "Changing Density 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452990",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "v30w4s2djfc",
+                  "china_cdn_id": "v30w4s2djfc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Changing Density 2",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/9h8kIJ-BPZfQn50gPeq5eXHYAQOEHeBHF_7RFXEKMjdkYdn_GFADNQ1auCY6qs1tod_gRSdHpZC0A3WNhA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452990",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48204977",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349428898356",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.1483790523690773,
+                      "x": 0.6633923724212812,
+                      "y": 0.293949083011583
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1349428906106",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.06430155210643015,
+                      "width": 0.14962593516209477,
+                      "x": 0.6547061617806732,
+                      "y": 0.48455598455598453
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "96Cao3VKUok",
+                  "china_cdn_id": "96Cao3VKUok.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 88564,
+          "key": "482999980923",
+          "title": "Check Density",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "482999980923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 105596,
+              "key": "48299998",
+              "title": "Check Density",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48299998",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "RJFD5ok1ZIc",
+                  "china_cdn_id": "RJFD5ok1ZIc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Check Density",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/Q-ZDZ6TFz7mmSli3VO3vOJFyyaChFztGz2smybUcDl2Bie-KjKj8gN20PPZPUNeRCbwOn9gWbLImUreBKwE=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48299998",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48713668",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349428973439",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.1371571072319202,
+                      "x": 0.8013029315960912,
+                      "y": 0.6602316602316602
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "dyqgMA5zRko",
+                  "china_cdn_id": "dyqgMA5zRko.mp4"
+                }
+              }
+            },
+            {
+              "id": 480755,
+              "key": "7d558f23-eb65-4899-8b7d-7c74379c5276",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Piece-wise Continuous Probability Distributions\n\nThe probability distribution you just learned about sort of looks like a discrete probability distribution. But in fact, it is still a continuous distribution. It's called a piece-wise continuous distribution. If you're unfamiliar with piecewise functions, it just means that the function is divided into parts: check out this link for [more examples](https://en.wikipedia.org/wiki/Piecewise).\n\n# How to Tell if this is Continuous or Discrete?\nAsk yourself, is my variable of interest continuous or discrete? Hour, in this case, is a continuous variable because hour can be any decimal value between 0 and 24. So this is a continuous probability distribution.\n\nYou could rephrase this problem to make it discrete. If you counted how many people were born between 1am-2am, 2am-3am, 3am-4am, etc, the problem becomes discrete. You are slicing the hour variable so that it can only take on specific values ie 1, 2, 3, 4, 5, etc.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 113708,
+          "key": "487441230923",
+          "title": "Calculate Density",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487441230923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 71479,
+              "key": "48744123",
+              "title": "Calculate Density",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48744123",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "0gcTEExMH3k",
+                  "china_cdn_id": "0gcTEExMH3k.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Calculate Density",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/XqI8lD4DVBhoBXzN4TO-cY_CaVlM1vWvadZMIq9TTC-z_qESptFc4YyLiIIdBnas6XYD5SqH26HHwDyDYEA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48744123",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48714304",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1349429028351",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.12219451371571072,
+                      "x": 0.4662562344139651,
+                      "y": 0.6644262749445676
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "oZDLtTdhDy4",
+                  "china_cdn_id": "oZDLtTdhDy4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 80561,
+          "key": "487245350923",
+          "title": "Density Properties",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487245350923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 83434,
+              "key": "48724535",
+              "title": "Density Properties",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48724535",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "TxNrRo3jNAM",
+                  "china_cdn_id": "TxNrRo3jNAM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Density Properties",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/muNPOEcPZne6FZxrueRaKsD-ZYJVJcejfY9bJ-_rzi-O8fjNOXw5Xh_ckbunTTVw1W50vuZi0f2JzMJL5Q=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48724535",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48727441",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "1349429052809",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.2664902280130293,
+                      "y": 0.47915661196911197
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1349429055350",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.263453447339848,
+                      "y": 0.5755912162162162
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "1349429058523",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.25715933767643867,
+                      "y": 0.6732022200772201
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option5",
+                    "marker": "1349429061187",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.2582451140065147,
+                      "y": 0.7885497104247104
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "option6",
+                    "marker": "1349429064698",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": 6,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.25911034201954397,
+                      "y": 0.8734314671814671
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "U8I0vgojlcY",
+                  "china_cdn_id": "U8I0vgojlcY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 87310,
+          "key": "487042590923",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487042590923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 14777,
+              "key": "48704259",
+              "title": "Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "w5fm_dJrImE",
+                "china_cdn_id": "w5fm_dJrImE.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

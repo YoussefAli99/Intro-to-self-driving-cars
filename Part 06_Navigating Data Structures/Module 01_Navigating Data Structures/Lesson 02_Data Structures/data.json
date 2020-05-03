@@ -1,0 +1,1225 @@
+{
+  "data": {
+    "lesson": {
+      "id": 434405,
+      "key": "6b4f5dc0-2d47-48ef-b759-73b961cb68f9",
+      "title": "Data Structures",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "The list isn't the only structure for storing data! In this lesson you'll learn about sets, dictionaries and other Python data structures.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/6b4f5dc0-2d47-48ef-b759-73b961cb68f9/434405/1544452538552/Data+Structures+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/6b4f5dc0-2d47-48ef-b759-73b961cb68f9/434405/1544452534696/Data+Structures+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 434406,
+          "key": "b7eae9f9-ce30-4087-8e29-78fd9efe9002",
+          "title": "Lesson Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b7eae9f9-ce30-4087-8e29-78fd9efe9002",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458741,
+              "key": "d644b6e8-1de4-4f4b-b2a0-64954c27cffd",
+              "title": "Nd113 C5 L2 01 L Lesson Overview V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LLrp9jq381k",
+                "china_cdn_id": "LLrp9jq381k.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 439928,
+          "key": "f26519ac-da2c-48b6-9e7b-6cb49bff918d",
+          "title": "Tracking Tickets",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f26519ac-da2c-48b6-9e7b-6cb49bff918d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461389,
+              "key": "5fc4b302-ab2d-417b-9706-b7eabc88206c",
+              "title": "Tracking Tickets RENDER 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "6sbn7ECEOys",
+                "china_cdn_id": "6sbn7ECEOys.mp4"
+              }
+            },
+            {
+              "id": 439931,
+              "key": "9ec572a0-0314-403a-9185-ebd472fd323c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the ticket tracking system described in the video we keep track of `date`, `priority` and `description` for each ticket. Tickets are then placed in a `ticket_box` where they are sorted by `date` with the newest tickets at the front. \n\nAnswer the following questions about this system.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 439930,
+              "key": "5550004e-c225-47e9-ae62-4e90ea0e1332",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5550004e-c225-47e9-ae62-4e90ea0e1332",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following tasks would be **easiest** using this system?",
+                "answers": [
+                  {
+                    "id": "a1508955050656",
+                    "text": "Retrieving the oldest ticket.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1508955268867",
+                    "text": "Retrieving the **one** ticket that was filed on October 11th.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508955314869",
+                    "text": "Retrieving the ticket with the description: \"vehicle failed to stop at red light.\"",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 439932,
+              "key": "5248e6aa-1ff3-4f53-9d63-95a42a0da019",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5248e6aa-1ff3-4f53-9d63-95a42a0da019",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following tasks would be **hardest** using this system?",
+                "answers": [
+                  {
+                    "id": "a1508955452169",
+                    "text": "Retrieving the oldest ticket.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508955492627",
+                    "text": "Retrieving the one ticket that was filed on October 11th.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508955507540",
+                    "text": "Retrieving the ticket with the description: \"vehicle failed to stop at red light.\"",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 439936,
+              "key": "3cf828dc-4b21-496c-ae4f-f4e8dea55d4d",
+              "title": "Reflect",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3cf828dc-4b21-496c-ae4f-f4e8dea55d4d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "When prioritizing which tickets to address first, often we want to handle the highest-priority tickets first, but the system described in the video doesn't make that easy to do.\n\nHow would **you** design a ticket tracking system so  it was easy to handle high-priority tickets first? "
+              },
+              "answer": {
+                "text": "Thanks for your response. In the next video we will discuss a few possible options.",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 440003,
+          "key": "6aea31b7-9d6e-4cf6-9cba-fabc42731ee9",
+          "title": "Design Tradeoffs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6aea31b7-9d6e-4cf6-9cba-fabc42731ee9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458742,
+              "key": "82abc35c-1e1b-470d-ae4f-f963ea6448ca",
+              "title": "Nd113 C5 L2 03 L Design Tradeoffs V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "8IpVosy86Fo",
+                "china_cdn_id": "8IpVosy86Fo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 439937,
+          "key": "d3bf3ced-6a15-4990-9d94-8c59795b97f2",
+          "title": "Three Approaches",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d3bf3ced-6a15-4990-9d94-8c59795b97f2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461390,
+              "key": "f760bb8e-270f-44f2-8d0b-77e60e52f3ce",
+              "title": "Nd113 C5 L02 04 L Three Approaches V1 RENDER V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ptLUqOBlNzU",
+                "china_cdn_id": "ptLUqOBlNzU.mp4"
+              }
+            },
+            {
+              "id": 442369,
+              "key": "e8cf0d38-7e96-48b9-9ce0-be7969cacb31",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Tradeoff Analysis\n\nThe following questions compare the three options for storing tickets discussed in the video. For your reference:\n\n**Option 1: Prioritized Bags** - Three bags of tickets (one each for \"high\", \"medium\", and \"low\" priority). Once a ticket is filled out it is tossed into the appropriate bag.\n\n**Option 2: Single box, prioritized first by priority, then by date** - One box. High priority tickets go in the back. Low priority go in the front. *Within* a priority group tickets are sorted by date.\n\n**Option 3: Three boxes, one for each priority level** - Each box contains tickets of a single priority level, sorted by date.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 442372,
+              "key": "bf76f38a-6856-461f-b008-58c58055f23b",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bf76f38a-6856-461f-b008-58c58055f23b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Let's say you want to find the **oldest ticket** (of any priority). \n\nOn average, which system would take the **longest time** (slowest lookup) to find the oldest ticket?",
+                "answers": [
+                  {
+                    "id": "a1509645517765",
+                    "text": "Option 1: Bags of tickets",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1509645623239",
+                    "text": "Option 2: Single box",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1509645628774",
+                    "text": "Option 3: Three boxes ",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 442378,
+              "key": "a8814179-d0a2-4df4-9f54-9935751bdc1e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Narrowing our options\nAfter considering the question above, I decided to rule out option 1. I can't imagine having to scan through *every single ticket* to find the oldest one. \n\nWhatever system we use, it should have some date-based organization to it.\n\nThe following questions weigh the pros and cons of options 2 and 3.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 442373,
+              "key": "307ed5ad-a6b9-4ff5-835a-912d5186bdaa",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "307ed5ad-a6b9-4ff5-835a-912d5186bdaa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Again, you want to find the oldest ticket of any priority level.\n\nOn average, which system would take the **shortest time** (fastest lookup) to find the oldest ticket?",
+                "answers": [
+                  {
+                    "id": "a1509645787821",
+                    "text": "Option 2: Single box",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1509645793117",
+                    "text": "Option 3: Three boxes",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1509646462571",
+                    "text": "Neither, the lookup times for the oldest ticket would be the same.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 442370,
+              "key": "4d90252b-d71c-405c-8e81-9c13885c8f21",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4d90252b-d71c-405c-8e81-9c13885c8f21",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Regardless of which option you use, once a ticket is filled out it needs to be **inserted** into a box. \n\nWhich option would lead to the **fastest** inserts of new tickets? ",
+                "answers": [
+                  {
+                    "id": "a1509644616312",
+                    "text": "Option 2: Single box",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1509644621904",
+                    "text": "Option 3: Three boxes",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1509646603658",
+                    "text": "Neither, the insert times for new tickets would be the same.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 442379,
+              "key": "3123d601-6ff1-485f-a2e0-c9aec49c2e41",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3123d601-6ff1-485f-a2e0-c9aec49c2e41",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "So far we've only been considering the \"time\" aspects of performance. What about space?\n\nWhich of these options would take up the **least** space in the vehicle?",
+                "answers": [
+                  {
+                    "id": "a1509646672729",
+                    "text": "Option 2: Single box",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1509646732513",
+                    "text": "Option 3: Three boxes",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1509646738889",
+                    "text": "Neither, the space requirements would be the same.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 442380,
+              "key": "3eadcf65-3c8a-4ec2-8a39-ee202e143173",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Making a choice\nAfter considering the questions above, I decided to go with option 3. It may take up more space in the vehicle, but there's plenty of space in a car and the improved insert and lookup speeds made that an acceptable tradeoff for me.\n\nThis sort of thinking is very similar to the tradeoff analysis you do when writing software. Usually there isn't one best-in-every-way solution, but often there is one that is clearly superior for the requirements of the problem.\n\nIf you have another solution or just want to discuss these tradeoffs: go to your Student Hub and discuss! ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 439953,
+          "key": "99a9bd0c-645c-4563-96c1-bba5a91b183a",
+          "title": "Representing a Single Ticket",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "99a9bd0c-645c-4563-96c1-bba5a91b183a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461391,
+              "key": "2d7042bf-17f7-4a80-913d-0acfa312e1c4",
+              "title": "Nd113 C5 L02 05 L Representing A Single Ticket V1 RENDER V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wXTASv5R-VQ",
+                "china_cdn_id": "wXTASv5R-VQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 439460,
+          "key": "1900d727-ef0f-43c4-b017-046f1804893d",
+          "title": "The problems with strings and lists",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1900d727-ef0f-43c4-b017-046f1804893d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439463,
+              "key": "b7d5e99b-f019-4e9e-8182-79cad61e127c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "9c4f786a-d12f-48d6-a0dc-24b10fcac0a0",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/strings_and_lists.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 439791,
+          "key": "4559d5dc-0c9c-4bd1-b7a2-46f6a1f9a1a6",
+          "title": "Intro to Dictionaries",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4559d5dc-0c9c-4bd1-b7a2-46f6a1f9a1a6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439792,
+              "key": "08964098-34dc-4e9e-8aca-a085cb34d5b2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "bed34fc6-a737-443d-8160-713a99a40535",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Intro_to_dictionaries.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 457588,
+          "key": "d8f4a205-6b53-41f1-aac5-7e736cb004d9",
+          "title": "Intro to Dictionaries 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d8f4a205-6b53-41f1-aac5-7e736cb004d9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 457591,
+              "key": "a7bbbd7d-aeff-4519-9bb8-efe4f669c1ec",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "7488b9a2-ff4c-412c-bd0b-5158cb4f8e78",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Intro_to_dictionaries_2.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 440006,
+          "key": "eceb269b-f793-49b1-bee7-74bd547efe43",
+          "title": "Keys and Values",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "eceb269b-f793-49b1-bee7-74bd547efe43",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458743,
+              "key": "1f096557-5223-4c92-9faa-d55266b827a9",
+              "title": "Nd113 C5 L2 08 L Keys And Values V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1FO2KHIJYwY",
+                "china_cdn_id": "1FO2KHIJYwY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 440025,
+          "key": "a99a579d-9df2-4081-9170-45d4062c2515",
+          "title": "Adding Labels",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a99a579d-9df2-4081-9170-45d4062c2515",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461223,
+              "key": "ced99577-fb2e-405e-87e5-b954da3ff4b6",
+              "title": "Nd113 C5 L02 09 L Adding Labels V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VZcXBAHs5ts",
+                "china_cdn_id": "VZcXBAHs5ts.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 440024,
+          "key": "cb5457c0-1688-4ec8-834b-df86aebcf047",
+          "title": "Implementing Labels (and Introducing Sets)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cb5457c0-1688-4ec8-834b-df86aebcf047",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 457624,
+              "key": "47facad7-801c-4f62-bab1-0494acd8ac0e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "1f259e73-34fe-4846-a4a5-fd3b17a1bbc2",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Intro%20to%20Sets.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 458747,
+          "key": "f1da9fda-5dd9-4ac5-a802-e36fc6b78568",
+          "title": "Performance Considerations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f1da9fda-5dd9-4ac5-a802-e36fc6b78568",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458756,
+              "key": "e9c9bc2b-1f72-4e5e-b2ac-81abbccd7a0e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Performance Considerations\n\nUntil now, our reasons for using one data structure over another have mostly had to do with convenience and readability. But there's another reason to use `dictionaries` and `sets` over `lists`.  Speed!\n\nIn the rest of this lesson you'll see how fast dictionaries and sets can be.\n\nNote that when we talk about a data structure being \"fast\", we'll be talking about how long it takes to perform a **membership test** with Python's `in` keyword.\n\nHere's a brief reminder of how membership testing works...\n\n...on lists\n```python\n> my_list = [1,2,3]\n> 1 in my_list\nTrue\n> 4 in my_list\nFalse\n```\n\n...on dictionaries\n```python\n> my_dictionary = {1: 'one', 2: 'two', 3: 'three'}\n> 1 in my_dictionary\nTrue\n> 'one' in my_dictionary\nFalse\n```\n\n...on sets\n```python\n> my_set = set([1, 2, 3])\n> 1 in my_set\nTrue\n> 'one' in my_set\nFalse\n```\n\nIn the next section you'll explore how the size of a list impacts its speed.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 434408,
+          "key": "6fe110f2-eaa1-47e7-a562-309aa1b90657",
+          "title": "Lists, Timing, and Performance",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6fe110f2-eaa1-47e7-a562-309aa1b90657",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 436137,
+              "key": "6545252f-5a53-4a9f-ac4f-db2840592fa2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "41151a68-4e27-4804-ac11-1e6908c712cd",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/lists_timing_and_performance.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 436524,
+          "key": "4ada1051-1338-495a-af0c-a979ff79bef7",
+          "title": "How Lists Work",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4ada1051-1338-495a-af0c-a979ff79bef7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 436645,
+              "key": "088cd32b-45a5-484d-938f-fcf3432fa11d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# How Lists Work\nIn the previous section you saw two graphs that looked something like these:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 436639,
+              "key": "b821e2b3-2957-4671-b8a8-87f052058879",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59e92803_pos-v-time/pos-v-time.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b821e2b3-2957-4671-b8a8-87f052058879",
+              "caption": "",
+              "alt": "",
+              "width": 389,
+              "height": 293,
+              "instructor_notes": null
+            },
+            {
+              "id": 436640,
+              "key": "57c65616-70f3-43c4-9b7f-efc928b3b29e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59e9293a_size-vs-time/size-vs-time.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/57c65616-70f3-43c4-9b7f-efc928b3b29e",
+              "caption": "",
+              "alt": "",
+              "width": 386,
+              "height": 293,
+              "instructor_notes": null
+            },
+            {
+              "id": 436643,
+              "key": "97e39d1a-8cf3-4077-86c1-9bb0bba60dc2",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "97e39d1a-8cf3-4077-86c1-9bb0bba60dc2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In the second experiment, about how long did it take to perform a membership test for a list with 700,000 elements in it?",
+                "answers": [
+                  {
+                    "id": "a1508452745501",
+                    "text": "0.1 milliseconds",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508452898207",
+                    "text": "0.5 milliseconds",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508452931792",
+                    "text": "1 millisecond",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508452947001",
+                    "text": "5 milliseconds",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508452954505",
+                    "text": "10 milliseconds",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 436646,
+              "key": "02a94471-e7a5-4d4e-9f45-ec75b2f88bf5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We repeated the second experiment on 4 different computers, each of which had a different processor. The results of this experiment are shown below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 436653,
+              "key": "0a4343f1-0c69-4da9-a93b-b033f6c4e4bc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59e92d79_speed-test/speed-test.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0a4343f1-0c69-4da9-a93b-b033f6c4e4bc",
+              "caption": "",
+              "alt": "",
+              "width": 396,
+              "height": 293,
+              "instructor_notes": null
+            },
+            {
+              "id": 436655,
+              "key": "68a7efd1-c60d-4434-83ed-c11cab6362e4",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "68a7efd1-c60d-4434-83ed-c11cab6362e4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which CPU is the **fastest**?",
+                "answers": [
+                  {
+                    "id": "a1508453787079",
+                    "text": "CPU 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508453800893",
+                    "text": "CPU 2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508453804277",
+                    "text": "CPU 3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508453807518",
+                    "text": "CPU 4",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 436656,
+              "key": "ce8e49ec-e058-4bf6-a147-6f416542c3a0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ce8e49ec-e058-4bf6-a147-6f416542c3a0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following statements are true **for all CPUs**? ",
+                "answers": [
+                  {
+                    "id": "a1508454894766",
+                    "text": "It takes about 10 milliseconds to perform a membership test on a list with 500,000 elements",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508454913962",
+                    "text": "The time it takes to scan a list of 800,000 elements is about **twice** the amount of time it takes to scan a list with 400,000 elements.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1508454926378",
+                    "text": "The speed of a CPU does not affect how long it takes to perform a membership test on a list.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 436664,
+              "key": "042d5a82-ff9d-46d2-8ce1-9e89b71209db",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "042d5a82-ff9d-46d2-8ce1-9e89b71209db",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "A new CPU is released. The side of the package brags\n\n> Performs membership tests on 100,000 element lists in 0.1 ms!\n\nAssuming this claim is true, how long would you expect this processor to take when testing for membership on a 1,000,000 element list?",
+                "answers": [
+                  {
+                    "id": "a1508455700532",
+                    "text": "about 0.1 ms",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1508455712792",
+                    "text": "about 1 ms",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1508455720528",
+                    "text": "about 10 ms",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 458780,
+              "key": "3dad7515-35a6-4950-a012-73a81771392a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## How do lists work?\n\nThe time it takes to test for membership in a list \"scales linearly\" with the size of the list. That just means if you double the size of the list you double the amount of time it takes to test for membership of an element (on average).\n\n> **Note:** As you learn more, you might see this algorithm described as \"big O of N\", or mathematically as <span class=\"mathquill\">\\mathcal{O}(n)</span>. We aren't going to get too deep into the topic at this time, but this notation is all about the [analysis of algorithms](https://en.wikipedia.org/wiki/Analysis_of_algorithms) in relation to their efficiency.\n\nThe reason it takes longer to membership test a big list has to do with what the computer is doing behind the scenes. When you write:\n\n```python\nif -1 in my_list\n\n``` \nThe computer will go through every single element of `my_list` in order until it finds `-1`. If it makes it through the entire list without finding `-1` then the result of the membership test will be `False`. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 458766,
+          "key": "8e4c080f-dc46-4fe7-bbca-4e22046c8b84",
+          "title": "Performance of Sets and Dictionaries",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8e4c080f-dc46-4fe7-bbca-4e22046c8b84",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458768,
+              "key": "1b4c2f42-9da8-48b5-9d2e-c7ce201d1afc",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "a6ac6563-c6e8-4e04-82c5-22349058213a",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/performance_of_sets_and_dictionaries.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 461190,
+          "key": "f3126f33-a108-4408-b9e8-87690fed5710",
+          "title": "How Sets and Dictionaries Work",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f3126f33-a108-4408-b9e8-87690fed5710",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461198,
+              "key": "a05c14d8-3ec0-4e61-80b8-739ab915f279",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# How Sets and Dictionaries Work\n\nUnderlying Python sets and dictionaries is something called a **hash table**. We aren't going to discuss how these work in this Nanodegree because you don't need to know how they work in order to use them. But if you're interested in learning more you should take a look at:\n\n* [Udacity videos on hash tables](https://classroom.udacity.com/courses/cs101/lessons/48682650/concepts/486996020923). The link is to the first video in a series of videos about how hash tables work.\n* [Wikipedia article on hash tables](https://en.wikipedia.org/wiki/Hash_table).\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 436254,
+          "key": "037f042d-0e94-45e7-a36b-2de48aec7146",
+          "title": "Other Data Structures [optional]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "037f042d-0e94-45e7-a36b-2de48aec7146",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 436255,
+              "key": "85ce0b7e-24cd-4b4d-bc50-f13132840848",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view41151a68",
+              "pool_id": "jupyter",
+              "view_id": "1006f7b7-25e3-4a4d-9c54-3ff13e8f55f0",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/other_data_structures.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 436526,
+          "key": "5782e8b9-46b8-4b99-a671-ec80b9f025fe",
+          "title": "Choosing good data structures",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5782e8b9-46b8-4b99-a671-ec80b9f025fe",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461192,
+              "key": "1b66176d-fa18-4ec1-b12b-9e474823756b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Choosing Good Data Structures\n\n#### Lists\nLists are good when:\n1. Your data is ordered (and indexing based on position-in-list makes sense).\n2. You need to keep track of duplicates.\n3. Your data is **mutable** (dictionary keys and elements in a set **must** be immutable).\n\n#### Sets\nSets are good for:\n\n1. **Fast** membership testing.\n2. Removing duplicates from a sequence.\n3. Computing mathematical operations like intersection, union, and difference.\n\n#### Dictionaries\nDictionaries are good when:\n\n1. You want to associate keys with values.\n2. You want fast key-based lookups. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461204,
+              "key": "407abf44-bbb9-4eef-a41a-8704804114c0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "407abf44-bbb9-4eef-a41a-8704804114c0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What data structure would be best for representing a one-dimensional grid world (as you did in Bayesian Thinking)?",
+                "answers": [
+                  {
+                    "id": "a1510342379041",
+                    "text": "List",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510342409566",
+                    "text": "Set",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510342411830",
+                    "text": "Dictionary",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 461206,
+              "key": "da82667f-fe4e-4710-b548-8334399ee517",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "da82667f-fe4e-4710-b548-8334399ee517",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You want to associate a population with every big city in your country. What data structure would be best for storing this information?",
+                "answers": [
+                  {
+                    "id": "a1510342837883",
+                    "text": "List",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510342848224",
+                    "text": "Set",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510342850472",
+                    "text": "Dictionary",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 461207,
+              "key": "f0010c66-1ff3-4427-94d4-8e30828aacfa",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f0010c66-1ff3-4427-94d4-8e30828aacfa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You want your self driving car to visit every city in your country. You don't care how many times it visits any given city. What data structure would be best for storing the names of all the cities your car has visited?",
+                "answers": [
+                  {
+                    "id": "a1510342993817",
+                    "text": "List",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510343050912",
+                    "text": "Set",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510343053048",
+                    "text": "Dictionary",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 436256,
+          "key": "8ea92bb0-ebef-43c1-a83b-e7d15282c5dc",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8ea92bb0-ebef-43c1-a83b-e7d15282c5dc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458744,
+              "key": "1d140b8f-41ea-4615-b744-4b41b70f6625",
+              "title": "Nd113 C5 L2 17 L Conclusion V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Andy mentions using Slack in this video, but you should now use Student Hub for talking with your fellow classmates!",
+              "video": {
+                "youtube_id": "a3Q8QSjpVHQ",
+                "china_cdn_id": "a3Q8QSjpVHQ.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

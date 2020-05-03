@@ -1,0 +1,2078 @@
+{
+  "data": {
+    "lesson": {
+      "id": 434404,
+      "key": "600c2bcc-4731-42fe-a251-df25a84818fd",
+      "title": "How to Solve Problems",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson you'll solve a hard problem with the help of Dave Evans and you'll learn a systematic approach to solving hard computer programming problems as you do.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/600c2bcc-4731-42fe-a251-df25a84818fd/434404/1556053920658/How+to+Solve+Problems+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/600c2bcc-4731-42fe-a251-df25a84818fd/434404/1556053903931/How+to+Solve+Problems+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 436533,
+          "key": "cd184982-643c-4cf1-a45d-8f627fc30d52",
+          "title": "Course Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cd184982-643c-4cf1-a45d-8f627fc30d52",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458584,
+              "key": "2de3aad4-ed02-4fb2-8c83-2b7165043ab0",
+              "title": "Nd113 Navigating L1 01 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "5tdMvdcUF-E",
+                "china_cdn_id": "5tdMvdcUF-E.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 436122,
+          "key": "9fede09f-8486-45b5-9bab-d6abca555dec",
+          "title": "About this Lesson",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9fede09f-8486-45b5-9bab-d6abca555dec",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 458740,
+              "key": "71d2f368-e4aa-42cd-a3b0-37b373b95e55",
+              "title": "Nd113 C5 L1 02 L About This Lesson V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XOSFGuB2mRs",
+                "china_cdn_id": "XOSFGuB2mRs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 461394,
+          "key": "efe1a931-7116-4a19-b4f1-99b383153d81",
+          "title": "How to Solve Problems",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "efe1a931-7116-4a19-b4f1-99b383153d81",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 832272,
+              "key": "66662d5f-7786-4419-89b4-71d55652d358",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461398,
+              "key": "55f830f1-be81-4999-8fde-025a75fcab53",
+              "title": "Como Resolver Problemas",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "E6t0oGRXXh8",
+                "china_cdn_id": "E6t0oGRXXh8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 20654,
+          "key": "1083253730923",
+          "title": "Days Between Dates",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253730923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 832760,
+              "key": "68bea13a-94e2-427e-822f-743d4534eb7e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 832759,
+              "key": "ee2fac3a-b239-4771-8683-8a418624c6c8",
+              "title": "Days Between Dates  Intro To Computer Science V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "uJ4bfRfuSjE",
+                "china_cdn_id": "uJ4bfRfuSjE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 436124,
+          "key": "d5d4db5f-e7fc-4005-96b1-cb8b1c770fdc",
+          "title": "Attempting the Problem [workspace]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d5d4db5f-e7fc-4005-96b1-cb8b1c770fdc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 436125,
+              "key": "525d0e55-eada-4730-a2c1-650968a2b682",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view2b804835",
+              "pool_id": "jupyter",
+              "view_id": "2b804835-9428-4046-a4e9-52f5ca82d112",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/daysBetweenDates.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 47505,
+          "key": "1082817580923",
+          "title": "First Step",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817580923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 22305,
+              "key": "108281758",
+              "title": "First Step",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281758",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "7WNYd36EDh4",
+                  "china_cdn_id": "7WNYd36EDh4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "First Step",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/1Y04fl-TxAWwxdreduIa22EMAnu6ETnzphXrCioIcrk5Pr-jA4driceobh-tmmPtWcQPkCM-scw0iXgOK5g=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281758",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325374",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.11617806731813246,
+                      "y": 0.5173745173745173
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.12269272529858849,
+                      "y": 0.6158301158301158
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.1237785016286645,
+                      "y": 0.7007722007722008
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.1259500542888165,
+                      "y": 0.7972972972972973
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "N8dKtrrCZ7U",
+                  "china_cdn_id": "N8dKtrrCZ7U.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 96598,
+          "key": "1083253770923",
+          "title": "Understanding a Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253770923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 100131,
+              "key": "108325377",
+              "title": "Understanding a Problem",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "hkspB2e0S9A",
+                "china_cdn_id": "hkspB2e0S9A.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 56253,
+          "key": "1083253780923",
+          "title": "The First Rule",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253780923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 73097,
+              "key": "108325378",
+              "title": "The First Rule",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "yh00phtQ-vE",
+                "china_cdn_id": "yh00phtQ-vE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 72022,
+          "key": "1083253790923",
+          "title": "What Are the Inputs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 57231,
+              "key": "108325379",
+              "title": "What Are the Inputs",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "cAr-unfe-mg",
+                "china_cdn_id": "cAr-unfe-mg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 133833,
+          "key": "1083253800923",
+          "title": "How Are Inputs Represented",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 73227,
+              "key": "108325380",
+              "title": "How Are Inputs Represented",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "kG94A6xHqZk",
+                "china_cdn_id": "kG94A6xHqZk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 108268,
+          "key": "1082817590923",
+          "title": "What Are the Outputs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817590923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 20050,
+              "key": "108281759",
+              "title": "What Are the Outputs",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281759",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "4jNzxstbCy0",
+                  "china_cdn_id": "4jNzxstbCy0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "What Are the Outputs",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/-HHdDHHerv3BUY_Cnjy8uyMFFPDBm-ouTGhvdPpXnCE7lna3DcF0h0jqvZNXOjkyJTU4hQQKg0P-TtSdM2U=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281759",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325381",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.11818110972568578,
+                      "y": 0.5230737250554324
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.11724594763092269,
+                      "y": 0.6585019401330376
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.13137079177057356,
+                      "y": 0.8228589246119734
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "5vjhu_cssNQ",
+                  "china_cdn_id": "5vjhu_cssNQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 20645,
+          "key": "1083253840923",
+          "title": "Obey the Rules",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253840923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 73161,
+              "key": "108325384",
+              "title": "Obey the Rules",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "NZq4vDooURs",
+                "china_cdn_id": "NZq4vDooURs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 19589,
+          "key": "1082817600923",
+          "title": "Next Step",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 112782,
+              "key": "108281760",
+              "title": "Next Step",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281760",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "1DVj00gpDOk",
+                  "china_cdn_id": "1DVj00gpDOk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Next Step",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/FsYS1WZcICiWJNS7r0tKaF-4sRX26Qu0BoeOU1TQfo3scJNvw9y_1MoZZSwPcBfre6b01s_mwrYLb0T2DWKA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281760",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325385",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.09771986970684039,
+                      "y": 0.8687258687258688
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.41150922909880566,
+                      "y": 0.8667953667953668
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.5960912052117264,
+                      "y": 0.8745173745173745
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "3XiisY0IPPU",
+                  "china_cdn_id": "3XiisY0IPPU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 2814,
+          "key": "1082817610923",
+          "title": "The Expected Output",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817610923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 45928,
+              "key": "108281761",
+              "title": "The Expected Output",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281761",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "tiAFliSz9CY",
+                  "china_cdn_id": "tiAFliSz9CY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "The Expected Output",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/oCsTqU0A9gOtZP4GbNZEP-T2_kAKyIt5j9s50z2giQDLt9LUXAerW9i9ZlMm5mIuaeFD6ZiCS0pbAn_qXw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281761",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325388",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.10224438902743142,
+                      "x": 0.885286783042394,
+                      "y": 0.24019539911308205
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.10224438902743142,
+                      "x": 0.885286783042394,
+                      "y": 0.3822062084257206
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.10224438902743142,
+                      "x": 0.885286783042394,
+                      "y": 0.5243209534368071
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text4",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.10224438902743142,
+                      "x": 0.885286783042394,
+                      "y": 0.6692419623059866
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text5",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.10224438902743142,
+                      "x": 0.885286783042394,
+                      "y": 0.8199833702882483
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "trokjJravhc",
+                  "china_cdn_id": "trokjJravhc.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 31084,
+          "key": "1083253910923",
+          "title": "Take the Next Step",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253910923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 27558,
+              "key": "108325391",
+              "title": "Take the Next Step",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "L4vB8eu6Wo8",
+                "china_cdn_id": "L4vB8eu6Wo8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 40276,
+          "key": "1083253920923",
+          "title": "Try an Example",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253920923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 99120,
+              "key": "108325392",
+              "title": "Try an Example",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "X29RjzKHsWU",
+                "china_cdn_id": "X29RjzKHsWU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 22098,
+          "key": "1083253930923",
+          "title": "Harder Example",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 73267,
+              "key": "108325393",
+              "title": "Harder Example",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "-eAKNo9cA6Y",
+                "china_cdn_id": "-eAKNo9cA6Y.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 51905,
+          "key": "1083253940923",
+          "title": "Algorithm Pseudocode",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253940923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 21470,
+              "key": "108325394",
+              "title": "Algorithm Pseudocode",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "Ei91QeYiG_E",
+                "china_cdn_id": "Ei91QeYiG_E.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 98674,
+          "key": "1082817620923",
+          "title": "Should We Implement It",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817620923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 61187,
+              "key": "108281762",
+              "title": "Should We Implement It",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281762",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "M62yGhjmJoA",
+                  "china_cdn_id": "M62yGhjmJoA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Should We Implement It",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/za18prxLKDet8CRUbFx1dpiOWGfR6GS_6hQkHHUL06oFLseG_4rq264_wmj0japf5mvI7HtDHAUmm3Zlfg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281762",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325395",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.5808903365906624,
+                      "y": 0.37258687258687256
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.5874049945711184,
+                      "y": 0.4671814671814672
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.5819761129207384,
+                      "y": 0.6737451737451737
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.5798045602605864,
+                      "y": 0.8667953667953668
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "osHXLCQ9TKE",
+                  "china_cdn_id": "osHXLCQ9TKE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 89883,
+          "key": "1083253980923",
+          "title": "Different Approach",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083253980923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 46716,
+              "key": "108325398",
+              "title": "Different Approach",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "czjMsAXjWVg",
+                "china_cdn_id": "czjMsAXjWVg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 138415,
+          "key": "1082817630923",
+          "title": "Simple Mechanical Algorithm",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817630923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 112559,
+              "key": "108281763",
+              "title": "Simple Mechanical Algorithm",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281763",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "wN445aeFEFI",
+                  "china_cdn_id": "wN445aeFEFI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Simple Mechanical Algorithm",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/H10FZTEHTykjXIOWTvdCVAHsyIN2d2Zm04NcQLdgkCrdmZSFdEafwCzk-fFPMKXpabuQEgYjrksTtMlQzkM=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281763",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325399",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.08251900108577633,
+                      "y": 0.8108108108108109
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.08360477741585233,
+                      "y": 0.9034749034749034
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.4723127035830619,
+                      "y": 0.803088803088803
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.4744842562432139,
+                      "y": 0.8957528957528957
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.750271444082519,
+                      "y": 0.7972972972972973
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "5",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 6,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.756786102062975,
+                      "y": 0.8976833976833977
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "gPfkboHV3QA",
+                  "china_cdn_id": "gPfkboHV3QA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 25068,
+          "key": "1083254020923",
+          "title": "Don't Optimize Prematurely",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254020923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 73013,
+              "key": "108325402",
+              "title": "Don't Optimize Prematurely",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "uQDk8euwyDI",
+                "china_cdn_id": "uQDk8euwyDI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 88177,
+          "key": "1082817640923",
+          "title": "What Should We Write First",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817640923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 78468,
+              "key": "108281764",
+              "title": "What Should We Write First",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281764",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "YCQWVwsCZCk",
+                  "china_cdn_id": "YCQWVwsCZCk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "What Should We Write First",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/AxlF2zZ_A7cPx-e8vesN6MxShI0Tv9IE_x9kIBm9tNJVLvmbo54nGRe9fLVvT8Oi8gedzLZdCmniZLWquKM=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281764",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325403",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.03257328990228013,
+                      "y": 0.611969111969112
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.035830618892508145,
+                      "y": 0.7007722007722008
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.04343105320304017,
+                      "y": 0.7895752895752896
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.048859934853420196,
+                      "y": 0.8764478764478765
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "HRepefDqkDM",
+                  "china_cdn_id": "HRepefDqkDM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 138339,
+          "key": "1082817660923",
+          "title": "Define Simple nextDay",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817660923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 20845,
+              "key": "108281766",
+              "title": "Define Simple nextDay",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281766",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "84mZj582H64",
+                  "china_cdn_id": "84mZj582H64.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Define nextDay",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "108281765",
+                "initial_code_files": [
+                  {
+                    "text": "###\n### Define a simple nextDay procedure, that assumes\n### every month has 30 days.\n###\n### For example:\n###    nextDay(1999, 12, 30) => (2000, 1, 1)\n###    nextDay(2013, 1, 30) => (2013, 2, 1)\n###    nextDay(2012, 12, 30) => (2013, 1, 1)  (even though December really has 31 days)\n###\n\ndef nextDay(year, month, day):\n    \"\"\"\n    Returns the year, month, day of the next day.\n    Simple version: assume every month has 30 days.\n    \"\"\"\n    # YOUR CODE HERE\n    return",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Qttkfhh3I5s",
+                  "china_cdn_id": "Qttkfhh3I5s.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 107241,
+          "key": "1083254080923",
+          "title": "Making Progress Is Good",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254080923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 21412,
+              "key": "108325408",
+              "title": "Making Progress Is Good",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "cUFZPid3yVw",
+                "china_cdn_id": "cUFZPid3yVw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 65258,
+          "key": "1082817670923",
+          "title": "What Should We Do Next",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817670923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 42267,
+              "key": "108281767",
+              "title": "What Should We Do Next",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281767",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "kieducUmiD0",
+                  "china_cdn_id": "kieducUmiD0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "What Should We Do Next",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/ASnnBkfi-B0Q7CWz7sQa9LUWLhROGZrji00ItQVQR8mFGFyfFL_eRNPQDTAvEKntfS0-cuvZkypGsQrk9l_U=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281767",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325409",
+                "widgets": [
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.10857763300760044,
+                      "y": 0.3745173745173745
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.11074918566775244,
+                      "y": 0.47876447876447875
+                    }
+                  },
+                  {
+                    "group": "group0",
+                    "initial_value": "false",
+                    "label": "Empty",
+                    "marker": "2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0,
+                      "width": 0,
+                      "x": 0.11400651465798045,
+                      "y": 0.6698841698841699
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ZETmw5tFcFU",
+                  "china_cdn_id": "ZETmw5tFcFU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 6571,
+          "key": "1082817690923",
+          "title": "Define daysBetweenDates",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126800,
+              "key": "108281769",
+              "title": "Define daysBetweenDates",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281769",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "oM3oyyQKQFU",
+                  "china_cdn_id": "oM3oyyQKQFU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Define daysBetweenDates",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "108281768",
+                "initial_code_files": [
+                  {
+                    "text": "# Define a daysBetweenDates procedure that would produce the\n# correct output if there was a correct nextDay procedure.\n#\n# Note that this will NOT produce correct outputs yet, since\n# our nextDay procedure assumes all months have 30 days\n# (hence a year is 360 days, instead of 365).\n# \n\ndef nextDay(year, month, day):\n    \"\"\"Simple version: assume every month has 30 days\"\"\"\n    if day < 30:\n        return year, month, day + 1\n    else:\n        if month == 12:\n            return year + 1, 1, 1\n        else:\n            return year, month + 1, 1\n        \ndef daysBetweenDates(year1, month1, day1, year2, month2, day2):\n    \"\"\"Returns the number of days between year1/month1/day1\n       and year2/month2/day2. Assumes inputs are valid dates\n       in Gregorian calendar, and the first date is not after\n       the second.\"\"\"\n        \n    # YOUR CODE HERE!\n    return\n\ndef test():\n    test_cases = [((2012,9,30,2012,10,30),30), \n                  ((2012,1,1,2013,1,1),360),\n                  ((2012,9,1,2012,9,4),3)]\n    \n    for (args, answer) in test_cases:\n        result = daysBetweenDates(*args)\n        if result != answer:\n            print \"Test with data:\", args, \"failed\"\n        else:\n            print \"Test case passed!\"\n\ntest()\n    \n",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": "## Solution in Three Parts\n\nWell done for getting this far!  The solution to this problem is broken down into three parts:\n\n1)  <b>Step One Pseudocode</b>\n\n2)  <b>Step Two Helper Function</b>\n\n3)  <b>Step Three daysBetweenDates</b>\n\nPlease continue to watch them.",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 67909,
+          "key": "1083254130923",
+          "title": "Step One Pseudocode",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254130923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 29801,
+              "key": "108325413",
+              "title": "Step One Pseudocode",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "hJzpU5qC3hs",
+                "china_cdn_id": "hJzpU5qC3hs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 58156,
+          "key": "1083254140923",
+          "title": "Step Two Helper Function",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254140923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 25267,
+              "key": "108325414",
+              "title": "Step Two Helper Function",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "lpprz4op11k",
+                "china_cdn_id": "lpprz4op11k.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 129512,
+          "key": "1083254150923",
+          "title": "Step Three daysBetweenDates",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254150923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 46676,
+              "key": "108325415",
+              "title": "Step Three daysBetweenDates",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "DOkkOsraobw",
+                "china_cdn_id": "DOkkOsraobw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 109723,
+          "key": "1082817710923",
+          "title": "Test for Valid Inputs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817710923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 60506,
+              "key": "108281771",
+              "title": "Test for Valid Inputs",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "108281771",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "6ZV_SjrnvJQ",
+                  "china_cdn_id": "6ZV_SjrnvJQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Test for Valid Inputs",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "108281770",
+                "initial_code_files": [
+                  {
+                    "text": "# Credit goes to Websten from forums\n#\n# Program defensively:\n#\n# What do you do if your input is invalid? For example what should\n# happen when date 1 is not before date 2?\n#\n# Add an assertion to the code for daysBetweenDates to give\n# an assertion failure when the inputs are invalid. This should\n# occur when the first date is not before the second date.\n#  \n\ndef nextDay(year, month, day):\n    \"\"\"Simple version: assume every month has 30 days\"\"\"\n    if day < 30:\n        return year, month, day + 1\n    else:\n        if month == 12:\n            return year + 1, 1, 1\n        else:\n            return year, month + 1, 1\n        \ndef dateIsBefore(year1, month1, day1, year2, month2, day2):\n    \"\"\"Returns True if year1-month1-day1 is before\n       year2-month2-day2. Otherwise, returns False.\"\"\"\n    if year1 < year2:\n        return True\n    if year1 == year2:\n        if month1 < month2:\n            return True\n        if month1 == month2:\n            return day1 < day2\n    return False        \n\ndef daysBetweenDates(year1, month1, day1, year2, month2, day2):\n    \"\"\"Returns the number of days between year1/month1/day1\n       and year2/month2/day2. Assumes inputs are valid dates\n       in Gregorian calendar.\"\"\"\n    # program defensively! Add an assertion if the input is not valid!\n\n    days = 0\n    while dateIsBefore(year1, month1, day1, year2, month2, day2):\n        year1, month1, day1 = nextDay(year1, month1, day1)\n        days += 1\n    return days\n\ndef test():\n    test_cases = [((2012,9,30,2012,10,30),30), \n                  ((2012,1,1,2013,1,1),360),\n                  ((2012,9,1,2012,9,4),3),\n                  ((2013,1,1,1999,12,31), \"AssertionError\")]\n    \n    for (args, answer) in test_cases:\n        try:\n            result = daysBetweenDates(*args)\n            if result == answer and answer != \"AssertionError\":\n                print \"Test case passed!\"\n            else:\n                print \"Test with data:\", args, \"failed\"\n    \n        except AssertionError:\n            if answer == \"AssertionError\":\n                print \"Nice job! Test case {0} correctly raises AssertionError!\\n\".format(args)\n            else:\n                print \"Check your work! Test case {0} should not raise AssertionError!\\n\".format(args)            \ntest()",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "7c7wYMftRSg",
+                  "china_cdn_id": "7c7wYMftRSg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 58271,
+          "key": "1083254180923",
+          "title": "Real World Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254180923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 25117,
+              "key": "108325418",
+              "title": "Real World Problem",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "lY0CYTfkLWo",
+                "china_cdn_id": "lY0CYTfkLWo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 108265,
+          "key": "1082817720923",
+          "title": "Best Strategy",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817720923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 110157,
+              "key": "108281772",
+              "title": "Best Strategy",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "A stub is a dummy implementation of the method. It can be used for testing before you code the whole function.\n\nIn order to answer this question, you should think about the dependencies between the various steps, but also about what order of implementing and testing them will be most likely to efficiently lead to a correct solution.\n\nIt's definitely a subjective question, and there are many reasonable answers to this question.  Because of this, your answer will not be graded. But watching the instructor explain his solution will help you evaluate your solution.",
+              "user_state": {
+                "node_key": "108281772",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "2T1JONL0WyE",
+                  "china_cdn_id": "2T1JONL0WyE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Best Strategy",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/5CYAu3P2p6XpBL_V_2gTFyGgRJEirZzTS8m9dK6TJm_YSMUgjBRrDAdpsOiQ1NS1VajEJiM9jLunvJN3uA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/108281772",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "108325419",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Empty",
+                    "marker": "0",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.3491271820448878,
+                      "x": 0.1758957654723127,
+                      "y": 0.805019305019305
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "JsMwEH8cluU",
+                  "china_cdn_id": "JsMwEH8cluU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 436135,
+          "key": "4fb1a818-92b3-4a94-9e91-a138bc72ea30",
+          "title": "Completing the Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4fb1a818-92b3-4a94-9e91-a138bc72ea30",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461409,
+              "key": "4da60eec-a09c-4afd-b608-f679d3a074b2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view2b804835",
+              "pool_id": "jupyter",
+              "view_id": "5950b525-697e-48fb-bd1d-8d13b9ac2d3f",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/daysBetweenDates.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 89843,
+          "key": "1082817740923",
+          "title": "Finish daysBetweenDates",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1082817740923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 37705,
+              "key": "108281774",
+              "title": "Finish daysBetweenDates",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "The answer to this quiz starts in the next video and progresses through the rest of the lesson. Click the navigation bar to move on to it.",
+              "user_state": {
+                "node_key": "108281774",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-70lzVJyS8Y",
+                  "china_cdn_id": "-70lzVJyS8Y.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Finish daysBetweenDates",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "108281773",
+                "initial_code_files": [
+                  {
+                    "text": "# Credit goes to Websten from forums\n#\n# Use Dave's suggestions to finish your daysBetweenDates\n# procedure. It will need to take into account leap years\n# in addition to the correct number of days in each month.\n\ndef nextDay(year, month, day):\n    \"\"\"Simple version: assume every month has 30 days\"\"\"\n    if day < 30:\n        return year, month, day + 1\n    else:\n        if month == 12:\n            return year + 1, 1, 1\n        else:\n            return year, month + 1, 1\n        \ndef dateIsBefore(year1, month1, day1, year2, month2, day2):\n    \"\"\"Returns True if year1-month1-day1 is before year2-month2-day2. Otherwise, returns False.\"\"\"\n    if year1 < year2:\n        return True\n    if year1 == year2:\n        if month1 < month2:\n            return True\n        if month1 == month2:\n            return day1 < day2\n    return False        \n\ndef daysBetweenDates(year1, month1, day1, year2, month2, day2):\n    \"\"\"Returns the number of days between year1/month1/day1\n       and year2/month2/day2. Assumes inputs are valid dates\n       in Gregorian calendar.\"\"\"\n    # program defensively! Add an assertion if the input is not valid!\n    assert not dateIsBefore(year2, month2, day2, year1, month1, day1)\n    days = 0\n    while dateIsBefore(year1, month1, day1, year2, month2, day2):\n        year1, month1, day1 = nextDay(year1, month1, day1)\n        days += 1\n    return days\n\ndef test():\n    test_cases = [((2012,1,1,2012,2,28), 58), \n                  ((2012,1,1,2012,3,1), 60),\n                  ((2011,6,30,2012,6,30), 366),\n                  ((2011,1,1,2012,8,8), 585 ),\n                  ((1900,1,1,1999,12,31), 36523)]\n    \n    for (args, answer) in test_cases:\n        result = daysBetweenDates(*args)\n        if result != answer:\n            print \"Test with data:\", args, \"failed\"\n        else:\n            print \"Test case passed!\"\n\ntest()",
+                    "name": "studentMain.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 93381,
+          "key": "1083254230923",
+          "title": "Solution Step I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254230923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 29528,
+              "key": "108325423",
+              "title": "Solution Step I",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "bIZgt0ttMeU",
+                "china_cdn_id": "bIZgt0ttMeU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 131432,
+          "key": "1083254240923",
+          "title": "Solution Step II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254240923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 29506,
+              "key": "108325424",
+              "title": "Solution Step II",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "SGC8UAz12Q4",
+                "china_cdn_id": "SGC8UAz12Q4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 95413,
+          "key": "1083254250923",
+          "title": "Solution Step III",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254250923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 64213,
+              "key": "108325425",
+              "title": "Solution Step III",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "When Dave goes over how to write the isLeapYear function, he introduces the modulo (%) operator. This returns the remainder of dividing the first argument by the second. For example: 10 % 5 is 0, and 10 % 7 is 3. For more information, follow [this link](https://docs.python.org/2/reference/expressions.html#binary-arithmetic-operations).",
+              "video": {
+                "youtube_id": "CRv1ogJYe8w",
+                "china_cdn_id": "CRv1ogJYe8w.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 19586,
+          "key": "1083254260923",
+          "title": "Solution Step IV",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254260923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 99196,
+              "key": "108325426",
+              "title": "Solution Step IV",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "A fun bit about real time tracking software, for those interested: https://www.youtube.com/watch?v=-5wpm-gesOY&list=TLBBCouWmde2kE6qFG90Fsn3GusE_aTr8k",
+              "video": {
+                "youtube_id": "H1oVKsgSsi0",
+                "china_cdn_id": "H1oVKsgSsi0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 76607,
+          "key": "1083254270923",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1083254270923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 4449,
+              "key": "108325427",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "JmP5wzHFchc",
+                "china_cdn_id": "JmP5wzHFchc.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

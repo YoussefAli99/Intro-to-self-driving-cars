@@ -1,0 +1,753 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inclusion Guards</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Object Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Python vs. C++.html">02. Python vs. C++</a>
+    </li>
+    <li class="">
+      <a href="03. Why use Object Oriented Programming.html">03. Why use Object Oriented Programming?</a>
+    </li>
+    <li class="">
+      <a href="04. Using a Class in C++ [Demo].html">04. Using a Class in C++ [Demo]</a>
+    </li>
+    <li class="">
+      <a href="05. Explanation of the Main.cpp File.html">05. Explanation of the Main.cpp File</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Using a Class.html">06. Practice Using a Class</a>
+    </li>
+    <li class="">
+      <a href="07. Review Anatomy of a Class.html">07. Review: Anatomy of a Class</a>
+    </li>
+    <li class="">
+      <a href="08. Other Facets of C++ Classes.html">08. Other Facets of C++ Classes</a>
+    </li>
+    <li class="">
+      <a href="09. Private and Public.html">09. Private and Public</a>
+    </li>
+    <li class="">
+      <a href="10. Header Files.html">10. Header Files</a>
+    </li>
+    <li class="">
+      <a href="11. Inclusion Guards.html">11. Inclusion Guards</a>
+    </li>
+    <li class="">
+      <a href="12. Implement a Class.html">12. Implement a Class</a>
+    </li>
+    <li class="">
+      <a href="13. Class Variables.html">13. Class Variables</a>
+    </li>
+    <li class="">
+      <a href="14. Class Function Declarations.html">14. Class Function Declarations</a>
+    </li>
+    <li class="">
+      <a href="15. Constructor Functions.html">15. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="16. Set and Get Functions.html">16. Set and Get Functions</a>
+    </li>
+    <li class="">
+      <a href="17. Matrix Functions.html">17. Matrix Functions</a>
+    </li>
+    <li class="">
+      <a href="18. Use an Inclusion Guard.html">18. Use an Inclusion Guard</a>
+    </li>
+    <li class="">
+      <a href="19. Instantiate an Object.html">19. Instantiate an Object</a>
+    </li>
+    <li class="">
+      <a href="20. Running your Program Locally.html">20. Running your Program Locally</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Inclusion Guards</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="whats-wrong-with-this-code">What's Wrong with This Code?</h1>
+<p>Take a look at this main.cpp file and click the "Test Run" button. Why doesn't the code compile?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#410162-main-cpp" class="nav-item nav-link  active show" id="tab-410162-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="410162-main-cpp" aria-selected="true">main.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="410162-main-cpp" aria-labelledby="tab-410162-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    
+    string color;
+    int doors;
+    
+    color &#x3D; &quot;blue&quot;;
+    doors &#x3D; 4;
+    
+    string color;
+    color &#x3D; &quot;red&quot;;
+    
+    cout &lt;&lt; &quot;This &quot; &lt;&lt; color &lt;&lt; &quot; car has &quot; &lt;&lt; doors &lt;&lt; &quot; doors&quot;;
+    
+    return 0;
+    
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Double Declaration</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Why didn't the code compile?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1506443201407" name="410175" id="a1506443201407">
+        <label for="a1506443201407"><p>The namespace was declared incorrectly.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506443339204" name="410175" id="a1506443339204">
+        <label for="a1506443339204"><p>The color variable was declared multiple times.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506443339770" name="410175" id="a1506443339770">
+        <label for="a1506443339770"><p>The string variable type does not exist in C++.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506443340291" name="410175" id="a1506443340291">
+        <label for="a1506443340291"><p>The value in the color variable was changed from blue to red.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The color variable was declared multiple times.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="declaring-variables-functions-or-classes-multiple-times">Declaring variables, functions or classes multiple times</h1>
+<p>C++ programs will not compile if a variable, function or class gets declared more than once. This might seem easy to avoid when the codebase is small. But imagine what happens when you have a large codebase with many different classes, .cpp files, and personnel working on different parts of the code.</p>
+<p>Take a look at this code below. There are two different classes in two separate files. One class represents an engine with a variable storing the size of the engine. The other class represents a car, which has a color variable and a variable representing the number of doors.</p>
+<p>But there's a catch. The car class also uses the engine class in order to store the car's engine properties. That is why the car.h header file includes the engine header file with the line:</p>
+<pre><code class="c++ language-c++">#include "engine.h"</code></pre>
+<p>However, the code will not compile in its current state. Think about why it does not compile correctly when you press the "Test Run" button. </p>
+<p>As a hint, look at the include statements on the top of main.cpp. Include statements will essentially copy a file into another file. Remember that a program that defines a class more than once will not compile.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#410327-main-cpp" class="nav-item nav-link  active show" id="tab-410327-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="410327-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#410327-engine-h" class="nav-item nav-link " id="tab-410327-engine-h" data-toggle="tab" role="tab"
+      aria-controls="410327-engine-h" aria-selected="false">engine.h</a>
+    <a href="#410327-engine-cpp" class="nav-item nav-link " id="tab-410327-engine-cpp" data-toggle="tab" role="tab"
+      aria-controls="410327-engine-cpp" aria-selected="false">engine.cpp</a>
+    <a href="#410327-car-h" class="nav-item nav-link " id="tab-410327-car-h" data-toggle="tab" role="tab"
+      aria-controls="410327-car-h" aria-selected="false">car.h</a>
+    <a href="#410327-car-cpp" class="nav-item nav-link " id="tab-410327-car-cpp" data-toggle="tab" role="tab"
+      aria-controls="410327-car-cpp" aria-selected="false">car.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="410327-main-cpp" aria-labelledby="tab-410327-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &quot;engine.h&quot;
+#include &quot;car.h&quot;
+
+using namespace std;
+
+int main() {
+
+	Engine enginelarge(&quot;4L&quot;);
+	Engine enginesmall(&quot;2.5L&quot;);
+
+	Car carone(&quot;red&quot;, 5);
+	Car cartwo(&quot;green&quot;, 4);
+
+
+	cout &lt;&lt; &quot;Small engine size &quot;  &lt;&lt; enginesmall.getSize() &lt;&lt; endl;
+	cout &lt;&lt; &quot;Large engine size &quot; &lt;&lt; enginelarge.getSize() &lt;&lt; endl;
+	cout &lt;&lt; &quot;Car one doors &quot; &lt;&lt; carone.getDoors() &lt;&lt; endl;
+	cout &lt;&lt; &quot;Car two doors &quot; &lt;&lt; cartwo.getDoors() &lt;&lt; endl;
+
+	cout &lt;&lt; &quot;Car one engine size &quot; &lt;&lt; carone.getEngine() &lt;&lt; endl;
+	carone.setEngine(enginelarge.getSize());
+	cout &lt;&lt; &quot;Car one engine size new &quot; &lt;&lt; carone.getEngine() &lt;&lt; endl;
+
+	return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="410327-engine-h" aria-labelledby="tab-410327-engine-h" role="tabpanel">
+      <pre><code></code>#include &lt;string&gt;
+
+class Engine
+{
+	private:
+		std::string enginesize;
+
+	public:
+
+		Engine ();
+
+		Engine (std::string);
+
+		void setSize(std::string);
+
+		std::string getSize();
+
+};</code></pre>
+    </div>
+    <div class="tab-pane " id="410327-engine-cpp" aria-labelledby="tab-410327-engine-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;engine.h&quot;
+
+using namespace std;
+
+Engine::Engine () {
+	enginesize &#x3D; &quot;4L&quot;;
+}
+
+Engine::Engine (string engine) {
+	enginesize &#x3D; engine;
+}
+
+void Engine::setSize(string newsize) {
+	enginesize &#x3D; newsize;
+}
+
+string Engine::getSize() {
+	return enginesize;
+}
+
+</code></pre>
+    </div>
+    <div class="tab-pane " id="410327-car-h" aria-labelledby="tab-410327-car-h" role="tabpanel">
+      <pre><code></code>#include &lt;string&gt;
+#include &quot;engine.h&quot;
+
+class Car
+{
+	private:
+		std::string color;
+		int doors;
+		Engine enginetype;
+
+	public:
+		Car (std::string, int);
+
+		void setColor(std::string);
+		void setDoors(int);
+		void setEngine(std::string);
+
+		std::string getColor();
+		int getDoors();
+		std::string getEngine();
+
+};</code></pre>
+    </div>
+    <div class="tab-pane " id="410327-car-cpp" aria-labelledby="tab-410327-car-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;car.h&quot;
+
+using namespace std;
+
+Car::Car (string newcolor, int newdoors) {
+	color &#x3D; newcolor;
+	doors &#x3D; newdoors;
+	enginetype.setSize(&quot;2.5L&quot;);
+}
+
+string Car::getColor() {
+	return color;
+}
+
+int Car::getDoors() {
+	return doors;
+}
+
+string Car::getEngine() {
+	return enginetype.getSize();
+}
+
+void Car::setColor(string newcolor) {
+	color &#x3D; newcolor;
+}
+
+void Car::setDoors(int newdoors) {
+	doors &#x3D; newdoors;
+}
+
+void Car::setEngine(string newengine) {
+	enginetype.setSize(newengine);
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Compiling</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Why didn't the code compile?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1506458557526" name="410341" id="a1506458557526">
+        <label for="a1506458557526"><p>The car class is declared twice in main.cpp</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506458593721" name="410341" id="a1506458593721">
+        <label for="a1506458593721"><p>The engine class is declared twice in main.cpp</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506458594184" name="410341" id="a1506458594184">
+        <label for="a1506458594184"><p>The car class includes the engine.h header file, which is not allowed.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506458594704" name="410341" id="a1506458594704">
+        <label for="a1506458594704"><p>Standard namespace is not being used properly.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The engine class is declared twice in main.cpp
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The code would not compile because of these statements:</p>
+<pre><code>#include "engine.h"
+#include "car.h"</code></pre>
+<p>The first include statement will copy the contents of the engine header file into main.cpp. So main.cpp will have the definition of the Engine class.</p>
+<p>But then, main.cpp will copy the contents of "car.h" as well. But the "car.h" file also includes engine.h:</p>
+<pre><code class="c++ language-c++">#include "engine.h"</code></pre>
+<p>The "engine.h" file ends up being included twice, so the Engine class is declared twice. The Car uses the engine class, and main.cpp also uses the engine class. </p>
+<p>The modularity of .cpp and .h files is a big advantage of C++. But how can you avoid the multiple declarations?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="ifndef">ifndef</h1>
+<p>The solution is to use <code># ifndef</code> statements, which allow you to implement a technique called inclusion guards.</p>
+<p>The ifndef statement stands for "if not defined".  When you wrap your header files with #ifndef statements, the compiler will only include a header file if the file has not yet been defined. In the current main.cpp example, the "engine.h" file would be included first. Then the compiler includes "car.h". But "car.h" will try to include "engine.h" again; however, the inclusion guard in the "engine.h" file will ensure that "engine.h" does not get included again.</p>
+<p>Here is what the "engine.h" file looks like with an ifndef statement:</p>
+<pre><code class="c++ language-c++">#ifndef ENGINE_H
+#define ENGINE_H
+
+#include &lt;string&gt;
+
+class Engine
+{
+    private:
+        std::string enginesize;
+
+    public:
+
+        Engine ();
+
+        Engine (std::string);
+
+        void setSize(std::string);
+
+        std::string getSize();
+
+};
+
+#endif /* ENGINE_H */</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code>#ifndef FILENAME_H
+#define FILENAME_H
+
+header code ...
+
+#endif /* FILENAME_H */</code></pre>
+<p>Using all caps with the _H is a naming convention. It is also customary to put a comment after the #endif statement with the filename.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You would want to wrap all of your header files with #ifndef statements. That way other programs do not have to keep track of what files have already been included when they want to use your code. </p>
+<p>Here are the results of including #ifndef statements in the engine and car header files. If you click on "Test Run", you will see that the code now compiles.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#410365-main-cpp" class="nav-item nav-link  active show" id="tab-410365-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="410365-main-cpp" aria-selected="true">main.cpp</a>
+    <a href="#410365-engine-h" class="nav-item nav-link " id="tab-410365-engine-h" data-toggle="tab" role="tab"
+      aria-controls="410365-engine-h" aria-selected="false">engine.h</a>
+    <a href="#410365-engine-cpp" class="nav-item nav-link " id="tab-410365-engine-cpp" data-toggle="tab" role="tab"
+      aria-controls="410365-engine-cpp" aria-selected="false">engine.cpp</a>
+    <a href="#410365-car-h" class="nav-item nav-link " id="tab-410365-car-h" data-toggle="tab" role="tab"
+      aria-controls="410365-car-h" aria-selected="false">car.h</a>
+    <a href="#410365-car-cpp" class="nav-item nav-link " id="tab-410365-car-cpp" data-toggle="tab" role="tab"
+      aria-controls="410365-car-cpp" aria-selected="false">car.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="410365-main-cpp" aria-labelledby="tab-410365-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &quot;engine.h&quot;
+#include &quot;car.h&quot;
+
+using namespace std;
+
+int main() {
+
+	Engine enginelarge(&quot;4L&quot;);
+	Engine enginesmall(&quot;2.5L&quot;);
+
+	Car carone(&quot;red&quot;, 5);
+	Car cartwo(&quot;green&quot;, 4);
+
+
+	cout &lt;&lt; &quot;Small engine size &quot;  &lt;&lt; enginesmall.getSize() &lt;&lt; endl;
+	cout &lt;&lt; &quot;Large engine size &quot; &lt;&lt; enginelarge.getSize() &lt;&lt; endl;
+	cout &lt;&lt; &quot;Car one doors &quot; &lt;&lt; carone.getDoors() &lt;&lt; endl;
+	cout &lt;&lt; &quot;Car two doors &quot; &lt;&lt; cartwo.getDoors() &lt;&lt; endl;
+
+	cout &lt;&lt; &quot;Car one engine size &quot; &lt;&lt; carone.getEngine() &lt;&lt; endl;
+	carone.setEngine(enginelarge.getSize());
+	cout &lt;&lt; &quot;Car one engine size new &quot; &lt;&lt; carone.getEngine() &lt;&lt; endl;
+
+	return 0;
+}</code></pre>
+    </div>
+    <div class="tab-pane " id="410365-engine-h" aria-labelledby="tab-410365-engine-h" role="tabpanel">
+      <pre><code></code>#ifndef ENGINE_H
+#define ENGINE_H
+
+#include &lt;string&gt;
+
+class Engine
+{
+	private:
+		std::string enginesize;
+
+	public:
+
+		Engine ();
+
+		Engine (std::string);
+
+		void setSize(std::string);
+
+		std::string getSize();
+
+};
+
+#endif /* ENGINE_H */</code></pre>
+    </div>
+    <div class="tab-pane " id="410365-engine-cpp" aria-labelledby="tab-410365-engine-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;engine.h&quot;
+
+using namespace std;
+
+Engine::Engine () {
+	enginesize &#x3D; &quot;4L&quot;;
+}
+
+Engine::Engine (string engine) {
+	enginesize &#x3D; engine;
+}
+
+void Engine::setSize(string newsize) {
+	enginesize &#x3D; newsize;
+}
+
+string Engine::getSize() {
+	return enginesize;
+}
+
+</code></pre>
+    </div>
+    <div class="tab-pane " id="410365-car-h" aria-labelledby="tab-410365-car-h" role="tabpanel">
+      <pre><code></code>#ifndef CAR_H
+#define CAR_H
+
+#include &lt;string&gt;
+#include &quot;engine.h&quot;
+
+class Car
+{
+	private:
+		std::string color;
+		int doors;
+		Engine enginetype;
+
+	public:
+		Car (std::string, int);
+
+		void setColor(std::string);
+		void setDoors(int);
+		void setEngine(std::string);
+
+		std::string getColor();
+		int getDoors();
+		std::string getEngine();
+
+};
+
+#endif  /* CAR_H */</code></pre>
+    </div>
+    <div class="tab-pane " id="410365-car-cpp" aria-labelledby="tab-410365-car-cpp" role="tabpanel">
+      <pre><code></code>#include &quot;car.h&quot;
+
+using namespace std;
+
+Car::Car (string newcolor, int newdoors) {
+	color &#x3D; newcolor;
+	doors &#x3D; newdoors;
+	enginetype.setSize(&quot;2.5L&quot;);
+}
+
+string Car::getColor() {
+	return color;
+}
+
+int Car::getDoors() {
+	return doors;
+}
+
+string Car::getEngine() {
+	return enginetype.getSize();
+}
+
+void Car::setColor(string newcolor) {
+	color &#x3D; newcolor;
+}
+
+void Car::setDoors(int newdoors) {
+	doors &#x3D; newdoors;
+}
+
+void Car::setEngine(string newengine) {
+	enginetype.setSize(newengine);
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="namespaces-in-header-files">Namespaces in Header Files</h1>
+<p>As an aside, you'll notice that the header files did not use the standard namespace. It's generally recommended to avoid using namespaces in a header file. This can help avoid naming conflicts later as functions and classes are reused in different parts of a code base.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Implement a Class.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Inclusion Guards')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

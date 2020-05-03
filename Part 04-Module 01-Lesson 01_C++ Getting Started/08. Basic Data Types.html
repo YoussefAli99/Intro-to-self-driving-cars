@@ -1,0 +1,349 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Basic Data Types</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Getting Started</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Lesson Overview.html">02. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Elecia White.html">03. Elecia White</a>
+    </li>
+    <li class="">
+      <a href="04. Why C++.html">04. Why C++</a>
+    </li>
+    <li class="">
+      <a href="05. Python and C++ Comparison.html">05. Python and C++ Comparison</a>
+    </li>
+    <li class="">
+      <a href="06. Static vs Dynamic Typing.html">06. Static vs Dynamic Typing</a>
+    </li>
+    <li class="">
+      <a href="07. C++ - A Statically Typed Language.html">07. C++ - A Statically Typed Language</a>
+    </li>
+    <li class="">
+      <a href="08. Basic Data Types.html">08. Basic Data Types</a>
+    </li>
+    <li class="">
+      <a href="09. Floating versus Double [demonstration].html">09. Floating versus Double [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="10. Doubles are Bigger.html">10. Doubles are Bigger</a>
+    </li>
+    <li class="">
+      <a href="11. Common Errors and Error Messages.html">11. Common Errors and Error Messages</a>
+    </li>
+    <li class="">
+      <a href="12. C++ Functions.html">12. C++ Functions</a>
+    </li>
+    <li class="">
+      <a href="13. Anatomy of a Function.html">13. Anatomy of a Function</a>
+    </li>
+    <li class="">
+      <a href="14. Multiple Outputs.html">14. Multiple Outputs</a>
+    </li>
+    <li class="">
+      <a href="15. Two Functions Same Name.html">15. Two Functions Same Name</a>
+    </li>
+    <li class="">
+      <a href="16. Function Signatures 1.html">16. Function Signatures 1</a>
+    </li>
+    <li class="">
+      <a href="17. Function Signatures 2.html">17. Function Signatures 2</a>
+    </li>
+    <li class="">
+      <a href="18. If and Boolean Logic.html">18. If and Boolean Logic</a>
+    </li>
+    <li class="">
+      <a href="19. While and For Loops.html">19. While and For Loops</a>
+    </li>
+    <li class="">
+      <a href="20. Switch Statement.html">20. Switch Statement</a>
+    </li>
+    <li class="">
+      <a href="21. Libraries.html">21. Libraries</a>
+    </li>
+    <li class="">
+      <a href="22. Forge on!.html">22. Forge on!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Basic Data Types</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="basic-c-data-types">Basic C++ Data Types</h1>
+<p>Now you know how to declare a variable in a statically typed language like C++. The C++ language has a handful of basic data types that you can use directly in your programs. These include integers, floats, and characters. Here is a table showing the most important basic data types that you will be using in the lesson:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <table>
+<thead>
+<tr>
+<th id="**data_type**"><strong>data type</strong></th>
+<th id="**declaration**"><strong>declaration</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>int</td>
+</tr>
+<tr>
+<td>floating point</td>
+<td>float</td>
+</tr>
+<tr>
+<td>double floating point</td>
+<td>double</td>
+</tr>
+<tr>
+<td>character</td>
+<td>char</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>valueless</td>
+<td>void</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Some of these data types might look a bit unfamiliar. Here are some examples of each type:</p>
+<p><strong>integer</strong></p>
+<p>integers are whole numbers like <br />
+-20<br />
+5<br />
+700<br />
+-19</p>
+<p><strong>floating point</strong> </p>
+<p>floating points are real numbers containing decimals like 5.109 199.25 -1.278</p>
+<p><strong>double floating point</strong></p>
+<p>A double floating point can hold more decimals than a floating point; the tradeoff is that a double floating point requires more memory. The next part of the lesson goes into more detail about floating points versus double floating points.</p>
+<p><strong>character</strong></p>
+<p>The char type definition is for ASCII characters. ASCII represent the English language Roman alphabet and  common mathematical symbols. A <code>char</code> variable can only hold one letter at a time; you cannot use a <code>char</code> type definition to represent a string. </p>
+<p>examples of characters: a U l &amp; @</p>
+<p><strong>boolean</strong></p>
+<p>Booleans are variables containing either true or false.</p>
+<p><strong>valueless</strong></p>
+<p>The <code>void</code> type definition is used for special cases. You cannot declare a void variable in C++. You'll find that void is used when a function does not return anything; a function might print something out to the terminal but not return a value.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="quiz-assigning-other-data-types">Quiz:: Assigning Other Data Types</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#385242-main-cpp" class="nav-item nav-link  active show" id="tab-385242-main-cpp" data-toggle="tab" role="tab"
+      aria-controls="385242-main-cpp" aria-selected="true">main.cpp</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="385242-main-cpp" aria-labelledby="tab-385242-main-cpp" role="tabpanel">
+      <pre><code></code>#include &lt;iostream&gt;
+
+int main() {
+    
+    // TODO: define two floating point numbers. Assign 12.07 to the
+    // first floating point number. Assign 65.102 to the 
+    // second floating point number.
+    
+    
+    // TODO: Calculate the sum of the two floating point variables into
+    // the float_sum variable.
+    
+    float float_sum; 
+    std::cout &lt;&lt; float_sum &lt;&lt; std::endl;
+    
+    // TODO: Calculate difference between the second and first number
+    // output the results to cout. 
+    
+    // TODO: Calculate second_float / first_float and output the results
+    // to cout.
+    
+    // TODO: Calculate the product of the two numbers and output the results
+    // to cout.
+
+    return 0;
+}</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Floating versus Double [demonstration].html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Basic Data Types')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

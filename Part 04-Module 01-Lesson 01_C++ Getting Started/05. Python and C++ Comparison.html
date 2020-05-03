@@ -1,0 +1,367 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python and C++ Comparison</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Getting Started</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Lesson Overview.html">02. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Elecia White.html">03. Elecia White</a>
+    </li>
+    <li class="">
+      <a href="04. Why C++.html">04. Why C++</a>
+    </li>
+    <li class="">
+      <a href="05. Python and C++ Comparison.html">05. Python and C++ Comparison</a>
+    </li>
+    <li class="">
+      <a href="06. Static vs Dynamic Typing.html">06. Static vs Dynamic Typing</a>
+    </li>
+    <li class="">
+      <a href="07. C++ - A Statically Typed Language.html">07. C++ - A Statically Typed Language</a>
+    </li>
+    <li class="">
+      <a href="08. Basic Data Types.html">08. Basic Data Types</a>
+    </li>
+    <li class="">
+      <a href="09. Floating versus Double [demonstration].html">09. Floating versus Double [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="10. Doubles are Bigger.html">10. Doubles are Bigger</a>
+    </li>
+    <li class="">
+      <a href="11. Common Errors and Error Messages.html">11. Common Errors and Error Messages</a>
+    </li>
+    <li class="">
+      <a href="12. C++ Functions.html">12. C++ Functions</a>
+    </li>
+    <li class="">
+      <a href="13. Anatomy of a Function.html">13. Anatomy of a Function</a>
+    </li>
+    <li class="">
+      <a href="14. Multiple Outputs.html">14. Multiple Outputs</a>
+    </li>
+    <li class="">
+      <a href="15. Two Functions Same Name.html">15. Two Functions Same Name</a>
+    </li>
+    <li class="">
+      <a href="16. Function Signatures 1.html">16. Function Signatures 1</a>
+    </li>
+    <li class="">
+      <a href="17. Function Signatures 2.html">17. Function Signatures 2</a>
+    </li>
+    <li class="">
+      <a href="18. If and Boolean Logic.html">18. If and Boolean Logic</a>
+    </li>
+    <li class="">
+      <a href="19. While and For Loops.html">19. While and For Loops</a>
+    </li>
+    <li class="">
+      <a href="20. Switch Statement.html">20. Switch Statement</a>
+    </li>
+    <li class="">
+      <a href="21. Libraries.html">21. Libraries</a>
+    </li>
+    <li class="">
+      <a href="22. Forge on!.html">22. Forge on!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Python and C++ Comparison</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="python-and-c-comparison">Python and C++ Comparison</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="goal-of-this-module">Goal of this Module</h3>
+<p>The main goal of this module is to prepare you for writing C++ code. Because you are already familiar with coding practices in Python, the module will emphasize the similarities and differences between the two languages. </p>
+<p>These lessons assume you are already familiar with general programming ideas like writing for loops, while loops, assigning values to variables, and writing functions. The fundamentals of how to code remain the same.</p>
+<h3 id="learning-a-new-programming-language">Learning a New Programming Language</h3>
+<p>The best way to learn a new programming language is to practice writing code; therefore, most of this lesson involves learning C++ syntax and then practicing the syntax in an exercise.</p>
+<p>By the end of the lesson, you should feel confident translating Python code into C++ code.</p>
+<p>Throughout this lesson, you will be presented with Python code and the C++ equivalent. Below is an example of a simple program in Python alongside a C++ version. Both versions do exactly the same thing; they assign an integer 5 to the variable x. Then they output the value of x to the terminal.</p>
+<p>Study each example line by line. Notice the similarities as well as the differences:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/my-drawing.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>One similarity is variable assignment:  <code>x = 5</code>.  And the overall structure of the programs are the same.</p>
+<p>But there are also a few major differences:</p>
+<ul>
+<li>the C++ program is wrapped with a function called <code>main()</code></li>
+<li><code>x</code> has to be explicitly defined as an integer</li>
+<li>instead of using <code>print()</code> to output the results to terminal, the code uses <code>std::cout</code></li>
+</ul>
+<p>You are going to learn about all of these facets (and more) in this C++ lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Include</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What do you think the code line <code>#include &lt;iostream&gt;</code> is for?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1504045766752" name="384321" id="a1504045766752">
+      <label for="a1504045766752"><p>You need that for every C++ program you write.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1504045781122" name="384321" id="a1504045781122">
+      <label for="a1504045781122"><p>The include statement pastes the iostream file into the program when the program is compiled.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1504045781746" name="384321" id="a1504045781746">
+      <label for="a1504045781746"><p>That code line gives the program access to the library where <code>std::cout</code> is defined.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The include statement pastes the iostream file into the program when the program is compiled.</li>
+      <li>That code line gives the program access to the library where `std::cout` is defined.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>The semi-colon</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>In the C++ code above, every command ended with a semi-colon. What is Python's equivalent of the semi-colon?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1504046624673" name="384328" id="a1504046624673">
+        <label for="a1504046624673"><p>There is no equivalent</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504046692421" name="384328" id="a1504046692421">
+        <label for="a1504046692421"><p>Hitting return (ie enter) after each line of Python code</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504046693137" name="384328" id="a1504046693137">
+        <label for="a1504046693137"><p>Indenting Python code</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504046693849" name="384328" id="a1504046693849">
+        <label for="a1504046693849"><p>Parenthesis like ()</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Hitting return (ie enter) after each line of Python code
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Curly Braces</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What do you think the curly braces are used for in C++, and what might the equivalent be in Python?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1504146770365" name="385246" id="a1504146770365">
+        <label for="a1504146770365"><p>Curly braces are used to make the code more readable. There is no equivalent in Python.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504147011488" name="385246" id="a1504147011488">
+        <label for="a1504147011488"><p>Curly braces group a set of statements together. The Python equivalent is hitting return (ie enter) after a statement.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504147012264" name="385246" id="a1504147012264">
+        <label for="a1504147012264"><p>Curly braces group a set of statements together. The Python equivalent is indentation.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504147229769" name="385246" id="a1504147229769">
+        <label for="a1504147229769"><p>Curly braces are used to make the code more readable. The Python equivalent is indentation.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Curly braces group a set of statements together. The Python equivalent is indentation.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Static vs Dynamic Typing.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Python and C++ Comparison')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

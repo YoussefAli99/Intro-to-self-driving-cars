@@ -1,0 +1,99 @@
+{
+  "data": {
+    "lesson": {
+      "id": 390490,
+      "key": "1c5c5a83-4166-4788-b9ea-205428ce4566",
+      "title": "Section Overview",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "An introduction to the amazing tools and algorithms you'll learn in this lesson.\n",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/1c5c5a83-4166-4788-b9ea-205428ce4566/390490/1544452818456/Section+Overview+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/1c5c5a83-4166-4788-b9ea-205428ce4566/390490/1544452815544/Section+Overview+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 393581,
+          "key": "33f33f9a-d0ca-4bf4-9d3f-500152d5732a",
+          "title": "Introduction to Matrices",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "33f33f9a-d0ca-4bf4-9d3f-500152d5732a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 415779,
+              "key": "717caabf-0c03-4a65-b21d-00193fec66ea",
+              "title": "Introduction to Matrices",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ugx3mldc0lE",
+                "china_cdn_id": "Ugx3mldc0lE.mp4"
+              }
+            },
+            {
+              "id": 393582,
+              "key": "792336e1-cc1b-4091-bb22-222d1692c290",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Sebastian introduces the course.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 390491,
+          "key": "94268b78-1567-4bcc-bcef-9cd8b931c5ac",
+          "title": "Course Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "94268b78-1567-4bcc-bcef-9cd8b931c5ac",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390493,
+              "key": "a24bc719-dac5-40e2-8264-ba164026c00d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Course Overview\nMany of the terms you just heard are likely unfamiliar to you. In this course, you will gain your first exposure to many of the concepts and tools which you will keep coming back to as you make progress towards becoming a self-driving car engineer.\n\nAt the end of this course you will demonstrate your proficiency with basic linear algebra by writing a matrix `class` of your own and using this class to make a functioning \"Kalman Filter\" (which you'll learn all about shortly).\n\n## Lessons\n\n### 1. Introduction to Kalman Filters\nA Kalman Filter is an algorithm which uses noisy sensor measurements (and Bayes' Rule) to produce reliable estimates of unknown quantities (like where a vehicle is likely to be in 3 seconds). \n\nIn this lesson you'll learn the general intuition behind Kalman Filters.\n\n### 2. State and Object Oriented Programming\nWhat is the \"state\" of a self driving car? What quantities do we need to keep track of when programming a car to drive itself?\n\nIn this lesson you'll learn how roboticists think about \"state\" and how to use a programming tool called object oriented programming to manage that \"state\".\n\n### 3. Matrices and Transformations\nMatrix math is one of the most powerful mathematical tools that a self-driving car engineer can use. When a problem can be framed in the language of matrices, it's often possible to find programmatic solutions which are effective and very fast. \n\nThis lesson will give you a practical / non-theoretical approach to matrix math. \n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

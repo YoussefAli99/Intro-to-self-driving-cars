@@ -1,0 +1,308 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trigonometric Ratios</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Two Dimensional Robot Motion and Trigonometry</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Plotting Robot Motion (right angles only).html">02. Plotting Robot Motion (right angles only)</a>
+    </li>
+    <li class="">
+      <a href="03. Plotting Robot Motion Solution .html">03. Plotting Robot Motion Solution </a>
+    </li>
+    <li class="">
+      <a href="04. Moving at an Angle.html">04. Moving at an Angle</a>
+    </li>
+    <li class="">
+      <a href="05. Moving at 53.13 Degrees.html">05. Moving at 53.13 Degrees</a>
+    </li>
+    <li class="">
+      <a href="06. Who Cares About 53.13 Degrees.html">06. Who Cares About 53.13 Degrees?</a>
+    </li>
+    <li class="">
+      <a href="07. The Power of Trigonometry.html">07. The Power of Trigonometry</a>
+    </li>
+    <li class="">
+      <a href="08. Opposite, Adjacent, Hypotenuse.html">08. Opposite, Adjacent, Hypotenuse</a>
+    </li>
+    <li class="">
+      <a href="09. Trigonometric Ratios.html">09. Trigonometric Ratios</a>
+    </li>
+    <li class="">
+      <a href="10. Looking up Sin, Cos, and Tan.html">10. Looking up Sin, Cos, and Tan</a>
+    </li>
+    <li class="">
+      <a href="11. Trigonometry and Vehicle Motion.html">11. Trigonometry and Vehicle Motion</a>
+    </li>
+    <li class="">
+      <a href="12. Solving Trig Problems.html">12. Solving Trig Problems</a>
+    </li>
+    <li class="">
+      <a href="13. Keeping Track of x and y.html">13. Keeping Track of x and y</a>
+    </li>
+    <li class="">
+      <a href="14. Keeping Track of x and y (solution).html">14. Keeping Track of x and y (solution)</a>
+    </li>
+    <li class="">
+      <a href="15. Conclusion.html">15. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Trigonometric Ratios</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Nd113 C6 L3 09 L Trigonometric Ratios V2</p></h3>
+  
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="soh---cah---toa">SOH - CAH - TOA</h3>
+<p>The <strong>sine</strong>, <strong>cosine</strong>, and <strong>tangent</strong> are all trigonometric ratios. A helpful mnemonic for remembering which sides each of these ratios compare is <strong>SOH - CAH - TOA</strong></p>
+<p><strong>SOH</strong> - <strong>s</strong>ine is <strong>o</strong>pposite over <strong>h</strong>ypotenuse</p>
+<div class="mathquill">\sin(\theta) = \frac{\text{opposite}}{\text{hypotenuse}}</div>
+<p><br><br />
+<strong>CAH</strong> - <strong>c</strong>osine is <strong>a</strong>djacent over <strong>h</strong>ypotenuse</p>
+<div class="mathquill">\cos(\theta) = \frac{\text{adjacent}}{\text{hypotenuse}}</div>
+<p><br><br />
+<strong>TOA</strong> - <strong>t</strong>angent is <strong>o</strong>pposite over <strong>a</strong>djacent</p>
+<div class="mathquill">\tan(\theta) = \frac{\text{opposite}}{\text{adjacent}}</div>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the <strong>cosine</strong> of 53.13 degrees?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1513192484111" name="478318" id="a1513192484111">
+        <label for="a1513192484111"><p>3/5</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192514693" name="478318" id="a1513192514693">
+        <label for="a1513192514693"><p>3/4</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192517124" name="478318" id="a1513192517124">
+        <label for="a1513192517124"><p>4/5</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192522205" name="478318" id="a1513192522205">
+        <label for="a1513192522205"><p>5/4</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192527077" name="478318" id="a1513192527077">
+        <label for="a1513192527077"><p>5/3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192532885" name="478318" id="a1513192532885">
+        <label for="a1513192532885"><p>4/3</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    3/5
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the <strong>tangent</strong> of 53.13 degrees?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1513192604884" name="478319" id="a1513192604884">
+        <label for="a1513192604884"><p>3/5</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192626105" name="478319" id="a1513192626105">
+        <label for="a1513192626105"><p>3/4</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192630002" name="478319" id="a1513192630002">
+        <label for="a1513192630002"><p>4/5</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192632681" name="478319" id="a1513192632681">
+        <label for="a1513192632681"><p>5/4</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192636858" name="478319" id="a1513192636858">
+        <label for="a1513192636858"><p>5/3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1513192640130" name="478319" id="a1513192640130">
+        <label for="a1513192640130"><p>4/3</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    4/3
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd113 C6 L3 095 L Trigonometric Ratios Solution V2</p></h3>
+  
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Looking up Sin, Cos, and Tan.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Trigonometric Ratios')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

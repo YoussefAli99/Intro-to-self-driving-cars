@@ -1,0 +1,201 @@
+{
+  "id": 1213,
+  "project_id": 359,
+  "upload_types": [
+    "file"
+  ],
+  "file_filter_regex": "\\A(?!(((.*/)?(__MACOSX|\\.git|node_modules|bower_components|jspm_packages|\\.idea|build|.ipynb_checkpoints|\\.Trash-0|logs)(\\Z|/))))((.*\\.(css|docx|gradle|htm|html|java|js|markdown|md|pdf|py|rmd|rst|sql|swift|txt|xml|yaml|yml)\\Z)|((.*/)?(README|Readme|readme|Makefile)\\Z))",
+  "nomination_eligible": false,
+  "stand_out": "1. (Optional) Aim for >95% classification accuracy.\n2. (Optional) Some lights are in the shape of arrows; further classify the lights as round or arrow-shaped.\n3. (Optional) Add another feature and aim for as close to 100% accuracy as you can get!\n",
+  "hide_criteria": false,
+  "created_at": "2017-09-14T05:01:38.680Z",
+  "updated_at": "2019-03-26T18:21:46.245Z",
+  "hashtag": "",
+  "max_upload_size_mb": 500,
+  "estimated_sla": null,
+  "project_assistant_enabled": false,
+  "checkmate_enabled": false,
+  "checkmate_metadata": null,
+  "available_for_cert_project": false,
+  "classroom_node_id": 395977,
+  "classroom_project_key": "f3c92db8-8269-44a4-a9d3-5297e4c9cddd",
+  "language": "en-us",
+  "ndkeys": [
+    "nd113-ent",
+    "nd113-mena-connect",
+    "nd113",
+    "nd113-cn-ent",
+    "nd113-cn"
+  ],
+  "coursekeys": [],
+  "sections": [
+    {
+      "id": 2727,
+      "name": "Notebook Questions",
+      "created_at": "2017-11-22T23:31:11.780Z",
+      "updated_at": "2017-11-22T23:35:54.568Z",
+      "deleted_at": null,
+      "position": 1,
+      "rubric_id": 1213,
+      "rubric_items": [
+        {
+          "id": 8067,
+          "section_id": 2727,
+          "passed_description": "In the project notebook, all questions are answered. (There are two questions total.)",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:31:32.194Z",
+          "updated_at": "2017-11-22T23:41:21.573Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "All questions answered",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 2728,
+      "name": "Pre-processing",
+      "created_at": "2017-11-22T23:37:41.174Z",
+      "updated_at": "2017-11-22T23:38:19.478Z",
+      "deleted_at": null,
+      "position": 2,
+      "rubric_id": 1213,
+      "rubric_items": [
+        {
+          "id": 8068,
+          "section_id": 2728,
+          "passed_description": "All input images (before they are classified) should be processed so that they are the same size.",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:38:19.601Z",
+          "updated_at": "2017-11-22T23:42:39.557Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Standardize the input images",
+          "exceedable": false
+        },
+        {
+          "id": 8069,
+          "section_id": 2728,
+          "passed_description": "All labels should be a one-hot encoded vector of length 3. Ex. ‘yellow’ becomes: [0, 1, 0].",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:40:54.533Z",
+          "updated_at": "2017-11-22T23:41:21.587Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "One-hot encode all output labels",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 2729,
+      "name": "Create a brightness feature",
+      "created_at": "2017-11-22T23:37:42.314Z",
+      "updated_at": "2017-11-22T23:42:39.570Z",
+      "deleted_at": null,
+      "position": 3,
+      "rubric_id": 1213,
+      "rubric_items": [
+        {
+          "id": 8070,
+          "section_id": 2729,
+          "passed_description": "Using HSV colorspace, extract a feature from a traffic light image that represents the level(s) of brightness in an image. This feature can help classify any traffic light image. A feature can be a list, array, or a single value.",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:42:39.685Z",
+          "updated_at": "2018-03-12T20:17:51.805Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Create a brightness feature that uses HSV color space",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 2731,
+      "name": "Classification Model",
+      "created_at": "2017-11-22T23:43:56.243Z",
+      "updated_at": "2017-11-22T23:44:20.251Z",
+      "deleted_at": null,
+      "position": 4,
+      "rubric_id": 1213,
+      "rubric_items": [
+        {
+          "id": 8071,
+          "section_id": 2731,
+          "passed_description": "Using any created features, write a classification function that takes in a standardized RGB image and outputs whether a traffic light is red, yellow, or green as a one-hot encoded label.",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:44:20.365Z",
+          "updated_at": "2017-11-22T23:45:11.452Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Build a complete classifier\n",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 2730,
+      "name": "Model Evaluation",
+      "created_at": "2017-11-22T23:43:56.119Z",
+      "updated_at": "2017-11-22T23:45:11.460Z",
+      "deleted_at": null,
+      "position": 4,
+      "rubric_id": 1213,
+      "rubric_items": [
+        {
+          "id": 8073,
+          "section_id": 2730,
+          "passed_description": "The model must have greater than 90% accuracy on the given test set.",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:45:26.182Z",
+          "updated_at": "2017-11-22T23:48:17.731Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Accuracy",
+          "exceedable": false
+        },
+        {
+          "id": 8072,
+          "section_id": 2730,
+          "passed_description": "In the given test set, red traffic lights can never be mistakenly labeled as green. ",
+          "exceeded_description": null,
+          "created_at": "2017-11-22T23:45:14.346Z",
+          "updated_at": "2017-11-22T23:48:17.740Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "No red lights labeled as green",
+          "exceedable": false
+        }
+      ]
+    }
+  ],
+  "project": {
+    "id": 359,
+    "name": "Traffic Light Classifier",
+    "nanodegree_key": "nd113",
+    "is_cert_project": false,
+    "audit_project_id": null,
+    "hashtag": null,
+    "audit_rubric_id": 1144,
+    "entitlement_required": null,
+    "is_career": null,
+    "recruitment_family_id": 9,
+    "awaiting_review_count": 0,
+    "awaiting_review_count_by_language": {},
+    "awaiting_audit_count": 0,
+    "awaiting_quality_audit_count": 0,
+    "awaiting_training_audit_count": 0,
+    "created_at": "2017-10-24T20:35:52.399Z",
+    "updated_at": "2020-05-03T21:57:53.789Z",
+    "price": "5.5",
+    "ungradeable_price": "3.0",
+    "audit_price": "0.0"
+  }
+}

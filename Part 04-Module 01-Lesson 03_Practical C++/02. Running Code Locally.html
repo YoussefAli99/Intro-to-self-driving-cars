@@ -1,0 +1,288 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Running Code Locally</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practical C++</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Compilation.html">01. Introduction to Compilation</a>
+    </li>
+    <li class="">
+      <a href="02. Running Code Locally.html">02. Running Code Locally</a>
+    </li>
+    <li class="">
+      <a href="03. C++ Versions.html">03. C++ Versions</a>
+    </li>
+    <li class="">
+      <a href="04. Structuring Functions and File Organization.html">04. Structuring Functions and File Organization</a>
+    </li>
+    <li class="">
+      <a href="05. Input and Output.html">05. Input and Output</a>
+    </li>
+    <li class="">
+      <a href="06. Reading in Text Files.html">06. Reading in Text Files</a>
+    </li>
+    <li class="">
+      <a href="07. Outputting to Text Files.html">07. Outputting to Text Files</a>
+    </li>
+    <li class="">
+      <a href="08. Exercises.html">08. Exercises</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Running Code Locally</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="running-code-locally">Running Code Locally</h1>
+<p>If you haven't already tried running your C++ code locally, now's the time to get things working. In the C++ section, we mentioned how to get code to run locally on your computer. Here are the instructions again for your reference:</p>
+<p>Here are some suggested programs for writing and executing your code locally:</p>
+<ul>
+<li><a href="https://www.sublimetext.com/" rel="noopener noreferrer" target="_blank">Sublime Text</a> as a general text editor</li>
+<li>Download an IDE (Integrated Development Environment) such as <a href="https://developer.apple.com/xcode/downloads/" rel="noopener noreferrer" target="_blank">Xcode</a> (Mac only), <a href="https://www.visualstudio.com/downloads/" rel="noopener noreferrer" target="_blank">Visual Studio</a> or any other IDE.</li>
+</ul>
+<h3 id="detailed-setup-instructions">Detailed Setup Instructions</h3>
+<p>Big thanks to Michael Ikemann! Michael is a student in this Nanodegree and put together some <strong>exceptionally</strong> detailed documentation to help you get started with C++.</p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1PA3YcIKpANBZuHLX6tz7bVw60ug_DM1_V_yFKyrMP-s/edit?usp=sharing" rel="noopener noreferrer" target="_blank">Windows C++ Setup Guide</a><ul>
+<li>Per student Tarun, the guide document for IDE setup suggests moving the .sln file to parent directory, along with the .vcproj file. To avoid errors, the .sln file needs to be hand modified with updated path.</li></ul></li>
+<li><a href="https://docs.google.com/document/d/1FoIc9X0NcM-0y0dgXCzJcpu5lVXGFqS62mb1ABLDT1M/edit" rel="noopener noreferrer" target="_blank">Mac C++ Setup Guide</a></li>
+</ul>
+<p>Below you'll find further instructions as well, although Michael's documents should be enough to get things running.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="compiling-and-executing-c-code">Compiling and Executing C++ Code</h3>
+<p>If you are on a Windows, Mac, or Linux machine, the basic process is going to be the same; you will compile your code and then execute the compiled code. But the details of how to do this are slightly different on different machines and operating systems. </p>
+<p>And there are two different ways you can compile and execute your code:</p>
+<ul>
+<li>using the windows console/mac terminal/linux terminal</li>
+<li>using an IDE (Integrated Development Environment), which is a software program that makes it easier to write, organize, compile and run your code.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="running-your-code-through-the-console-or-terminal">Running your Code through the Console or Terminal</h3>
+<p>This is the quickest way to get started compiling and executing your code. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="for-windows">For Windows</h4>
+<p>You will first need to download and install the <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15" rel="noopener noreferrer" target="_blank">Visual C++ Build Tools</a>, which are provided by Microsoft. The installation process might vary depending on what version of windows you are using. The microsoft website has a helpful guide about how to make sure the installation went correctly. The guide also explains how to compile and run your code: <a href="https://docs.microsoft.com/en-us/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line" rel="noopener noreferrer" target="_blank">microsoft instructions</a>.</p>
+<p>If the Visual C++ Build Tools are installed, you should be able to compile and execute your code from the console.  For example, if you have a main.cpp, you would open the console and navigate to the directory with the file. </p>
+<p>You will see that the microsoft tutorial suggests compiling your code with the following command:</p>
+<pre><code>cl /W4 /EHsc main.cpp</code></pre>
+<p>The /W4 and /EHsc are options that will compile your code with warnings and <a href="https://docs.microsoft.com/en-us/cpp/build/reference/eh-exception-handling-model" rel="noopener noreferrer" target="_blank">error handing</a>.</p>
+<p>The compiler outputs an .obj file, which contains the instructions for the CPU. You will also see a .exe file that will get your code running.</p>
+<p>Now typing</p>
+<pre><code>main</code></pre>
+<p>at the command prompt should get your program running.</p>
+<p>If your program has multiple .cpp files, then you compile with:</p>
+<pre><code>cl /W4 /EHsc file1.cpp file2.cpp file3.cpp</code></pre>
+<p>The name of the .obj and .exe files will be file1.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="for-mac">For Mac</h3>
+<p>Depending on your OS version, the installation process will be different. In general, you will need to download the "command line developer tools" from the Apple developer website. </p>
+<p>As a first step, see if you already have a compiler on your system called <strong>g++</strong>. Open the Terminal application, and type</p>
+<pre><code>g++</code></pre>
+<p>If g++ is installed, you should get an error message like <code>no input files</code>. If g++ is not installed and you are using a relatively newer version of Mac OS,  a dialogue box will pop up asking you if you would like to install the command line tools. Click "Install". </p>
+<p>However, on older Mac OS systems, you'll need to go to the Apple developer's website and download the command line developer tools. Go to this <a href="https://developer.apple.com/download/" rel="noopener noreferrer" target="_blank">link</a>. You will need to create an Apple ID if you do not already have one. Enter your Apple ID and password. </p>
+<p>On the downloads page, there is a search box in the top left corner. Search for "command line developer tools". Then download and install the developer tools for your OS version. </p>
+<p>Now go back to the Terminal and type</p>
+<pre><code>g++</code></pre>
+<p>You should now get an error message <code>no input files</code>. </p>
+<p>To compile a program you would type:</p>
+<pre><code>g++ filename.cpp</code></pre>
+<p>or with multiple .cpp files:</p>
+<pre><code>g++ filename1.cpp filename2.cpp filename3.cpp</code></pre>
+<p>The compiler will create an executable file named <code>a.out</code>. To run your program, in terminal type:</p>
+<pre><code>./a.out</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="for-linux-ubuntu">For Linux Ubuntu</h3>
+<p>The g++ compiler might already be on your system. If you are using Ubuntu, open Terminal and type:</p>
+<pre><code>dpkg --list | grep compiler</code></pre>
+<p>You will see a list of compilers. Check if g++ is in the list. If not, you can install g++ by typing:</p>
+<pre><code>sudo apt-get install g++</code></pre>
+<p>The commands to compile and run a program are the same as for Mac:</p>
+<pre><code>g++ filename.cpp
+./a.out</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="using-an-ide">Using an IDE</h3>
+<p>Another option is to download an IDE (Integrated Development Environment) to help write, organize, debug, compile and execute your code.</p>
+<p>Microsoft provides an IDE called Visual Studio, which you can download here: <a href="https://www.visualstudio.com/" rel="noopener noreferrer" target="_blank">Visual Studio</a>. Up until recently, Visual Studio was only available for Windows. But there is also a Mac version as well.</p>
+<p>For Mac users, Apple also provides an IDE called Xcode, which you can download <a href="https://developer.apple.com/xcode/" rel="noopener noreferrer" target="_blank">here</a>. </p>
+<p>You can use either of these IDEs to help you develop your C++ programs.</p>
+<p>For Linux Ubuntu users, there are a number of free IDEs available such as <a href="https://netbeans.org/features/cpp/index.html" rel="noopener noreferrer" target="_blank">NetBeans</a>, <a href="http://www.codeblocks.org" rel="noopener noreferrer" target="_blank">Code::Blocks</a>, <a href="https://www.eclipse.org/cdt/" rel="noopener noreferrer" target="_blank">Eclipse</a>, and <a href="https://codelite.org/" rel="noopener noreferrer" target="_blank">CodeLite</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. C++ Versions.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Running Code Locally')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

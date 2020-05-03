@@ -1,0 +1,320 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Car Object</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>State and Object-Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Localization Steps.html">01. Localization Steps</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to State.html">02. Intro to State</a>
+    </li>
+    <li class="">
+      <a href="03. Motion Models.html">03. Motion Models</a>
+    </li>
+    <li class="">
+      <a href="04. Quiz Predicting State.html">04. Quiz: Predicting State</a>
+    </li>
+    <li class="">
+      <a href="05. A Different Model.html">05. A Different Model</a>
+    </li>
+    <li class="">
+      <a href="06. Kinematics.html">06. Kinematics</a>
+    </li>
+    <li class="">
+      <a href="07. Quantifying State.html">07. Quantifying State</a>
+    </li>
+    <li class="">
+      <a href="08. Lesson Outline.html">08. Lesson Outline</a>
+    </li>
+    <li class="">
+      <a href="09. Always Moving.html">09. Always Moving</a>
+    </li>
+    <li class="">
+      <a href="10. Objects.html">10. Objects</a>
+    </li>
+    <li class="">
+      <a href="11. Car Object.html">11. Car Object</a>
+    </li>
+    <li class="">
+      <a href="12. Interacting with a Car Object.html">12. Interacting with a Car Object</a>
+    </li>
+    <li class="">
+      <a href="13. Car Class.html">13. Car Class</a>
+    </li>
+    <li class="">
+      <a href="14. Car Class File.html">14. Car Class File</a>
+    </li>
+    <li class="">
+      <a href="15. Look at the Class Code.html">15. Look at the Class Code</a>
+    </li>
+    <li class="">
+      <a href="16. Turn Right.html">16. Turn Right</a>
+    </li>
+    <li class="">
+      <a href="17. Adding Color.html">17. Adding Color</a>
+    </li>
+    <li class="">
+      <a href="18. Instantiate Multiple Cars.html">18. Instantiate Multiple Cars</a>
+    </li>
+    <li class="">
+      <a href="19. Color Class.html">19. Color Class</a>
+    </li>
+    <li class="">
+      <a href="20. Overloading Functions.html">20. Overloading Functions</a>
+    </li>
+    <li class="">
+      <a href="21. Overloading Color Addition.html">21. Overloading Color Addition</a>
+    </li>
+    <li class="">
+      <a href="22. State Vector.html">22. State Vector</a>
+    </li>
+    <li class="">
+      <a href="23. State Transformation Matrix.html">23. State Transformation Matrix</a>
+    </li>
+    <li class="">
+      <a href="24. Matrix Multiplication.html">24. Matrix Multiplication</a>
+    </li>
+    <li class="">
+      <a href="25. 1D State Vector and More Multiplication.html">25. 1D State Vector and More Multiplication</a>
+    </li>
+    <li class="">
+      <a href="26. Modify Predict State.html">26. Modify Predict State</a>
+    </li>
+    <li class="">
+      <a href="27. Working with Matrices.html">27. Working with Matrices</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Car Object</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Car Object</p></h3>
+  
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="creating-a-car-object">Creating a Car Object</h3>
+<p>To create a Car, which was named <code>carla</code> in the example. I have to:</p>
+<ol>
+<li>Import our car file and define a car's initial state variable, and </li>
+<li>Call <code>car.Car()</code>; a special function that initializes a Car object, and pass in the initial state variables.</li>
+</ol>
+<p>The state is defined by a position: [y, x] and a velocity, which has vertical and horizontal components: [vy, vx]. And lastly, we had to pass in a world, which is just a 2D array.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="imports-and-defining-initial-variables">Imports and Defining initial variables</h3>
+<pre><code class="python language-python"># Import statements
+import numpy
+import car
+
+# Declare initial variables
+# Create a 2D world of 0's
+height = 4
+width = 6
+world = np.zeros((height, width))
+
+# Define the initial car state
+initial_position = [0, 0] # [y, x] (top-left corner)
+velocity = [0, 1] # [vy, vx] (moving to the right)</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="creating-and-visualizing-a-car">Creating and Visualizing a Car!</h3>
+<pre><code class="python language-python"># Create a car object with these initial params
+carla = car.Car(initial_position, velocity, world)
+
+# Display the world
+carla.display_world()</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-27-at-1.55.25-pm.png" alt="Carla&#x27;s initial state at position [0,0]" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Carla's initial state at position [0,0]</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="car-movement">Car movement</h3>
+<p>Carla can also move in the direction of the velocity and turnleft with the functions: <code>move()</code> and <code>turn_left()</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-06-at-12.01.37-pm.png" alt="Car path after some movement." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Car path after some movement.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Interacting with a Car Object.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Car Object')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

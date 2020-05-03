@@ -1,0 +1,1012 @@
+{
+  "data": {
+    "lesson": {
+      "id": 466899,
+      "key": "73e99119-ac68-4326-a4fb-b4e41149e056",
+      "title": "Accelerometers, Rate Gyros and Integrals",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn how **integrals** can be used to calculate accumulated changes by finding the area under a curve.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/73e99119-ac68-4326-a4fb-b4e41149e056/466899/1544452809699/Accelerometers%2C+Rate+Gyros+and+Integrals+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/73e99119-ac68-4326-a4fb-b4e41149e056/466899/1544452806111/Accelerometers%2C+Rate+Gyros+and+Integrals+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 466923,
+          "key": "14ef5c0e-8e3c-477c-91c7-d7391f269674",
+          "title": "Lesson Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "14ef5c0e-8e3c-477c-91c7-d7391f269674",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485994,
+              "key": "c0c1072f-0897-48dc-a0d7-d6c2dd4503b4",
+              "title": "Accelerometer Lesson Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GRgbA3XBy6w",
+                "china_cdn_id": "GRgbA3XBy6w.mp4"
+              }
+            },
+            {
+              "id": 485877,
+              "key": "7621b793-8df4-42e2-b95d-8ec45bba62ab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Differentiation and Integration\n\nIn the last lesson you learned how we can go from position to velocity to acceleration by \"differentiating\" or \"taking the derivative\".\n\nIn this lesson, you'll learn how to go from acceleration to velocity to position using something called an \"integral\".",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466924,
+          "key": "ef264143-6057-47f1-bd3c-0cf1f8047192",
+          "title": "Differentiation Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ef264143-6057-47f1-bd3c-0cf1f8047192",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 477829,
+              "key": "bbe633f2-82b8-4269-b4fe-b02e4f13e8c1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Differentiation Recap\nIn the last lesson, you learned about the **derivative**. This section is just here to remind you of what you learned.\n\n### Understanding the Derivative\n\nYou saw a few ways to understand the derivative:\n\n##### 1. The \"Rate of Change\" Interpretation\n\nIf <span class=\"mathquill\">f(t)</span> gives the value of a function at **any** <span class=\"mathquill\">t</span>, then <span class=\"mathquill\">\\dot{f}(t_0)</span> gives the instantaneous rate of change of <span class=\"mathquill\">f(t)</span> at the value <span class=\"mathquill\">t=t_0</span>.\n\n<br>\n\n##### 2. The Graphical Interpretation\nThe slope of the line tangent to <span class=\"mathquill\">f(t)</span> at <span class=\"mathquill\">t=t_0</span> is <span class=\"mathquill\">\\dot{f}(t_0)</span>\n\n<br>\n\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 477831,
+              "key": "e5c9af2f-2a6f-4271-b20b-d243e13216ef",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a306a08_screen-shot-2017-12-12-at-3.44.23-pm/screen-shot-2017-12-12-at-3.44.23-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e5c9af2f-2a6f-4271-b20b-d243e13216ef",
+              "caption": "The slope of the orange line is equal to the **derivative** of *f* at t=t_0",
+              "alt": "",
+              "width": 542,
+              "height": 341,
+              "instructor_notes": null
+            },
+            {
+              "id": 477830,
+              "key": "232afb7a-14b5-4f54-9cb9-6e4b740daf65",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##### 3. The Formal Definition\nThe *formal* mathematical definition is the following:\n\nThe **derivative** of a function <span class=\"mathquill\">f(t)</span> is the function <span class=\"mathquill\">\\dot{f}(t)</span> (or <span class=\"mathquill\">\\frac{df}{dt}</span>), and is defined as:\n\n<div class=\"mathquill\">\\dot{f}(t) = \\lim_{\\Delta t \\to 0}\\frac{ f(t + \\Delta t) - f(t)}{\\Delta t}</div>\n\n<br>\n\n\n### Derivatives and Motion\n**Position**, **velocity**, and **acceleration** are all useful quantities when describing a vehicle's motion and these quantities are related through the derivative.\n\n* velocity is the derivative of position\n    * <span class=\"mathquill\">v(t)=\\dot{x}(t)</span>\n\n* acceleration is the derivative of velocity and the second derivative of position.\n    * <span class=\"mathquill\">a(t) = \\dot{v}(t) = \\ddot{x}(t)</span>\n\n### Coding the Derivative\n\n```python\ndef get_derivative_from_data(position_data, time_data):\n    \"\"\"\n    Calculates a list of speeds from position_data and \n    time_data.\n    \n    Arguments:\n      position_data - a list of values corresponding to \n        vehicle position\n \n      time_data     - a list of values (equal in length to\n        position_data) which give timestamps for each \n        position measurement\n    \n    Returns:\n      speeds        - a list of values (which is shorter \n        by ONE than the input lists) of speeds.\n    \"\"\"\n    # 1. Check to make sure the input lists have same length\n    if len(position_data) != len(time_data):\n        raise(ValueError, \"Data sets must have same length\")\n    \n    # 2. Prepare empty list of speeds\n    speeds = []\n    \n    # 3. Get first values for position and time\n    previous_position = position_data[0]\n    previous_time     = time_data[0]\n    \n    # 4. Begin loop through all data EXCEPT first entry\n    for i in range(1, len(position_data)):\n        \n        # 5. get position and time data for this timestamp\n        position = position_data[i]\n        time     = time_data[i]\n        \n        # 6. Calculate delta_x and delta_t\n        delta_x = position - previous_position\n        delta_t = time - previous_time\n        \n        # 7. Speed is slope. Calculate it and append to list\n        speed = delta_x / delta_t\n        speeds.append(speed)\n        \n        # 8. Update values for next iteration of the loop.\n        previous_position = position\n        previous_time     = time\n    \n    return speeds\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466925,
+          "key": "bc434dab-3853-45b9-b78b-f0d6745861d2",
+          "title": "Acceleration Basics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bc434dab-3853-45b9-b78b-f0d6745861d2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485829,
+              "key": "a28b2c82-f2d4-4d66-b05e-0c81d01ee733",
+              "title": "Nd113 C6 L2 03 L Acceleration Basics V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ea6b4PZ7YXU",
+                "china_cdn_id": "ea6b4PZ7YXU.mp4"
+              }
+            },
+            {
+              "id": 485863,
+              "key": "67c074ea-37bb-4545-9d96-f11b48a6e3f4",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "67c074ea-37bb-4545-9d96-f11b48a6e3f4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "A self driving car is moving with an initial velocity of **10 meters per second**. \n\nIt accelerates for **3 seconds** with an acceleration of **2 meters per second per second**.\n\nWhat is it's velocity afterwards?",
+                "answers": [
+                  {
+                    "id": "a1513361878865",
+                    "text": "10 meters per second",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361978678",
+                    "text": "12 meters per second",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361982783",
+                    "text": "13 meters per second",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361987967",
+                    "text": "16 meters per second",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 466927,
+          "key": "480decf6-9a1d-4701-bf06-c5a0cbb29e67",
+          "title": "Plotting Elevator Acceleration",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "480decf6-9a1d-4701-bf06-c5a0cbb29e67",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 480773,
+              "key": "a02d1445-148d-4a93-9331-6d3810cf8b13",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view4bc5104a",
+              "pool_id": "jupyter",
+              "view_id": "62eb172d-38ef-4dc4-9bf7-e264e4238863",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Plotting%20Elevator%20Acceleration.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466928,
+          "key": "d42f39c1-0485-4948-8d8e-590d92e87530",
+          "title": "Reasoning About Two Peaks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d42f39c1-0485-4948-8d8e-590d92e87530",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485830,
+              "key": "fffc216a-380a-4f42-a3e1-925e27f10b58",
+              "title": "06 L Reasoning About Two Peaks H1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bgPS1GO1EJs",
+                "china_cdn_id": "bgPS1GO1EJs.mp4"
+              }
+            },
+            {
+              "id": 485840,
+              "key": "7eee191f-7cf8-4906-bcb5-65e2701b03ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "I exaggerated in the video when I said the peaks look like mirror images. In fact the first peak is wider but not as tall (in absolute value) while the second peak is \"peakier\".\n\nBut that just makes it even more amazing that the area under each of these curves still winds up being equal!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486024,
+              "key": "a898a35c-fa00-48d3-8f40-68cb7adc5418",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a3453af_screen-shot-2017-12-15-at-2.58.22-pm/screen-shot-2017-12-15-at-2.58.22-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a898a35c-fa00-48d3-8f40-68cb7adc5418",
+              "caption": "",
+              "alt": "",
+              "width": 621,
+              "height": 432,
+              "instructor_notes": null
+            },
+            {
+              "id": 486026,
+              "key": "7c2e0d37-3276-4f4a-a269-8eed93403947",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7c2e0d37-3276-4f4a-a269-8eed93403947",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In which regions of this graph was the elevator **stopped** (or nearly stopped)?\n\nCheck all that apply.",
+                "answers": [
+                  {
+                    "id": "a1513378749362",
+                    "text": "Region 1",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513378772992",
+                    "text": "Region 2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378775768",
+                    "text": "Region 3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378779040",
+                    "text": "Region 4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378782143",
+                    "text": "Region 5",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 486028,
+              "key": "9d00e9ac-d1f3-4d8a-a02e-ece96108c69e",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9d00e9ac-d1f3-4d8a-a02e-ece96108c69e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In which of these regions was the elevator's speed **not changing** (or close to not changing)?",
+                "answers": [
+                  {
+                    "id": "a1513378939667",
+                    "text": "Region 1",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513378966536",
+                    "text": "Region 2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378969967",
+                    "text": "Region 3",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513378972848",
+                    "text": "Region 4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513378976224",
+                    "text": "Region 5",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 466931,
+          "key": "28121669-0685-4be1-9bc3-0e9135c88037",
+          "title": "The Integral: Area Under a Curve",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28121669-0685-4be1-9bc3-0e9135c88037",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 488956,
+              "key": "061ef7cb-c9ae-4d7c-bc35-1d224ae9ec03",
+              "title": "Nd113 C6 07 L The Integral Area Under A Curve H1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Nhpvh2dolcE",
+                "china_cdn_id": "Nhpvh2dolcE.mp4"
+              }
+            },
+            {
+              "id": 485848,
+              "key": "c9f9113c-182a-4ecb-a3cf-77007cdbeaed",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Finding Area Practice\n\nThe following four questions are based on graphs of vehicle velocity vs time. For these graphs the horizontal axis is in units of **seconds** and the vertical axis is in units of **meters / second**.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485845,
+              "key": "2c2a02a2-145d-4755-acf7-c5d5ab16b580",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a340c31_screen-shot-2017-12-15-at-9.48.11-am/screen-shot-2017-12-15-at-9.48.11-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2c2a02a2-145d-4755-acf7-c5d5ab16b580",
+              "caption": "",
+              "alt": "",
+              "width": 493,
+              "height": 390,
+              "instructor_notes": null
+            },
+            {
+              "id": 485856,
+              "key": "cb31d672-945c-454f-8753-5a790a753e9c",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cb31d672-945c-454f-8753-5a790a753e9c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "For the graph above, what was the vehicle's **total displacement** from t=2 to t=6?",
+                "answers": [
+                  {
+                    "id": "a1513360681023",
+                    "text": "6 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513360716100",
+                    "text": "12 meters ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513360724509",
+                    "text": "24 meters",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513360729685",
+                    "text": "0 ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513360738309",
+                    "text": "-6 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513360760022",
+                    "text": "-12 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513360764286",
+                    "text": "-24 meters",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 485844,
+              "key": "731141db-ad8b-4d53-887a-44b321937c83",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a340c11_screen-shot-2017-12-15-at-9.51.10-am/screen-shot-2017-12-15-at-9.51.10-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/731141db-ad8b-4d53-887a-44b321937c83",
+              "caption": "",
+              "alt": "",
+              "width": 482,
+              "height": 365,
+              "instructor_notes": null
+            },
+            {
+              "id": 485857,
+              "key": "9c221809-b683-4cf8-acc8-436d2bad483e",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9c221809-b683-4cf8-acc8-436d2bad483e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "For the graph above, what is the vehicle's total displacement from t=2 to t=6?",
+                "answers": [
+                  {
+                    "id": "a1513361088035",
+                    "text": "4 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361109539",
+                    "text": "16 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361110161",
+                    "text": "-4 meters",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361111177",
+                    "text": "-16 meters",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 485846,
+              "key": "d09361d3-66ce-42a3-af19-e0f67ec14be9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a340c5a_screen-shot-2017-12-15-at-9.49.09-am/screen-shot-2017-12-15-at-9.49.09-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d09361d3-66ce-42a3-af19-e0f67ec14be9",
+              "caption": "",
+              "alt": "",
+              "width": 617,
+              "height": 604,
+              "instructor_notes": null
+            },
+            {
+              "id": 485860,
+              "key": "7b57aeb8-5d24-4e81-ae91-75e2c7fa932f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7b57aeb8-5d24-4e81-ae91-75e2c7fa932f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "For the graph above, what is the total displacement from t=-8 to t=-2?",
+                "answers": [
+                  {
+                    "id": "a1513361219272",
+                    "text": "48 meters",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1513361261254",
+                    "text": "-48 meters",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 485847,
+              "key": "77825f8a-a636-4642-b1d6-3cbc43c956b2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a340c6b_screen-shot-2017-12-15-at-9.49.56-am/screen-shot-2017-12-15-at-9.49.56-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/77825f8a-a636-4642-b1d6-3cbc43c956b2",
+              "caption": "",
+              "alt": "",
+              "width": 481,
+              "height": 590,
+              "instructor_notes": null
+            },
+            {
+              "id": 485861,
+              "key": "336654af-c762-411b-9db6-a5391bb0d14f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "336654af-c762-411b-9db6-a5391bb0d14f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "For the graph above, what is the vehicle's total displacement from t=-1 to t=1?",
+                "answers": [
+                  {
+                    "id": "a1513361557763",
+                    "text": "-16",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361584257",
+                    "text": "-8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361586825",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361589049",
+                    "text": "8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1513361591233",
+                    "text": "16",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 486267,
+              "key": "d12aab44-247e-48cd-b292-ca9929aeaf95",
+              "title": "07 L The Integral Area Under A Curve H1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QNvgwoIrsIE",
+                "china_cdn_id": "QNvgwoIrsIE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466934,
+          "key": "bb86ed2c-6f98-4dde-9ae1-43e5c2859502",
+          "title": "Approximating the Integral",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bb86ed2c-6f98-4dde-9ae1-43e5c2859502",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 486266,
+              "key": "1e1ba1b6-da04-40b6-99c6-b6ac6744264f",
+              "title": "Approximating The Integral",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9C05AHzI_I8",
+                "china_cdn_id": "9C05AHzI_I8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 466933,
+          "key": "409cc334-ed1f-4648-bed1-6b073bdf17d3",
+          "title": "Approximating Integrals with Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "409cc334-ed1f-4648-bed1-6b073bdf17d3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 479088,
+              "key": "a079c42c-6075-4acc-9223-9a931a8060d0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view4bc5104a",
+              "pool_id": "jupyter",
+              "view_id": "4bc5104a-242c-491e-b586-19af40138968",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Approximating%20the%20Integral.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466937,
+          "key": "c6af98b8-00f1-4024-947a-9f4876ead612",
+          "title": "Integrating Accelerometer Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c6af98b8-00f1-4024-947a-9f4876ead612",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 479095,
+              "key": "136555e3-2d5c-4365-a0a9-6c3f56ab6ec5",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view4bc5104a",
+              "pool_id": "jupyter",
+              "view_id": "3327acfa-fee3-4c94-87fa-69c3ae4be293",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Integrating%20Accelerometer%20Data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466935,
+          "key": "57fc1fc8-f1dd-49dd-a035-c56d6c2c988b",
+          "title": "Rate Gyros",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "57fc1fc8-f1dd-49dd-a035-c56d6c2c988b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485995,
+              "key": "5b9dba88-ebad-4e03-a884-ac3aceca89b5",
+              "title": "Rate Gyros",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TmnecSf80b0",
+                "china_cdn_id": "TmnecSf80b0.mp4"
+              }
+            },
+            {
+              "id": 485879,
+              "key": "60cb1216-f55b-41ba-8022-637f17b92c6f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "A car's heading is usually represented by the Greek letter theta: <span class=\"mathquill\">\\theta</span>\n\nThe *angular velocity* is the rate of change (derivative) of the heading, so it's represented by \"theta dot\": <span class=\"mathquill\">\\dot{\\theta}</span>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466936,
+          "key": "158eb1b0-4c42-4432-902b-aa011b06f669",
+          "title": "Integrating Rate Gyro Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "158eb1b0-4c42-4432-902b-aa011b06f669",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 479132,
+              "key": "e8a4dc03-a5b4-41e3-ae2d-dcd379fcc8e0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view4bc5104a",
+              "pool_id": "jupyter",
+              "view_id": "6f9a13db-086f-46fa-a88e-1f54fcf0cae3",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Integrating%20Rate%20Gyro%20Data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 475985,
+          "key": "25aff8bc-6745-4b8b-9968-f4a620d3edd2",
+          "title": "Working with Real Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "25aff8bc-6745-4b8b-9968-f4a620d3edd2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485996,
+              "key": "cf4b02e4-b7a6-417a-b5fe-0dace3d0b70f",
+              "title": "Working with Real Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WvEcWtAz-OQ",
+                "china_cdn_id": "WvEcWtAz-OQ.mp4"
+              }
+            },
+            {
+              "id": 485881,
+              "key": "e416ffcc-6664-4b35-9c36-5c8796cc8f4b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Just so you know: not *all* of the data I've shown you has been fake. The elevator data at the beginning of the lesson was 100% real!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466938,
+          "key": "5576c0cb-01b7-4943-9fd6-5941e47a99ef",
+          "title": "Accumulating Errors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5576c0cb-01b7-4943-9fd6-5941e47a99ef",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 479141,
+              "key": "287986f8-667a-4eb3-819c-9083449efc8b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view4bc5104a",
+              "pool_id": "jupyter",
+              "view_id": "6d8cd95b-d3ac-46e3-8590-c5527caa758a",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Accumulating%20Errors.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 466939,
+          "key": "f9e6234a-0045-42f0-bc53-c476eaac8e73",
+          "title": "Sensor Strengths and Weaknesses",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f9e6234a-0045-42f0-bc53-c476eaac8e73",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485968,
+              "key": "1f96c58a-ed0a-44a0-87d2-4ed30efbe677",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "As you just saw, it can be dangerous to rely on accelerometer data for localization since errors have a tendency to accumulate. This is a weakness of accelerometers.\n\nFortunately, it takes some time for these errors to accumulate. So when they're used over short time intervals accelerometers can be really helpful.\n\nTake a look at one of Uber's early prototypes of a self driving car:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485969,
+              "key": "45a9fb9d-cfcf-4200-afdc-9ebb66f61681",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a343dd2_self-driving-uber-prototype-in-san-francisco/self-driving-uber-prototype-in-san-francisco.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/45a9fb9d-cfcf-4200-afdc-9ebb66f61681",
+              "caption": "",
+              "alt": "",
+              "width": 736,
+              "height": 491,
+              "instructor_notes": null
+            },
+            {
+              "id": 485970,
+              "key": "7d3ce127-3222-4ad5-94f8-9bf65fbaf153",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Look at all those sensors perched on the hood! And you can't even see the IMUs and odometers and GPS sensors inside the vehicle! \n\nEach of these sensors has strengths and weaknesses and each contributes to an improved understanding of the vehicle and it's surroundings.\n\nIf you choose to take the advanced Self Driving Car Engineer Nanodegree, you'll learn about **sensor fusion**. Sensor fusion is how you use software to stitch together all these disparate data sources into one coherent picture about the vehicle, its motion, and the world around it.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 466940,
+          "key": "89d4d213-d948-4cdb-9aa9-b8e34120c6ee",
+          "title": "Lesson Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "89d4d213-d948-4cdb-9aa9-b8e34120c6ee",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 485997,
+              "key": "1aea2165-a1d3-4c45-8034-dc7056cd761c",
+              "title": "L2 18 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nCJQl2kH8bY",
+                "china_cdn_id": "nCJQl2kH8bY.mp4"
+              }
+            },
+            {
+              "id": 485883,
+              "key": "e8c3e803-66cc-4424-a288-d4a4ab136345",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Congratulations! Next up: trigonometry!",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

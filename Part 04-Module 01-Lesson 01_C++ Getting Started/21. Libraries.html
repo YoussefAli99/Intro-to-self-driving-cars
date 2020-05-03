@@ -1,0 +1,330 @@
+<!-- udacimak v1.6.6 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Libraries</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>C++ Getting Started</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Lesson Overview.html">02. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Elecia White.html">03. Elecia White</a>
+    </li>
+    <li class="">
+      <a href="04. Why C++.html">04. Why C++</a>
+    </li>
+    <li class="">
+      <a href="05. Python and C++ Comparison.html">05. Python and C++ Comparison</a>
+    </li>
+    <li class="">
+      <a href="06. Static vs Dynamic Typing.html">06. Static vs Dynamic Typing</a>
+    </li>
+    <li class="">
+      <a href="07. C++ - A Statically Typed Language.html">07. C++ - A Statically Typed Language</a>
+    </li>
+    <li class="">
+      <a href="08. Basic Data Types.html">08. Basic Data Types</a>
+    </li>
+    <li class="">
+      <a href="09. Floating versus Double [demonstration].html">09. Floating versus Double [demonstration]</a>
+    </li>
+    <li class="">
+      <a href="10. Doubles are Bigger.html">10. Doubles are Bigger</a>
+    </li>
+    <li class="">
+      <a href="11. Common Errors and Error Messages.html">11. Common Errors and Error Messages</a>
+    </li>
+    <li class="">
+      <a href="12. C++ Functions.html">12. C++ Functions</a>
+    </li>
+    <li class="">
+      <a href="13. Anatomy of a Function.html">13. Anatomy of a Function</a>
+    </li>
+    <li class="">
+      <a href="14. Multiple Outputs.html">14. Multiple Outputs</a>
+    </li>
+    <li class="">
+      <a href="15. Two Functions Same Name.html">15. Two Functions Same Name</a>
+    </li>
+    <li class="">
+      <a href="16. Function Signatures 1.html">16. Function Signatures 1</a>
+    </li>
+    <li class="">
+      <a href="17. Function Signatures 2.html">17. Function Signatures 2</a>
+    </li>
+    <li class="">
+      <a href="18. If and Boolean Logic.html">18. If and Boolean Logic</a>
+    </li>
+    <li class="">
+      <a href="19. While and For Loops.html">19. While and For Loops</a>
+    </li>
+    <li class="">
+      <a href="20. Switch Statement.html">20. Switch Statement</a>
+    </li>
+    <li class="">
+      <a href="21. Libraries.html">21. Libraries</a>
+    </li>
+    <li class="">
+      <a href="22. Forge on!.html">22. Forge on!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">21. Libraries</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="c-libraries">C++ Libraries</h1>
+<p>You have learned how to declare variables, write functions, and use control statements. Those are the basic building blocks of any programming language, and you are ready to write programs in C++.</p>
+<p>But, what if you want to store a string in a variable or do more advanced math like taking the square root of a number? Just like Python, C++ also uses pre-built libraries to help make programming easier. In python, you use these libraries with an </p>
+<pre><code class="python language-python">import</code></pre>
+<p>statement.</p>
+<p>In C++, you use</p>
+<pre><code class="c++ language-c++">#include</code></pre>
+<p>You have already been using a file called "iostream" from the <a href="https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library" rel="noopener noreferrer" target="_blank">C++ Standard Library</a>. The "iostream" file contains functions and classes for outputting to a terminal and also reading in from a terminal.</p>
+<p>You were able to take advantage of these pre-built functions by including the appropriate file like so:</p>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;</code></pre>
+<p>That include statement essentially pastes the <a href="http://en.cppreference.com/w/cpp/header/iostream" rel="noopener noreferrer" target="_blank">iostream</a> file to the top of your code and gives you access to all of its functions and classes.</p>
+<p>As your programs become more complex, you will rely more and more on C++ libraries.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="c-standard-library">C++ Standard Library</h3>
+<p>The <a href="http://en.cppreference.com/w/cpp/header" rel="noopener noreferrer" target="_blank">C++ Standard Library</a> has a lot of functions and classes like a definition for a string, arrays, tuples, functions for reading in and outputting files, random number generators, definitions for complex number variables, mathematical functions and many other functions as well.</p>
+<p>And the C++ Standard Library comes with a C++ installation.</p>
+<p>Besides this <a href="http://en.cppreference.com/w/cpp/header" rel="noopener noreferrer" target="_blank">list</a> of files in the Standard Library, search engines are your best friend for finding functionality and libraries in C++. For example, if you are not sure how to do something in C++ like using strings, open a search engine and type "C++ string syntax". You will find many examples online of how to use strings in C++ and quickly find an example like the following:</p>
+<h5 id="example-strings">Example: Strings</h5>
+<p>To use the part of the library that defines strings, you would include a line at the top of your main.cpp file like:</p>
+<pre><code class="c++ language-c++">#include &lt;string&gt;</code></pre>
+<pre><code class="c++ language-c++">#include &lt;string&gt;
+
+int main() {
+   std::string stringvariable = "stringvalue";
+   return 0;
+}</code></pre>
+<h5 id="example-math">Example: Math</h5>
+<p>Here is another example from the standard library.</p>
+<pre><code class="c++ language-c++">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+int main ()
+{
+   // calculate 
+    std::cout &lt;&lt; pow(3.4, 4);
+}</code></pre>
+<p>The pow() function is raising 3.4 to the fourth power. </p>
+<p>Cmath includes logarithmic and exponential functions, power functions, and trigonometric functions. You can see a full list <a href="http://www.cplusplus.com/reference/cmath/" rel="noopener noreferrer" target="_blank">here</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="include-syntax">Include Syntax</h3>
+<p>When you learned about structuring functions, you saw two different include statements:</p>
+<pre><code>#include &lt;iostream&gt;
+#include "distance.h"</code></pre>
+<p>Here is a quiz to help you remember the difference between using quotes and using brackets:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quotes and Brackets</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the difference between using double quotes versus brackets in an include statement?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1504292477781" name="385912" id="a1504292477781">
+        <label for="a1504292477781"><p>There is no difference. You could use either syntax.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504293247492" name="385912" id="a1504293247492">
+        <label for="a1504293247492"><p>Double quotes looks for files in the main.cpp directory. Brackets look for files where system header files are kept.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1504293248021" name="385912" id="a1504293248021">
+        <label for="a1504293248021"><p>Brackets look for files in the main.cpp directory. Double quotes looks for files where system header files are kept.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Double quotes looks for files in the main.cpp directory. Brackets look for files where system header files are kept.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In fact, you could also write,</p>
+<pre><code>#include "iostream"
+#include "distance.h"</code></pre>
+<p>but using quotes instead of brackets is less efficient. When using quotes, your program will first look for the iostream file in the main.cpp directory. When the program cannot find the file, the program will search where the standard library files are kept.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="other-useful-libraries">Other Useful Libraries</h3>
+<p>As previously mentioned, the C++ Standard Library generally comes with a C++ installation; however, there are many other useful C++ libraries that you install separately. Each library will have its own installation procedure and usually comes with instructions. Again, search engines are your best friends when trying to find and install libraries.</p>
+<p>This <a href="http://en.cppreference.com/w/cpp/links/libs" rel="noopener noreferrer" target="_blank">link</a> contains a list of many open source C++ libraries. In the list, you will see all kinds of libraries for math, gaming, computer vision, machine learning, as well as many other topics.</p>
+<p>In the next lesson, you will learn to use the C++ vector library.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="22. Forge on!.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.6.6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('21. Libraries')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
